@@ -180,10 +180,9 @@ export function registerSelectContentPointerTracker(content, dotNetRef, pageX, p
     const withinPointerTolerance = pointerMoveDelta.x <= 10 && pointerMoveDelta.y <= 10;
     const target = event.target;
     const targetInsideContent = !!target && content.contains(target);
-    const suppressSelection = withinPointerTolerance && targetInsideContent;
     const shouldClose = !withinPointerTolerance && !!target && !targetInsideContent;
 
-    invokeDotNetSafely(dotNetRef, "HandleTriggerPointerGuardResult", suppressSelection, shouldClose);
+    invokeDotNetSafely(dotNetRef, "HandleTriggerPointerGuardResult", false, shouldClose);
   };
 
   document.addEventListener("pointermove", handlePointerMove);
@@ -334,6 +333,7 @@ function positionSelectItemAligned(wrapper, content, viewport, trigger, valueNod
   wrapper.style.right = "";
   wrapper.style.bottom = "";
   wrapper.style.left = "";
+  wrapper.style.zIndex = window.getComputedStyle(content).zIndex;
 
   if (!isRtl) {
     const itemTextOffset = itemTextRect.left - contentRect.left;
