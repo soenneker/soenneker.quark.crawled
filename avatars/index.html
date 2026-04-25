@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,8 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -48,7 +50,8 @@
 			<div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full h-svh min-h-svh flex-col overflow-hidden bg-background text-foreground" style="--sidebar-width: calc(var(--spacing) * 72); --sidebar-width-icon: 3rem; --sidebar-width-mobile: 100vw; --header-height: 4.5rem;" data-slot="sidebar-wrapper">
 				<!--!-->
 				<header data-slot="header" class="sticky top-0 z-50 w-full bg-background">
-					<div class="container-wrapper px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0">
+					<!--!-->
+					<div class="mx-auto px-2 w-full px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
 						<div class="flex min-h-12 h-(--header-height) items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="true" data-state="open" class="shrink-0 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<div class="relative flex h-8 w-4 items-center justify-center">
@@ -1665,13 +1668,6 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<div _bl_111="">
-																		<!--!-->
-																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_112="">
-																			<!--!-->
-																			<!--!-->
-																		</div>
-																	</div>
 																</div>
 															</div>
 														</div>
@@ -1821,10 +1817,10 @@
 																	<span id="avatar-loaded-example" class="group/avatar shrink-0 select-none after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
+																		<img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20128%20128%27%3E%0A%20%20%3Crect%20width%3D%27128%27%20height%3D%27128%27%20rx%3D%2764%27%20fill%3D%27%231d4ed8%27%2F%3E%0A%20%20%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27white%27%20font-family%3D%27Arial%27%20font-size%3D%2744%27%3EQL%3C%2Ftext%3E%0A%3C%2Fsvg%3E" alt="Loaded avatar example" class="aspect-square size-full rounded-full object-cover" data-slot="avatar-image">
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="inset-0 items-center justify-center group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm absolute w-full h-full bg-muted rounded-full" data-slot="avatar-fallback">QL</span>
 																	</span>
 																</div>
 															</div>
@@ -1869,5 +1865,13 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
+		<div _bl_111="">
+			<!--!-->
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_112="">
+				<!--!-->
+				<!--!-->
+			</div>
+		</div>
 	</body>
 </html>

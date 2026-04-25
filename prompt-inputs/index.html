@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,17 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -48,7 +59,8 @@
 			<div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full h-svh min-h-svh flex-col overflow-hidden bg-background text-foreground" style="--sidebar-width: calc(var(--spacing) * 72); --sidebar-width-icon: 3rem; --sidebar-width-mobile: 100vw; --header-height: 4.5rem;" data-slot="sidebar-wrapper">
 				<!--!-->
 				<header data-slot="header" class="sticky top-0 z-50 w-full bg-background">
-					<div class="container-wrapper px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0">
+					<!--!-->
+					<div class="mx-auto px-2 w-full px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
 						<div class="flex min-h-12 h-(--header-height) items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="true" data-state="open" class="shrink-0 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<div class="relative flex h-8 w-4 items-center justify-center">
@@ -1104,7 +1116,7 @@
 																				</button>
 																				<!--!-->     
 																				<!--!-->
-																				<input id="prompt-input-file-5beeb8656e3e45429202dd9bd5455634" data-slot="prompt-input-file-input" data-quark-blazor-input-file="true" class="sr-only" tabindex="-1" multiple="" aria-hidden="true" type="file" _bl_104="">
+																				<input id="prompt-input-file-35576c4529e94cac80adc061060c6241" data-slot="prompt-input-file-input" data-quark-blazor-input-file="true" class="sr-only" tabindex="-1" multiple="" aria-hidden="true" type="file" _bl_104="">
 																			</div>
 																			<!--!-->                             
 																			<!--!-->
@@ -1139,13 +1151,6 @@
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->
-																					<div _bl_116="">
-																						<!--!-->
-																						<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_117="">
-																							<!--!-->
-																							<!--!-->
-																						</div>
-																					</div>
 																				</div>
 																			</div>
 																			<!--!-->                             
@@ -1209,55 +1214,6 @@
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->
-																					<div _bl_108="">
-																						<!--!-->
-																						<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_111="">
-																							<!--!-->
-																							<div hidden="" style="display:none;">
-																								<!--!-->
-																								<!--!-->
-																								<style>
-    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
-
-																								</style>
-																								<div class="h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1 p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_113="">
-																									<div style="min-width:100%;display:block;" _bl_114="">
-																										<!--!-->
-																										<!--!-->
-																										<!--!-->
-																										<!--!-->
-																										<div role="option" aria-labelledby="bradix-select-5-item-gpt-4o-text" aria-selected="false" data-state="checked" tabindex="-1" data-slot="select-item" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" _bl_118="">
-																											<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-																												<!--!-->
-																												<span aria-hidden="true">
-																													<!--!-->
-																													<svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-																														<path d="M20 6 9 17l-5-5"></path>
-																													</svg>
-																												</span>
-																											</span>
-																											<!--!-->     
-																											<!--!-->
-																											<span id="bradix-select-5-item-gpt-4o-text" _bl_120="">GPT-4o</span>
-																										</div>
-																										<!--!-->
-																										<!--!-->
-																										<!--!-->
-																										<!--!-->
-																										<div role="option" aria-labelledby="bradix-select-5-item-claude-opus-4-20250514-text" aria-selected="false" data-state="unchecked" tabindex="-1" data-slot="select-item" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" _bl_119="">
-																											<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-																												<!--!-->
-																											</span>
-																											<!--!-->     
-																											<!--!-->
-																											<span id="bradix-select-5-item-claude-opus-4-20250514-text" _bl_121="">Claude 4 Opus</span>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
 																					<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_106="">
 																						<option value="gpt-4o">GPT-4o</option>
 																						<option value="claude-opus-4-20250514">Claude 4 Opus</option>
@@ -1326,5 +1282,62 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
+		<div _bl_108="">
+			<!--!-->
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_111="">
+				<!--!-->
+				<div hidden="" style="display:none;">
+					<!--!-->
+					<!--!-->
+					<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+					</style>
+					<div class="h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1 p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_113="">
+						<div style="min-width:100%;display:block;" _bl_114="">
+							<!--!-->
+							<!--!-->
+							<!--!-->
+							<!--!-->
+							<div role="option" aria-labelledby="bradix-select-5-item-gpt-4o-text" aria-selected="false" data-state="checked" tabindex="-1" data-slot="select-item" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" _bl_118="">
+								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+									<!--!-->
+									<span aria-hidden="true">
+										<!--!-->
+										<svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+									</span>
+								</span>
+								<!--!-->     
+								<!--!-->
+								<span id="bradix-select-5-item-gpt-4o-text" _bl_120="">GPT-4o</span>
+							</div>
+							<!--!-->
+							<!--!-->
+							<!--!-->
+							<!--!-->
+							<div role="option" aria-labelledby="bradix-select-5-item-claude-opus-4-20250514-text" aria-selected="false" data-state="unchecked" tabindex="-1" data-slot="select-item" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" _bl_119="">
+								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+									<!--!-->
+								</span>
+								<!--!-->     
+								<!--!-->
+								<span id="bradix-select-5-item-claude-opus-4-20250514-text" _bl_121="">Claude 4 Opus</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div _bl_116="">
+			<!--!-->
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_117="">
+				<!--!-->
+				<!--!-->
+			</div>
+		</div>
 	</body>
 </html>
