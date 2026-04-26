@@ -22,8 +22,7 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css">
 	</head>
 	<body>
 		<div id="app">
@@ -51,7 +50,7 @@
 				<!--!-->
 				<header data-slot="header" class="sticky top-0 z-50 w-full bg-background">
 					<!--!-->
-					<div class="mx-auto px-2 w-full px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
+					<div class="mx-auto px-2 w-full max-w-[1400px] container-wrapper px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
 						<div class="flex min-h-12 h-(--header-height) items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="true" data-state="open" class="shrink-0 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<div class="relative flex h-8 w-4 items-center justify-center">
@@ -62,7 +61,7 @@
 									</div>
 									<span class="sr-only">Toggle Menu</span>
 								</div>
-								<span class="flex h-8 items-center text-lg leading-none font-medium">Navigation</span>
+								<span class="flex h-8 items-center text-lg leading-none font-medium">Menu</span>
 							</button>
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="shadcn/ui" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex">
@@ -86,7 +85,7 @@
 							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch ml-2 hidden lg:block" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px ml-2 hidden lg:block" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<a rel="noreferrer" data-slot="button" data-variant="ghost" data-size="sm" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 h-8 shadow-none" href="https://github.com/soenneker/soenneker.quark.suite" target="_blank">
@@ -98,7 +97,7 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" title="Toggle layout" class="hidden shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8 3xl:flex 3xl:group-has-data-[slot=designer]/layout:hidden">
@@ -112,7 +111,7 @@
 								
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+								<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8" aria-label="Toggle theme">
@@ -131,7 +130,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:md:flex">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -154,7 +153,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:flex group-has-data-[slot=designer]/layout:md:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -172,7 +171,7 @@
 								<div class="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" data-variant="default" data-size="sm" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground [a]:hover:bg-primary/80 gap-1 px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 h-[31px] rounded-lg" href="components">
@@ -188,7 +187,7 @@
 					</div>
 				</header>
 				<!--!-->
-				<div class="mx-auto px-2 w-full overflow-hidden grow min-h-0" data-slot="div">
+				<div class="mx-auto px-2 w-full max-w-[1400px] overflow-hidden grow container-wrapper min-h-0" data-slot="div">
 					<!--!-->
 					<div class="flex h-full min-h-0" data-slot="div">
 						<!--!-->
@@ -830,9 +829,20 @@
 											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
 												<!--!-->
 												<!--!-->
+												<a href="threads" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
+													<!--!-->
+													<span _bl_82="">Thread</span>
+													<!--!-->
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_83=""></span>
+												</a>
+											</li>
+											<!--!-->
+											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
+												<!--!-->
+												<!--!-->
 												<a href="timelines" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_82="">Timeline</span>
+													<span _bl_84="">Timeline</span>
 												</a>
 											</li>
 											<!--!-->
@@ -841,7 +851,7 @@
 												<!--!-->
 												<a href="toggles" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_83="">Toggle</span>
+													<span _bl_85="">Toggle</span>
 												</a>
 											</li>
 											<!--!-->
@@ -850,7 +860,7 @@
 												<!--!-->
 												<a href="toggle-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_84="">Toggle Group</span>
+													<span _bl_86="">Toggle Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -859,7 +869,7 @@
 												<!--!-->
 												<a href="tooltips" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_85="">Tooltip</span>
+													<span _bl_87="">Tooltip</span>
 												</a>
 											</li>
 											<!--!-->
@@ -868,7 +878,7 @@
 												<!--!-->
 												<a href="typography" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_86="">Typography</span>
+													<span _bl_88="">Typography</span>
 												</a>
 											</li>
 										</ul>
@@ -890,7 +900,7 @@
 												<!--!-->
 												<a href="divs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_87="">Div</span>
+													<span _bl_89="">Div</span>
 												</a>
 											</li>
 											<!--!-->
@@ -899,7 +909,7 @@
 												<!--!-->
 												<a href="margin-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_88="">Margin</span>
+													<span _bl_90="">Margin</span>
 												</a>
 											</li>
 											<!--!-->
@@ -908,7 +918,7 @@
 												<!--!-->
 												<a href="padding-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_89="">Padding</span>
+													<span _bl_91="">Padding</span>
 												</a>
 											</li>
 											<!--!-->
@@ -917,7 +927,7 @@
 												<!--!-->
 												<a href="anchors" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_90="">Anchor</span>
+													<span _bl_92="">Anchor</span>
 												</a>
 											</li>
 											<!--!-->
@@ -926,7 +936,7 @@
 												<!--!-->
 												<a href="blockquotes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_91="">Blockquote</span>
+													<span _bl_93="">Blockquote</span>
 												</a>
 											</li>
 											<!--!-->
@@ -935,7 +945,7 @@
 												<!--!-->
 												<a href="br-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_92="">Br</span>
+													<span _bl_94="">Br</span>
 												</a>
 											</li>
 											<!--!-->
@@ -944,7 +954,7 @@
 												<!--!-->
 												<a href="codes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_93="">Code</span>
+													<span _bl_95="">Code</span>
 												</a>
 											</li>
 											<!--!-->
@@ -953,7 +963,7 @@
 												<!--!-->
 												<a href="fieldsets-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_94="">Fieldset</span>
+													<span _bl_96="">Fieldset</span>
 												</a>
 											</li>
 											<!--!-->
@@ -962,7 +972,7 @@
 												<!--!-->
 												<a href="figures" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_95="">Figure</span>
+													<span _bl_97="">Figure</span>
 												</a>
 											</li>
 											<!--!-->
@@ -971,7 +981,7 @@
 												<!--!-->
 												<a href="icons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_96="">Icons</span>
+													<span _bl_98="">Icons</span>
 												</a>
 											</li>
 											<!--!-->
@@ -980,7 +990,7 @@
 												<!--!-->
 												<a href="paragraph-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_97="">Paragraph</span>
+													<span _bl_99="">Paragraph</span>
 												</a>
 											</li>
 											<!--!-->
@@ -989,7 +999,7 @@
 												<!--!-->
 												<a href="section-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_98="">Section</span>
+													<span _bl_100="">Section</span>
 												</a>
 											</li>
 											<!--!-->
@@ -998,7 +1008,7 @@
 												<!--!-->
 												<a href="small-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_99="">Small</span>
+													<span _bl_101="">Small</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1007,7 +1017,7 @@
 												<!--!-->
 												<a href="span-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_100="">Span</span>
+													<span _bl_102="">Span</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1016,7 +1026,7 @@
 												<!--!-->
 												<a href="strong-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_101="">Strong</span>
+													<span _bl_103="">Strong</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1025,7 +1035,7 @@
 												<!--!-->
 												<a href="texts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_102="">Text</span>
+													<span _bl_104="">Text</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1034,7 +1044,7 @@
 												<!--!-->
 												<a href="semantic-html" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_103="">Semantic HTML</span>
+													<span _bl_105="">Semantic HTML</span>
 												</a>
 											</li>
 										</ul>
@@ -1072,23 +1082,23 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="w-full max-w-md" data-slot="div">
 																	<form>
 																		<!--!-->
-																		<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																		<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																			<!--!-->
-																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-6" data-slot="field-set">
+																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-4" data-slot="field-set">
 																				<!--!-->
-																				<legend class="mb-3 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Payment Method</legend>
+																				<legend class="mb-1.5 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Payment Method</legend>
 																				<!--!-->                                 
 																				<!--!-->
-																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description">All transactions are secure and encrypted.</p>
+																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description">All transactions are secure and encrypted</p>
 																				<!--!-->                                 
 																				<!--!-->
-																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->
@@ -1096,10 +1106,10 @@
 																					<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																						<!--!-->
 																						<!--!-->
-																						<label for="field-card-name" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_117="">Name on Card</label>
+																						<label for="field-card-name" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_119="">Name on Card</label>
 																						<!--!-->                                         
 																						<!--!-->
-																						<input id="field-card-name" placeholder="Evil Rabbit" required="" data-slot="input" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40">
+																						<input id="field-card-name" placeholder="Evil Rabbit" required="" data-slot="input" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
 																					</div>
 																					<!--!-->                                     
 																					<!--!-->
@@ -1109,13 +1119,13 @@
 																					<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																						<!--!-->
 																						<!--!-->
-																						<label for="field-card-number" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_118="">Card Number</label>
+																						<label for="field-card-number" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_120="">Card Number</label>
 																						<!--!-->                                         
 																						<!--!-->
-																						<input id="field-card-number" placeholder="1234 5678 9012 3456" required="" data-slot="input" aria-describedby="quark-field-9-description" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40">
+																						<input id="field-card-number" placeholder="1234 5678 9012 3456" required="" data-slot="input" aria-describedby="quark-field-9-description" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
 																						<!--!-->                                         
 																						<!--!-->
-																						<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-9-description">Enter your 16-digit card number.</p>
+																						<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-9-description">Enter your 16-digit card number</p>
 																					</div>
 																					<!--!-->                                     
 																					<!--!-->
@@ -1127,7 +1137,7 @@
 																						<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																							<!--!-->
 																							<!--!-->
-																							<label for="field-exp-month" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_122="">Month</label>
+																							<label for="field-exp-month" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_124="">Month</label>
 																							<!--!-->                                             
 																							<!--!-->
 																							<!--!-->
@@ -1140,13 +1150,13 @@
 																								<!--!-->
 																								<!--!-->
 																								<!--!-->
-																								<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_128="">
+																								<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_130="">
 																									<!--!-->
-																									<div style="display:contents;" _bl_132="">
-																										<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-19-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="" id="field-exp-month" class="outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between select-none border border-input bg-transparent rounded-lg transition-colors" data-slot="select-trigger" data-size="default" _bl_133="">
+																									<div style="display:contents;" _bl_134="">
+																										<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-19-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="" id="field-exp-month" class="outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-9 data-[size=sm]:h-8 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 flex text-sm whitespace-nowrap py-2 px-3 w-full gap-2 items-center justify-between select-none border border-input bg-transparent rounded-md shadow-xs transition-[color,box-shadow]" data-slot="select-trigger" data-size="default" _bl_135="">
 																											<!--!-->
 																											<!--!-->
-																											<span style="pointer-events:none;" data-slot="select-value" _bl_138="">MM</span>
+																											<span style="pointer-events:none;" data-slot="select-value" _bl_140="">MM</span>
 																											<!--!-->     
 																											<!--!-->
 																											<span aria-hidden="true" class="pointer-events-none size-4 opacity-50 shrink-0">
@@ -1162,7 +1172,73 @@
 																								<!--!-->
 																								<!--!-->
 																								<!--!-->
-																								<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_126="">
+																								<div _bl_131="">
+																									<!--!-->
+																									<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_136="">
+																										<!--!-->
+																										<div hidden="" style="display:none;">
+																											<!--!-->
+																											<!--!-->
+																											<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+																											</style>
+																											<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_141="">
+																												<div style="min-width:100%;display:block;" _bl_142="">
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-19-item-01-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_146="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-19-item-01-text" _bl_154="">01</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-19-item-02-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_147="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-19-item-02-text" _bl_155="">02</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-19-item-03-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_148="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-19-item-03-text" _bl_156="">03</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-19-item-04-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_149="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-19-item-04-text" _bl_157="">04</span>
+																													</div>
+																												</div>
+																											</div>
+																										</div>
+																									</div>
+																								</div>
+																								<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_128="">
 																									<option value=""></option>
 																									<option value="01">01</option>
 																									<option value="02">02</option>
@@ -1179,7 +1255,7 @@
 																						<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																							<!--!-->
 																							<!--!-->
-																							<label for="field-exp-year" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_123="">Year</label>
+																							<label for="field-exp-year" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_125="">Year</label>
 																							<!--!-->                                             
 																							<!--!-->
 																							<!--!-->
@@ -1192,13 +1268,13 @@
 																								<!--!-->
 																								<!--!-->
 																								<!--!-->
-																								<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_130="">
+																								<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_132="">
 																									<!--!-->
-																									<div style="display:contents;" _bl_135="">
-																										<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-20-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="" id="field-exp-year" class="outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between select-none border border-input bg-transparent rounded-lg transition-colors" data-slot="select-trigger" data-size="default" _bl_136="">
+																									<div style="display:contents;" _bl_137="">
+																										<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-20-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="" id="field-exp-year" class="outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-9 data-[size=sm]:h-8 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 flex text-sm whitespace-nowrap py-2 px-3 w-full gap-2 items-center justify-between select-none border border-input bg-transparent rounded-md shadow-xs transition-[color,box-shadow]" data-slot="select-trigger" data-size="default" _bl_138="">
 																											<!--!-->
 																											<!--!-->
-																											<span style="pointer-events:none;" data-slot="select-value" _bl_141="">YYYY</span>
+																											<span style="pointer-events:none;" data-slot="select-value" _bl_143="">YYYY</span>
 																											<!--!-->     
 																											<!--!-->
 																											<span aria-hidden="true" class="pointer-events-none size-4 opacity-50 shrink-0">
@@ -1214,7 +1290,73 @@
 																								<!--!-->
 																								<!--!-->
 																								<!--!-->
-																								<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_127="">
+																								<div _bl_133="">
+																									<!--!-->
+																									<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_139="">
+																										<!--!-->
+																										<div hidden="" style="display:none;">
+																											<!--!-->
+																											<!--!-->
+																											<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+																											</style>
+																											<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_144="">
+																												<div style="min-width:100%;display:block;" _bl_145="">
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-20-item-2026-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_150="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-20-item-2026-text" _bl_158="">2026</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-20-item-2027-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_151="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-20-item-2027-text" _bl_159="">2027</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-20-item-2028-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_152="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-20-item-2028-text" _bl_160="">2028</span>
+																													</div>
+																													<!--!-->                                                     
+																													<!--!-->
+																													<!--!-->
+																													<!--!-->
+																													<div role="option" aria-labelledby="bradix-select-20-item-2029-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_153="">
+																														<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																															<!--!-->
+																														</span>
+																														<!--!-->     
+																														<!--!-->
+																														<span id="bradix-select-20-item-2029-text" _bl_161="">2029</span>
+																													</div>
+																												</div>
+																											</div>
+																										</div>
+																									</div>
+																								</div>
+																								<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_129="">
 																									<option value=""></option>
 																									<option value="2026">2026</option>
 																									<option value="2027">2027</option>
@@ -1231,10 +1373,10 @@
 																						<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																							<!--!-->
 																							<!--!-->
-																							<label for="field-cvv" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_124="">CVV</label>
+																							<label for="field-cvv" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_126="">CVV</label>
 																							<!--!-->                                             
 																							<!--!-->
-																							<input id="field-cvv" placeholder="123" required="" data-slot="input" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40">
+																							<input id="field-cvv" placeholder="123" required="" data-slot="input" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
 																						</div>
 																					</div>
 																				</div>
@@ -1248,15 +1390,15 @@
 																			</div>
 																			<!--!-->                             
 																			<!--!-->
-																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-6" data-slot="field-set">
+																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-4" data-slot="field-set">
 																				<!--!-->
-																				<legend class="mb-3 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Billing Address</legend>
+																				<legend class="mb-1.5 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Billing Address</legend>
 																				<!--!-->                                 
 																				<!--!-->
-																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description">The billing address associated with your payment method.</p>
+																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description">The billing address associated with your payment method</p>
 																				<!--!-->                                 
 																				<!--!-->
-																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->
@@ -1265,7 +1407,7 @@
 																						<!--!-->
 																						<!--!-->
 																						<!--!-->
-																						<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="field-same-as-shipping" data-slot="checkbox" class="peer relative flex size-4 shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-none group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-foreground dark:data-[state=checked]:bg-primary dark:data-[state=indeterminate]:bg-primary" _bl_125="" data-bradix-checkbox-root="">
+																						<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="field-same-as-shipping" data-slot="checkbox" class="peer relative flex size-4 shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-none group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-foreground dark:data-[state=checked]:bg-primary dark:data-[state=indeterminate]:bg-primary" _bl_127="">
 																							<!--!-->
 																							<span data-state="checked" style="pointer-events: none;" data-slot="checkbox-indicator" class="grid place-content-center text-current transition-none [&amp;>svg]:size-3.5">
 																								<!--!-->
@@ -1274,19 +1416,19 @@
 																								</svg>
 																							</span>
 																						</button>
-																						<input type="checkbox" value="on" tabindex="-1" aria-hidden="true" style="position: absolute; pointer-events: none; opacity: 0; margin: 0px; transform: translateX(-100%); width: 16px; height: 16px;" _bl_119="">
+																						<input type="checkbox" value="on" tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_121="">
 																						<!--!-->                                         
 																						<!--!-->
 																						<!--!-->
-																						<label for="field-same-as-shipping" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-normal select-none" data-slot="field-label" _bl_120="">Same as shipping address</label>
+																						<label for="field-same-as-shipping" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-normal select-none" data-slot="field-label" _bl_122="">Same as shipping address</label>
 																					</div>
 																				</div>
 																			</fieldset>
 																			<!--!-->                             
 																			<!--!-->
-																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-6" data-slot="field-set">
+																			<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-4" data-slot="field-set">
 																				<!--!-->
-																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																				<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->
@@ -1294,10 +1436,10 @@
 																					<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																						<!--!-->
 																						<!--!-->
-																						<label for="field-comments" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_121="">Comments</label>
+																						<label for="field-comments" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_123="">Comments</label>
 																						<!--!-->                                         
 																						<!--!-->
-																						<textarea id="field-comments" placeholder="Add any additional comments" class="flex field-sizing-content min-h-16 w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 resize-none" data-slot="textarea"></textarea>
+																						<textarea id="field-comments" placeholder="Add any additional comments" class="flex field-sizing-content min-h-16 w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40 resize-none" data-slot="textarea"></textarea>
 																					</div>
 																				</div>
 																			</fieldset>
@@ -1308,10 +1450,10 @@
 																			<!--!-->
 																			<div class="group/field data-[invalid=true]:text-destructive flex-row items-center *:data-[slot=field-label]:flex-auto has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&amp;>[role=checkbox],[role=radio]]:mt-px flex w-full gap-2" data-slot="field" role="group" data-orientation="horizontal">
 																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="submit" _bl_107="">Submit</button>
+																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="submit" _bl_109="">Submit</button>
 																				<!--!-->                                 
 																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_108="">Cancel</button>
+																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_110="">Cancel</button>
 																			</div>
 																		</div>
 																	</form>
@@ -1319,18 +1461,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_4=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1354,12 +1491,12 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
-																<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 w-full max-w-xs flex flex-col gap-6" data-slot="field-set">
+																<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 w-full max-w-xs flex flex-col gap-4" data-slot="field-set">
 																	<!--!-->
-																	<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																	<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
@@ -1367,10 +1504,10 @@
 																		<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical">
 																			<!--!-->
 																			<!--!-->
-																			<label for="feedback" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_109="">Feedback</label>
+																			<label for="feedback" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_111="">Feedback</label>
 																			<!--!-->                             
 																			<!--!-->
-																			<textarea id="feedback" placeholder="Your feedback helps us improve..." class="flex field-sizing-content min-h-16 w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40" data-slot="textarea" aria-describedby="quark-field-5-description" rows="4"></textarea>
+																			<textarea id="feedback" placeholder="Your feedback helps us improve..." class="flex field-sizing-content min-h-16 w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40" data-slot="textarea" aria-describedby="quark-field-5-description" rows="4"></textarea>
 																			<!--!-->                             
 																			<!--!-->
 																			<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-5-description">Share your thoughts about our service.</p>
@@ -1380,18 +1517,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_5=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1415,8 +1547,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="w-full max-w-sm" data-slot="div">
 																	<!--!-->
@@ -1428,7 +1560,7 @@
 																		<label class="group/form-label peer/form-label items-center data-[error=true]:text-destructive group-data-[disabled=true]/form-item:pointer-events-none group-data-[disabled=true]/form-item:opacity-50 group-data-[invalid=true]/form-item:text-destructive flex text-sm font-medium leading-snug w-fit gap-2 select-none" data-slot="form-label" data-error="true" for="quark-field-3-control">Email</label>
 																		<!--!-->                         
 																		<!--!-->
-																		<input placeholder="name@example.com" required="" type="email" data-slot="input" id="quark-field-3-control" aria-describedby="quark-field-3-description quark-field-3-error" aria-invalid="true" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40">
+																		<input placeholder="name@example.com" required="" type="email" data-slot="input" id="quark-field-3-control" aria-describedby="quark-field-3-description quark-field-3-error" aria-invalid="true" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
 																		<!--!-->                         
 																		<!--!-->
 																		<p class="text-sm text-muted-foreground [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary font-normal" data-slot="form-description" id="quark-field-3-description">Use your work email for notifications.</p>
@@ -1437,7 +1569,7 @@
 																		<p class="text-sm text-destructive font-normal" data-slot="form-message" id="quark-field-3-error">Email is required.</p>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_104="">
+																		<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_106="">
 																			<!--!-->                             Toggle invalid state
 																		</button>
 																	</div>
@@ -1445,18 +1577,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_6=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1491,15 +1618,15 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
-																<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-6" data-slot="field-set">
+																<fieldset class="has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3 flex flex-col gap-4" data-slot="field-set">
 																	<!--!-->
-																	<legend class="mb-3 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Notification preferences</legend>
+																	<legend class="mb-1.5 data-[variant=label]:text-sm data-[variant=legend]:text-base font-medium" data-slot="field-legend" data-variant="legend">Notification preferences</legend>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 [&amp;>[data-slot=field-group]]:gap-4 w-full flex flex-col gap-7" data-slot="field-group">
+																	<div class="group/field-group @container/field-group data-[slot=checkbox-group]:gap-3 *:data-[slot=field-group]:gap-4 w-full flex flex-col gap-5" data-slot="field-group">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
@@ -1509,7 +1636,7 @@
 																			<div class="group/field-content leading-snug flex flex-1 flex-col gap-0.5" data-slot="field-content">
 																				<!--!-->
 																				<!--!-->
-																				<label for="quark-field-6-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_113="">Email alerts</label>
+																				<label for="quark-field-6-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_115="">Email alerts</label>
 																				<!--!-->                                 
 																				<!--!-->
 																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-6-description">Receive build and deploy notifications in your inbox.</p>
@@ -1519,10 +1646,11 @@
 																			<label for="quark-field-6-control" class="inline-flex cursor-pointer items-center gap-2">
 																				<!--!-->
 																				<!--!-->
-																				<button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" id="quark-field-6-control" data-slot="switch" data-size="default" aria-describedby="quark-field-6-description" class="peer group/switch relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px] data-checked:bg-primary data-unchecked:bg-input dark:data-unchecked:bg-input/80 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input dark:data-[state=unchecked]:bg-input/80 disabled:cursor-not-allowed disabled:opacity-50" _bl_114="" data-bradix-checkbox-root="">
+																				<button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" id="quark-field-6-control" data-slot="switch" data-size="default" aria-describedby="quark-field-6-description" class="peer group/switch inline-flex shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 data-[size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px] data-checked:bg-primary data-unchecked:bg-input dark:data-unchecked:bg-input/80 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input dark:data-[state=unchecked]:bg-input/80 disabled:cursor-not-allowed disabled:opacity-50" _bl_116="">
 																					<!--!-->
 																					<span data-state="unchecked" data-slot="switch-thumb" class="pointer-events-none block rounded-full bg-background ring-0 transition-transform group-data-[size=default]/switch:size-4 group-data-[size=sm]/switch:size-3 group-data-[size=default]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=sm]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=default]/switch:data-unchecked:translate-x-0 group-data-[size=sm]/switch:data-unchecked:translate-x-0 data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0 dark:data-checked:bg-primary-foreground dark:data-unchecked:bg-foreground dark:data-[state=checked]:bg-primary-foreground dark:data-[state=unchecked]:bg-foreground"></span>
 																				</button>
+																				<input type="checkbox" value="on" tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_112="">
 																				<span class="text-sm font-medium leading-none">Enable alerts</span>
 																			</label>
 																		</div>
@@ -1536,7 +1664,7 @@
 																			<div class="group/field-content leading-snug flex flex-1 flex-col gap-0.5" data-slot="field-content">
 																				<!--!-->
 																				<!--!-->
-																				<label for="quark-field-7-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_115="">SMS alerts</label>
+																				<label for="quark-field-7-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_117="">SMS alerts</label>
 																				<!--!-->                                 
 																				<!--!-->
 																				<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-7-description">Use SMS only for urgent production incidents.</p>
@@ -1546,10 +1674,11 @@
 																			<label for="quark-field-7-control" class="inline-flex cursor-pointer items-center gap-2">
 																				<!--!-->
 																				<!--!-->
-																				<button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" id="quark-field-7-control" data-slot="switch" data-size="default" aria-describedby="quark-field-7-description" class="peer group/switch relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px] data-checked:bg-primary data-unchecked:bg-input dark:data-unchecked:bg-input/80 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input dark:data-[state=unchecked]:bg-input/80 disabled:cursor-not-allowed disabled:opacity-50" _bl_116="" data-bradix-checkbox-root="">
+																				<button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" id="quark-field-7-control" data-slot="switch" data-size="default" aria-describedby="quark-field-7-description" class="peer group/switch inline-flex shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 data-[size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px] data-checked:bg-primary data-unchecked:bg-input dark:data-unchecked:bg-input/80 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input dark:data-[state=unchecked]:bg-input/80 disabled:cursor-not-allowed disabled:opacity-50" _bl_118="">
 																					<!--!-->
 																					<span data-state="unchecked" data-slot="switch-thumb" class="pointer-events-none block rounded-full bg-background ring-0 transition-transform group-data-[size=default]/switch:size-4 group-data-[size=sm]/switch:size-3 group-data-[size=default]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=sm]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=default]/switch:data-unchecked:translate-x-0 group-data-[size=sm]/switch:data-unchecked:translate-x-0 data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0 dark:data-checked:bg-primary-foreground dark:data-unchecked:bg-foreground dark:data-[state=checked]:bg-primary-foreground dark:data-[state=unchecked]:bg-foreground"></span>
 																				</button>
+																				<input type="checkbox" value="on" tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_113="">
 																				<span class="text-sm font-medium leading-none">Enable SMS</span>
 																			</label>
 																		</div>
@@ -1558,18 +1687,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_7=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1590,8 +1714,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
 																<!--!-->
@@ -1599,10 +1723,10 @@
 																<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" data-slot="field" role="group" data-orientation="vertical" data-invalid="true">
 																	<!--!-->
 																	<!--!-->
-																	<label for="deploy-branch" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_105="">Deployment branch</label>
+																	<label for="deploy-branch" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_107="">Deployment branch</label>
 																	<!--!-->                     
 																	<!--!-->
-																	<input id="deploy-branch" aria-invalid="true" data-slot="input" aria-describedby="quark-field-1-description quark-field-1-error" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40">
+																	<input id="deploy-branch" aria-invalid="true" data-slot="input" aria-describedby="quark-field-1-description quark-field-1-error" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
 																	<!--!-->                     
 																	<!--!-->
 																	<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-1-description">Use a single git branch name.</p>
@@ -1613,18 +1737,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_8=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1645,8 +1764,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
 																<!--!-->
@@ -1658,7 +1777,7 @@
 																		<div class="space-y-1" data-slot="div">
 																			<!--!-->
 																			<!--!-->
-																			<label for="quark-field-2-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-data-checked:border-primary/30 has-data-checked:bg-primary/5 has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-data-checked:border-primary/20 dark:has-data-checked:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_112="">Starter</label>
+																			<label for="quark-field-2-control" class="items-center group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 has-[[data-slot=checkbox][data-state=checked]]:border-primary/30 has-[[data-slot=checkbox][data-state=checked]]:bg-muted has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/30 has-[[data-slot=radio-group-item][data-state=checked]]:bg-muted has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-slot=checkbox][data-state=checked]]:border-primary/20 dark:has-[[data-slot=checkbox][data-state=checked]]:bg-primary/10 dark:has-[[data-slot=radio-group-item][data-state=checked]]:border-primary/20 dark:has-[[data-slot=radio-group-item][data-state=checked]]:bg-primary/10 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col text-sm font-medium select-none" data-slot="field-label" _bl_114="">Starter</label>
 																			<!--!-->                             
 																			<!--!-->
 																			<p class="text-left text-sm font-normal leading-normal text-muted-foreground group-has-[[data-orientation=horizontal]]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary" data-slot="field-description" id="quark-field-2-description">Good for smaller teams and prototypes.</p>
@@ -1666,13 +1785,13 @@
 																		<!--!-->                         
 																		<!--!-->
 																		<div class="flex items-center gap-2">
-																			<input id="quark-field-2-control" type="radio" name="planChoiceCard" value="Starter" data-state="checked" tabindex="0" class="peer sr-only" aria-describedby="quark-field-2-description" _bl_106="">
+																			<input id="quark-field-2-control" type="radio" name="planChoiceCard" value="Starter" data-state="checked" tabindex="0" class="peer sr-only" aria-describedby="quark-field-2-description" _bl_108="">
 																			<!--!-->
-																			<span data-slot="radio-group-item" data-state="checked" data-checked="true" class="group/radio-group-item peer relative flex aspect-square size-4 shrink-0 rounded-full border border-input outline-none after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary size-4">
+																			<span data-slot="radio-group-item" data-state="checked" data-checked="true" class="aspect-square size-4 shrink-0 rounded-full border border-input text-primary shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:ring-destructive/40 size-4">
 																				<span data-slot="radio-group-indicator" class="relative flex items-center justify-center">
 																					<!--!-->
 																					<!--!-->
-																					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4 shrink-0 align-middle absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2 fill-primary" data-slot="icon">
+																					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4 shrink-0 align-middle absolute top-1/2 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 fill-primary" data-slot="icon">
 																						<circle cx="12" cy="12" r="10"></circle>
 																					</svg>
 																				</span>
@@ -1683,18 +1802,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
 																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_9=""></div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -1722,138 +1836,5 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
-		<div _bl_129="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_134="">
-				<!--!-->
-				<div hidden="" style="display:none;">
-					<!--!-->
-					<!--!-->
-					<style>
-    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
-
-					</style>
-					<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_139="">
-						<div style="min-width:100%;display:block;" _bl_140="">
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-19-item-01-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_144="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-19-item-01-text" _bl_152="">01</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-19-item-02-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_145="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-19-item-02-text" _bl_153="">02</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-19-item-03-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_146="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-19-item-03-text" _bl_154="">03</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-19-item-04-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_147="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-19-item-04-text" _bl_155="">04</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div _bl_131="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_137="">
-				<!--!-->
-				<div hidden="" style="display:none;">
-					<!--!-->
-					<!--!-->
-					<style>
-    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
-
-					</style>
-					<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_142="">
-						<div style="min-width:100%;display:block;" _bl_143="">
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-20-item-2026-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_148="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-20-item-2026-text" _bl_156="">2026</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-20-item-2027-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_149="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-20-item-2027-text" _bl_157="">2027</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-20-item-2028-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_150="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-20-item-2028-text" _bl_158="">2028</span>
-							</div>
-							<!--!-->                                                     
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-20-item-2029-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_151="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-20-item-2029-text" _bl_159="">2029</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>

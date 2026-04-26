@@ -23,16 +23,6 @@
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -60,7 +50,7 @@
 				<!--!-->
 				<header data-slot="header" class="sticky top-0 z-50 w-full bg-background">
 					<!--!-->
-					<div class="mx-auto px-2 w-full px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
+					<div class="mx-auto px-2 w-full max-w-[1400px] container-wrapper px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
 						<div class="flex min-h-12 h-(--header-height) items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="true" data-state="open" class="shrink-0 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<div class="relative flex h-8 w-4 items-center justify-center">
@@ -71,7 +61,7 @@
 									</div>
 									<span class="sr-only">Toggle Menu</span>
 								</div>
-								<span class="flex h-8 items-center text-lg leading-none font-medium">Navigation</span>
+								<span class="flex h-8 items-center text-lg leading-none font-medium">Menu</span>
 							</button>
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="shadcn/ui" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex">
@@ -95,7 +85,7 @@
 							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch ml-2 hidden lg:block" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px ml-2 hidden lg:block" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<a rel="noreferrer" data-slot="button" data-variant="ghost" data-size="sm" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 h-8 shadow-none" href="https://github.com/soenneker/soenneker.quark.suite" target="_blank">
@@ -107,7 +97,7 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" title="Toggle layout" class="hidden shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8 3xl:flex 3xl:group-has-data-[slot=designer]/layout:hidden">
@@ -121,7 +111,7 @@
 								
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+								<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8" aria-label="Toggle theme">
@@ -140,7 +130,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:md:flex">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -163,7 +153,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:flex group-has-data-[slot=designer]/layout:md:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -181,7 +171,7 @@
 								<div class="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" data-variant="default" data-size="sm" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground [a]:hover:bg-primary/80 gap-1 px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 h-[31px] rounded-lg" href="components">
@@ -197,7 +187,7 @@
 					</div>
 				</header>
 				<!--!-->
-				<div class="mx-auto px-2 w-full overflow-hidden grow min-h-0" data-slot="div">
+				<div class="mx-auto px-2 w-full max-w-[1400px] overflow-hidden grow container-wrapper min-h-0" data-slot="div">
 					<!--!-->
 					<div class="flex h-full min-h-0" data-slot="div">
 						<!--!-->
@@ -222,7 +212,7 @@
 												<!--!-->
 												<button class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" type="button">
 													<!--!-->
-													<span _bl_6="">Introduction</span>
+													<span _bl_4="">Introduction</span>
 												</button>
 											</li>
 											<!--!-->
@@ -231,7 +221,7 @@
 												<!--!-->
 												<a href="components" aria-current="page" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="true" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_7="">Components</span>
+													<span _bl_5="">Components</span>
 												</a>
 											</li>
 											<!--!-->
@@ -240,7 +230,7 @@
 												<!--!-->
 												<a href="validation-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_8="">Validation</span>
+													<span _bl_6="">Validation</span>
 												</a>
 											</li>
 										</ul>
@@ -262,7 +252,7 @@
 												<!--!-->
 												<a href="accordions" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_9="">Accordion</span>
+													<span _bl_7="">Accordion</span>
 												</a>
 											</li>
 											<!--!-->
@@ -271,7 +261,7 @@
 												<!--!-->
 												<a href="alerts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_10="">Alert</span>
+													<span _bl_8="">Alert</span>
 												</a>
 											</li>
 											<!--!-->
@@ -280,7 +270,7 @@
 												<!--!-->
 												<a href="alert-dialogs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_11="">Alert Dialog</span>
+													<span _bl_9="">Alert Dialog</span>
 												</a>
 											</li>
 											<!--!-->
@@ -289,7 +279,7 @@
 												<!--!-->
 												<a href="aspect-ratios" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_12="">Aspect Ratio</span>
+													<span _bl_10="">Aspect Ratio</span>
 												</a>
 											</li>
 											<!--!-->
@@ -298,7 +288,7 @@
 												<!--!-->
 												<a href="avatars" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_13="">Avatar</span>
+													<span _bl_11="">Avatar</span>
 												</a>
 											</li>
 											<!--!-->
@@ -307,7 +297,7 @@
 												<!--!-->
 												<a href="badges" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_14="">Badge</span>
+													<span _bl_12="">Badge</span>
 												</a>
 											</li>
 											<!--!-->
@@ -316,7 +306,7 @@
 												<!--!-->
 												<a href="breadcrumbs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_15="">Breadcrumb</span>
+													<span _bl_13="">Breadcrumb</span>
 												</a>
 											</li>
 											<!--!-->
@@ -325,7 +315,7 @@
 												<!--!-->
 												<a href="buttons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_16="">Button</span>
+													<span _bl_14="">Button</span>
 												</a>
 											</li>
 											<!--!-->
@@ -334,7 +324,7 @@
 												<!--!-->
 												<a href="button-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_17="">Button Group</span>
+													<span _bl_15="">Button Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -343,7 +333,7 @@
 												<!--!-->
 												<a href="calendars" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_18="">Calendar</span>
+													<span _bl_16="">Calendar</span>
 												</a>
 											</li>
 											<!--!-->
@@ -352,7 +342,7 @@
 												<!--!-->
 												<a href="cards" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_19="">Card</span>
+													<span _bl_17="">Card</span>
 												</a>
 											</li>
 											<!--!-->
@@ -361,7 +351,7 @@
 												<!--!-->
 												<a href="carousels" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_20="">Carousel</span>
+													<span _bl_18="">Carousel</span>
 												</a>
 											</li>
 											<!--!-->
@@ -370,7 +360,7 @@
 												<!--!-->
 												<a href="checks" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_21="">Checkbox</span>
+													<span _bl_19="">Checkbox</span>
 												</a>
 											</li>
 											<!--!-->
@@ -379,7 +369,7 @@
 												<!--!-->
 												<a href="collapsibles" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_22="">Collapsible</span>
+													<span _bl_20="">Collapsible</span>
 												</a>
 											</li>
 											<!--!-->
@@ -388,7 +378,7 @@
 												<!--!-->
 												<a href="comboboxes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_23="">Combobox</span>
+													<span _bl_21="">Combobox</span>
 												</a>
 											</li>
 											<!--!-->
@@ -397,7 +387,7 @@
 												<!--!-->
 												<a href="commands" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_24="">Command</span>
+													<span _bl_22="">Command</span>
 												</a>
 											</li>
 											<!--!-->
@@ -406,7 +396,7 @@
 												<!--!-->
 												<a href="context-menus" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_25="">Context Menu</span>
+													<span _bl_23="">Context Menu</span>
 												</a>
 											</li>
 											<!--!-->
@@ -415,7 +405,7 @@
 												<!--!-->
 												<a href="container" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_26="">Container</span>
+													<span _bl_24="">Container</span>
 												</a>
 											</li>
 											<!--!-->
@@ -424,9 +414,9 @@
 												<!--!-->
 												<a href="currency-inputs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_27="">Currency Input</span>
+													<span _bl_25="">Currency Input</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_28=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_26=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -435,7 +425,7 @@
 												<!--!-->
 												<a href="tables-basic" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_29="">Table</span>
+													<span _bl_27="">Table</span>
 												</a>
 											</li>
 											<!--!-->
@@ -444,7 +434,7 @@
 												<!--!-->
 												<a href="datepickers" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_30="">Date Picker</span>
+													<span _bl_28="">Date Picker</span>
 												</a>
 											</li>
 											<!--!-->
@@ -453,7 +443,7 @@
 												<!--!-->
 												<a href="dialogs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_31="">Dialog</span>
+													<span _bl_29="">Dialog</span>
 												</a>
 											</li>
 											<!--!-->
@@ -462,7 +452,7 @@
 												<!--!-->
 												<a href="directions" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="true" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md bg-sidebar-accent text-sidebar-accent-foreground font-medium" aria-current="page">
 													<!--!-->
-													<span _bl_32="">Direction</span>
+													<span _bl_30="">Direction</span>
 												</a>
 											</li>
 											<!--!-->
@@ -471,7 +461,7 @@
 												<!--!-->
 												<a href="drawers" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_33="">Drawer</span>
+													<span _bl_31="">Drawer</span>
 												</a>
 											</li>
 											<!--!-->
@@ -480,7 +470,7 @@
 												<!--!-->
 												<a href="dropdowns" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_34="">Dropdown Menu</span>
+													<span _bl_32="">Dropdown Menu</span>
 												</a>
 											</li>
 											<!--!-->
@@ -489,7 +479,7 @@
 												<!--!-->
 												<a href="empties" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_35="">Empty</span>
+													<span _bl_33="">Empty</span>
 												</a>
 											</li>
 											<!--!-->
@@ -498,7 +488,7 @@
 												<!--!-->
 												<a href="fields" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_36="">Field</span>
+													<span _bl_34="">Field</span>
 												</a>
 											</li>
 											<!--!-->
@@ -507,7 +497,7 @@
 												<!--!-->
 												<a href="grids" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_37="">Grid</span>
+													<span _bl_35="">Grid</span>
 												</a>
 											</li>
 											<!--!-->
@@ -516,7 +506,7 @@
 												<!--!-->
 												<a href="header" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_38="">Header</span>
+													<span _bl_36="">Header</span>
 												</a>
 											</li>
 											<!--!-->
@@ -525,7 +515,7 @@
 												<!--!-->
 												<a href="hover-cards" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_39="">Hover Card</span>
+													<span _bl_37="">Hover Card</span>
 												</a>
 											</li>
 											<!--!-->
@@ -534,7 +524,7 @@
 												<!--!-->
 												<a href="input-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_40="">Input</span>
+													<span _bl_38="">Input</span>
 												</a>
 											</li>
 											<!--!-->
@@ -543,7 +533,7 @@
 												<!--!-->
 												<a href="input-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_41="">Input Group</span>
+													<span _bl_39="">Input Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -552,7 +542,7 @@
 												<!--!-->
 												<a href="input-otp" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_42="">Input OTP</span>
+													<span _bl_40="">Input OTP</span>
 												</a>
 											</li>
 											<!--!-->
@@ -561,7 +551,7 @@
 												<!--!-->
 												<a href="items" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_43="">Item</span>
+													<span _bl_41="">Item</span>
 												</a>
 											</li>
 											<!--!-->
@@ -570,7 +560,7 @@
 												<!--!-->
 												<a href="kbd" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_44="">Kbd</span>
+													<span _bl_42="">Kbd</span>
 												</a>
 											</li>
 											<!--!-->
@@ -579,7 +569,7 @@
 												<!--!-->
 												<a href="labels" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_45="">Label</span>
+													<span _bl_43="">Label</span>
 												</a>
 											</li>
 											<!--!-->
@@ -588,7 +578,7 @@
 												<!--!-->
 												<a href="menubar" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_46="">Menubar</span>
+													<span _bl_44="">Menubar</span>
 												</a>
 											</li>
 											<!--!-->
@@ -597,9 +587,9 @@
 												<!--!-->
 												<a href="attachments" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_47="">Attachments</span>
+													<span _bl_45="">Attachments</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_48=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_46=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -608,9 +598,9 @@
 												<!--!-->
 												<a href="model-selectors" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_49="">Model Selector</span>
+													<span _bl_47="">Model Selector</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_50=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_48=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -619,7 +609,7 @@
 												<!--!-->
 												<a href="native-selects" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_51="">Native Select</span>
+													<span _bl_49="">Native Select</span>
 												</a>
 											</li>
 											<!--!-->
@@ -628,7 +618,7 @@
 												<!--!-->
 												<a href="navigation-menu" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_52="">Navigation Menu</span>
+													<span _bl_50="">Navigation Menu</span>
 												</a>
 											</li>
 											<!--!-->
@@ -637,7 +627,7 @@
 												<!--!-->
 												<a href="paginations" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_53="">Pagination</span>
+													<span _bl_51="">Pagination</span>
 												</a>
 											</li>
 											<!--!-->
@@ -646,7 +636,7 @@
 												<!--!-->
 												<a href="popovers" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_54="">Popover</span>
+													<span _bl_52="">Popover</span>
 												</a>
 											</li>
 											<!--!-->
@@ -655,9 +645,9 @@
 												<!--!-->
 												<a href="prompt-inputs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_55="">Prompt Input</span>
+													<span _bl_53="">Prompt Input</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_56=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_54=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -666,7 +656,7 @@
 												<!--!-->
 												<a href="progresses" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_57="">Progress</span>
+													<span _bl_55="">Progress</span>
 												</a>
 											</li>
 											<!--!-->
@@ -675,7 +665,7 @@
 												<!--!-->
 												<a href="radiogroups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_58="">Radio Group</span>
+													<span _bl_56="">Radio Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -684,7 +674,7 @@
 												<!--!-->
 												<a href="resizable" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_59="">Resizable</span>
+													<span _bl_57="">Resizable</span>
 												</a>
 											</li>
 											<!--!-->
@@ -693,7 +683,7 @@
 												<!--!-->
 												<a href="scroll-area" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_60="">Scroll Area</span>
+													<span _bl_58="">Scroll Area</span>
 												</a>
 											</li>
 											<!--!-->
@@ -702,7 +692,7 @@
 												<!--!-->
 												<a href="selects" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_61="">Select</span>
+													<span _bl_59="">Select</span>
 												</a>
 											</li>
 											<!--!-->
@@ -711,7 +701,7 @@
 												<!--!-->
 												<a href="separators" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_62="">Separator</span>
+													<span _bl_60="">Separator</span>
 												</a>
 											</li>
 											<!--!-->
@@ -720,7 +710,7 @@
 												<!--!-->
 												<a href="sheets" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_63="">Sheet</span>
+													<span _bl_61="">Sheet</span>
 												</a>
 											</li>
 											<!--!-->
@@ -729,7 +719,7 @@
 												<!--!-->
 												<a href="sidebar" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_64="">Sidebar</span>
+													<span _bl_62="">Sidebar</span>
 												</a>
 											</li>
 											<!--!-->
@@ -738,7 +728,7 @@
 												<!--!-->
 												<a href="skeletons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_65="">Skeleton</span>
+													<span _bl_63="">Skeleton</span>
 												</a>
 											</li>
 											<!--!-->
@@ -747,7 +737,7 @@
 												<!--!-->
 												<a href="sliders" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_66="">Slider</span>
+													<span _bl_64="">Slider</span>
 												</a>
 											</li>
 											<!--!-->
@@ -756,9 +746,9 @@
 												<!--!-->
 												<a href="sortables" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_67="">Sortable</span>
+													<span _bl_65="">Sortable</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_68=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_66=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -767,7 +757,7 @@
 												<!--!-->
 												<a href="sonner" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_69="">Sonner</span>
+													<span _bl_67="">Sonner</span>
 												</a>
 											</li>
 											<!--!-->
@@ -776,7 +766,7 @@
 												<!--!-->
 												<a href="spinners" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_70="">Spinner</span>
+													<span _bl_68="">Spinner</span>
 												</a>
 											</li>
 											<!--!-->
@@ -785,9 +775,9 @@
 												<!--!-->
 												<a href="suggestions" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_71="">Suggestions</span>
+													<span _bl_69="">Suggestions</span>
 													<!--!-->
-													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_72=""></span>
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_70=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -796,7 +786,7 @@
 												<!--!-->
 												<a href="stack" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_73="">Stack</span>
+													<span _bl_71="">Stack</span>
 												</a>
 											</li>
 											<!--!-->
@@ -805,7 +795,7 @@
 												<!--!-->
 												<a href="stepsdemo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_74="">Steps</span>
+													<span _bl_72="">Steps</span>
 												</a>
 											</li>
 											<!--!-->
@@ -814,7 +804,7 @@
 												<!--!-->
 												<a href="switches" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_75="">Switch</span>
+													<span _bl_73="">Switch</span>
 												</a>
 											</li>
 											<!--!-->
@@ -823,7 +813,7 @@
 												<!--!-->
 												<a href="tabs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_76="">Tabs</span>
+													<span _bl_74="">Tabs</span>
 												</a>
 											</li>
 											<!--!-->
@@ -832,7 +822,18 @@
 												<!--!-->
 												<a href="textareas" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_77="">Textarea</span>
+													<span _bl_75="">Textarea</span>
+												</a>
+											</li>
+											<!--!-->
+											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
+												<!--!-->
+												<!--!-->
+												<a href="threads" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
+													<!--!-->
+													<span _bl_76="">Thread</span>
+													<!--!-->
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_77=""></span>
 												</a>
 											</li>
 											<!--!-->
@@ -1073,101 +1074,139 @@
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
+											<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+												<!--!-->                 The 
+												<!--!-->
+												<code class="relative px-[0.3rem] py-[0.2rem] text-sm font-mono font-semibold bg-muted rounded" data-slot="code">DirectionProvider</code>
+												component is used to set the text direction (
+												<!--!-->
+												<code class="relative px-[0.3rem] py-[0.2rem] text-sm font-mono font-semibold bg-muted rounded" data-slot="code">ltr</code>
+												or 
+												<!--!-->
+												<code class="relative px-[0.3rem] py-[0.2rem] text-sm font-mono font-semibold bg-muted rounded" data-slot="code">rtl</code>
+												<!--!-->) for your application. This is essential for supporting right-to-left languages like Arabic, Hebrew, and Persian.
+											</p>
+											<!--!-->             
+											<!--!-->
+											<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+												<!--!-->                 Here's a preview of the component in RTL mode. Use the language selector to switch the language. To see more examples, look for the RTL section on components pages.
+											</p>
+											<!--!-->              
+											<!--!-->
 											<div class="w-full space-y-4">
-												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Demo</h3>
-													<p class="text-sm text-muted-foreground">DirectionProvider lets you preview left-to-right and right-to-left flows side by side.</p>
-												</div>
+												<div class="space-y-2"></div>
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex h-auto w-full flex-col p-0">
+															<div class="w-full">
 																<!--!-->
-																<div class="grid gap-6 md:grid-cols-2" data-slot="div">
+																<div class="flex h-16 items-center border-b px-4" data-slot="div">
 																	<!--!-->
 																	<!--!-->
-																	<div data-slot="direction-provider" dir="ltr">
+																	<!--!-->
+																	<div data-slot="select" data-size="default" data-state="closed" class="group/select relative w-full max-w-full">
 																		<!--!-->
-																		<div class="space-y-4 rounded-xl border bg-card p-5 text-left" data-slot="div">
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_104="">
 																			<!--!-->
-																			<div class="flex items-center justify-between" data-slot="div">
-																				<!--!-->
-																				<p class="[&amp;:not(:first-child)]:mt-6 text-sm font-semibold leading-7" data-slot="paragraph">Left to right</p>
-																				<!--!-->                                 
-																				<!--!-->
-																				<span class="text-muted-foreground text-xs px-2 py-1 border border-border rounded-full" _bl_100="">LTR</span>
-																			</div>
-																			<!--!-->                              
-																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-sm leading-7" data-slot="paragraph">
-																				<!--!-->                                 Ship changes, review feedback, and coordinate release work in the default left-to-right flow.
-																			</p>
-																			<!--!-->                              
-																			<!--!-->
-																			<div class="flex flex-wrap gap-2" data-slot="div">
-																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="button" _bl_101="">Deploy</button>
-																				<!--!-->                                 
-																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_102="">Preview</button>
+																			<div style="display:contents;" _bl_106="">
+																				<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-1-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-name="language-selector" class="outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-9 data-[size=sm]:h-8 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 flex text-sm whitespace-nowrap py-2 px-3 w-fit gap-2 items-center justify-between select-none border border-input bg-transparent rounded-md shadow-xs transition-[color,box-shadow] w-36" data-slot="select-trigger" data-size="sm" _bl_107="">
+																					<!--!-->
+																					<!--!-->
+																					<span style="pointer-events:none;" data-slot="select-value" _bl_111="">Arabic (العربية)</span>
+																					<!--!-->     
+																					<!--!-->
+																					<span aria-hidden="true" class="pointer-events-none size-4 opacity-50 shrink-0">
+																						<!--!-->
+																						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+																							<path d="m6 9 6 6 6-6"></path>
+																						</svg>
+																					</span>
+																				</button>
 																			</div>
 																		</div>
-																	</div>
-																	<!--!-->                      
-																	<!--!-->
-																	<!--!-->
-																	<div data-slot="direction-provider" dir="rtl">
+																		<!--!-->                         
 																		<!--!-->
-																		<div class="space-y-4 rounded-xl border bg-card p-5 text-right" data-slot="div">
+																		<!--!-->
+																		<!--!-->
+																	</div>
+																</div>
+																<!--!-->                  
+																<!--!-->
+																<div class="flex justify-center p-10" data-slot="div">
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<div data-slot="direction-provider" dir="rtl" class="contents">
+																		<!--!-->
+																		<!--!-->
+																		<div dir="rtl" class="group/card flex flex-col gap-4 overflow-hidden rounded-xl bg-card py-4 text-sm text-card-foreground ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl w-full max-w-sm" data-slot="card" data-size="default">
 																			<!--!-->
-																			<div class="flex items-center justify-between" data-slot="div">
+																			<div data-slot="card-header" class="group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-4 group-data-[size=sm]/card:px-3 has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3">
 																				<!--!-->
-																				<span class="text-muted-foreground text-xs px-2 py-1 border border-border rounded-full" _bl_103="">RTL</span>
+																				<div data-slot="card-title" class="cn-font-heading text-base leading-snug font-medium group-data-[size=sm]/card:text-sm">تسجيل الدخول إلى حسابك</div>
 																				<!--!-->                                 
 																				<!--!-->
-																				<p class="[&amp;:not(:first-child)]:mt-6 text-sm font-semibold leading-7" data-slot="paragraph">
-																					<!--!-->من اليمين إلى اليسار</p>
+																				<div class="text-sm text-muted-foreground" data-slot="card-description">أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك</div>
+																				<!--!-->                                 
+																				<!--!-->
+																				<div data-slot="card-action" class="col-start-2 row-span-2 row-start-1 self-start justify-self-end">
+																					<!--!-->
+																					<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent text-primary underline-offset-4 hover:underline h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="link" data-size="default" type="button" _bl_103="">إنشاء حساب</button>
+																				</div>
 																			</div>
-																			<!--!-->                              
+																			<!--!-->                             
 																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-sm leading-7" data-slot="paragraph">
-																				<!--!-->                                 استخدم موفر الاتجاه لمعاينة الواجهات العربية أو العبرية مع نفس مكونات كوارك.
-																			</p>
-																			<!--!-->                              
+																			<div data-slot="card-content" class="px-4 group-data-[size=sm]/card:px-3">
+																				<form>
+																					<!--!-->
+																					<div class="flex flex-col gap-6" data-slot="div">
+																						<!--!-->
+																						<div class="grid gap-2" data-slot="div">
+																							<!--!-->
+																							<!--!-->
+																							<label for="email-rtl" class="items-center gap-2 text-sm leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 flex font-medium" data-slot="label" _bl_109="">البريد الإلكتروني</label>
+																							<!--!-->                                             
+																							<!--!-->
+																							<input id="email-rtl" placeholder="m@example.com" required="" type="email" data-slot="input" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
+																						</div>
+																						<!--!-->                                         
+																						<!--!-->
+																						<div class="grid gap-2" data-slot="div">
+																							<!--!-->
+																							<div class="flex items-center" data-slot="div">
+																								<!--!-->
+																								<!--!-->
+																								<label for="password-rtl" class="items-center gap-2 text-sm leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 flex font-medium" data-slot="label" _bl_110="">كلمة المرور</label>
+																								<!--!-->
+																								<a href="#" class="ms-auto inline-block text-sm underline-offset-4 hover:underline">نسيت كلمة المرور؟</a>
+																							</div>
+																							<!--!-->                                             
+																							<!--!-->
+																							<input id="password-rtl" required="" type="password" data-slot="input" class="h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40">
+																						</div>
+																					</div>
+																				</form>
+																			</div>
+																			<!--!-->                             
 																			<!--!-->
-																			<div class="flex flex-wrap justify-end gap-2" data-slot="div">
+																			<div class="flex items-center rounded-b-xl border-t bg-muted/50 p-4 group-data-[size=sm]/card:p-3 flex-col gap-2" data-slot="card-footer">
 																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="button" _bl_104="">
-																					<!--!-->نشر</button>
+																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all w-full" data-slot="button" data-variant="default" data-size="default" type="submit" _bl_101="">تسجيل الدخول</button>
 																				<!--!-->                                 
 																				<!--!-->
-																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_105="">
-																					<!--!-->معاينة</button>
+																				<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all w-full" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_102="">تسجيل الدخول باستخدام Google</button>
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
-														</div>
-													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
-														<div class="relative">
-															<div class="bg-muted/25">
-																<!--!-->
-																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_4=""></div>
-															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
-																<!--!-->
-																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
-																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-																	<!--!-->                                 View Code
-																</button>
 															</div>
 														</div>
 													</div>
@@ -1178,71 +1217,29 @@
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
-											<div class="w-full space-y-4">
-												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Content blocks</h3>
-													<p class="text-sm text-muted-foreground">Direction can also scope smaller regions instead of the whole app.</p>
-												</div>
-												<!--!-->
-												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
-													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
-																<!--!-->
-																<div class="grid gap-4" data-slot="div">
-																	<!--!-->
-																	<!--!-->
-																	<div data-slot="direction-provider" dir="ltr">
-																		<!--!-->
-																		<div class="rounded-xl border border-dashed border-border bg-background p-4" data-slot="div">
-																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 text-sm font-medium leading-7" data-slot="paragraph">Billing summary</p>
-																			<!--!-->                             
-																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 leading-7 mt-1 text-sm text-muted-foreground" data-slot="paragraph">Direction can be applied to just the components that need it.</p>
-																		</div>
-																	</div>
-																	<!--!-->                      
-																	<!--!-->
-																	<!--!-->
-																	<div data-slot="direction-provider" dir="rtl">
-																		<!--!-->
-																		<div class="rounded-xl border border-dashed border-border bg-background p-4 text-right" data-slot="div">
-																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 text-sm font-medium leading-7" data-slot="paragraph">
-																				<!--!-->ملخص الفوترة</p>
-																			<!--!-->                             
-																			<!--!-->
-																			<p class="[&amp;:not(:first-child)]:mt-6 leading-7 mt-1 text-sm text-muted-foreground" data-slot="paragraph">
-																				<!--!-->يمكنك تطبيق الاتجاه على قسم واحد فقط دون تغيير بقية الصفحة.</p>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
-														<div class="relative">
-															<div class="bg-muted/25">
-																<!--!-->
-																<div readonly="" class="w-full min-w-0 text-sm" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_5=""></div>
-															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
-																<!--!-->
-																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
-																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-																	<!--!-->                                 View Code
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<h2 class="scroll-m-20 border-b pb-2 first:mt-0 text-xl font-semibold tracking-tight" data-slot="h2">Installation</h2>
+											<!--!-->             
+											<!--!-->
+											<pre text="npx shadcn@latest add direction" data-slot="pre-code" class="p-3 rounded overflow-auto">
+												<code highlight=""></code>
+											</pre>
+										</section>
+										<!--!-->          
+										<!--!-->
+										<section class="space-y-4" data-slot="section">
+											<!--!-->
+											<h2 class="scroll-m-20 border-b pb-2 first:mt-0 text-xl font-semibold tracking-tight" data-slot="h2">Usage</h2>
+											<!--!-->             
+											<!--!-->
+											<pre text="<html dir=&quot;rtl&quot;>
+  <body>
+    <DirectionProvider Dir=&quot;rtl&quot;>
+      @* Your app content *@
+    </DirectionProvider>
+  </body>
+</html>" data-slot="pre-code" class="p-3 rounded overflow-auto">
+												<code highlight=""></code>
+											</pre>
 										</section>
 									</div>
 								</div>
@@ -1260,6 +1257,70 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
+		<div _bl_105="">
+			<!--!-->
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_108="">
+				<!--!-->
+				<div hidden="" style="display:none;">
+					<!--!-->
+					<!--!-->
+					<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+					</style>
+					<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_112="">
+						<div style="min-width:100%;display:block;" _bl_113="">
+							<!--!-->
+							<!--!-->
+							<!--!-->
+							<div role="group" aria-labelledby="bradix-select-1-group-label" data-slot="select-group" class="p-1">
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<div role="option" aria-labelledby="bradix-select-1-item-ar-text" aria-selected="false" data-state="checked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_114="">
+									<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+										<!--!-->
+										<span aria-hidden="true">
+											<!--!-->
+											<svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+												<path d="M20 6 9 17l-5-5"></path>
+											</svg>
+										</span>
+									</span>
+									<!--!-->     
+									<!--!-->
+									<span id="bradix-select-1-item-ar-text" _bl_117="">Arabic (العربية)</span>
+								</div>
+								<!--!-->                                 
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<div role="option" aria-labelledby="bradix-select-1-item-en-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_115="">
+									<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+										<!--!-->
+									</span>
+									<!--!-->     
+									<!--!-->
+									<span id="bradix-select-1-item-en-text" _bl_118="">English</span>
+								</div>
+								<!--!-->                                 
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<div role="option" aria-labelledby="bradix-select-1-item-he-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="outline-hidden focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm" data-slot="select-item" _bl_116="">
+									<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+										<!--!-->
+									</span>
+									<!--!-->     
+									<!--!-->
+									<span id="bradix-select-1-item-he-text" _bl_119="">Hebrew (עברית)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

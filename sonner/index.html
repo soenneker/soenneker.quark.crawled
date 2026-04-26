@@ -1227,7 +1227,6 @@
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
 		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/razor-BYAHOTkz.js"></script>
 		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/htmlMode-Bz67EXwp.js"></script>
-		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/lspLanguageFeatures-kM9O9rjY.js"></script>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -1255,7 +1254,7 @@
 				<!--!-->
 				<header data-slot="header" class="sticky top-0 z-50 w-full bg-background">
 					<!--!-->
-					<div class="mx-auto px-2 w-full px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
+					<div class="mx-auto px-2 w-full max-w-[1400px] container-wrapper px-6 group-has-data-[slot=designer]/layout:max-w-none 3xl:fixed:px-0" data-slot="div">
 						<div class="flex min-h-12 h-(--header-height) items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="true" data-state="open" class="shrink-0 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<div class="relative flex h-8 w-4 items-center justify-center">
@@ -1266,7 +1265,7 @@
 									</div>
 									<span class="sr-only">Toggle Menu</span>
 								</div>
-								<span class="flex h-8 items-center text-lg leading-none font-medium">Navigation</span>
+								<span class="flex h-8 items-center text-lg leading-none font-medium">Menu</span>
 							</button>
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="shadcn/ui" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex">
@@ -1290,7 +1289,7 @@
 							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch ml-2 hidden lg:block" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px ml-2 hidden lg:block" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<a rel="noreferrer" data-slot="button" data-variant="ghost" data-size="sm" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 h-8 shadow-none" href="https://github.com/soenneker/soenneker.quark.suite" target="_blank">
@@ -1302,7 +1301,7 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator" data-vertical=""></div>
+								<div role="none" data-orientation="vertical" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px hidden group-has-data-[slot=designer]/layout:hidden 3xl:flex" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" title="Toggle layout" class="hidden shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8 3xl:flex 3xl:group-has-data-[slot=designer]/layout:hidden">
@@ -1316,7 +1315,7 @@
 								
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+								<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 								<!--!-->                      
 								<!--!-->
 								<button type="button" data-slot="button" data-variant="ghost" data-size="icon" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8" aria-label="Toggle theme">
@@ -1335,7 +1334,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:md:flex">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -1358,7 +1357,7 @@
 								<div class="hidden items-center gap-2 group-has-data-[slot=designer]/layout:flex group-has-data-[slot=designer]/layout:md:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 h-[31px] gap-1 rounded-lg" href="https://v0.dev/chat/api/open?url=https://ui.shadcn.com/init/v0?preset=b0&amp;base=radix&amp;title=New radix-nova project" target="_blank">
@@ -1376,7 +1375,7 @@
 								<div class="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
 									<!--!-->
 									<!--!-->
-									<div role="none" data-orientation="vertical" data-slot="separator" data-vertical="" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div>
+									<div role="none" data-orientation="vertical" data-slot="separator" class="shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"></div>
 									<!--!-->                          
 									<!--!-->
 									<a data-slot="button" data-variant="default" data-size="sm" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-primary text-primary-foreground [a]:hover:bg-primary/80 gap-1 px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 h-[31px] rounded-lg" href="components">
@@ -1392,7 +1391,7 @@
 					</div>
 				</header>
 				<!--!-->
-				<div class="mx-auto px-2 w-full overflow-hidden grow min-h-0" data-slot="div">
+				<div class="mx-auto px-2 w-full max-w-[1400px] overflow-hidden grow container-wrapper min-h-0" data-slot="div">
 					<!--!-->
 					<div class="flex h-full min-h-0" data-slot="div">
 						<!--!-->
@@ -2034,9 +2033,20 @@
 											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
 												<!--!-->
 												<!--!-->
+												<a href="threads" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
+													<!--!-->
+													<span _bl_105="">Thread</span>
+													<!--!-->
+													<span title="New" class="size-2 flex rounded-full bg-blue-500" _bl_106=""></span>
+												</a>
+											</li>
+											<!--!-->
+											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
+												<!--!-->
+												<!--!-->
 												<a href="timelines" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_105="">Timeline</span>
+													<span _bl_107="">Timeline</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2045,7 +2055,7 @@
 												<!--!-->
 												<a href="toggles" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_106="">Toggle</span>
+													<span _bl_108="">Toggle</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2054,7 +2064,7 @@
 												<!--!-->
 												<a href="toggle-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_107="">Toggle Group</span>
+													<span _bl_109="">Toggle Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2063,7 +2073,7 @@
 												<!--!-->
 												<a href="tooltips" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_108="">Tooltip</span>
+													<span _bl_110="">Tooltip</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2072,7 +2082,7 @@
 												<!--!-->
 												<a href="typography" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_109="">Typography</span>
+													<span _bl_111="">Typography</span>
 												</a>
 											</li>
 										</ul>
@@ -2094,7 +2104,7 @@
 												<!--!-->
 												<a href="divs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_110="">Div</span>
+													<span _bl_112="">Div</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2103,7 +2113,7 @@
 												<!--!-->
 												<a href="margin-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_111="">Margin</span>
+													<span _bl_113="">Margin</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2112,7 +2122,7 @@
 												<!--!-->
 												<a href="padding-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_112="">Padding</span>
+													<span _bl_114="">Padding</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2121,7 +2131,7 @@
 												<!--!-->
 												<a href="anchors" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_113="">Anchor</span>
+													<span _bl_115="">Anchor</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2130,7 +2140,7 @@
 												<!--!-->
 												<a href="blockquotes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_114="">Blockquote</span>
+													<span _bl_116="">Blockquote</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2139,7 +2149,7 @@
 												<!--!-->
 												<a href="br-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_115="">Br</span>
+													<span _bl_117="">Br</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2148,7 +2158,7 @@
 												<!--!-->
 												<a href="codes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_116="">Code</span>
+													<span _bl_118="">Code</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2157,7 +2167,7 @@
 												<!--!-->
 												<a href="fieldsets-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_117="">Fieldset</span>
+													<span _bl_119="">Fieldset</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2166,7 +2176,7 @@
 												<!--!-->
 												<a href="figures" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_118="">Figure</span>
+													<span _bl_120="">Figure</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2175,7 +2185,7 @@
 												<!--!-->
 												<a href="icons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_119="">Icons</span>
+													<span _bl_121="">Icons</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2184,7 +2194,7 @@
 												<!--!-->
 												<a href="paragraph-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_120="">Paragraph</span>
+													<span _bl_122="">Paragraph</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2193,7 +2203,7 @@
 												<!--!-->
 												<a href="section-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_121="">Section</span>
+													<span _bl_123="">Section</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2202,7 +2212,7 @@
 												<!--!-->
 												<a href="small-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_122="">Small</span>
+													<span _bl_124="">Small</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2211,7 +2221,7 @@
 												<!--!-->
 												<a href="span-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_123="">Span</span>
+													<span _bl_125="">Span</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2220,7 +2230,7 @@
 												<!--!-->
 												<a href="strong-demo" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_124="">Strong</span>
+													<span _bl_126="">Strong</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2229,7 +2239,7 @@
 												<!--!-->
 												<a href="texts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_125="">Text</span>
+													<span _bl_127="">Text</span>
 												</a>
 											</li>
 											<!--!-->
@@ -2238,7 +2248,7 @@
 												<!--!-->
 												<a href="semantic-html" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button w-full overflow-hidden text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 h-8 text-sm relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex p-2 gap-2 items-center rounded-md">
 													<!--!-->
-													<span _bl_126="">Semantic HTML</span>
+													<span _bl_128="">Semantic HTML</span>
 												</a>
 											</li>
 										</ul>
@@ -2271,24 +2281,19 @@
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
 													<h3 class="text-xl font-semibold tracking-tight">Demo</h3>
-													<p class="text-sm text-muted-foreground">Show the standard shadcn toast with description and undo action.</p>
+													<p class="text-sm text-muted-foreground">An opinionated toast component for React.</p>
 												</div>
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_4="">Show Toast</button>
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -2351,15 +2356,13 @@
 																						</div>
 																						<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Toast</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Event&nbsp;has&nbsp;been&nbsp;created",&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Toast("Event&nbsp;has&nbsp;been&nbsp;created",&nbsp;optio</span>
+																								<span class="mtk1">ns&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																					</div>
@@ -2393,7 +2396,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -2417,8 +2420,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="flex flex-wrap gap-2" data-slot="div">
 																	<!--!-->
@@ -2442,12 +2445,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -2510,20 +2508,12 @@
 																						</div>
 																						<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Toast</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Event&nbsp;has&nbsp;been&nbsp;created"</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Toast("Event&nbsp;has&nbsp;been&nbsp;created");</span>
 																							</span>
 																						</div>
 																						<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Success</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Saved&nbsp;successfully"</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Success("Saved&nbsp;successfully");</span>
 																							</span>
 																						</div>
 																					</div>
@@ -2557,7 +2547,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -2595,8 +2585,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="flex flex-wrap gap-2" data-slot="div">
 																	<!--!-->
@@ -2608,12 +2598,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -2667,15 +2652,13 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 172px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Toast</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Your&nbsp;message&nbsp;has&nbsp;been&nbsp;sent",&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Toast("Your&nbsp;message&nbsp;has&nbsp;been&nbsp;sent",&nbsp;o</span>
+																								<span class="mtk1">ptions&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -2691,12 +2674,8 @@
 																						</div>
 																						<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;options.Action&nbsp;=</span>
-																								<span class="mtk1 bracket-highlighting-2">(</span>
-																								<span class="mtk1 bracket-highlighting-2">)</span>
-																								<span class="mtk1">&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
-																								<span class="mtk1">&nbsp;ValueTask.CompletedTask;</span>
+																								<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;options.Action&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;ValueTask.CompletedTask</span>
+																								<span class="mtk1">;</span>
 																							</span>
 																						</div>
 																					</div>
@@ -2730,7 +2709,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -2754,8 +2733,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="flex flex-wrap gap-2" data-slot="div">
 																	<!--!-->
@@ -2767,12 +2746,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -2826,17 +2800,13 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 172px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Promise</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">SimulateRequest</span>
-																								<span class="mtk1 bracket-highlighting-1">(</span>
-																								<span class="mtk1 bracket-highlighting-1">)</span>
-																								<span class="mtk1">,&nbsp;new&nbsp;SonnerPromiseOptions</span>
+																								<span class="mtk1">await&nbsp;Toasts.Promise(SimulateRequest(),&nbsp;new&nbsp;Sonner</span>
+																								<span class="mtk1">PromiseOptions</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -2885,7 +2855,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -2909,8 +2879,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="grid-cols-2 grid max-w-md gap-2" data-slot="grid">
 																	<!--!-->
@@ -2934,12 +2904,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -2985,15 +2950,12 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 134px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Info</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Deployment&nbsp;started",&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Info("Deployment&nbsp;started",&nbsp;options&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -3003,9 +2965,7 @@
 																						</div>
 																						<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">}</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">});</span>
 																							</span>
 																						</div>
 																					</div>
@@ -3039,7 +2999,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -3063,8 +3023,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<div class="flex flex-wrap gap-2" data-slot="div">
 																	<!--!-->
@@ -3076,12 +3036,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -3127,15 +3082,12 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 134px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Custom</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">builder&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Custom(builder&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -3145,12 +3097,7 @@
 																						</div>
 																						<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">}</span>
-																								<span class="mtk1">,&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
-																								<span class="mtk1">&nbsp;options.Duration&nbsp;=&nbsp;0</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">},&nbsp;options&nbsp;=&gt;&nbsp;options.Duration&nbsp;=&nbsp;0);</span>
 																							</span>
 																						</div>
 																					</div>
@@ -3184,7 +3131,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -3208,8 +3155,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="button" _bl_11="">
 																	<!--!-->                     Short duration
@@ -3217,12 +3164,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -3274,15 +3216,12 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 153px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Toast</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Paused&nbsp;timer",&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Toast("Paused&nbsp;timer",&nbsp;options&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -3298,9 +3237,7 @@
 																						</div>
 																						<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">}</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">});</span>
 																							</span>
 																						</div>
 																					</div>
@@ -3334,7 +3271,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
@@ -3355,8 +3292,8 @@
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
 													<div data-slot="preview" dir="ltr">
-														<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0">
-															<div class="mx-auto flex max-w-full flex-col items-center justify-center [&amp;>*]:max-w-full [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
+															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<button class="group/button bg-clip-padding outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg transition-all" data-slot="button" data-variant="default" data-size="default" type="button" _bl_13="">
 																	<!--!-->                     Swipe toast
@@ -3364,12 +3301,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex justify-center border-t border-border bg-muted/10 px-4 py-4 md:hidden">
-														<button data-slot="button" type="button" class="inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
-															<!--!-->                         View Code
-														</button>
-													</div>
-													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none hidden md:block">
+													<div data-slot="code" data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block">
 														<div class="relative">
 															<div class="bg-muted/25">
 																<!--!-->
@@ -3421,15 +3353,12 @@
 																					<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 732px; height: 153px;">
 																						<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1">await&nbsp;Toasts.Toast</span>
-																								<span class="mtk1 bracket-highlighting-0">(</span>
-																								<span class="mtk1">"Swipe&nbsp;me&nbsp;away",&nbsp;options&nbsp;=</span>
-																								<span class="mtk1 unexpected-closing-bracket">&gt;</span>
+																								<span class="mtk1">await&nbsp;Toasts.Toast("Swipe&nbsp;me&nbsp;away",&nbsp;options&nbsp;=&gt;</span>
 																							</span>
 																						</div>
 																						<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">{</span>
+																								<span class="mtk1">{</span>
 																							</span>
 																						</div>
 																						<div style="top:38px;height:19px;line-height:19px;" class="view-line">
@@ -3445,9 +3374,7 @@
 																						</div>
 																						<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																							<span>
-																								<span class="mtk1 bracket-highlighting-1">}</span>
-																								<span class="mtk1 bracket-highlighting-0">)</span>
-																								<span class="mtk1">;</span>
+																								<span class="mtk1">});</span>
 																							</span>
 																						</div>
 																					</div>
@@ -3481,7 +3408,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="pointer-events-none absolute inset-0 hidden items-center justify-center pb-4 md:flex">
+															<div class="pointer-events-none absolute inset-0 flex items-center justify-center pb-4">
 																<!--!-->
 																<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]"></div>
 																<button data-slot="button" type="button" class="pointer-events-auto relative z-10 inline-flex h-8 items-center justify-center rounded-lg border border-input bg-background px-3 text-sm font-medium text-foreground shadow-none transition-all hover:bg-muted">
