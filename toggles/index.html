@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,17 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -1376,21 +1387,10 @@
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
-											<div class="space-y-2" data-slot="div">
-												<!--!-->
-												<h2 class="first:mt-0 text-xl font-semibold tracking-tight pb-2 scroll-m-20 border-b" data-slot="h2">Additional examples</h2>
-												<!--!-->                 
-												<!--!-->
-												<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-sm leading-7" data-slot="paragraph">
-													<!--!-->                     Two-way binding and dynamic label text.
-												</p>
-											</div>
-											<!--!-->              
-											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Stateful bookmark</h3>
-													<p class="text-sm text-muted-foreground">Use two-way binding to reflect pressed state in the label.</p>
+													<h3 class="text-xl font-semibold tracking-tight">Controlled Bookmark</h3>
+													<p class="text-sm text-muted-foreground">A bound toggle can update its visible state while keeping the same pressed value.</p>
 												</div>
 												<!--!-->
 												<div data-slot="component-preview" class="group relative mt-4 mb-12 flex flex-col overflow-hidden rounded-xl border [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto">
@@ -1399,7 +1399,7 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<button type="button" aria-pressed="false" data-state="off" aria-label="Toggle bookmark" class="hover:bg-muted hover:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground inline-flex text-sm font-medium whitespace-nowrap px-1.5 min-w-8 h-8 gap-2 items-center justify-center border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow] data-[state=on]:bg-transparent data-[state=on]:text-blue-600" data-slot="toggle" data-variant="outline" _bl_14="">
+																<button type="button" aria-pressed="false" data-state="off" aria-label="Toggle bookmark" class="hover:bg-muted hover:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground inline-flex text-sm font-medium whitespace-nowrap px-1.5 min-w-8 h-8 gap-2 items-center justify-center border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow] data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-blue-500 data-[state=on]:*:[svg]:stroke-blue-500" data-slot="toggle" data-variant="outline" _bl_14="">
 																	<!--!-->
 																	<span data-icon="inline-start" _bl_25="">
 																		<!--!-->
@@ -1511,5 +1511,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
 	</body>
 </html>

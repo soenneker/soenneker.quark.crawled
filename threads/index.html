@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,17 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -1158,6 +1169,14 @@
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
+																	<button data-slot="thread-scroll-to-bottom" type="button" aria-label="Scroll to bottom" title="Scroll to bottom" class="absolute bottom-6 left-[50%] flex size-8 translate-x-[-50%] cursor-pointer items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground shadow-sm transition-all hover:bg-border active:scale-95">
+																		<!--!-->
+																		<!--!-->
+																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0 size-4.5" data-slot="icon">
+																			<path d="M12 5v14"></path>
+																			<path d="m19 12-7 7-7-7"></path>
+																		</svg>
+																	</button>
 																</div>
 															</div>
 														</div>
@@ -1196,5 +1215,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
 	</body>
 </html>

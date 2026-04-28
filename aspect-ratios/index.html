@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,17 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -1074,7 +1085,7 @@
 																<div id="aspect-ratio-landscape-demo" class="w-full max-w-sm" data-slot="div">
 																	<!--!-->
 																	<!--!-->
-																	<div style="position: relative; width: 100%; padding-bottom: 56.250000%;" data-radix-aspect-ratio-wrapper="">
+																	<div style="position: relative; width: 100%; aspect-ratio: 1.7777777777777777;" data-radix-aspect-ratio-wrapper="">
 																		<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" class="[&amp;>img]:object-cover [&amp;>video]:object-cover [&amp;>iframe]:object-cover relative w-full overflow-hidden rounded-lg bg-muted" data-slot="aspect-ratio">
 																			<!--!-->
 																			<img class="w-full h-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale" data-slot="image" src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&amp;dpr=2&amp;q=80" alt="Photo by Drew Beamer">
@@ -1102,21 +1113,7 @@
 												</div>
 											</div>
 										</section>
-										<!--!-->          
-										<!--!-->
-										<section class="space-y-4" data-slot="section">
-											<!--!-->
-											<div class="space-y-2" data-slot="div">
-												<!--!-->
-												<h2 class="first:mt-0 text-xl font-semibold tracking-tight pb-2 scroll-m-20 border-b" data-slot="h2">Additional examples</h2>
-												<!--!-->                 
-												<!--!-->
-												<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-sm leading-7" data-slot="paragraph">
-													<!--!-->                     Square, portrait, and RTL aspect-ratio examples from shadcn.
-												</p>
-											</div>
-										</section>
-										<!--!-->          
+										<!--!--> 
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
@@ -1136,7 +1133,7 @@
 																	<div id="aspect-ratio-square-demo" class="w-full" data-slot="div">
 																		<!--!-->
 																		<!--!-->
-																		<div style="position: relative; width: 100%; padding-bottom: 100.000000%;" data-radix-aspect-ratio-wrapper="">
+																		<div style="position: relative; width: 100%; aspect-ratio: 1;" data-radix-aspect-ratio-wrapper="">
 																			<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" class="[&amp;>img]:object-cover [&amp;>video]:object-cover [&amp;>iframe]:object-cover relative w-full overflow-hidden rounded-lg bg-muted" data-slot="aspect-ratio">
 																				<!--!-->
 																				<img class="w-full h-full rounded-lg object-cover grayscale dark:brightness-20" data-slot="image" src="https://avatar.vercel.sh/shadcn1" alt="Photo">
@@ -1185,7 +1182,7 @@
 																	<div id="aspect-ratio-portrait-demo" class="w-full" data-slot="div">
 																		<!--!-->
 																		<!--!-->
-																		<div style="position: relative; width: 100%; padding-bottom: 177.777778%;" data-radix-aspect-ratio-wrapper="">
+																		<div style="position: relative; width: 100%; aspect-ratio: 0.5625;" data-radix-aspect-ratio-wrapper="">
 																			<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" class="[&amp;>img]:object-cover [&amp;>video]:object-cover [&amp;>iframe]:object-cover relative w-full overflow-hidden rounded-lg bg-muted" data-slot="aspect-ratio">
 																				<!--!-->
 																				<img class="w-full h-full rounded-lg object-cover grayscale dark:brightness-20" data-slot="image" src="https://avatar.vercel.sh/shadcn1" alt="Photo">
@@ -1237,7 +1234,7 @@
 																	<figure class="w-full max-w-sm" data-slot="figure">
 																		<!--!-->
 																		<!--!-->
-																		<div style="position: relative; width: 100%; padding-bottom: 56.250000%;" data-radix-aspect-ratio-wrapper="">
+																		<div style="position: relative; width: 100%; aspect-ratio: 1.7777777777777777;" data-radix-aspect-ratio-wrapper="">
 																			<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" class="[&amp;>img]:object-cover [&amp;>video]:object-cover [&amp;>iframe]:object-cover relative w-full overflow-hidden rounded-lg bg-muted" data-slot="aspect-ratio">
 																				<!--!-->
 																				<img class="w-full h-full rounded-lg object-cover grayscale dark:brightness-20" data-slot="image" src="https://avatar.vercel.sh/shadcn1" alt="Photo">
@@ -1287,5 +1284,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
 	</body>
 </html>

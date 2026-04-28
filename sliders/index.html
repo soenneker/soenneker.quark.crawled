@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,9 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -1073,11 +1076,11 @@
 																<!--!-->
 																<div data-testid="slider-demo-primary" class="w-full max-w-xs" data-slot="div">
 																	<!--!-->
-																	<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_17="">
+																	<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_17="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 50.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50.00% + 0.0px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50% + 0px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="50">
@@ -1110,7 +1113,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Field</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Range</h3>
 													<p class="text-sm text-muted-foreground">Set your budget range ($200 - 800).</p>
 												</div>
 												<!--!-->
@@ -1144,10 +1147,10 @@
 																			<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																				<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 20.00%; right: 20.00%"></div>
 																			</div>
-																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(20.00% + 4.8px)">
+																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(20% + 4.8px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																				<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="200" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Minimum" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																			</span>
-																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(80.00% - 4.8px)">
+																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(80% - 4.8px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																				<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="800" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Maximum" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																			</span>
 																			<input type="hidden" class="sr-only" value="200">
@@ -1180,20 +1183,9 @@
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
-											<h2 class="first:mt-0 text-xl font-semibold tracking-tight pb-2 scroll-m-20 border-b" data-slot="h2">Additional examples</h2>
-											<!--!-->             
-											<!--!-->
-											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground leading-7" data-slot="paragraph">
-												<!--!-->                 Range, multiple thumbs, vertical layout, controlled values, disabled state, RTL, step size, and alternate sizes.
-											</p>
-										</section>
-										<!--!-->          
-										<!--!-->
-										<section class="space-y-4" data-slot="section">
-											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Range</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Multiple Thumbs</h3>
 													<p class="text-sm text-muted-foreground">Two-thumb range. Current: 25 – 50.</p>
 												</div>
 												<!--!-->
@@ -1202,14 +1194,14 @@
 														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
-																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_6="">
+																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_6="">
 																	<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																		<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 25.00%; right: 50.00%"></div>
 																	</div>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(25.00% + 4.0px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(25% + 4px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Minimum" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50.00% + 0.0px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50% + 0px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Maximum" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
 																	<input type="hidden" class="sr-only" value="25">
@@ -1242,7 +1234,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Multiple Thumbs</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Vertical</h3>
 													<p class="text-sm text-muted-foreground">Several thumbs on one track. Values: 10, 20, 70.</p>
 												</div>
 												<!--!-->
@@ -1251,17 +1243,17 @@
 														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
-																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_8="">
+																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_8="">
 																	<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																		<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 10.00%; right: 30.00%"></div>
 																	</div>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(10.00% + 6.4px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(10% + 6.4px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Value 1 of 3" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(20.00% + 4.8px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(20% + 4.8px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Value 2 of 3" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(70.00% - 3.2px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(70% - 3.2px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Value 3 of 3" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
 																	<input type="hidden" class="sr-only" value="10">
@@ -1295,7 +1287,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Vertical</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Controlled</h3>
 													<p class="text-sm text-muted-foreground">Vertical sliders. Left: 50, right: 25.</p>
 												</div>
 												<!--!-->
@@ -1306,22 +1298,22 @@
 																<!--!-->
 																<div class="flex mx-auto w-full max-w-xs gap-6 items-center justify-center" data-slot="div">
 																	<!--!-->
-																	<div class="h-40 relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" data-slot="slider" data-orientation="vertical" data-js-ready="false" dir="ltr" aria-disabled="false" data-vertical="" _bl_18="">
+																	<div class="h-40 relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" data-slot="slider" data-orientation="vertical" data-js-ready="true" dir="ltr" aria-disabled="false" data-vertical="" _bl_18="">
 																		<div data-slot="slider-track" data-orientation="vertical" data-vertical="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 w-1.5">
 																			<div data-slot="slider-range" data-orientation="vertical" data-vertical="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="bottom: 0.00%; top: 50.00%"></div>
 																		</div>
-																		<span style="transform: translateY(50%); position: absolute; bottom: calc(50.00% + 0.0px)">
+																		<span style="transform: translateY(50%); position: absolute; bottom: calc(50% + 0px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="vertical" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="vertical" data-radix-collection-item="" data-vertical="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="50">
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="h-40 relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" data-slot="slider" data-orientation="vertical" data-js-ready="false" dir="ltr" aria-disabled="false" data-vertical="" _bl_19="">
+																	<div class="h-40 relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" data-slot="slider" data-orientation="vertical" data-js-ready="true" dir="ltr" aria-disabled="false" data-vertical="" _bl_19="">
 																		<div data-slot="slider-track" data-orientation="vertical" data-vertical="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 w-1.5">
 																			<div data-slot="slider-range" data-orientation="vertical" data-vertical="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="bottom: 0.00%; top: 75.00%"></div>
 																		</div>
-																		<span style="transform: translateY(50%); position: absolute; bottom: calc(25.00% + 4.0px)">
+																		<span style="transform: translateY(50%); position: absolute; bottom: calc(25% + 4px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="vertical" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-orientation="vertical" data-radix-collection-item="" data-vertical="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="25">
@@ -1354,7 +1346,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Controlled</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Disabled</h3>
 													<p class="text-sm text-muted-foreground">Label + live readout. Values: 0.3, 0.7.</p>
 												</div>
 												<!--!-->
@@ -1375,14 +1367,14 @@
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" id="slider-demo-temperature" _bl_20="">
+																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" id="slider-demo-temperature" _bl_20="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 30.00%; right: 30.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(30.00% + 3.2px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(30% + 3.2px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0.30000000000000004" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Minimum" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(70.00% - 3.2px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(70% - 3.2px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0.7000000000000001" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" aria-label="Maximum" id="slider-demo-temperature-1" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="0.30000000000000004" id="slider-demo-temperature-value">
@@ -1416,7 +1408,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Disabled</h3>
+													<h3 class="text-xl font-semibold tracking-tight">RTL</h3>
 													<p class="text-sm text-muted-foreground">Set Disabled to prevent interaction.</p>
 												</div>
 												<!--!-->
@@ -1425,11 +1417,11 @@
 														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0">
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
-																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="true" data-horizontal="" data-disabled="true" _bl_12="">
+																<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="true" data-horizontal="" data-disabled="true" _bl_12="">
 																	<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																		<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 50.00%"></div>
 																	</div>
-																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50.00% + 0.0px)">
+																	<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50% + 0px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																		<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="-1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" disabled="" aria-disabled="true" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																	</span>
 																	<input type="hidden" class="sr-only" value="50" disabled="">
@@ -1477,11 +1469,11 @@
 																	<!--!-->
 																	<div class="text-end mx-auto w-full max-w-xs" data-slot="div">
 																		<!--!-->
-																		<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="rtl" aria-disabled="false" data-horizontal="" _bl_124="">
+																		<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="rtl" aria-disabled="false" data-horizontal="" _bl_124="">
 																			<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																				<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="right: 0.00%; left: 25.00%"></div>
 																			</div>
-																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; right: calc(75.00% - 4.0px)">
+																			<span style="transform: var(--radix-slider-thumb-transform); position: absolute; right: calc(75% - 4px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																				<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																			</span>
 																			<input type="hidden" class="sr-only" value="75">
@@ -1526,11 +1518,11 @@
 																<!--!-->
 																<div data-testid="slider-demo-step" class="w-full max-w-xs" data-slot="div">
 																	<!--!-->
-																	<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_21="">
+																	<div class="mx-auto w-full max-w-xs relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_21="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 70.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(30.00% + 3.2px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(30% + 3.2px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="30">
@@ -1574,33 +1566,33 @@
 																<!--!-->
 																<div class="space-y-4" data-slot="div">
 																	<!--!-->
-																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col h-5" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_22="">
+																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col h-5" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_22="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 65.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(35.00% + 1.8px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(35% + 1.8px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="35">
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_23="">
+																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_23="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 40.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(60.00% - 1.6px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(60% - 1.6px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="60">
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col h-8" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_24="">
+																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col h-8" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_24="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-2">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 20.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(80.00% - 6.0px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(80% - 6px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="80">
@@ -1643,5 +1635,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
 	</body>
 </html>

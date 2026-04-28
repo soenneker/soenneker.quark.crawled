@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,17 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/nls.messages-loader.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-DO3azKX8.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-qLAYrEOP.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-EcChJV6a.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/monaco.contribution-D2OdxNBt.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/basic-languages/monaco.contribution.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor.api-CalNCsUg.js"></script>
+		<script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/workers-DcJshg-q.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -1104,7 +1115,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">Progress Bar</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Label</h3>
 													<p class="text-sm text-muted-foreground">Determinate values from empty through complete.</p>
 												</div>
 												<!--!-->
@@ -1181,7 +1192,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">With Label</h3>
+													<h3 class="text-xl font-semibold tracking-tight">Controlled</h3>
 													<p class="text-sm text-muted-foreground">Associate the bar with a label using matching id and for values.</p>
 												</div>
 												<!--!-->
@@ -1239,7 +1250,7 @@
 											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
-													<h3 class="text-xl font-semibold tracking-tight">File Upload List</h3>
+													<h3 class="text-xl font-semibold tracking-tight">RTL</h3>
 													<p class="text-sm text-muted-foreground">Compact rows with a fixed-width bar and status text.</p>
 												</div>
 												<!--!-->
@@ -1415,17 +1426,6 @@
 										<!--!-->
 										<section class="space-y-4" data-slot="section">
 											<!--!-->
-											<h2 class="first:mt-0 text-xl font-semibold tracking-tight pb-2 scroll-m-20 border-b" data-slot="h2">Additional examples</h2>
-											<!--!-->             
-											<!--!-->
-											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground leading-7" data-slot="paragraph">
-												<!--!-->                 Controlled values, upload layouts, layout direction, and indeterminate loading.
-											</p>
-										</section>
-										<!--!-->          
-										<!--!-->
-										<section class="space-y-4" data-slot="section">
-											<!--!-->
 											<div class="w-full space-y-4">
 												<div class="space-y-2">
 													<h3 class="text-xl font-semibold tracking-tight">Controlled</h3>
@@ -1447,11 +1447,11 @@
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="false" dir="ltr" aria-disabled="false" data-horizontal="" _bl_11="">
+																	<div class="w-full relative flex touch-none items-center select-none data-[disabled]:opacity-50 data-horizontal:w-full data-vertical:h-full data-vertical:min-h-44 data-vertical:w-auto data-vertical:flex-col" style="--radix-slider-thumb-transform: translateX(-50%)" data-slot="slider" data-orientation="horizontal" data-js-ready="true" dir="ltr" aria-disabled="false" data-horizontal="" _bl_11="">
 																		<div data-slot="slider-track" data-orientation="horizontal" data-horizontal="" class="relative grow overflow-hidden rounded-full bg-muted select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5 h-1.5">
 																			<div data-slot="slider-range" data-orientation="horizontal" data-horizontal="" class="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full" style="left: 0.00%; right: 50.00%"></div>
 																		</div>
-																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50.00% + 0.0px)">
+																		<span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(50% + 0px); --bradix-slider-thumb-in-bounds-offset: 0px;">
 																			<span data-slot="slider-thumb" data-orientation="horizontal" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" data-radix-collection-item="" data-horizontal="" class="relative block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,shadow] select-none after:absolute after:-inset-2 hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden active:ring-4 disabled:pointer-events-none disabled:opacity-50"></span>
 																		</span>
 																		<input type="hidden" class="sr-only" value="50">
@@ -1613,5 +1613,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
 	</body>
 </html>
