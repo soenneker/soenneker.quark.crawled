@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -179,12 +179,12 @@
 							<div class="absolute top-8 z-10 hidden h-8 w-(--sidebar-menu-width) shrink-0 bg-linear-to-b from-background via-background/80 to-background/50 blur-xs lg:block"></div>
 							<div class="absolute top-12 right-2 bottom-0 hidden h-full w-px bg-linear-to-b from-transparent via-border to-transparent lg:flex"></div>
 							<!--!-->
-							<div class="no-scrollbar min-h-0 flex-col overflow-y-auto overflow-x-hidden group-data-[collapsible=icon]:overflow-hidden group-data-[shell=navigation]:w-full group-data-[shell=navigation]:px-4 group-data-[shell=navigation]:pb-6 group-data-[shell=navigation]:lg:mx-auto group-data-[shell=navigation]:lg:w-(--sidebar-menu-width) group-data-[shell=navigation]:lg:px-2 flex flex-1 gap-2" data-slot="sidebar-content" data-sidebar="content">
+							<div class="min-h-0 flex-col group-data-[collapsible=icon]:overflow-hidden group-data-[shell=navigation]:w-full group-data-[shell=navigation]:px-4 group-data-[shell=navigation]:pb-6 group-data-[shell=navigation]:lg:mx-auto group-data-[shell=navigation]:lg:w-(--sidebar-menu-width) group-data-[shell=navigation]:lg:px-2 flex overflow-auto flex-1 gap-2" data-slot="sidebar-content" data-sidebar="content">
 								<!--!-->
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col pt-4 lg:pt-6" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Sections</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Sections</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -215,7 +215,7 @@
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Components</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Components</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -823,9 +823,18 @@
 											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
 												<!--!-->
 												<!--!-->
+												<a href="toasts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
+													<!--!-->
+													<span _bl_89="">Toast</span>
+												</a>
+											</li>
+											<!--!-->
+											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
+												<!--!-->
+												<!--!-->
 												<a href="toggles" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_89="">Toggle</span>
+													<span _bl_90="">Toggle</span>
 												</a>
 											</li>
 											<!--!-->
@@ -834,7 +843,7 @@
 												<!--!-->
 												<a href="toggle-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_90="">Toggle Group</span>
+													<span _bl_91="">Toggle Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -843,7 +852,7 @@
 												<!--!-->
 												<a href="tooltips" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_91="">Tooltip</span>
+													<span _bl_92="">Tooltip</span>
 												</a>
 											</li>
 											<!--!-->
@@ -852,7 +861,7 @@
 												<!--!-->
 												<a href="typography" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_92="">Typography</span>
+													<span _bl_93="">Typography</span>
 												</a>
 											</li>
 										</ul>
@@ -863,7 +872,7 @@
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Primitives</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Primitives</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -874,7 +883,7 @@
 												<!--!-->
 												<a href="divs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_93="">Div</span>
+													<span _bl_94="">Div</span>
 												</a>
 											</li>
 											<!--!-->
@@ -883,7 +892,7 @@
 												<!--!-->
 												<a href="margins" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_94="">Margin</span>
+													<span _bl_95="">Margin</span>
 												</a>
 											</li>
 											<!--!-->
@@ -892,7 +901,7 @@
 												<!--!-->
 												<a href="padding" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_95="">Padding</span>
+													<span _bl_96="">Padding</span>
 												</a>
 											</li>
 											<!--!-->
@@ -901,7 +910,7 @@
 												<!--!-->
 												<a href="anchors" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_96="">Anchor</span>
+													<span _bl_97="">Anchor</span>
 												</a>
 											</li>
 											<!--!-->
@@ -910,7 +919,7 @@
 												<!--!-->
 												<a href="blockquotes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_97="">Blockquote</span>
+													<span _bl_98="">Blockquote</span>
 												</a>
 											</li>
 											<!--!-->
@@ -919,7 +928,7 @@
 												<!--!-->
 												<a href="br" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_98="">Br</span>
+													<span _bl_99="">Br</span>
 												</a>
 											</li>
 											<!--!-->
@@ -928,7 +937,7 @@
 												<!--!-->
 												<a href="codes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_99="">Code</span>
+													<span _bl_100="">Code</span>
 												</a>
 											</li>
 											<!--!-->
@@ -937,7 +946,7 @@
 												<!--!-->
 												<a href="fieldsets" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_100="">Fieldset</span>
+													<span _bl_101="">Fieldset</span>
 												</a>
 											</li>
 											<!--!-->
@@ -946,7 +955,7 @@
 												<!--!-->
 												<a href="figures" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_101="">Figure</span>
+													<span _bl_102="">Figure</span>
 												</a>
 											</li>
 											<!--!-->
@@ -955,7 +964,7 @@
 												<!--!-->
 												<a href="icons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_102="">Icons</span>
+													<span _bl_103="">Icons</span>
 												</a>
 											</li>
 											<!--!-->
@@ -964,7 +973,7 @@
 												<!--!-->
 												<a href="paragraphs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_103="">Paragraph</span>
+													<span _bl_104="">Paragraph</span>
 												</a>
 											</li>
 											<!--!-->
@@ -973,7 +982,7 @@
 												<!--!-->
 												<a href="sections" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_104="">Section</span>
+													<span _bl_105="">Section</span>
 												</a>
 											</li>
 											<!--!-->
@@ -982,7 +991,7 @@
 												<!--!-->
 												<a href="small" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_105="">Small</span>
+													<span _bl_106="">Small</span>
 												</a>
 											</li>
 											<!--!-->
@@ -991,7 +1000,7 @@
 												<!--!-->
 												<a href="spans" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_106="">Span</span>
+													<span _bl_107="">Span</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1000,7 +1009,7 @@
 												<!--!-->
 												<a href="strong" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_107="">Strong</span>
+													<span _bl_108="">Strong</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1009,7 +1018,7 @@
 												<!--!-->
 												<a href="texts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_108="">Text</span>
+													<span _bl_109="">Text</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1018,7 +1027,7 @@
 												<!--!-->
 												<a href="semantic-html" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_109="">Semantic HTML</span>
+													<span _bl_110="">Semantic HTML</span>
 												</a>
 											</li>
 										</ul>
@@ -1034,7 +1043,7 @@
 								<!--!-->
 								<div class="flex mb-8 flex-col gap-2" data-slot="div">
 									<!--!-->
-									<h1 class="text-3xl font-semibold tracking-tight text-balance scroll-mt-24" data-slot="h1">Avatar</h1>
+									<h1 class="text-center text-3xl font-semibold tracking-tight text-balance scroll-mt-24" data-slot="h1">Avatar</h1>
 								</div>
 								<!--!-->
 								<!--!-->
@@ -1061,28 +1070,28 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																		<!--!-->                         
 																		<!--!-->
-																		<span class="right-0 bottom-0 z-10 bg-blend-color group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
+																		<span class="right-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
@@ -1090,37 +1099,37 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
@@ -1167,28 +1176,28 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																		<!--!-->                         
 																		<!--!-->
-																		<span class="right-0 bottom-0 z-10 bg-blend-color group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
+																		<span class="right-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
@@ -1196,37 +1205,37 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->                             
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																		</span>
 																		<!--!-->                         
 																		<!--!-->
@@ -1271,16 +1280,16 @@
 																<!--!-->
 																<!--!-->
 																<!--!-->
-																<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																	<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	<!--!-->                     
 																	<!--!-->
-																	<span class="right-0 bottom-0 z-10 bg-blend-color group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
+																	<span class="right-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
 																</span>
 															</div>
 														</div>
@@ -1320,16 +1329,16 @@
 																<!--!-->
 																<!--!-->
 																<!--!-->
-																<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full grayscale" data-slot="avatar" data-size="default">
+																<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full grayscale" data-slot="avatar" data-size="default">
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PP</span>
+																	<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PP</span>
 																	<!--!-->                     
 																	<!--!-->
-																	<span class="right-0 bottom-0 z-10 bg-blend-color group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2" data-slot="avatar-badge">
+																	<span class="right-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none bg-primary rounded-full ring-background ring-2" data-slot="avatar-badge">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1378,37 +1387,37 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																	</span>
 																</div>
 															</div>
@@ -1451,37 +1460,37 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
@@ -1527,37 +1536,37 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
@@ -1610,37 +1619,37 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="sm">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="sm">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="lg">
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="lg">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																	</span>
 																</div>
 															</div>
@@ -1691,21 +1700,21 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_110="">
+																	<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_111="">
 																		<!--!-->
 																		<!--!-->
-																		<div style="display:contents;" _bl_111="">
-																			<button type="button" id="bradix-dropdown-menu-3-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-3-content" data-state="closed" class="group/button bg-clip-padding cursor-pointer focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap px-2.5 h-8 shrink-0 gap-1.5 items-center justify-center select-none border border-border bg-background rounded-lg outline-none transition-all size-8 rounded-full p-0 hover:bg-accent" data-slot="dropdown-menu-trigger" _bl_112="">
+																		<div style="display:contents;" _bl_112="">
+																			<button type="button" id="bradix-dropdown-menu-3-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-3-content" data-state="closed" class="size-8 rounded-full p-0 hover:bg-accent" data-slot="dropdown-menu-trigger" _bl_113="">
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
-																				<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																				<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																					<!--!-->
 																					<!--!-->
 																					<!--!-->                             
 																					<!--!-->
 																					<!--!-->
-																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PR</span>
 																				</span>
 																			</button>
 																		</div>
@@ -1716,9 +1725,9 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<div _bl_113="">
+																	<div _bl_114="">
 																		<!--!-->
-																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_114="">
+																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_115="">
 																			<!--!-->
 																			<!--!-->
 																		</div>
@@ -1763,50 +1772,48 @@
 																<!--!-->
 																<!--!-->
 																<!--!-->
-																<div data-slot="direction-provider" dir="rtl" class="contents">
+																<!--!-->
+																<div class="flex flex-wrap items-center justify-end gap-3 grayscale" data-slot="div">
 																	<!--!-->
-																	<div class="flex flex-wrap items-center justify-end gap-3 grayscale" data-slot="div">
+																	<!--!-->
+																	<!--!-->
+																	<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->                             
+																		<!--!-->
+																		<!--!-->
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
+																			<!--!-->م</span>
+																	</span>
+																	<!--!-->                         
+																	<!--!-->
+																	<div data-slot="avatar-group" class="group/avatar-group flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
-																			<!--!-->                             
+																			<!--!-->                                 
 																			<!--!-->
 																			<!--!-->
-																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
-																				<!--!-->م</span>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
+																				<!--!-->أ</span>
 																		</span>
-																		<!--!-->                         
+																		<!--!-->                             
 																		<!--!-->
-																		<div data-slot="avatar-group" class="group/avatar-group flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background">
+																		<!--!-->
+																		<!--!-->
+																		<span class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																			<!--!-->
 																			<!--!-->
-																			<!--!-->
-																			<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
-																				<!--!-->
-																				<!--!-->
-																				<!--!-->                                 
-																				<!--!-->
-																				<!--!-->
-																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
-																					<!--!-->أ</span>
-																			</span>
-																			<!--!-->                             
+																			<!--!-->                                 
 																			<!--!-->
 																			<!--!-->
-																			<!--!-->
-																			<span class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
-																				<!--!-->
-																				<!--!-->
-																				<!--!-->                                 
-																				<!--!-->
-																				<!--!-->
-																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
-																					<!--!-->ب</span>
-																			</span>
-																		</div>
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">
+																				<!--!-->ب</span>
+																		</span>
 																	</div>
 																</div>
 															</div>
@@ -1849,25 +1856,25 @@
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span id="avatar-error-example" class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span id="avatar-error-example" class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">QE</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">QE</span>
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
 																	<!--!-->
-																	<span id="avatar-loaded-example" class="group/avatar after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
+																	<span id="avatar-loaded-example" class="group/avatar overflow-hidden data-[size=lg]:size-10 data-[size=sm]:size-6 flex relative size-8 shrink-0 select-none rounded-full" data-slot="avatar" data-size="default">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm inset-0 absolute w-full h-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">QL</span>
+																		<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">QL</span>
 																	</span>
 																</div>
 															</div>

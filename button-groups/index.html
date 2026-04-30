@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,8 +22,6 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -181,12 +179,12 @@
 							<div class="absolute top-8 z-10 hidden h-8 w-(--sidebar-menu-width) shrink-0 bg-linear-to-b from-background via-background/80 to-background/50 blur-xs lg:block"></div>
 							<div class="absolute top-12 right-2 bottom-0 hidden h-full w-px bg-linear-to-b from-transparent via-border to-transparent lg:flex"></div>
 							<!--!-->
-							<div class="no-scrollbar min-h-0 flex-col overflow-y-auto overflow-x-hidden group-data-[collapsible=icon]:overflow-hidden group-data-[shell=navigation]:w-full group-data-[shell=navigation]:px-4 group-data-[shell=navigation]:pb-6 group-data-[shell=navigation]:lg:mx-auto group-data-[shell=navigation]:lg:w-(--sidebar-menu-width) group-data-[shell=navigation]:lg:px-2 flex flex-1 gap-2" data-slot="sidebar-content" data-sidebar="content">
+							<div class="min-h-0 flex-col group-data-[collapsible=icon]:overflow-hidden group-data-[shell=navigation]:w-full group-data-[shell=navigation]:px-4 group-data-[shell=navigation]:pb-6 group-data-[shell=navigation]:lg:mx-auto group-data-[shell=navigation]:lg:w-(--sidebar-menu-width) group-data-[shell=navigation]:lg:px-2 flex overflow-auto flex-1 gap-2" data-slot="sidebar-content" data-sidebar="content">
 								<!--!-->
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col pt-4 lg:pt-6" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Sections</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Sections</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -217,7 +215,7 @@
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Components</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Components</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -825,9 +823,18 @@
 											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
 												<!--!-->
 												<!--!-->
+												<a href="toasts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
+													<!--!-->
+													<span _bl_103="">Toast</span>
+												</a>
+											</li>
+											<!--!-->
+											<li class="group/menu-item relative" data-slot="sidebar-menu-item" data-sidebar="menu-item">
+												<!--!-->
+												<!--!-->
 												<a href="toggles" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_103="">Toggle</span>
+													<span _bl_104="">Toggle</span>
 												</a>
 											</li>
 											<!--!-->
@@ -836,7 +843,7 @@
 												<!--!-->
 												<a href="toggle-groups" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_104="">Toggle Group</span>
+													<span _bl_105="">Toggle Group</span>
 												</a>
 											</li>
 											<!--!-->
@@ -845,7 +852,7 @@
 												<!--!-->
 												<a href="tooltips" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_105="">Tooltip</span>
+													<span _bl_106="">Tooltip</span>
 												</a>
 											</li>
 											<!--!-->
@@ -854,7 +861,7 @@
 												<!--!-->
 												<a href="typography" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_106="">Typography</span>
+													<span _bl_107="">Typography</span>
 												</a>
 											</li>
 										</ul>
@@ -865,7 +872,7 @@
 								<!--!-->
 								<div class="flex p-2 relative w-full min-w-0 flex-col" data-slot="sidebar-group" data-sidebar="group">
 									<!--!-->
-									<div class="transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-muted-foreground text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Primitives</div>
+									<div class="text-sidebar-foreground/70 transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 flex text-xs font-medium px-2 h-8 shrink-0 items-center rounded-md ring-sidebar-ring outline-hidden" data-slot="sidebar-group-label" data-sidebar="group-label">Primitives</div>
 									<!--!-->
 									<div class="text-sm w-full" data-slot="sidebar-group-content" data-sidebar="group-content">
 										<!--!-->
@@ -876,7 +883,7 @@
 												<!--!-->
 												<a href="divs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_107="">Div</span>
+													<span _bl_108="">Div</span>
 												</a>
 											</li>
 											<!--!-->
@@ -885,7 +892,7 @@
 												<!--!-->
 												<a href="margins" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_108="">Margin</span>
+													<span _bl_109="">Margin</span>
 												</a>
 											</li>
 											<!--!-->
@@ -894,7 +901,7 @@
 												<!--!-->
 												<a href="padding" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_109="">Padding</span>
+													<span _bl_110="">Padding</span>
 												</a>
 											</li>
 											<!--!-->
@@ -903,7 +910,7 @@
 												<!--!-->
 												<a href="anchors" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_110="">Anchor</span>
+													<span _bl_111="">Anchor</span>
 												</a>
 											</li>
 											<!--!-->
@@ -912,7 +919,7 @@
 												<!--!-->
 												<a href="blockquotes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_111="">Blockquote</span>
+													<span _bl_112="">Blockquote</span>
 												</a>
 											</li>
 											<!--!-->
@@ -921,7 +928,7 @@
 												<!--!-->
 												<a href="br" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_112="">Br</span>
+													<span _bl_113="">Br</span>
 												</a>
 											</li>
 											<!--!-->
@@ -930,7 +937,7 @@
 												<!--!-->
 												<a href="codes" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_113="">Code</span>
+													<span _bl_114="">Code</span>
 												</a>
 											</li>
 											<!--!-->
@@ -939,7 +946,7 @@
 												<!--!-->
 												<a href="fieldsets" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_114="">Fieldset</span>
+													<span _bl_115="">Fieldset</span>
 												</a>
 											</li>
 											<!--!-->
@@ -948,7 +955,7 @@
 												<!--!-->
 												<a href="figures" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_115="">Figure</span>
+													<span _bl_116="">Figure</span>
 												</a>
 											</li>
 											<!--!-->
@@ -957,7 +964,7 @@
 												<!--!-->
 												<a href="icons" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_116="">Icons</span>
+													<span _bl_117="">Icons</span>
 												</a>
 											</li>
 											<!--!-->
@@ -966,7 +973,7 @@
 												<!--!-->
 												<a href="paragraphs" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_117="">Paragraph</span>
+													<span _bl_118="">Paragraph</span>
 												</a>
 											</li>
 											<!--!-->
@@ -975,7 +982,7 @@
 												<!--!-->
 												<a href="sections" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_118="">Section</span>
+													<span _bl_119="">Section</span>
 												</a>
 											</li>
 											<!--!-->
@@ -984,7 +991,7 @@
 												<!--!-->
 												<a href="small" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_119="">Small</span>
+													<span _bl_120="">Small</span>
 												</a>
 											</li>
 											<!--!-->
@@ -993,7 +1000,7 @@
 												<!--!-->
 												<a href="spans" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_120="">Span</span>
+													<span _bl_121="">Span</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1002,7 +1009,7 @@
 												<!--!-->
 												<a href="strong" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_121="">Strong</span>
+													<span _bl_122="">Strong</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1011,7 +1018,7 @@
 												<!--!-->
 												<a href="texts" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_122="">Text</span>
+													<span _bl_123="">Text</span>
 												</a>
 											</li>
 											<!--!-->
@@ -1020,7 +1027,7 @@
 												<!--!-->
 												<a href="semantic-html" data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" data-state="closed" class="peer/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center border border-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
-													<span _bl_123="">Semantic HTML</span>
+													<span _bl_124="">Semantic HTML</span>
 												</a>
 											</li>
 										</ul>
@@ -1036,7 +1043,7 @@
 								<!--!-->
 								<div class="flex mb-8 flex-col gap-2" data-slot="div">
 									<!--!-->
-									<h1 class="text-3xl font-semibold tracking-tight text-balance scroll-mt-24" data-slot="h1">Button Group</h1>
+									<h1 class="text-center text-3xl font-semibold tracking-tight text-balance scroll-mt-24" data-slot="h1">Button Group</h1>
 								</div>
 								<!--!-->
 								<!--!-->
@@ -1060,12 +1067,12 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div aria-label="Message actions" class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div aria-label="Message actions" class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch hidden sm:flex" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch hidden sm:flex" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button aria-label="Go Back" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_138="">
+																		<button aria-label="Go Back" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_139="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1077,19 +1084,19 @@
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_139="">Archive</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_140="">Archive</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_140="">Report</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_141="">Report</button>
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_141="">Snooze</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_142="">Snooze</button>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
@@ -1104,11 +1111,11 @@
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->
-																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_159="">
+																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_160="">
 																				<!--!-->
 																				<!--!-->
-																				<div style="display:contents;" _bl_167="">
-																					<button type="button" id="bradix-dropdown-menu-9-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-9-content" data-state="closed" aria-label="More Options" class="group/button bg-clip-padding cursor-pointer focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap px-2.5 h-8 shrink-0 gap-1.5 items-center justify-center select-none border border-input bg-background rounded-lg outline-none transition-all" data-slot="dropdown-menu-trigger" _bl_168="">
+																				<div style="display:contents;" _bl_168="">
+																					<button type="button" id="bradix-dropdown-menu-9-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-9-content" data-state="closed" aria-label="More Options" data-slot="dropdown-menu-trigger" _bl_169="">
 																						<!--!-->
 																						<!--!-->
 																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1125,6 +1132,13 @@
 																			<!--!-->
 																			<!--!-->
 																			<!--!-->
+																			<div _bl_170="">
+																				<!--!-->
+																				<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_171="">
+																					<!--!-->
+																					<!--!-->
+																				</div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
@@ -1165,9 +1179,9 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div aria-label="Media controls" class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-b-none [&amp;>[data-slot]~[data-slot]]:rounded-t-none [&amp;>[data-slot]~[data-slot]]:border-t-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-b-lg! flex w-fit flex-col items-stretch h-fit" data-slot="button-group" data-orientation="vertical" role="group">
+																<div aria-label="Media controls" class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-t-none [&amp;>*:not(:first-child)]:border-t-0 [&amp;>*:not(:last-child)]:rounded-b-none flex w-fit flex-col items-stretch h-fit" data-slot="button-group" data-orientation="vertical" role="group">
 																	<!--!-->
-																	<button aria-label="Increase" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_16="">
+																	<button aria-label="Increase" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_16="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1177,7 +1191,7 @@
 																	</button>
 																	<!--!-->                     
 																	<!--!-->
-																	<button aria-label="Decrease" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_17="">
+																	<button aria-label="Decrease" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_17="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1224,18 +1238,18 @@
 																<div class="flex flex-col gap-8 items-start" data-slot="div">
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_124="">Small</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_125="">Small</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_125="">Button</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_126="">Button</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_126="">Group</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="sm" type="button" _bl_127="">Group</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button aria-label="Add" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon-sm" type="button" _bl_127="">
+																		<button aria-label="Add" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon-sm" type="button" _bl_128="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1247,18 +1261,18 @@
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_128="">Default</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_129="">Default</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_129="">Button</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_130="">Button</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_130="">Group</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_131="">Group</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button aria-label="Add" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_131="">
+																		<button aria-label="Add" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_132="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1270,18 +1284,18 @@
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_132="">Large</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_133="">Large</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_133="">Button</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_134="">Button</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_134="">Group</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="outline" data-size="lg" type="button" _bl_135="">Group</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button aria-label="Add" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon-lg" type="button" _bl_135="">
+																		<button aria-label="Add" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-10 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon-lg" type="button" _bl_136="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1328,12 +1342,12 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button aria-label="Add" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_142="">
+																		<button aria-label="Add" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_143="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1345,13 +1359,13 @@
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch min-w-[20rem]" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch min-w-[20rem]" data-slot="button-group" role="group">
 																		<!--!-->
 																		<!--!-->
-																		<div class="group/input-group dark:bg-input/30 in-data-[slot=combobox-content]:focus-within:border-inherit in-data-[slot=combobox-content]:focus-within:ring-0 has-disabled:bg-input/50 has-disabled:opacity-50 has-[>textarea]:h-auto dark:has-disabled:bg-input/80 has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-2 has-[>[data-align=inline-end]]:[&amp;>input]:pr-2 flex relative w-full min-w-0 h-9 items-center border border-input rounded-md outline-none shadow-xs transition-[color,shadow]" data-slot="input-group" role="group">
+																		<div class="group/input-group dark:bg-input/30 has-[>textarea]:h-auto has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-2 has-[>[data-align=inline-end]]:[&amp;>input]:pr-2 flex relative w-full min-w-0 h-9 items-center border border-input rounded-md outline-none shadow-xs transition-[color,box-shadow]" data-slot="input-group" role="group">
 																			<!--!-->
 																			<!--!-->
-																			<input placeholder="Send a message..." data-slot="input-group-control" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow] focus-visible:ring-0 disabled:bg-transparent aria-invalid:ring-0 dark:bg-transparent dark:disabled:bg-transparent flex-1 border-0 rounded-none ring-0 shadow-none" _bl_146="">
+																			<input placeholder="Send a message..." data-slot="input-group-control" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,box-shadow] focus-visible:ring-0 dark:bg-transparent flex-1 border-0 rounded-none ring-0 shadow-none" _bl_147="">
 																			<!--!-->                             
 																			<!--!-->
 																			<div class="group-data-[disabled=true]/input-group:opacity-50 [&amp;>kbd]:rounded-[calc(var(--radius)-5px)] [&amp;>svg:not([class*='size-'])]:size-4 order-last has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem] flex text-muted-foreground text-sm font-medium py-1.5 pr-3 h-auto gap-2 items-center justify-center select-none cursor-text" role="group" data-slot="input-group-addon" data-align="inline-end">
@@ -1401,16 +1415,16 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="secondary" data-size="sm" type="button" _bl_18="">Copy</button>
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="secondary" data-size="sm" type="button" _bl_18="">Copy</button>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div role="none" data-orientation="vertical" class="data-horizontal:mx-px data-horizontal:h-px data-horizontal:w-auto data-vertical:my-px data-vertical:h-auto data-vertical:w-px data-vertical:self-stretch relative self-stretch bg-input" data-slot="button-group-separator" data-vertical=""></div>
+																	<div role="none" data-orientation="vertical" class="relative m-0! self-stretch data-[orientation=vertical]:h-auto bg-input" data-slot="button-group-separator"></div>
 																	<!--!-->                     
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="secondary" data-size="sm" type="button" _bl_19="">Paste</button>
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center outline-none transition-all" data-slot="button" data-variant="secondary" data-size="sm" type="button" _bl_19="">Paste</button>
 																</div>
 															</div>
 														</div>
@@ -1449,16 +1463,16 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="secondary" data-size="default" type="button" _bl_20="">Button</button>
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="secondary" data-size="default" type="button" _bl_20="">Button</button>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div role="none" data-orientation="vertical" class="data-horizontal:mx-px data-horizontal:h-px data-horizontal:w-auto data-vertical:my-px data-vertical:h-auto data-vertical:w-px data-vertical:self-stretch relative self-stretch bg-input" data-slot="button-group-separator" data-vertical=""></div>
+																	<div role="none" data-orientation="vertical" class="relative m-0! self-stretch data-[orientation=vertical]:h-auto bg-input" data-slot="button-group-separator"></div>
 																	<!--!-->                     
 																	<!--!-->
-																	<button aria-label="Add" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="secondary" data-size="icon" type="button" _bl_21="">
+																	<button aria-label="Add" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="secondary" data-size="icon" type="button" _bl_21="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1504,12 +1518,12 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<input placeholder="Search..." class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow]" data-slot="input" _bl_22="">
+																	<input placeholder="Search..." class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,box-shadow]" data-slot="input" _bl_22="">
 																	<!--!-->                     
 																	<!--!-->
-																	<button aria-label="Search" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_23="">
+																	<button aria-label="Search" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_23="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1557,23 +1571,23 @@
 																<div class="flex flex-wrap gap-3 items-center" data-slot="div">
 																	<!--!-->
 																	<!--!-->
-																	<div class="group/input-group dark:bg-input/30 in-data-[slot=combobox-content]:focus-within:border-inherit in-data-[slot=combobox-content]:focus-within:ring-0 has-disabled:bg-input/50 has-disabled:opacity-50 has-[>textarea]:h-auto dark:has-disabled:bg-input/80 has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-2 has-[>[data-align=inline-end]]:[&amp;>input]:pr-2 flex relative w-full min-w-0 h-9 items-center border border-input rounded-md outline-none shadow-xs transition-[color,shadow]" data-slot="input-group" role="group">
+																	<div class="group/input-group dark:bg-input/30 has-[>textarea]:h-auto has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-2 has-[>[data-align=inline-end]]:[&amp;>input]:pr-2 flex relative w-full min-w-0 h-9 items-center border border-input rounded-md outline-none shadow-xs transition-[color,box-shadow]" data-slot="input-group" role="group">
 																		<!--!-->
 																		<div class="group-data-[disabled=true]/input-group:opacity-50 [&amp;>kbd]:rounded-[calc(var(--radius)-5px)] [&amp;>svg:not([class*='size-'])]:size-4 order-first has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem] flex text-muted-foreground text-sm font-medium py-1.5 pl-3 h-auto gap-2 items-center justify-center select-none cursor-text" role="group" data-slot="input-group-addon" data-align="inline-start">https://</div>
 																		<!--!-->                         
 																		<!--!-->
 																		<!--!-->
-																		<input placeholder="acme.dev" data-slot="input-group-control" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow] focus-visible:ring-0 disabled:bg-transparent aria-invalid:ring-0 dark:bg-transparent dark:disabled:bg-transparent flex-1 border-0 rounded-none ring-0 shadow-none" _bl_143="">
+																		<input placeholder="acme.dev" data-slot="input-group-control" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,box-shadow] focus-visible:ring-0 dark:bg-transparent flex-1 border-0 rounded-none ring-0 shadow-none" _bl_144="">
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_136="">Verify</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_137="">Verify</button>
 																		<!--!-->                         
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_137="">Copy</button>
+																		<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_138="">Copy</button>
 																	</div>
 																</div>
 															</div>
@@ -1613,9 +1627,9 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_24="">Follow</button>
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_24="">Follow</button>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
@@ -1630,11 +1644,11 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_153="">
+																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_154="">
 																			<!--!-->
 																			<!--!-->
-																			<div style="display:contents;" _bl_160="">
-																				<button type="button" id="bradix-dropdown-menu-4-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-4-content" data-state="closed" class="group/button bg-clip-padding cursor-pointer focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap px-2.5 h-8 shrink-0 gap-1.5 items-center justify-center select-none border border-input bg-background rounded-lg outline-none transition-all pl-2!" data-slot="dropdown-menu-trigger" _bl_161="">
+																			<div style="display:contents;" _bl_161="">
+																				<button type="button" id="bradix-dropdown-menu-4-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="bradix-dropdown-menu-4-content" data-state="closed" class="pl-2!" data-slot="dropdown-menu-trigger" _bl_162="">
 																					<!--!-->
 																					<!--!-->
 																					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1649,6 +1663,13 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div _bl_163="">
+																			<!--!-->
+																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_164="">
+																				<!--!-->
+																				<!--!-->
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1688,54 +1709,123 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<div data-slot="select" data-size="default" data-state="closed" class="group/select relative w-full max-w-full">
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_155="">
 																			<!--!-->
+																			<div style="display:contents;" _bl_157="">
+																				<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-11-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[placeholder]:text-muted-foreground data-[size=default]:h-9 data-[size=sm]:h-8 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 flex text-sm whitespace-nowrap py-2 px-3 w-fit gap-2 items-center justify-between border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,box-shadow] font-mono" data-slot="select-trigger" data-size="default" _bl_158="">
+																					<!--!-->
+																					<!--!-->
+																					<span style="pointer-events:none;" data-slot="select-value" _bl_165="">US Dollar</span>
+																					<!--!-->     
+																					<!--!-->
+																					<span aria-hidden="true" class="pointer-events-none size-4 opacity-50 shrink-0">
+																						<!--!-->
+																						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+																							<path d="m6 9 6 6 6-6"></path>
+																						</svg>
+																					</span>
+																				</button>
+																			</div>
+																		</div>
+																		<!--!-->                             
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<div _bl_156="">
 																			<!--!-->
-																			<!--!-->
-																			<!--!-->
-																			<!--!-->
-																			<!--!-->
-																			<!--!-->
-																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_154="">
+																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_159="">
 																				<!--!-->
-																				<div style="display:contents;" _bl_156="">
-																					<button type="button" role="combobox" aria-haspopup="listbox" aria-controls="bradix-select-11-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[placeholder]:text-muted-foreground data-[size=default]:h-9 data-[size=sm]:h-8 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 flex text-sm whitespace-nowrap py-2 px-3 w-fit gap-2 items-center justify-between select-none border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow] font-mono" data-slot="select-trigger" data-size="default" _bl_157="">
-																						<!--!-->
-																						<!--!-->
-																						<span style="pointer-events:none;" data-slot="select-value" _bl_164="">US Dollar</span>
-																						<!--!-->     
-																						<!--!-->
-																						<span aria-hidden="true" class="pointer-events-none size-4 opacity-50 shrink-0">
+																				<div hidden="" style="display:none;">
+																					<!--!-->
+																					<!--!-->
+																					<!--!-->         
+																					<!--!-->
+																					<!--!-->
+																					<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+																					</style>
+																					<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_166="">
+																						<div style="min-width:100%;display:block;" _bl_167="">
 																							<!--!-->
-																							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-																								<path d="m6 9 6 6 6-6"></path>
-																							</svg>
-																						</span>
-																					</button>
+																							<!--!-->
+																							<!--!-->
+																							<div role="option" aria-labelledby="bradix-select-11-item-USD-text" aria-selected="false" data-state="checked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_172="">
+																								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																									<!--!-->
+																									<span aria-hidden="true">
+																										<!--!-->
+																										<svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+																											<path d="M20 6 9 17l-5-5"></path>
+																										</svg>
+																									</span>
+																								</span>
+																								<!--!-->     
+																								<!--!-->
+																								<span id="bradix-select-11-item-USD-text" _bl_175="">US Dollar</span>
+																							</div>
+																							<!--!-->                                 
+																							<!--!-->
+																							<!--!-->
+																							<!--!-->
+																							<div role="option" aria-labelledby="bradix-select-11-item-EUR-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_173="">
+																								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																									<!--!-->
+																								</span>
+																								<!--!-->     
+																								<!--!-->
+																								<span id="bradix-select-11-item-EUR-text" _bl_176="">Euro</span>
+																							</div>
+																							<!--!-->                                 
+																							<!--!-->
+																							<!--!-->
+																							<!--!-->
+																							<div role="option" aria-labelledby="bradix-select-11-item-GBP-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_174="">
+																								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
+																									<!--!-->
+																								</span>
+																								<!--!-->     
+																								<!--!-->
+																								<span id="bradix-select-11-item-GBP-text" _bl_177="">British Pound</span>
+																							</div>
+																						</div>
+																					</div>
+																					<!--!-->         
+																					<!--!-->
+																					<!--!-->
 																				</div>
 																			</div>
-																			<!--!-->                             
-																			<!--!-->
-																			<!--!-->
-																			<!--!-->
 																		</div>
+																		<select tabindex="-1" aria-hidden="true" style="position:absolute;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_148="">
+																			<option value="USD">US Dollar</option>
+																			<option value="EUR">Euro</option>
+																			<option value="GBP">British Pound</option>
+																		</select>
 																		<!--!-->                         
 																		<!--!-->
-																		<input placeholder="10.00" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,shadow]" data-slot="input" _bl_144="">
+																		<input placeholder="10.00" class="selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 text-base md:text-sm px-3 py-1 w-full min-w-0 h-9 border border-input bg-transparent rounded-md outline-none shadow-xs transition-[color,box-shadow]" data-slot="input" _bl_145="">
 																	</div>
 																	<!--!-->                     
 																	<!--!-->
 																	<!--!-->
-																	<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																	<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																		<!--!-->
-																		<button aria-label="Send" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_145="">
+																		<button aria-label="Send" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_146="">
 																			<!--!-->
 																			<!--!-->
 																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1782,9 +1872,9 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_25="">
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_25="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1795,34 +1885,38 @@
 																	</button>
 																	<!--!-->                     
 																	<!--!-->
-																	<div class="relative" data-slot="popover">
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_149="">
 																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_148="">
+																		<div style="display:contents;" _bl_150="">
 																			<!--!-->
-																			<div style="display:contents;" _bl_149="">
+																			<!--!-->
+																			<button aria-label="Open popover" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="popover-trigger" data-variant="outline" data-size="icon" id="bradix-popover-5-trigger" data-state="closed" aria-haspopup="dialog" aria-expanded="false" aria-controls="bradix-popover-5-content" type="button" _bl_152="">
 																				<!--!-->
 																				<!--!-->
-																				<button aria-label="Open popover" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="popover-trigger" data-variant="outline" data-size="icon" id="bradix-popover-5-trigger" data-state="closed" aria-haspopup="dialog" aria-expanded="false" aria-controls="bradix-popover-5-content" type="button" _bl_151="">
-																					<!--!-->
-																					<!--!-->
-																					<!--!-->
-																					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
-																						<path d="m6 9 6 6 6-6"></path>
-																					</svg>
-																				</button>
-																			</div>
+																				<!--!-->
+																				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																					<path d="m6 9 6 6 6-6"></path>
+																				</svg>
+																			</button>
 																		</div>
-																		<!--!-->                         
+																	</div>
+																	<!--!-->                         
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<!--!-->
+																	<div _bl_151="">
 																		<!--!-->
-																		<!--!-->
-																		<!--!-->
-																		<!--!-->
+																		<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_153="">
+																			<!--!-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1862,17 +1956,17 @@
 															<div class="mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full [&amp;_img]:object-contain">
 																<!--!-->
 																<!--!-->
-																<div dir="rtl" class="*:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-lg [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 *:data-slot:rounded-r-none [&amp;>[data-slot]~[data-slot]]:rounded-l-none [&amp;>[data-slot]~[data-slot]]:border-l-0 [&amp;>[data-slot]:not(:has(~[data-slot]))]:rounded-r-lg! flex w-fit items-stretch" data-slot="button-group" role="group">
+																<div dir="rtl" class="[&amp;>*]:focus-visible:relative [&amp;>*]:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&amp;>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&amp;>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&amp;>input]:flex-1 [&amp;>*:not(:first-child)]:rounded-l-none [&amp;>*:not(:first-child)]:border-l-0 [&amp;>*:not(:last-child)]:rounded-r-none flex w-fit items-stretch" data-slot="button-group" role="group">
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_26="">
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_26="">
 																		<!--!-->السابق</button>
 																	<!--!-->                     
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_27="">
+																	<button class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="default" type="button" _bl_27="">
 																		<!--!-->التالي</button>
 																	<!--!-->                     
 																	<!--!-->
-																	<button aria-label="More" class="group/button bg-clip-padding focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-8 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center select-none border rounded-lg outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_28="">
+																	<button aria-label="More" class="focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 size-9 inline-flex text-sm font-medium whitespace-nowrap shrink-0 gap-2 items-center justify-center rounded-md outline-none transition-all" data-slot="button" data-variant="outline" data-size="icon" type="button" _bl_28="">
 																		<!--!-->
 																		<!--!-->
 																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
@@ -1919,86 +2013,5 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE=" data-soenneker-loaded="true"></script>
-		<div _bl_150="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_152="">
-				<!--!-->
-			</div>
-		</div>
-		<div _bl_155="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_158="">
-				<!--!-->
-				<div hidden="" style="display:none;">
-					<!--!-->
-					<!--!-->
-					<style>
-    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
-
-					</style>
-					<div class="p-1" data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" _bl_165="">
-						<div style="min-width:100%;display:block;" _bl_166="">
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-11-item-USD-text" aria-selected="false" data-state="checked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_171="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-									<span aria-hidden="true">
-										<!--!-->
-										<svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M20 6 9 17l-5-5"></path>
-										</svg>
-									</span>
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-11-item-USD-text" _bl_174="">US Dollar</span>
-							</div>
-							<!--!-->                                 
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-11-item-EUR-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_172="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-11-item-EUR-text" _bl_175="">Euro</span>
-							</div>
-							<!--!-->                                 
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="option" aria-labelledby="bradix-select-11-item-GBP-text" aria-selected="false" data-state="unchecked" tabindex="-1" class="focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg:not([class*='text-'])]:text-muted-foreground *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex text-sm pr-8 pl-2 py-1.5 relative w-full gap-2 items-center select-none cursor-default rounded-sm outline-hidden" data-slot="select-item" _bl_173="">
-								<span data-slot="select-item-indicator" class="absolute right-2 flex size-3.5 items-center justify-center">
-									<!--!-->
-								</span>
-								<!--!-->     
-								<!--!-->
-								<span id="bradix-select-11-item-GBP-text" _bl_176="">British Pound</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div _bl_162="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_163="">
-				<!--!-->
-				<!--!-->
-			</div>
-		</div>
-		<div _bl_169="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_170="">
-				<!--!-->
-				<!--!-->
-			</div>
-		</div>
 	</body>
 </html>
