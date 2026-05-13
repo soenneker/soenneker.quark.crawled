@@ -25,8 +25,6 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css">
 	</head>
 	<body>
 		<div id="app">
@@ -1382,7 +1380,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_53="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_201="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_201="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_221="">
 																		<!--!-->
@@ -1393,10 +1391,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1405,10 +1404,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																				<!--!-->                         
 																				<!--!-->
 																				<span class="end-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
@@ -1422,10 +1422,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                             
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																				</span>
 																				<!--!-->                         
 																				<!--!-->
@@ -1434,10 +1435,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                             
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																				</span>
 																				<!--!-->                         
 																				<!--!-->
@@ -1446,10 +1448,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                             
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																				</span>
 																				<!--!-->                         
 																				<!--!-->
@@ -1502,7 +1505,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_56="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_203="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_203="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_224="">
 																		<!--!-->
@@ -1513,10 +1516,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																		</div>
 																	</div>
@@ -1565,7 +1569,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_59="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_205="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_205="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_227="">
 																		<!--!-->
@@ -1574,10 +1578,11 @@
 																		<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																			<!--!-->
 																			<!--!-->
-																			<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																			<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																			<!--!-->                     
 																			<!--!-->
 																			<!--!-->
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			<!--!-->                     
 																			<!--!-->
 																			<span class="end-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
@@ -1628,7 +1633,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_62="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_207="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_207="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_230="">
 																		<!--!-->
@@ -1637,10 +1642,11 @@
 																		<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full grayscale" data-size="default" data-slot="avatar">
 																			<!--!-->
 																			<!--!-->
-																			<img src="https://github.com/pranathip.png" alt="@pranathip" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																			<img src="https://github.com/pranathip.png" alt="@pranathip" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																			<!--!-->                     
 																			<!--!-->
 																			<!--!-->
+																			<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">PP</span>
 																			<!--!-->                     
 																			<!--!-->
 																			<span class="bg-primary end-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none rounded-full ring-background ring-2" data-slot="avatar-badge">
@@ -1698,7 +1704,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_65="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_209="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_209="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_233="">
 																		<!--!-->
@@ -1709,10 +1715,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1721,10 +1728,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1733,10 +1741,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																			</span>
 																		</div>
 																	</div>
@@ -1785,7 +1794,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_68="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_211="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_211="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_236="">
 																		<!--!-->
@@ -1796,10 +1805,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1808,10 +1818,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1820,10 +1831,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1875,7 +1887,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_71="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_213="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_213="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_239="">
 																		<!--!-->
@@ -1886,10 +1898,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1898,10 +1911,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1910,10 +1924,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1972,7 +1987,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_74="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_215="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_215="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_242="">
 																		<!--!-->
@@ -1983,10 +1998,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="sm" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -1995,10 +2011,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                     
 																			<!--!-->
@@ -2007,10 +2024,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="lg" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																		</div>
 																	</div>
@@ -2059,7 +2077,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_77="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_217="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_217="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_245="">
 																		<!--!-->
@@ -2082,10 +2100,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                                 
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																		</button>
 																		<!--!-->                     
@@ -2147,7 +2166,7 @@
 															<!--!-->
 															<div dir="ltr" data-slot="preview" _bl_80="">
 																<!--!-->
-																<div data-align="center" data-chromeless="false" class="preview relative flex h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:h-auto data-[chromeless=true]:p-0" data-slot="div" _bl_219="">
+																<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_219="">
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_248="">
 																		<!--!-->
@@ -2162,10 +2181,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full grayscale aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                             
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																			</span>
 																			<!--!-->                         
 																			<!--!-->
@@ -2174,10 +2194,11 @@
 																			<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																				<!--!-->
 																				<!--!-->
-																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																				<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																				<!--!-->                             
 																				<!--!-->
 																				<!--!-->
+																				<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																				<!--!-->                             
 																				<!--!-->
 																				<span class="end-0 bottom-0 z-10 group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&amp;>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&amp;>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&amp;>svg]:size-2 inline-flex text-primary-foreground absolute items-center justify-center select-none rounded-full ring-background ring-2 bg-green-600 dark:bg-green-800" data-slot="avatar-badge"></span>
@@ -2191,10 +2212,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                                 
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																				</span>
 																				<!--!-->                             
 																				<!--!-->
@@ -2203,10 +2225,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                                 
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																				</span>
 																				<!--!-->                             
 																				<!--!-->
@@ -2215,10 +2238,11 @@
 																				<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																					<!--!-->
 																					<!--!-->
-																					<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image">
+																					<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																					<!--!-->                                 
 																					<!--!-->
 																					<!--!-->
+																					<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																				</span>
 																				<!--!-->                             
 																				<!--!-->
