@@ -25,6 +25,8 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/editor/editor.main.css" crossorigin="anonymous" integrity="sha256-22wc1geUOoYbR8dmDQ7wLvZPcXMZTXxLi85cmIFW5fg=" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -2606,6 +2608,37 @@
 									</article>
 									<!--!-->                                     
 									<!--!-->
+									<!--!-->
+									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
+										<!--!-->
+										<div class="px-1 h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_346="">
+											<!--!-->
+											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
+											<!--!-->             
+											<!--!-->
+											<div class="contents" data-slot="scrollspy" _bl_347="">
+												<!--!-->
+												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
+													<!--!-->
+													<a data-scrollspy-anchor="basic-size-examples" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#basic-size-examples">Basic Size Examples</a>
+													<!--!-->
+													<a data-scrollspy-anchor="fluent-api-directional-margins" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#fluent-api-directional-margins">Fluent API - Directional Margins</a>
+													<!--!-->
+													<a data-scrollspy-anchor="fluent-api-axis-margins" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#fluent-api-axis-margins">Fluent API - Axis Margins</a>
+													<!--!-->
+													<a data-scrollspy-anchor="fluent-api-auto-margins" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#fluent-api-auto-margins">Fluent API - Auto Margins</a>
+													<!--!-->
+													<a data-scrollspy-anchor="fluent-api-chaining-examples" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#fluent-api-chaining-examples">Fluent API - Chaining Examples</a>
+													<!--!-->
+													<a data-scrollspy-anchor="responsive-margins" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#responsive-margins">Responsive Margins</a>
+													<!--!-->
+													<a data-scrollspy-anchor="responsive-chaining-examples" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#responsive-chaining-examples">Responsive Chaining Examples</a>
+													<!--!-->
+													<a data-scrollspy-anchor="custom-css-and-string-usage" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/margins#custom-css-and-string-usage">Custom CSS and String Usage</a>
+												</nav>
+											</div>
+										</div>
+									</aside>
 								</div>
 							</main>
 						</div>
@@ -2621,5 +2654,6 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js" crossorigin="anonymous" integrity="sha256-NbWd+AtBqLc78c6xWbRPBAVnwqtT9Od6PQAtncOdVdE="></script>
 	</body>
 </html>
