@@ -2895,7 +2895,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_214="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_225="" data-keybinding-context="1" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_225="" data-keybinding-context="1" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -2999,14 +2999,7 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
-																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute;">
-																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
-																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
-																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
-																								</div>
-																							</div>
-																						</div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3020,7 +3013,6 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
-																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3580,7 +3572,7 @@
 																								</div>
 																								<div role="presentation" aria-hidden="true" class="view-rulers"></div>
 																								<div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 585px; height: 666px;">
+																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 570px; height: 666px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
 																											<span class="mtk1">&lt;DirectionProvider&nbsp;Dir="rtl"&gt;</span>
@@ -3618,7 +3610,7 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 556px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
@@ -3676,11 +3668,11 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="side" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sheet#side" data-active="true" aria-current="location">Side</a>
+													<a data-scrollspy-anchor="side" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sheet#side">Side</a>
 													<!--!-->
 													<a data-scrollspy-anchor="no-close-button" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sheet#no-close-button">No Close Button</a>
 													<!--!-->
-													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sheet#rtl">RTL</a>
+													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sheet#rtl" data-active="true" aria-current="location">RTL</a>
 												</nav>
 											</div>
 										</div>
