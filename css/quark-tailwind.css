@@ -1,4 +1,4 @@
-/*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.2 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -422,9 +422,6 @@
   .right-8 {
     right: calc(var(--spacing) * 8);
   }
-  .right-10 {
-    right: calc(var(--spacing) * 10);
-  }
   .-bottom-1 {
     bottom: calc(var(--spacing) * -1);
   }
@@ -670,6 +667,9 @@
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-3\.5 {
+    margin-top: calc(var(--spacing) * 3.5);
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
@@ -1051,8 +1051,14 @@
   .h-\[45vh\] {
     height: 45vh;
   }
+  .h-\[92px\] {
+    height: 92px;
+  }
   .h-\[120px\] {
     height: 120px;
+  }
+  .h-\[200px\] {
+    height: 200px;
   }
   .h-\[208px\] {
     height: 208px;
@@ -1191,9 +1197,6 @@
   }
   .min-h-\[36rem\] {
     min-height: 36rem;
-  }
-  .min-h-\[92px\] {
-    min-height: 92px;
   }
   .min-h-\[104px\] {
     min-height: 104px;
@@ -2175,10 +2178,6 @@
     border-top-left-radius: calc(var(--radius) * 1.4);
     border-top-right-radius: calc(var(--radius) * 1.4);
   }
-  .rounded-l-none {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
   .rounded-tl-sm {
     border-top-left-radius: calc(var(--radius) * 0.6);
   }
@@ -2934,14 +2933,8 @@
   .pr-9 {
     padding-right: calc(var(--spacing) * 9);
   }
-  .pr-10 {
-    padding-right: calc(var(--spacing) * 10);
-  }
   .pr-12 {
     padding-right: calc(var(--spacing) * 12);
-  }
-  .pr-16 {
-    padding-right: calc(var(--spacing) * 16);
   }
   .pb-0 {
     padding-bottom: 0;
@@ -3656,6 +3649,10 @@
   .duration-1000 {
     --tw-duration: 1000ms;
     transition-duration: 1000ms;
+  }
+  .duration-\[50ms\] {
+    --tw-duration: 50ms;
+    transition-duration: 50ms;
   }
   .ease-\[cubic-bezier\(0\.22\,1\,0\.36\,1\)\] {
     --tw-ease: cubic-bezier(0.22,1,0.36,1);
@@ -6459,11 +6456,6 @@
           --tw-ring-color: color-mix(in oklab, var(--destructive) 20%, transparent);
         }
       }
-    }
-  }
-  .data-\[align-trigger\=true\]\:animate-none {
-    &[data-align-trigger="true"] {
-      animation: none;
     }
   }
   .data-\[align\=center\]\:items-center {
