@@ -1219,6 +1219,18 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -2957,7 +2969,7 @@
 															<div class="bg-muted/25" data-slot="div" _bl_38="">
 																<!--!-->
 																<div class="group/code-editor relative w-full min-w-0">
-																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_204="" data-keybinding-context="1" data-mode-id="razor">
+																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_204="" data-keybinding-context="1" data-mode-id="razor">
 																		<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																			<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																				<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3021,34 +3033,66 @@
 																						<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 812px; height: 552px;">
 																							<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&lt;FeedbackBar&gt;</span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBar</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarContent&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarContent</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarPrompt&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarPrompt</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Icon&nbsp;Name="LucideIcon.Info"&nbsp;Size="Qua</span>
-																									<span class="mtk1">rk.Size.Is4"&nbsp;Shrink="Quark.Shrink.Is0"&nbsp;/&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">Icon</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Name</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"LucideIcon.Info"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Size</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"Quark.Size.Is4"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Shrink</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"Quark.Shrink.Is0"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">/&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarLabel&gt;Is&nbsp;this&nbsp;response&nbsp;hel</span>
-																									<span class="mtk1">pful?&lt;/FeedbackBarLabel&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarLabel</span>
+																									<span class="mtk10">&gt;</span>
+																									<span class="mtk1">Is&nbsp;this&nbsp;response&nbsp;helpful?</span>
+																									<span class="mtk10">&lt;/</span>
+																									<span class="mtk14">FeedbackBarLabel</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/FeedbackBarPrompt&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;/</span>
+																									<span class="mtk14">FeedbackBarPrompt</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																						</div>
@@ -3066,7 +3110,14 @@
 																					</div>
 																				</div>
 																				<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																				<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																				<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																					<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																						<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																						<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 798px;">
+																							<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																						</div>
+																					</div>
+																				</div>
 																				<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																					<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																					<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3080,6 +3131,7 @@
 																			<div data-mprt="2" class="overflowingContentWidgets"></div>
 																			<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																		</div>
+																		<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																	</div>
 																</div>
 															</div>
@@ -3219,7 +3271,7 @@
 															<div class="bg-muted/25" data-slot="div" _bl_41="">
 																<!--!-->
 																<div class="group/code-editor relative w-full min-w-0">
-																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_207="" data-keybinding-context="2" data-mode-id="razor">
+																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_207="" data-keybinding-context="2" data-mode-id="razor">
 																		<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/2" style="width: 638px; height: 96px;">
 																			<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																				<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3287,40 +3339,96 @@
 																						<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 694px; height: 476px;">
 																							<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&lt;FeedbackBar&nbsp;Class="w-auto"&gt;</span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBar</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Class</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"w-auto"</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarContent&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarContent</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarActions&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarActions</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FeedbackBarAction&nbsp;AsChild="true"&nbsp;Tool</span>
-																									<span class="mtk1">tip="Helpful"&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">FeedbackBarAction</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">AsChild</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"true"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Tooltip</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"Helpful"</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;DataSlot="feedback-bar-act</span>
-																									<span class="mtk1">ion"&nbsp;Type="ButtonType.Button"&nbsp;Variant="ButtonVaria</span>
-																									<span class="mtk1">nt.Ghost"&nbsp;ButtonSize="ButtonSize.IconSm"&nbsp;Class="si</span>
-																									<span class="mtk1">ze-8!&nbsp;cursor-pointer&nbsp;rounded-full&nbsp;bg-transparent&nbsp;t</span>
-																									<span class="mtk1">ext-muted-foreground!&nbsp;transition-all&nbsp;hover:bg-bord</span>
-																									<span class="mtk1">er!&nbsp;hover:text-foreground!&nbsp;active:scale-97"&nbsp;aria-l</span>
-																									<span class="mtk1">abel="Helpful"&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">Button</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">DataSlot</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"feedback-bar-action"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Type</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"ButtonType.Button"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Variant</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"ButtonVariant.Ghost"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">ButtonSize</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"ButtonSize.IconSm"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Class</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"size-8!&nbsp;cursor-pointer&nbsp;rounded-full&nbsp;bg-transparen</span>
+																									<span class="mtk5">t&nbsp;text-muted-foreground!&nbsp;transition-all&nbsp;hover:bg-b</span>
+																									<span class="mtk5">order!&nbsp;hover:text-foreground!&nbsp;active:scale-97"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">aria-label</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"Helpful"</span>
+																									<span class="mtk10">&gt;</span>
 																								</span>
 																							</div>
 																							<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																								<span>
-																									<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Icon&nbsp;Name="LucideIcon.ThumbsU</span>
-																									<span class="mtk1">p"&nbsp;Size="Quark.Size.Is4"&nbsp;/&gt;</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">&lt;</span>
+																									<span class="mtk14">Icon</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Name</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"LucideIcon.ThumbsUp"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk4">Size</span>
+																									<span class="mtk1">=</span>
+																									<span class="mtk5">"Quark.Size.Is4"</span>
+																									<span class="mtk1"></span>
+																									<span class="mtk10">/&gt;</span>
 																								</span>
 																							</div>
 																						</div>
@@ -3338,7 +3446,14 @@
 																					</div>
 																				</div>
 																				<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																				<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																				<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																					<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																						<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																						<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 680px;">
+																							<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																						</div>
+																					</div>
+																				</div>
 																				<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																					<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																					<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
