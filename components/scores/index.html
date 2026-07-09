@@ -1219,6 +1219,24 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -2984,7 +3002,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_210="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_219="" data-keybinding-context="1" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_219="" data-keybinding-context="1" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -2995,9 +3013,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 267px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -3046,34 +3066,101 @@
 																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 912px; height: 267px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&lt;Div&nbsp;Margin="Margin.Is3.FromEnd"&gt;</span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Margin</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Margin.Is3.FromEnd"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Div&nbsp;Display="Display.Flex"&nbsp;FlexWrap="FlexWrap</span>
-																											<span class="mtk1">.Wrap"&nbsp;Justify="Justify.Center"&nbsp;Style="gap:&nbsp;1.5rem</span>
-																											<span class="mtk1">;"&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Display</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Display.Flex"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">FlexWrap</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"FlexWrap.Wrap"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Justify</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Justify.Center"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Style</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"gap:&nbsp;1.5rem;"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="15"&nbsp;Text="Risk"/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"15"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Risk"</span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="35"&nbsp;Text="Stability"/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"35"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Stability"</span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="50"&nbsp;Text="Completion"/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"50"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Completion"</span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="70"&nbsp;Text="Quality"/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"70"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Quality"</span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																								</div>
@@ -3091,7 +3178,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 898px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3105,6 +3199,7 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
+																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3198,7 +3293,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_213="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_223="" data-keybinding-context="2" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_223="" data-keybinding-context="2" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/2" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3209,9 +3304,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 210px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -3259,37 +3356,108 @@
 																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 912px; height: 210px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&lt;Div&nbsp;Margin="Margin.Is3.FromEnd"&gt;</span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Margin</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Margin.Is3.FromEnd"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Div&nbsp;Display="Display.Flex"&nbsp;FlexWrap="FlexWrap</span>
-																											<span class="mtk1">.Wrap"&nbsp;Justify="Justify.Center"&nbsp;Style="gap:&nbsp;1.5rem</span>
-																											<span class="mtk1">;"&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Display</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Display.Flex"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">FlexWrap</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"FlexWrap.Wrap"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Justify</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Justify.Center"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Style</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"gap:&nbsp;1.5rem;"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="25"&nbsp;Text="Low"&nbsp;Colored="fals</span>
-																											<span class="mtk1">e"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"25"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Low"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Colored</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"false"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="58"&nbsp;Text="Medium"&nbsp;Colored="f</span>
-																											<span class="mtk1">alse"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"58"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Medium"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Colored</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"false"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="92"&nbsp;Text="High"&nbsp;Colored="fal</span>
-																											<span class="mtk1">se"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"92"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"High"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Colored</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"false"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Div&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;/</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																								</div>
@@ -3307,7 +3475,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 898px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3414,7 +3589,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_216="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_227="" data-keybinding-context="3" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_227="" data-keybinding-context="3" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/3" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3425,9 +3600,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 210px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -3475,36 +3652,112 @@
 																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 896px; height: 210px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&lt;Div&nbsp;Margin="Margin.Is3.FromEnd"&gt;</span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Margin</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Margin.Is3.FromEnd"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Div&nbsp;Display="Display.Flex"&nbsp;FlexWrap="FlexWrap</span>
-																											<span class="mtk1">.Wrap"&nbsp;Justify="Justify.Center"&nbsp;Style="gap:&nbsp;2rem;"</span>
-																											<span class="mtk1">&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Display</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Display.Flex"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">FlexWrap</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"FlexWrap.Wrap"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Justify</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Justify.Center"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Style</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"gap:&nbsp;2rem;"</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="42"&nbsp;Text="Compact"&nbsp;ScoreSize</span>
-																											<span class="mtk1">="72"&nbsp;Thickness="6"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"42"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Compact"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">ScoreSize</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"72"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Thickness</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"6"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:57px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="64"&nbsp;Text="Default"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"64"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Default"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Score&nbsp;Value="82"&nbsp;Text="Large"&nbsp;ScoreSize="</span>
-																											<span class="mtk1">120"&nbsp;Thickness="12"&nbsp;/&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;</span>
+																											<span class="mtk14">Score</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Value</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"82"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Text</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"Large"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">ScoreSize</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"120"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk4">Thickness</span>
+																											<span class="mtk1">=</span>
+																											<span class="mtk5">"12"</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">/&gt;</span>
 																										</span>
 																									</div>
 																									<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Div&gt;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk10">&lt;/</span>
+																											<span class="mtk14">Div</span>
+																											<span class="mtk10">&gt;</span>
 																										</span>
 																									</div>
 																								</div>
@@ -3522,7 +3775,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 882px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3571,11 +3831,11 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="basic-scores" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/scores#basic-scores" data-slot="anchor" data-active="true" aria-current="location">Basic Scores</a>
+													<a data-scrollspy-anchor="basic-scores" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/scores#basic-scores" data-slot="anchor">Basic Scores</a>
 													<!--!-->
 													<a data-scrollspy-anchor="neutral-scores" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/scores#neutral-scores" data-slot="anchor">Neutral Scores</a>
 													<!--!-->
-													<a data-scrollspy-anchor="size-thickness" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/scores#size-thickness" data-slot="anchor">Size + Thickness</a>
+													<a data-scrollspy-anchor="size-thickness" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/scores#size-thickness" data-slot="anchor" data-active="true" aria-current="location">Size + Thickness</a>
 												</nav>
 											</div>
 										</div>
