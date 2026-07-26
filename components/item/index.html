@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<base href="/soenneker.quark.suite/">
-		<link rel="icon" href="data:,">
+		<link rel="icon" type="image/png" href="icon.png">
 		<script type="module">
         import { initialize } from "./_content/Soenneker.Quark.Suite/js/themeinterop.js";
         initialize();
@@ -25,8 +25,6 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/js/monaco-editor/monaco.editor.main.esm.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -84,7 +82,7 @@
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="Quark Suite" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex" href="https://soenneker.github.io/soenneker.quark.suite/">
 								<!--!-->
-								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain" loading="eager">
+								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain">
 								
 								<!--!-->
 								<span class="sr-only" data-slot="span" _bl_14="">
@@ -2124,10 +2122,11 @@
 																					<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="lg" data-slot="avatar">
 																						<!--!-->
 																						<!--!-->
-																						<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																						<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																						<!--!-->                                 
 																						<!--!-->
 																						<!--!-->
+																						<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																					</span>
 																				</div>
 																				<!--!-->                         
@@ -2166,9 +2165,10 @@
 																						<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full hidden sm:flex" data-size="default" data-slot="avatar">
 																							<!--!-->
 																							<!--!-->
-																							<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																							<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																							<!--!-->
 																							<!--!-->
+																							<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">CN</span>
 																						</span>
 																						<!--!-->                                 
 																						<!--!-->
@@ -2177,9 +2177,10 @@
 																						<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full hidden sm:flex" data-size="default" data-slot="avatar">
 																							<!--!-->
 																							<!--!-->
-																							<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																							<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																							<!--!-->
 																							<!--!-->
+																							<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">LR</span>
 																						</span>
 																						<!--!-->                                 
 																						<!--!-->
@@ -2188,9 +2189,10 @@
 																						<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																							<!--!-->
 																							<!--!-->
-																							<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																							<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																							<!--!-->
 																							<!--!-->
+																							<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">ER</span>
 																						</span>
 																					</div>
 																				</div>
@@ -2281,7 +2283,7 @@
 																				<!--!-->
 																				<div class="group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&amp;_svg]:pointer-events-none group-data-[size=sm]/item:size-8 group-data-[size=xs]/item:size-6 [&amp;_img]:size-full [&amp;_img]:object-cover flex size-10 overflow-hidden shrink-0 gap-2 items-center justify-center rounded-sm" data-variant="image" data-slot="item-media">
 																					<!--!-->
-																					<img src="https://avatar.vercel.sh/Midnight%20City%20Lights" alt="Midnight City Lights" data-slot="image" loading="eager">
+																					<img src="https://avatar.vercel.sh/Midnight%20City%20Lights" alt="Midnight City Lights" data-slot="image">
 																				</div>
 																				<!--!-->                             
 																				<!--!-->
@@ -2307,7 +2309,7 @@
 																				<!--!-->
 																				<div class="group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&amp;_svg]:pointer-events-none group-data-[size=sm]/item:size-8 group-data-[size=xs]/item:size-6 [&amp;_img]:size-full [&amp;_img]:object-cover flex size-10 overflow-hidden shrink-0 gap-2 items-center justify-center rounded-sm" data-variant="image" data-slot="item-media">
 																					<!--!-->
-																					<img src="https://avatar.vercel.sh/Coffee%20Shop%20Conversations" alt="Coffee Shop Conversations" data-slot="image" loading="eager">
+																					<img src="https://avatar.vercel.sh/Coffee%20Shop%20Conversations" alt="Coffee Shop Conversations" data-slot="image">
 																				</div>
 																				<!--!-->                             
 																				<!--!-->
@@ -2333,7 +2335,7 @@
 																				<!--!-->
 																				<div class="group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&amp;_svg]:pointer-events-none group-data-[size=sm]/item:size-8 group-data-[size=xs]/item:size-6 [&amp;_img]:size-full [&amp;_img]:object-cover flex size-10 overflow-hidden shrink-0 gap-2 items-center justify-center rounded-sm" data-variant="image" data-slot="item-media">
 																					<!--!-->
-																					<img src="https://avatar.vercel.sh/Digital%20Rain" alt="Digital Rain" data-slot="image" loading="eager">
+																					<img src="https://avatar.vercel.sh/Digital%20Rain" alt="Digital Rain" data-slot="image">
 																				</div>
 																				<!--!-->                             
 																				<!--!-->
@@ -2416,9 +2418,10 @@
 																					<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																						<!--!-->
 																						<!--!-->
-																						<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																						<img src="https://github.com/shadcn.png" alt="@shadcn" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																						<!--!-->
 																						<!--!-->
+																						<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">s</span>
 																					</span>
 																				</div>
 																				<!--!-->                         
@@ -2454,9 +2457,10 @@
 																					<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																						<!--!-->
 																						<!--!-->
-																						<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																						<img src="https://github.com/maxleiter.png" alt="@maxleiter" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																						<!--!-->
 																						<!--!-->
+																						<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">m</span>
 																					</span>
 																				</div>
 																				<!--!-->                         
@@ -2492,9 +2496,10 @@
 																					<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full" data-size="default" data-slot="avatar">
 																						<!--!-->
 																						<!--!-->
-																						<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" loading="eager">
+																						<img src="https://github.com/evilrabbit.png" alt="@evilrabbit" class="size-full rounded-full aspect-square object-cover" data-slot="avatar-image" hidden="">
 																						<!--!-->
 																						<!--!-->
+																						<span class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm size-full items-center justify-center bg-muted rounded-full" data-slot="avatar-fallback">e</span>
 																					</span>
 																				</div>
 																				<!--!-->                         
@@ -2579,7 +2584,7 @@
 																				<!--!-->
 																				<div class="basis-full flex gap-2 items-center justify-between" data-slot="item-header">
 																					<!--!-->
-																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1650804068570-7fb2e3dbf888?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-1.5-sm" data-slot="image" loading="eager">
+																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1650804068570-7fb2e3dbf888?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-1.5-sm" data-slot="image">
 																				</div>
 																				<!--!-->                         
 																				<!--!-->
@@ -2597,7 +2602,7 @@
 																				<!--!-->
 																				<div class="basis-full flex gap-2 items-center justify-between" data-slot="item-header">
 																					<!--!-->
-																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1610280777472-54133d004c8c?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-1.5-lg" data-slot="image" loading="eager">
+																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1610280777472-54133d004c8c?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-1.5-lg" data-slot="image">
 																				</div>
 																				<!--!-->                         
 																				<!--!-->
@@ -2615,7 +2620,7 @@
 																				<!--!-->
 																				<div class="basis-full flex gap-2 items-center justify-between" data-slot="item-header">
 																					<!--!-->
-																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1602146057681-08560aee8cde?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-2.0-mini" data-slot="image" loading="eager">
+																					<img class="aspect-square w-full rounded-sm object-cover" src="https://images.unsplash.com/photo-1602146057681-08560aee8cde?q=80&amp;w=640&amp;auto=format&amp;fit=crop" alt="v0-2.0-mini" data-slot="image">
 																				</div>
 																				<!--!-->                         
 																				<!--!-->
@@ -2804,6 +2809,13 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div style="display:contents;" _bl_360="">
+																			<!--!-->
+																			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_361="">
+																				<!--!-->
+																				<!--!-->
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2897,6 +2909,70 @@
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
+																				<div style="display:contents;" _bl_363="">
+																					<!--!-->
+																					<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_366="">
+																						<!--!-->
+																						<div hidden="" style="display:none;">
+																							<!--!-->
+																							<!--!-->
+																							<!--!-->         
+																							<!--!-->
+																							<!--!-->
+																							<style>
+    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
+
+																							</style>
+																							<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" data-position="item-aligned" _bl_368="">
+																								<div style="min-width:100%;display:block;" _bl_369="">
+																									<!--!-->
+																									<!--!-->
+																									<!--!-->
+																									<div role="group" aria-labelledby="bradix-select-6-group-label" class="scroll-my-1 p-1" data-slot="select-group">
+																										<!--!-->
+																										<!--!-->
+																										<!--!-->
+																										<div role="option" aria-labelledby="bradix-select-6-item-ar-text" aria-selected="false" data-value="ar" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_370="">
+																											<!--!-->
+																											<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_372="">
+																												<!--!-->
+																												<!--!-->
+																												<span aria-hidden="true">
+																													<!--!-->
+																													<svg aria-hidden="true" class="size-4 fill-none stroke-current stroke-2 stroke-cap-round stroke-join-round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" data-slot="svg">
+																														<!--!-->
+																														<path d="M20 6 9 17l-5-5"></path>
+																													</svg>
+																												</span>
+																											</span>
+																											<!--!-->     
+																											<!--!-->
+																											<span id="bradix-select-6-item-ar-text" _bl_373="">Arabic (العربية)</span>
+																										</div>
+																										<!--!-->                                         
+																										<!--!-->
+																										<!--!-->
+																										<!--!-->
+																										<div role="option" aria-labelledby="bradix-select-6-item-he-text" aria-selected="false" data-value="he" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_371="">
+																											<!--!-->
+																											<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_374="">
+																												<!--!-->
+																												<!--!-->
+																											</span>
+																											<!--!-->     
+																											<!--!-->
+																											<span id="bradix-select-6-item-he-text" _bl_375="">Hebrew (עברית)</span>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<!--!-->         
+																							<!--!-->
+																							<!--!-->
+																						</div>
+																					</div>
+																				</div>
 																				<select tabindex="-1" aria-hidden="true" style="position:absolute;width:0;height:0;padding:0;border:0;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_358="">
 																					<option value="ar">Arabic (العربية)</option>
 																					<option value="he">Hebrew (עברית)</option>
@@ -3022,76 +3098,5 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
-		<div style="display:contents;" _bl_360="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_361="">
-				<!--!-->
-				<!--!-->
-			</div>
-		</div>
-		<div style="display:contents;" _bl_363="">
-			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_366="">
-				<!--!-->
-				<div hidden="" style="display:none;">
-					<!--!-->
-					<!--!-->
-					<!--!-->         
-					<!--!-->
-					<!--!-->
-					<style>
-    [data-radix-select-viewport] { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
-    [data-radix-select-viewport]::-webkit-scrollbar { display: none; }
-
-					</style>
-					<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden auto;" data-position="item-aligned" _bl_368="">
-						<div style="min-width:100%;display:block;" _bl_369="">
-							<!--!-->
-							<!--!-->
-							<!--!-->
-							<div role="group" aria-labelledby="bradix-select-6-group-label" class="scroll-my-1 p-1" data-slot="select-group">
-								<!--!-->
-								<!--!-->
-								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-6-item-ar-text" aria-selected="false" data-value="ar" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_370="">
-									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_372="">
-										<!--!-->
-										<!--!-->
-										<span aria-hidden="true">
-											<!--!-->
-											<svg aria-hidden="true" class="size-4 fill-none stroke-current stroke-2 stroke-cap-round stroke-join-round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" data-slot="svg">
-												<!--!-->
-												<path d="M20 6 9 17l-5-5"></path>
-											</svg>
-										</span>
-									</span>
-									<!--!-->     
-									<!--!-->
-									<span id="bradix-select-6-item-ar-text" _bl_373="">Arabic (العربية)</span>
-								</div>
-								<!--!-->                                         
-								<!--!-->
-								<!--!-->
-								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-6-item-he-text" aria-selected="false" data-value="he" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_371="">
-									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_374="">
-										<!--!-->
-										<!--!-->
-									</span>
-									<!--!-->     
-									<!--!-->
-									<span id="bradix-select-6-item-he-text" _bl_375="">Hebrew (עברית)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--!-->         
-					<!--!-->
-					<!--!-->
-				</div>
-			</div>
-		</div>
 	</body>
 </html>
