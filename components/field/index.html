@@ -1219,6 +1219,30 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -1248,7 +1272,7 @@
 					<!--!-->
 					<div class="px-6" data-slot="div" _bl_3="">
 						<!--!-->
-						<div class="flex h-(--header-height) h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
+						<div class="flex h-(--header-height) min-h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<!--!-->
 								<div class="flex relative w-4 h-8 items-center justify-center" data-slot="div" _bl_6="">
@@ -3181,7 +3205,7 @@
 																								<label for="field-comments" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_437="">Comments</label>
 																								<!--!-->                                         
 																								<!--!-->
-																								<textarea id="field-comments" placeholder="Add any additional comments" class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors resize-none" data-slot="textarea" _bl_415=""></textarea>
+																								<textarea id="field-comments" placeholder="Add any additional comments" class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors resize-none" data-slot="textarea" _bl_415=""></textarea>
 																							</div>
 																						</div>
 																					</fieldset>
@@ -3211,7 +3235,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_290="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_330="" data-keybinding-context="1" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_330="" data-keybinding-context="1" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3222,15 +3246,19 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 1749px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
@@ -3314,16 +3342,23 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 378px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 823px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3337,6 +3372,7 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
+																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3420,7 +3456,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_293="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_333="" data-keybinding-context="2" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_333="" data-keybinding-context="2" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/2" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3431,9 +3467,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 305px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -3519,16 +3557,23 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 407px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 30px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 764px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3594,7 +3639,7 @@
 																					<label for="feedback" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_397="">Feedback</label>
 																					<!--!-->                             
 																					<!--!-->
-																					<textarea id="feedback" placeholder="Your feedback helps us improve..." class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="4" data-slot="textarea" _bl_384=""></textarea>
+																					<textarea id="feedback" placeholder="Your feedback helps us improve..." class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="4" data-slot="textarea" _bl_384=""></textarea>
 																					<!--!-->                             
 																					<!--!-->
 																					<p class="group-data-[orientation=horizontal]/field:text-balance last:mt-0 nth-last-2:-mt-1 [[data-variant=legend]+&amp;]:-mt-1.5 [&amp;>a]:underline [&amp;>a]:underline-offset-4 [&amp;>a:hover]:text-primary text-left text-muted-foreground text-sm font-normal leading-normal" id="quark-field-8-description" data-slot="field-description">Share your thoughts about our service.</p>
@@ -3612,7 +3657,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_296="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_336="" data-keybinding-context="3" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_336="" data-keybinding-context="3" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/3" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3623,12 +3668,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 248px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -3715,16 +3763,23 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 375px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 37px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 831px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3833,7 +3888,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_299="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_339="" data-keybinding-context="4" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_339="" data-keybinding-context="4" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/4" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3844,15 +3899,18 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 362px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
@@ -3939,12 +3997,19 @@
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 556px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 25px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -4049,6 +4114,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 172px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4127,11 +4193,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 390px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 53px;"></div>
 																							</div>
 																						</div>
@@ -4263,6 +4329,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 457px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4272,9 +4339,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
@@ -4349,11 +4418,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 420px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -4560,9 +4629,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 685px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -4572,9 +4643,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -4649,11 +4722,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 378px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -4803,6 +4876,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 419px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4812,9 +4886,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
@@ -4892,11 +4968,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 382px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 21px;"></div>
 																							</div>
 																						</div>
@@ -4992,6 +5068,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 153px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -5051,11 +5128,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 486px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 60px;"></div>
 																							</div>
 																						</div>
@@ -5209,6 +5286,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 533px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -5218,12 +5296,15 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -5298,11 +5379,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 398px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -5479,12 +5560,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 647px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -5568,11 +5652,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 248px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -5862,7 +5946,7 @@
 																						<!--!-->تعليقات</label>
 																					<!--!-->                             
 																					<!--!-->
-																					<textarea id="field-rtl-comments" class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors resize-none" data-slot="textarea" _bl_391=""></textarea>
+																					<textarea id="field-rtl-comments" class="field-sizing-content focus-visible:ring-3 placeholder:text-muted-foreground disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 flex text-base md:text-sm px-2.5 py-2 w-full min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors resize-none" data-slot="textarea" _bl_391=""></textarea>
 																				</div>
 																				<!--!-->                         
 																				<!--!-->
@@ -5902,12 +5986,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 1635px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -5917,6 +6004,7 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -5924,9 +6012,9 @@
 																						</div>
 																						<div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="6" style="position: absolute; overflow: hidden; left: 68px; width: 570px; height: 96px;">
 																							<div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1.67772e+07px; height: 1.67772e+07px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;">
-																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 570px;">
+																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 669px;">
 																									<div style="top:0px;height:19px;line-height:19px;">
-																										<div class="current-line current-line-exact" style="width:570px;"></div>
+																										<div class="current-line current-line-exact" style="width:669px;"></div>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;">
 																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
@@ -5994,7 +6082,7 @@
 																								</div>
 																							</div>
 																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 556px;"></div>
+																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 473px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
 																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
@@ -6121,6 +6209,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 400px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -6130,12 +6219,15 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -6211,11 +6303,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 473px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 23px;"></div>
 																							</div>
 																						</div>
@@ -6260,7 +6352,7 @@
 									<!--!-->
 									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
 										<!--!-->
-										<div class="px-1 h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_636="">
+										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_636="">
 											<!--!-->
 											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
 											<!--!-->             
@@ -6269,7 +6361,7 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="input" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#input" data-slot="anchor">Input</a>
+													<a data-scrollspy-anchor="input" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#input" data-slot="anchor" data-active="true" aria-current="location">Input</a>
 													<!--!-->
 													<a data-scrollspy-anchor="textarea" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#textarea" data-slot="anchor">Textarea</a>
 													<!--!-->
@@ -6287,7 +6379,7 @@
 													<!--!-->
 													<a data-scrollspy-anchor="choice-card" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#choice-card" data-slot="anchor">Choice Card</a>
 													<!--!-->
-													<a data-scrollspy-anchor="field-group" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#field-group" data-slot="anchor" data-active="true" aria-current="location">Field Group</a>
+													<a data-scrollspy-anchor="field-group" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#field-group" data-slot="anchor">Field Group</a>
 													<!--!-->
 													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#rtl" data-slot="anchor">RTL</a>
 													<!--!-->

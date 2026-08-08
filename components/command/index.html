@@ -56,7 +56,7 @@
 					<!--!-->
 					<div class="px-6" data-slot="div" _bl_3="">
 						<!--!-->
-						<div class="flex h-(--header-height) h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
+						<div class="flex h-(--header-height) min-h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<!--!-->
 								<div class="flex relative w-4 h-8 items-center justify-center" data-slot="div" _bl_6="">
@@ -1780,7 +1780,7 @@
 																			</div>
 																			<!--!-->                     
 																			<!--!-->
-																			<div class="no-scrollbar scroll-py-1 h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-1" role="listbox" aria-label="Suggestions" data-slot="command-list">
+																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-1" role="listbox" aria-label="Suggestions" data-slot="command-list">
 																				<!--!-->
 																				<!--!-->                         
 																				<!--!-->
@@ -1817,14 +1817,6 @@
 																						<!--!-->
 																						<div id="quark-command-item-21" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Search Emoji" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_287="">
 																							<!--!-->
-																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
-																								<circle cx="12" cy="12" r="10"></circle>
-																								<path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-																								<line x1="9" x2="9.01" y1="9" y2="9"></line>
-																								<line x1="15" x2="15.01" y1="9" y2="9"></line>
-																							</svg>
-																							
 																							<!--!-->                                 
 																							<!--!-->
 																							<span data-slot="span" _bl_293="">
@@ -2301,7 +2293,7 @@
 																			</div>
 																			<!--!-->                         
 																			<!--!-->
-																			<div class="no-scrollbar scroll-py-1 h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-19" role="listbox" aria-label="Suggestions" data-slot="command-list">
+																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-19" role="listbox" aria-label="Suggestions" data-slot="command-list">
 																				<!--!-->
 																				<!--!-->                             
 																				<!--!-->
@@ -2452,12 +2444,12 @@
 									<!--!-->
 									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
 										<!--!-->
-										<div class="px-1 h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_318="">
+										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_318="">
 											<!--!-->
 											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
 											<!--!-->             
 											<!--!-->
-											<div class="contents" data-slot="scrollspy" _bl_319="">
+											<div class="contents" data-slot="scrollspy" _bl_319="" data-scrollspy-initialized="true">
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
 													<!--!-->

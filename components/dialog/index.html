@@ -56,7 +56,7 @@
 					<!--!-->
 					<div class="px-6" data-slot="div" _bl_3="">
 						<!--!-->
-						<div class="flex h-(--header-height) h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
+						<div class="flex h-(--header-height) min-h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
 							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<!--!-->
 								<div class="flex relative w-4 h-8 items-center justify-center" data-slot="div" _bl_6="">
@@ -2133,6 +2133,10 @@
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
+																				<select tabindex="-1" aria-hidden="true" style="position:absolute;width:0;height:0;padding:0;border:0;pointer-events:none;opacity:0;margin:0;transform:translateX(-100%);" _bl_291="">
+																					<option value="ar">Arabic (العربية)</option>
+																					<option value="he">Hebrew (עברית)</option>
+																				</select>
 																				<!--!-->                             
 																				<!--!-->
 																				<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all ml-auto size-7" data-variant="ghost" data-slot="button" _bl_279="">
@@ -2207,31 +2211,6 @@
 									</article>
 									<!--!-->                                     
 									<!--!-->
-									<!--!-->
-									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
-										<!--!-->
-										<div class="px-1 h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_308="">
-											<!--!-->
-											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
-											<!--!-->             
-											<!--!-->
-											<div class="contents" data-slot="scrollspy" _bl_309="">
-												<!--!-->
-												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
-													<!--!-->
-													<a data-scrollspy-anchor="custom-close-button" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/dialog#custom-close-button" data-slot="anchor">Custom Close Button</a>
-													<!--!-->
-													<a data-scrollspy-anchor="no-close-button" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/dialog#no-close-button" data-slot="anchor">No Close Button</a>
-													<!--!-->
-													<a data-scrollspy-anchor="sticky-footer" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/dialog#sticky-footer" data-slot="anchor">Sticky Footer</a>
-													<!--!-->
-													<a data-scrollspy-anchor="scrollable-content" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/dialog#scrollable-content" data-slot="anchor">Scrollable Content</a>
-													<!--!-->
-													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/dialog#rtl" data-slot="anchor">RTL</a>
-												</nav>
-											</div>
-										</div>
-									</aside>
 								</div>
 							</main>
 						</div>
