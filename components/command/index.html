@@ -25,8 +25,6 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/js/monaco-editor/monaco.editor.main.esm.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -57,7 +55,7 @@
 					<div class="px-6" data-slot="div" _bl_3="">
 						<!--!-->
 						<div class="flex h-(--header-height) min-h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_5="">
-							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
+							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" aria-controls="quark-sidebar-mobile-1" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
 								<!--!-->
 								<div class="flex relative w-4 h-8 items-center justify-center" data-slot="div" _bl_6="">
 									<!--!-->
@@ -121,7 +119,7 @@
 									
 									<!--!-->
 									<!--!-->
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" focusable="false" data-slot="icon">
 										<path d="M2 3v18"></path>
 										<rect width="12" height="18" x="6" y="3" rx="2"></rect>
 										<path d="M22 3v18"></path>
@@ -143,7 +141,7 @@
 											<!--!-->
 											<!--!-->
 											<!--!-->
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle shrink-0 size-4.5" data-slot="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle shrink-0 size-4.5" focusable="false" aria-hidden="true" data-slot="icon">
 												<circle cx="12" cy="12" r="4"></circle>
 												<path d="M12 2v2"></path>
 												<path d="M12 20v2"></path>
@@ -161,7 +159,7 @@
 											<!--!-->
 											<!--!-->
 											<!--!-->
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle shrink-0 size-4.5" data-slot="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle shrink-0 size-4.5" focusable="false" aria-hidden="true" data-slot="icon">
 												<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
 											</svg>
 										</span>
@@ -1765,13 +1763,13 @@
 																				<!--!-->
 																				<!--!-->
 																				<div class="group/input-group dark:bg-input/30 in-data-[slot=combobox-content]:focus-within:border-inherit in-data-[slot=combobox-content]:focus-within:ring-0 has-disabled:bg-input/50 has-disabled:opacity-50 dark:has-disabled:bg-input/80 has-[>textarea]:h-auto has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-3 has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-3 has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-1.5 has-[>[data-align=inline-end]]:[&amp;>input]:pr-1.5 flex relative w-full min-w-0 h-8 items-center border border-input rounded-lg outline-none transition-colors h-8! rounded-lg! border-input/30 bg-input/30 shadow-none! *:data-[slot=input-group-addon]:pl-2!" role="group" data-slot="input-group">
-																					<input class="text-sm w-full disabled:opacity-50 disabled:cursor-not-allowed outline-hidden" type="text" role="combobox" aria-expanded="true" aria-controls="quark-command-list-1" data-slot="command-input" placeholder="Type a command or search..." cmdk-input="" _bl_279="" aria-activedescendant="quark-command-item-20">
+																					<input class="text-sm w-full disabled:opacity-50 disabled:cursor-not-allowed outline-hidden" type="text" role="combobox" aria-expanded="true" aria-controls="quark-command-list-2" data-slot="command-input" placeholder="Type a command or search..." cmdk-input="" _bl_279="" aria-activedescendant="quark-command-item-21">
 																					<!--!-->         
 																					<!--!-->
 																					<div class="group-data-[disabled=true]/input-group:opacity-50 [&amp;>kbd]:rounded-[calc(var(--radius)-5px)] [&amp;>svg:not([class*='size-'])]:size-4 order-first pl-2 has-[>button]:ml-[-0.3rem] has-[>kbd]:ml-[-0.15rem] flex text-muted-foreground text-sm font-medium py-1.5 pl-2 h-auto gap-2 items-center justify-center select-none cursor-text" role="group" data-align="inline-start" data-slot="input-group-addon">
 																						<!--!-->
 																						<!--!-->
-																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0 opacity-50" data-slot="icon">
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0 opacity-50" focusable="false" aria-hidden="true" data-slot="icon">
 																							<path d="m21 21-4.34-4.34"></path>
 																							<circle cx="11" cy="11" r="8"></circle>
 																						</svg>
@@ -1780,7 +1778,7 @@
 																			</div>
 																			<!--!-->                     
 																			<!--!-->
-																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-1" role="listbox" aria-label="Suggestions" data-slot="command-list">
+																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-2" role="listbox" aria-label="Suggestions" data-slot="command-list">
 																				<!--!-->
 																				<!--!-->                         
 																				<!--!-->
@@ -1792,10 +1790,10 @@
 																					<!--!-->
 																					<div data-slot="command-group-items" _bl_283="">
 																						<!--!-->
-																						<div id="quark-command-item-20" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="true" data-selected="true" data-value="Calendar" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_286="">
+																						<div id="quark-command-item-21" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="true" data-selected="true" data-value="Calendar" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_286="">
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M8 2v3"></path>
 																								<path d="M16 2v3"></path>
 																								<rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -1809,13 +1807,13 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                             
 																						<!--!-->
-																						<div id="quark-command-item-21" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Search Emoji" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_287="">
+																						<div id="quark-command-item-22" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Search Emoji" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_287="">
 																							<!--!-->
 																							<!--!-->                                 
 																							<!--!-->
@@ -1824,16 +1822,16 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                             
 																						<!--!-->
-																						<div id="quark-command-item-22" disabled="" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Calculator" data-disabled="true" data-checked="false" aria-disabled="true" data-slot="command-item" role="option" _bl_288="">
+																						<div id="quark-command-item-23" disabled="" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Calculator" data-disabled="true" data-checked="false" aria-disabled="true" data-slot="command-item" role="option" _bl_288="">
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																								<rect width="16" height="20" x="4" y="2" rx="2"></rect>
 																								<line x1="8" x2="16" y1="6" y2="6"></line>
 																								<line x1="16" x2="16" y1="14" y2="18"></line>
@@ -1853,7 +1851,7 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
@@ -1872,10 +1870,10 @@
 																					<!--!-->
 																					<div data-slot="command-group-items" _bl_285="">
 																						<!--!-->
-																						<div id="quark-command-item-23" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Profile" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_289="">
+																						<div id="quark-command-item-24" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Profile" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_289="">
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
 																								<circle cx="12" cy="7" r="4"></circle>
 																							</svg>
@@ -1891,16 +1889,16 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                             
 																						<!--!-->
-																						<div id="quark-command-item-24" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Billing" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_290="">
+																						<div id="quark-command-item-25" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Billing" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_290="">
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																								<rect width="20" height="14" x="2" y="5" rx="2"></rect>
 																								<line x1="2" x2="22" y1="10" y2="10"></line>
 																							</svg>
@@ -1916,16 +1914,16 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                             
 																						<!--!-->
-																						<div id="quark-command-item-25" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Settings" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_291="">
+																						<div id="quark-command-item-26" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="Settings" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_291="">
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
 																								<circle cx="12" cy="12" r="3"></circle>
 																							</svg>
@@ -1941,7 +1939,7 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
@@ -2002,7 +2000,7 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_242="">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" data-slot="button" _bl_260="">
+																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_260="">
 																			<!--!-->                     Open Menu
 																		</button>
 																		<!--!-->                 
@@ -2016,6 +2014,10 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div style="display:contents;" _bl_299="">
+																			<!--!-->
+																			<!--!-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2066,7 +2068,7 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_245="">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" data-slot="button" _bl_264="">
+																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_264="">
 																			<!--!-->                     Open Menu
 																		</button>
 																		<!--!-->                 
@@ -2080,6 +2082,10 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div style="display:contents;" _bl_300="">
+																			<!--!-->
+																			<!--!-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2133,7 +2139,7 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_248="">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" data-slot="button" _bl_268="">
+																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_268="">
 																			<!--!-->                     Open Menu
 																		</button>
 																		<!--!-->                 
@@ -2147,6 +2153,10 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div style="display:contents;" _bl_301="">
+																			<!--!-->
+																			<!--!-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2200,7 +2210,7 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_251="">
 																		<!--!-->
-																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" data-slot="button" _bl_272="">
+																		<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_272="">
 																			<!--!-->                     Open Menu
 																		</button>
 																		<!--!-->                 
@@ -2214,6 +2224,10 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
+																		<div style="display:contents;" _bl_302="">
+																			<!--!-->
+																			<!--!-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2278,13 +2292,13 @@
 																				<!--!-->
 																				<!--!-->
 																				<div class="group/input-group dark:bg-input/30 in-data-[slot=combobox-content]:focus-within:border-inherit in-data-[slot=combobox-content]:focus-within:ring-0 has-disabled:bg-input/50 has-disabled:opacity-50 dark:has-disabled:bg-input/80 has-[>textarea]:h-auto has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-3 has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50 has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-3 has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&amp;>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&amp;>input]:pt-3 has-[>[data-align=inline-start]]:[&amp;>input]:pl-1.5 has-[>[data-align=inline-end]]:[&amp;>input]:pr-1.5 flex relative w-full min-w-0 h-8 items-center border border-input rounded-lg outline-none transition-colors h-8! rounded-lg! border-input/30 bg-input/30 shadow-none! *:data-[slot=input-group-addon]:pl-2!" role="group" data-slot="input-group">
-																					<input class="text-sm w-full disabled:opacity-50 disabled:cursor-not-allowed outline-hidden" type="text" role="combobox" aria-expanded="true" aria-controls="quark-command-list-19" data-slot="command-input" placeholder="اكتب أمرًا أو ابحث..." cmdk-input="" _bl_298="" aria-activedescendant="quark-command-item-26">
+																					<input class="text-sm w-full disabled:opacity-50 disabled:cursor-not-allowed outline-hidden" type="text" role="combobox" aria-expanded="true" aria-controls="quark-command-list-20" data-slot="command-input" placeholder="اكتب أمرًا أو ابحث..." cmdk-input="" _bl_298="" aria-activedescendant="quark-command-item-27">
 																					<!--!-->         
 																					<!--!-->
 																					<div class="group-data-[disabled=true]/input-group:opacity-50 [&amp;>kbd]:rounded-[calc(var(--radius)-5px)] [&amp;>svg:not([class*='size-'])]:size-4 order-first pl-2 has-[>button]:ml-[-0.3rem] has-[>kbd]:ml-[-0.15rem] flex text-muted-foreground text-sm font-medium py-1.5 pl-2 h-auto gap-2 items-center justify-center select-none cursor-text" role="group" data-align="inline-start" data-slot="input-group-addon">
 																						<!--!-->
 																						<!--!-->
-																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0 opacity-50" data-slot="icon">
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0 opacity-50" focusable="false" aria-hidden="true" data-slot="icon">
 																							<path d="m21 21-4.34-4.34"></path>
 																							<circle cx="11" cy="11" r="8"></circle>
 																						</svg>
@@ -2293,7 +2307,7 @@
 																			</div>
 																			<!--!-->                         
 																			<!--!-->
-																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-19" role="listbox" aria-label="Suggestions" data-slot="command-list">
+																			<div class="no-scrollbar scroll-py-1 max-h-72 overflow-x-hidden overflow-y-auto outline-none" id="quark-command-list-20" role="listbox" aria-label="Suggestions" data-slot="command-list">
 																				<!--!-->
 																				<!--!-->                             
 																				<!--!-->
@@ -2305,34 +2319,34 @@
 																					<!--!-->
 																					<div data-slot="command-group-items" _bl_306="">
 																						<!--!-->
-																						<div id="quark-command-item-26" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="true" data-selected="true" data-value="التقويم" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_309="">
+																						<div id="quark-command-item-27" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="true" data-selected="true" data-value="التقويم" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_309="">
 																							<!--!-->التقويم
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                                 
 																						<!--!-->
-																						<div id="quark-command-item-27" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="البحث عن الرموز التعبيرية" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_310="">
+																						<div id="quark-command-item-28" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="البحث عن الرموز التعبيرية" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_310="">
 																							<!--!-->البحث عن الرموز التعبيرية
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                                 
 																						<!--!-->
-																						<div id="quark-command-item-28" disabled="" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الآلة الحاسبة" data-disabled="true" data-checked="false" aria-disabled="true" data-slot="command-item" role="option" _bl_311="">
+																						<div id="quark-command-item-29" disabled="" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الآلة الحاسبة" data-disabled="true" data-checked="false" aria-disabled="true" data-slot="command-item" role="option" _bl_311="">
 																							<!--!-->الآلة الحاسبة
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
@@ -2351,7 +2365,7 @@
 																					<!--!-->
 																					<div data-slot="command-group-items" _bl_308="">
 																						<!--!-->
-																						<div id="quark-command-item-29" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الملف الشخصي" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_312="">
+																						<div id="quark-command-item-30" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الملف الشخصي" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_312="">
 																							<!--!-->
 																							<span data-slot="span" _bl_315="">
 																								<!--!-->
@@ -2363,13 +2377,13 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                                 
 																						<!--!-->
-																						<div id="quark-command-item-30" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الفوترة" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_313="">
+																						<div id="quark-command-item-31" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الفوترة" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_313="">
 																							<!--!-->
 																							<span data-slot="span" _bl_316="">
 																								<!--!-->
@@ -2381,13 +2395,13 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
 																						<!--!-->                                 
 																						<!--!-->
-																						<div id="quark-command-item-31" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الإعدادات" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_314="">
+																						<div id="quark-command-item-32" class="group/command-item in-data-[slot=dialog-content]:rounded-lg! data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-selected:bg-muted data-selected:text-foreground [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 data-selected:*:[svg]:text-foreground flex text-sm px-2 py-1.5 relative gap-2 items-center select-none cursor-default rounded-sm outline-hidden" cmdk-item="" tabindex="-1" aria-selected="false" data-selected="false" data-value="الإعدادات" data-disabled="false" data-checked="false" data-slot="command-item" role="option" _bl_314="">
 																							<!--!-->
 																							<span data-slot="span" _bl_317="">
 																								<!--!-->
@@ -2399,7 +2413,7 @@
 																							<!--!-->     
 																							<!--!-->
 																							<!--!-->
-																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" data-slot="icon">
+																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden align-middle ml-auto size-4 shrink-0 opacity-0 group-data-[checked=true]/command-item:opacity-100" focusable="false" aria-hidden="true" data-slot="icon">
 																								<path d="M20 6 9 17l-5-5"></path>
 																							</svg>
 																						</div>
@@ -2441,31 +2455,6 @@
 									</article>
 									<!--!-->                                     
 									<!--!-->
-									<!--!-->
-									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
-										<!--!-->
-										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_318="">
-											<!--!-->
-											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
-											<!--!-->             
-											<!--!-->
-											<div class="contents" data-slot="scrollspy" _bl_319="" data-scrollspy-initialized="true">
-												<!--!-->
-												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
-													<!--!-->
-													<a data-scrollspy-anchor="basic" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/command#basic" data-slot="anchor">Basic</a>
-													<!--!-->
-													<a data-scrollspy-anchor="shortcuts" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/command#shortcuts" data-slot="anchor">Shortcuts</a>
-													<!--!-->
-													<a data-scrollspy-anchor="groups" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/command#groups" data-slot="anchor">Groups</a>
-													<!--!-->
-													<a data-scrollspy-anchor="scrollable" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/command#scrollable" data-slot="anchor">Scrollable</a>
-													<!--!-->
-													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/command#rtl" data-slot="anchor">RTL</a>
-												</nav>
-											</div>
-										</div>
-									</aside>
 								</div>
 							</main>
 						</div>
@@ -2481,21 +2470,5 @@
 			<a class="dismiss">🗙</a>
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
-		<div style="display:contents;" _bl_299="">
-			<!--!-->
-			<!--!-->
-		</div>
-		<div style="display:contents;" _bl_300="">
-			<!--!-->
-			<!--!-->
-		</div>
-		<div style="display:contents;" _bl_301="">
-			<!--!-->
-			<!--!-->
-		</div>
-		<div style="display:contents;" _bl_302="">
-			<!--!-->
-			<!--!-->
-		</div>
 	</body>
 </html>
