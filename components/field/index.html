@@ -1276,7 +1276,7 @@
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="Quark Suite" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex" href="https://soenneker.github.io/soenneker.quark.suite/">
 								<!--!-->
-								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain">
+								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain" loading="eager">
 								
 								<!--!-->
 								<span class="sr-only" data-slot="span" _bl_14="">
@@ -1803,10 +1803,10 @@
 											<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 												<!--!-->
 												<!--!-->
-												<a href="components/console" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" data-slot="sidebar-menu-button" class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;>span:last-child]:truncate hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed border border-transparent bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
+												<a href="components/console-panel" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" data-slot="sidebar-menu-button" class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;>span:last-child]:truncate hover:bg-sidebar-accent hover:text-sidebar-accent-foreground after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 flex text-left text-[0.8rem] font-medium p-2 relative w-full h-[30px] overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed border border-transparent bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]">
 													<!--!-->
 													<span data-slot="span" _bl_134="">
-														<!--!-->Console</span>
+														<!--!-->ConsolePanel</span>
 													<!--!-->
 													<span title="New" class="flex size-2 rounded-full" data-slot="span" _bl_135="">
 														<!--!-->
@@ -3225,7 +3225,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_292="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_332="" data-keybinding-context="1" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_332="" data-keybinding-context="1" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3236,15 +3236,19 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 1749px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
@@ -3337,7 +3341,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 823px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3351,6 +3362,7 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
+																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3445,9 +3457,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 305px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -3637,12 +3651,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 248px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -3858,15 +3875,18 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 362px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
@@ -4063,6 +4083,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 172px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4277,6 +4298,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 457px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4286,9 +4308,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
@@ -4574,9 +4598,11 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 685px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
@@ -4586,9 +4612,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -4817,6 +4845,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 419px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -4826,9 +4855,11 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
@@ -5006,6 +5037,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 153px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -5223,6 +5255,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 533px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -5232,12 +5265,15 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -5493,12 +5529,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 647px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -5916,12 +5955,15 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 1635px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
 																								</div>
 																								<div style="top:38px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
@@ -5931,6 +5973,7 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -5938,9 +5981,9 @@
 																						</div>
 																						<div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="6" style="position: absolute; overflow: hidden; left: 68px; width: 570px; height: 96px;">
 																							<div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1.67772e+07px; height: 1.67772e+07px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;">
-																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 570px;">
+																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 669px;">
 																									<div style="top:0px;height:19px;line-height:19px;">
-																										<div class="current-line current-line-exact" style="width:570px;"></div>
+																										<div class="current-line current-line-exact" style="width:669px;"></div>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;">
 																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
@@ -6007,11 +6050,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 556px;"></div>
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 473px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -6135,6 +6178,7 @@
 																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 400px;">
 																								<div style="top:0px;height:19px;line-height:19px;">
 																									<div class="current-line current-line-margin-both" style="width:68px"></div>
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
 																								</div>
 																								<div style="top:19px;height:19px;line-height:19px;">
@@ -6144,12 +6188,15 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
 																								</div>
 																								<div style="top:57px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
 																								</div>
 																								<div style="top:76px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																							</div>
@@ -6295,11 +6342,11 @@
 													<!--!-->
 													<a data-scrollspy-anchor="checkbox" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#checkbox" data-slot="anchor">Checkbox</a>
 													<!--!-->
-													<a data-scrollspy-anchor="radio" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#radio" data-slot="anchor" data-active="true" aria-current="location">Radio</a>
+													<a data-scrollspy-anchor="radio" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#radio" data-slot="anchor">Radio</a>
 													<!--!-->
 													<a data-scrollspy-anchor="switch" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#switch" data-slot="anchor">Switch</a>
 													<!--!-->
-													<a data-scrollspy-anchor="choice-card" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#choice-card" data-slot="anchor">Choice Card</a>
+													<a data-scrollspy-anchor="choice-card" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#choice-card" data-slot="anchor" data-active="true" aria-current="location">Choice Card</a>
 													<!--!-->
 													<a data-scrollspy-anchor="field-group" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/field#field-group" data-slot="anchor">Field Group</a>
 													<!--!-->
