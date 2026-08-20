@@ -1219,6 +1219,60 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -2989,7 +3043,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_315="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_360="" data-keybinding-context="1" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_360="" data-keybinding-context="1" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3094,7 +3148,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 814px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3108,6 +3169,7 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
+																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3226,7 +3288,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_318="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_364="" data-keybinding-context="2" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_364="" data-keybinding-context="2" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/2" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3345,7 +3407,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 1016px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3413,7 +3482,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_321="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_368="" data-keybinding-context="3" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_368="" data-keybinding-context="3" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/3" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3459,7 +3528,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3527,7 +3603,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_324="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_372="" data-keybinding-context="4" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_372="" data-keybinding-context="4" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/4" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3574,7 +3650,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3642,7 +3725,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_327="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_376="" data-keybinding-context="5" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_376="" data-keybinding-context="5" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/5" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3689,7 +3772,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3757,7 +3847,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_330="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_380="" data-keybinding-context="6" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_380="" data-keybinding-context="6" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/6" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3804,7 +3894,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3872,7 +3969,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_333="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_384="" data-keybinding-context="7" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_384="" data-keybinding-context="7" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/7" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -3919,7 +4016,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 571px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -3987,7 +4091,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_336="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_388="" data-keybinding-context="8" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_388="" data-keybinding-context="8" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/8" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -4033,7 +4137,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 556px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -4109,7 +4220,7 @@
 																	<div class="bg-muted/25" data-slot="div" _bl_339="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0">
-																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px;" _bl_392="" data-keybinding-context="9" data-mode-id="razor">
+																			<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_392="" data-keybinding-context="9" data-mode-id="razor">
 																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/9" style="width: 638px; height: 96px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 638px; height: 96px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Editor content" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -4168,16 +4279,23 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 505px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 68px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 638px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 613px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 96px;">
 																							<div class="minimap-shadow-hidden" style="height: 96px;"></div>
 																							<canvas width="0" height="96" style="position: absolute; left: 0px; width: 0px; height: 96px;"></canvas>
@@ -4353,11 +4471,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 492px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 48px;"></div>
 																							</div>
 																						</div>
@@ -4496,11 +4614,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 386px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 68px;"></div>
 																							</div>
 																						</div>
@@ -4693,11 +4811,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 382px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 34px;"></div>
 																							</div>
 																						</div>
@@ -4935,11 +5053,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 364px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 20px;"></div>
 																							</div>
 																						</div>
@@ -5076,7 +5194,7 @@
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 556px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 68px;"></div>
 																							</div>
 																						</div>
@@ -5290,11 +5408,11 @@
 																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
 																								</div>
 																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 556px; height: 12px; left: 0px; bottom: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 347px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="96" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 96px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 96px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 25px;"></div>
 																							</div>
 																						</div>
@@ -5348,7 +5466,7 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="size" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#size" data-slot="anchor" data-active="true" aria-current="location">Size</a>
+													<a data-scrollspy-anchor="size" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#size" data-slot="anchor">Size</a>
 													<!--!-->
 													<a data-scrollspy-anchor="default" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#default" data-slot="anchor">Default</a>
 													<!--!-->
@@ -5374,7 +5492,7 @@
 													<!--!-->
 													<a data-scrollspy-anchor="as-child" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#as-child" data-slot="anchor">As Child</a>
 													<!--!-->
-													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#rtl" data-slot="anchor">RTL</a>
+													<a data-scrollspy-anchor="rtl" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/button#rtl" data-slot="anchor" data-active="true" aria-current="location">RTL</a>
 												</nav>
 											</div>
 										</div>
