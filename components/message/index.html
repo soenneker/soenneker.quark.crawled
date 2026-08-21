@@ -25,8 +25,8 @@
 		</script>
 		<link href="css/quark-tailwind.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
-		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/js/monaco-editor/monaco.editor.main.esm.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css">
+		<link rel="stylesheet" href="https://soenneker.github.io/soenneker.quark.suite/_content/Soenneker.Quark.Suite/js/monaco-editor/monaco.editor.main.esm.css" crossorigin="anonymous" media="all" type="text/css">
 	</head>
 	<body>
 		<div id="app">
@@ -84,7 +84,7 @@
 							<!--!-->
 							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="Quark Suite" class="group/button hidden size-8 shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 lg:flex" href="https://soenneker.github.io/soenneker.quark.suite/">
 								<!--!-->
-								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain" loading="eager">
+								<img src="icon.png" alt="" aria-hidden="true" class="pointer-events-none size-5 shrink-0 object-contain">
 								
 								<!--!-->
 								<span class="sr-only" data-slot="span" _bl_14="">
@@ -1845,266 +1845,247 @@
 																	<div role="article" aria-label="User message" class="group/message flex ms-auto w-full max-w-[90%] gap-2 items-start" data-from="user" data-slot="message">
 																		<!--!-->
 																		<div class="flex w-full flex flex-col gap-2 items-end" data-slot="message-stack">
-																																<!--!-->
-																																<div class="text-primary text-sm leading-6.5 px-4 py-2 w-fit bg-secondary rounded-[20px]" data-slot="message-content">
-																																	<!--!-->
-																																	<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Tell me about Nexus UI.</div>
-																																</div>
-																																<!--!-->                     
-																																<!--!-->
-																																<div class="flex w-full justify-end" data-slot="message-actions">
-																																	<!--!-->
-																																	<div class="flex gap-1 items-center" data-slot="message-action-group">
-																																		<!--!-->
-																																		<button aria-label="Copy" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_236="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
-																																				<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
-																																			</svg>
-																																		</button>
-																																		<!--!-->                             
-																																		<!--!-->
-																																		<button aria-label="Edit" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_237="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path>
-																																				<path d="m15 5 4 4"></path>
-																																			</svg>
-																																		</button>
-																																	</div>
-																																</div>
-																															</div>
-																														</div>
-																														<!--!-->             
-																														<!--!-->
-																														<!--!-->
-																														<div role="article" aria-label="Assistant message" class="group/message flex me-auto w-full max-w-[90%] gap-2 items-start" data-from="assistant" data-slot="message">
-																															<!--!-->
-																															<div class="flex w-full flex flex-col gap-2 items-start" data-slot="message-stack">
-																																<!--!-->
-																																<div class="text-primary text-sm leading-6.5 mb-2 px-2 w-full bg-transparent rounded-[20px]" data-slot="message-content">
-																																	<!--!-->
-																																	<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Nexus UI is an open-source React component library aimed at AI-powered UIs--chat, streaming, and multimodal flows--built with Tailwind CSS v4 and Radix UI.</div>
-																																</div>
-																																<!--!-->                     
-																																<!--!-->
-																																<div class="flex w-full justify-start" data-slot="message-actions">
-																																	<!--!-->
-																																	<div class="flex gap-1 items-center" data-slot="message-action-group">
-																																		<!--!-->
-																																		<button aria-label="Copy" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_238="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
-																																				<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
-																																			</svg>
-																																		</button>
-																																		<!--!-->                             
-																																		<!--!-->
-																																		<button aria-label="Refresh" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_239="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-																																				<path d="M3 3v5h5"></path>
-																																				<path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
-																																				<path d="M16 16h5v5"></path>
-																																			</svg>
-																																		</button>
-																																		<!--!-->                             
-																																		<!--!-->
-																																		<button aria-label="Thumbs up" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_240="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"></path>
-																																				<path d="M7 10v12"></path>
-																																			</svg>
-																																		</button>
-																																		<!--!-->                             
-																																		<!--!-->
-																																		<button aria-label="Thumbs down" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_241="">
-																																			<!--!-->
-																																			<!--!-->
-																																			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
-																																				<path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"></path>
-																																				<path d="M17 14V2"></path>
-																																			</svg>
-																																		</button>
-																																	</div>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																												</div>
-																											</div>
-																										</div>
-																										<!--!-->
-																										<div data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block min-h-[104px]" data-slot="code" _bl_35="">
-																											<!--!-->
-																											<div class="relative" data-slot="div" _bl_41="">
-																												<!--!-->
-																												<div class="bg-muted/25" data-slot="div" _bl_48="">
-																													<!--!-->
-																													<div class="group/code-editor relative w-full min-w-0">
-																														<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_229=""></div>
-																													</div>
-																												</div>
-																												<!--!-->
-																												<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_49="">
-																													<!--!-->
-																													<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_230=""></div>
-																													<!--!-->                             
-																													<!--!-->
-																													<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-none shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_231="">
-																														<!--!-->                                 View Code
-																													</button>
-																												</div>
-																											</div>
-																										</div>
-																									</div>
-																								</div>
-																								<!--!-->      
-																								<!--!-->
-																								<!--!-->
-																								<div class="w-full space-y-4" data-slot="div" _bl_23="">
-																									<!--!-->
-																									<div class="space-y-2" data-slot="div" _bl_28="">
-																										<!--!-->
-																										<h3 id="with-avatar" class="scroll-m-20 text-xl font-semibold tracking-tight m-0" data-slot="h3">With Avatar</h3>
-																									</div>
-																									<!--!-->      
-																									<!--!-->
-																									<div class="flex mt-4 mb-12 relative overflow-hidden flex flex-col border rounded-xl group [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto" data-slot="component-preview" _bl_29="">
-																										<!--!-->
-																										<div dir="ltr" data-slot="preview" _bl_36="">
-																											<!--!-->
-																											<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_42="">
-																												<!--!-->
-																												<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_50="">
-																													<!--!-->
-																													<div class="flex w-full flex flex-col gap-6 items-center justify-center" data-slot="div" _bl_232="">
-																														<!--!-->
-																														<!--!-->
-																														<div role="article" aria-label="User message" class="group/message flex ms-auto w-full max-w-[90%] gap-2 items-start" data-from="user" data-slot="message">
-																															<!--!-->
-																															<div class="flex w-full flex flex-col gap-2 items-end" data-slot="message-stack">
-																																<!--!-->
-																																<div class="text-primary text-sm leading-6.5 px-4 py-2 w-fit bg-secondary rounded-[20px]" data-slot="message-content">
-																																	<!--!-->
-																																	<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Hello - can you help me draft an email?</div>
-																																</div>
-																															</div>
-																															<!--!-->                 
-																															<!--!-->
-																															<!--!-->
-																															<!--!-->
-																															<!--!-->
-																															<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full size-7 shrink-0" data-size="default" data-slot="avatar">
-																																<!--!-->
-																																<!--!-->
-																																<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&amp;h=400&amp;fit=crop" alt="You" data-slot="message-avatar-image" class="my-0! size-full rounded-full aspect-square object-cover" loading="eager">
-																																<!--!-->     
-																																<!--!-->
-																																<!--!-->
-																															</span>
-																														</div>
-																														<!--!-->             
-																														<!--!-->
-																														<!--!-->
-																														<div role="article" aria-label="Assistant message" class="group/message flex me-auto w-full max-w-[90%] gap-2 items-start" data-from="assistant" data-slot="message">
-																															<!--!-->
-																															<!--!-->
-																															<!--!-->
-																															<!--!-->
-																															<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full size-7 shrink-0" data-size="default" data-slot="avatar">
-																																<!--!-->
-																																<!--!-->
-																																<!--!-->     
-																																<!--!-->
-																																<!--!-->
-																																<span data-slot="message-avatar-fallback" class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm my-0! size-full shrink-0 items-center justify-center bg-muted rounded-full">AI</span>
-																															</span>
-																															<!--!-->                 
-																															<!--!-->
-																															<div class="flex w-full flex flex-col gap-2 items-start" data-slot="message-stack">
-																																<!--!-->
-																																<div class="text-primary text-sm leading-6.5 mb-2 px-2 w-full bg-transparent rounded-[20px]" data-slot="message-content">
-																																	<!--!-->
-																																	<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Absolutely. Share the audience, tone, and the main points you want included.</div>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																												</div>
-																											</div>
-																										</div>
-																										<!--!-->
-																										<div data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block min-h-[104px]" data-slot="code" _bl_37="">
-																											<!--!-->
-																											<div class="relative" data-slot="div" _bl_43="">
-																												<!--!-->
-																												<div class="bg-muted/25" data-slot="div" _bl_51="">
-																													<!--!-->
-																													<div class="group/code-editor relative w-full min-w-0">
-																														<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_233=""></div>
-																													</div>
-																												</div>
-																												<!--!-->
-																												<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_52="">
-																													<!--!-->
-																													<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_234=""></div>
-																													<!--!-->                             
-																													<!--!-->
-																													<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-none shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_235="">
-																														<!--!-->                                 View Code
-																													</button>
-																												</div>
-																											</div>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</article>
-																						<!--!-->                                     
+																			<!--!-->
+																			<div class="text-primary text-sm leading-6.5 px-4 py-2 w-fit bg-secondary rounded-[20px]" data-slot="message-content">
+																				<!--!-->
+																				<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Tell me about Nexus UI.</div>
+																			</div>
+																			<!--!-->                     
+																			<!--!-->
+																			<div class="flex w-full justify-end" data-slot="message-actions">
+																				<!--!-->
+																				<div class="flex gap-1 items-center" data-slot="message-action-group">
+																					<!--!-->
+																					<button aria-label="Copy" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_236="">
 																						<!--!-->
 																						<!--!-->
-																						<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
-																							<!--!-->
-																							<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_242="">
-																								<!--!-->
-																								<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
-																								<!--!-->             
-																								<!--!-->
-																								<div class="contents" data-slot="scrollspy" _bl_243="" data-scrollspy-initialized="true">
-																									<!--!-->
-																									<nav aria-label="On This Page" class="flex text-[0.8rem] flex flex-col gap-2" data-slot="nav">
-																										<!--!-->
-																										<a data-scrollspy-anchor="with-actions" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/message#with-actions" data-slot="anchor">With Actions</a>
-																										<!--!-->
-																										<a data-scrollspy-anchor="with-avatar" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground pl-4 data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/message#with-avatar" data-slot="anchor" data-active="true" aria-current="location">With Avatar</a>
-																									</nav>
-																								</div>
-																							</div>
-																						</aside>
-																					</div>
-																				</main>
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+																							<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+																						</svg>
+																					</button>
+																					<!--!-->                             
+																					<!--!-->
+																					<button aria-label="Edit" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_237="">
+																						<!--!-->
+																						<!--!-->
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path>
+																							<path d="m15 5 4 4"></path>
+																						</svg>
+																					</button>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<!--!-->             
+																	<!--!-->
+																	<!--!-->
+																	<div role="article" aria-label="Assistant message" class="group/message flex me-auto w-full max-w-[90%] gap-2 items-start" data-from="assistant" data-slot="message">
+																		<!--!-->
+																		<div class="flex w-full flex flex-col gap-2 items-start" data-slot="message-stack">
+																			<!--!-->
+																			<div class="text-primary text-sm leading-6.5 mb-2 px-2 w-full bg-transparent rounded-[20px]" data-slot="message-content">
+																				<!--!-->
+																				<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Nexus UI is an open-source React component library aimed at AI-powered UIs--chat, streaming, and multimodal flows--built with Tailwind CSS v4 and Radix UI.</div>
+																			</div>
+																			<!--!-->                     
+																			<!--!-->
+																			<div class="flex w-full justify-start" data-slot="message-actions">
+																				<!--!-->
+																				<div class="flex gap-1 items-center" data-slot="message-action-group">
+																					<!--!-->
+																					<button aria-label="Copy" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_238="">
+																						<!--!-->
+																						<!--!-->
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+																							<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+																						</svg>
+																					</button>
+																					<!--!-->                             
+																					<!--!-->
+																					<button aria-label="Refresh" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_239="">
+																						<!--!-->
+																						<!--!-->
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+																							<path d="M3 3v5h5"></path>
+																							<path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
+																							<path d="M16 16h5v5"></path>
+																						</svg>
+																					</button>
+																					<!--!-->                             
+																					<!--!-->
+																					<button aria-label="Thumbs up" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_240="">
+																						<!--!-->
+																						<!--!-->
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"></path>
+																							<path d="M7 10v12"></path>
+																						</svg>
+																					</button>
+																					<!--!-->                             
+																					<!--!-->
+																					<button aria-label="Thumbs down" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="ghost" type="button" data-slot="button" _bl_241="">
+																						<!--!-->
+																						<!--!-->
+																						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																							<path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"></path>
+																							<path d="M17 14V2"></path>
+																						</svg>
+																					</button>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
 																</div>
-																<!--!-->      
+															</div>
+														</div>
+													</div>
+													<!--!-->
+													<div data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block min-h-[104px]" data-slot="code" _bl_35="">
+														<!--!-->
+														<div class="relative" data-slot="div" _bl_41="">
+															<!--!-->
+															<div class="bg-muted/25" data-slot="div" _bl_48="">
 																<!--!-->
+																<div class="group/code-editor relative w-full min-w-0">
+																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_229=""></div>
+																</div>
 															</div>
-															<div id="blazor-error-ui">
-																An unhandled error has occurred.
-																<a href="" class="reload">Reload</a>
-																<a class="dismiss">🗙</a>
+															<!--!-->
+															<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_49="">
+																<!--!-->
+																<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_230=""></div>
+																<!--!-->                             
+																<!--!-->
+																<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-none shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_231="">
+																	<!--!-->                                 View Code
+																</button>
 															</div>
-															<script src="_framework/blazor.webassembly.js"></script>
-														</body>
-													</html>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--!-->      
+											<!--!-->
+											<!--!-->
+											<div class="w-full space-y-4" data-slot="div" _bl_23="">
+												<!--!-->
+												<div class="space-y-2" data-slot="div" _bl_28="">
+													<!--!-->
+													<h3 id="with-avatar" class="scroll-m-20 text-xl font-semibold tracking-tight m-0" data-slot="h3">With Avatar</h3>
+												</div>
+												<!--!-->      
+												<!--!-->
+												<div class="flex mt-4 mb-12 relative overflow-hidden flex flex-col border rounded-xl group [&amp;_[data-slot=header]]:relative [&amp;_[data-slot=header]]:top-auto" data-slot="component-preview" _bl_29="">
+													<!--!-->
+													<div dir="ltr" data-slot="preview" _bl_36="">
+														<!--!-->
+														<div data-align="center" data-chromeless="false" class="preview relative flex min-h-72 w-full justify-center p-2 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start data-[chromeless=true]:min-h-0 data-[chromeless=true]:p-0" data-slot="div" _bl_42="">
+															<!--!-->
+															<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_50="">
+																<!--!-->
+																<div class="flex w-full flex flex-col gap-6 items-center justify-center" data-slot="div" _bl_232="">
+																	<!--!-->
+																	<!--!-->
+																	<div role="article" aria-label="User message" class="group/message flex ms-auto w-full max-w-[90%] gap-2 items-start" data-from="user" data-slot="message">
+																		<!--!-->
+																		<div class="flex w-full flex flex-col gap-2 items-end" data-slot="message-stack">
+																			<!--!-->
+																			<div class="text-primary text-sm leading-6.5 px-4 py-2 w-fit bg-secondary rounded-[20px]" data-slot="message-content">
+																				<!--!-->
+																				<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Hello - can you help me draft an email?</div>
+																			</div>
+																		</div>
+																		<!--!-->                 
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full size-7 shrink-0" data-size="default" data-slot="avatar">
+																			<!--!-->
+																			<!--!-->
+																			<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&amp;h=400&amp;fit=crop" alt="You" data-slot="message-avatar-image" class="my-0! size-full rounded-full aspect-square object-cover">
+																			<!--!-->     
+																			<!--!-->
+																			<!--!-->
+																		</span>
+																	</div>
+																	<!--!-->             
+																	<!--!-->
+																	<!--!-->
+																	<div role="article" aria-label="Assistant message" class="group/message flex me-auto w-full max-w-[90%] gap-2 items-start" data-from="assistant" data-slot="message">
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<!--!-->
+																		<span class="group/avatar data-[size=lg]:size-10 data-[size=sm]:size-6 after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken dark:after:mix-blend-lighten flex relative size-8 shrink-0 select-none rounded-full size-7 shrink-0" data-size="default" data-slot="avatar">
+																			<!--!-->
+																			<!--!-->
+																			<!--!-->     
+																			<!--!-->
+																			<!--!-->
+																			<span data-slot="message-avatar-fallback" class="group-data-[size=sm]/avatar:text-xs flex text-muted-foreground text-sm my-0! size-full shrink-0 items-center justify-center bg-muted rounded-full">AI</span>
+																		</span>
+																		<!--!-->                 
+																		<!--!-->
+																		<div class="flex w-full flex flex-col gap-2 items-start" data-slot="message-stack">
+																			<!--!-->
+																			<div class="text-primary text-sm leading-6.5 mb-2 px-2 w-full bg-transparent rounded-[20px]" data-slot="message-content">
+																				<!--!-->
+																				<div class="prose prose-headings:font-[450] prose-headings:leading-5.5 prose-h2:tracking-[-0.45px] prose-headings:mb-4 prose-headings:mt-6 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-h3:leading-4.5 prose-h3:tracking-[-0.4px] prose-h4:text-sm prose-h5:text-xs prose-h6:text-xs prose-headings:[&amp;_a]:no-underline prose-headings:[&amp;_a]:shadow-none prose-headings:[&amp;_a]:text-inherit prose-lead:text-primary [&amp;_[data-streamdown=link]]:text-foreground [&amp;_[data-streamdown=link]]:font-normal [&amp;_[data-streamdown=link]]:underline [&amp;_[data-streamdown=link]]:underline-offset-2 [&amp;_[data-streamdown=strong]]:text-foreground [&amp;_[data-streamdown=strong]]:font-[550] prose-p:mb-1 prose-p:mt-4 prose-li:my-[-0.5px] prose-li:marker:text-muted-foreground/50 prose-ul:my-0 prose-ol:my-0 prose-ol:pl-3 [&amp;>*:first-child]:mt-0 [&amp;>*:last-child]:mb-0 text-primary text-sm font-normal leading-6.5 max-w-none" data-slot="message-markdown">Absolutely. Share the audience, tone, and the main points you want included.</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--!-->
+													<div data-mobile-code-visible="false" class="relative overflow-hidden border-t border-border **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&amp;_pre]:max-h-72 pointer-events-none block min-h-[104px]" data-slot="code" _bl_37="">
+														<!--!-->
+														<div class="relative" data-slot="div" _bl_43="">
+															<!--!-->
+															<div class="bg-muted/25" data-slot="div" _bl_51="">
+																<!--!-->
+																<div class="group/code-editor relative w-full min-w-0">
+																	<div readonly="" class="text-sm w-full min-w-0" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0" _bl_233=""></div>
+																</div>
+															</div>
+															<!--!-->
+															<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_52="">
+																<!--!-->
+																<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_234=""></div>
+																<!--!-->                             
+																<!--!-->
+																<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-none shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_235="">
+																	<!--!-->                                 View Code
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+									<!--!-->                                     
+									<!--!-->
+								</div>
+							</main>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--!-->      
+			<!--!-->
+		</div>
+		<div id="blazor-error-ui">
+			An unhandled error has occurred.
+			<a href="" class="reload">Reload</a>
+			<a class="dismiss">🗙</a>
+		</div>
+		<script src="_framework/blazor.webassembly.js"></script>
+	</body>
+</html>
