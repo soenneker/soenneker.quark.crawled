@@ -2437,6 +2437,12 @@
       border-color: color-mix(in oklab, var(--primary) 30%, transparent);
     }
   }
+  .border-primary\/80 {
+    border-color: var(--primary);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--primary) 80%, transparent);
+    }
+  }
   .border-ring {
     border-color: var(--ring);
   }
@@ -2484,6 +2490,12 @@
   }
   .bg-\[Canvas\] {
     background-color: Canvas;
+  }
+  .bg-\[color-mix\(in_oklch\,var\(--surface\)\,transparent_8\%\)\] {
+    background-color: var(--surface);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklch,var(--surface),transparent 8%);
+    }
   }
   .bg-accent {
     background-color: var(--accent);
@@ -3649,6 +3661,10 @@
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_0_0_1px_hsl\(var\(--primary\)\/0\.08\)\] {
+    --tw-shadow: 0 0 0 1px var(--tw-shadow-color, hsl(var(--primary)/0.08));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_0_0_1px_hsl\(var\(--sidebar-border\)\)\] {
