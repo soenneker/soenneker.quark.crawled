@@ -1,0 +1,60 @@
+import { cssEscape } from "./core/dom.js";
+
+const menubarDocumentDismissHandlers = new WeakMap();
+
+export function registerMenubarDocumentDismiss(element, dotNetRef, menubarId) {
+  if (!element || !dotNetRef || !menubarId) {
+    return;
+  }
+
+  unregisterMenubarDocumentDismiss(element);
+
+  const selector = `[data-radix-menubar-content][data-bradix-menubar-id="${cssEscape(menubarId)}"][data-state="open"]`;
+
+  const pointerdown = (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Node)) {
+      return;
+    }
+
+    if (element.contains(target)) {
+      return;
+    }
+
+    const openContent = document.querySelector(selector);
+
+    if (!(openContent instanceof HTMLElement)) {
+      return;
+    }
+
+    const targetElement =
+      target instanceof Element
+        ? target
+        : target.parentElement;
+
+    if (targetElement?.closest(selector)) {
+      return;
+    }
+
+    dotNetRef.invokeMethodAsync("HandleDocumentPointerDownOutside").catch(() => {});
+  };
+
+  document.addEventListener("pointerdown", pointerdown, true);
+  menubarDocumentDismissHandlers.set(element, { pointerdown });
+}
+
+export function unregisterMenubarDocumentDismiss(element) {
+  if (!element) {
+    return;
+  }
+
+  const handlers = menubarDocumentDismissHandlers.get(element);
+
+  if (!handlers) {
+    return;
+  }
+
+  document.removeEventListener("pointerdown", handlers.pointerdown, true);
+  menubarDocumentDismissHandlers.delete(element);
+}

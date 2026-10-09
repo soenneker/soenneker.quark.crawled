@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+	<head>
+		<meta charset="utf-8">
+		<script>
+        if (location.hostname === "quark.soenneker.com") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-0X51EEE3QC');
+
+            const googleTag = document.createElement("script");
+            googleTag.async = true;
+            googleTag.src = "https://www.googletagmanager.com/gtag/js?id=G-0X51EEE3QC";
+            document.head.appendChild(googleTag);
+
+            const cloudflareBeacon = document.createElement("script");
+            cloudflareBeacon.defer = true;
+            cloudflareBeacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+            cloudflareBeacon.dataset.cfBeacon = JSON.stringify({ token: "5fedbff71c8249899aa9a9d87287306f" });
+            document.head.appendChild(cloudflareBeacon);
+        }
+    
+		</script>
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0X51EEE3QC"></script>
+		<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;5fedbff71c8249899aa9a9d87287306f&quot;}"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<base href="/">
+		<script>
+        (() => {
+            let preference;
+            try { preference = localStorage.getItem("quark-theme"); } catch { }
+            const dark = preference === "dark" || (preference !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+            document.documentElement.classList.toggle("dark", dark);
+            document.documentElement.style.colorScheme = dark ? "dark" : "light";
+        })();
+    
+		</script>
+		<link rel="icon" type="image/png" href="icon.png">
+		<script type="module">
+        import { initialize } from "./_content/Soenneker.Quark.Suite/js/themeinterop.js";
+        initialize();
+    
+		</script>
+		<script>
+        window.quarkDemo = {
+            scrollPageToTop() {
+                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+            },
+            scrollElementToTop(element) {
+                if (element && typeof element.scrollTo === "function") {
+                    element.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                }
+            }
+        };
+    
+		</script>
+		<link href="css/quark-tailwind.min.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		<link href="Soenneker.Quark.Suite.Demo.styles.css" rel="stylesheet">
+		
+		<!--!-->
+		<!--!-->
+		<!--!-->
+		<title>Blazor Area Chart Examples | Quark Suite</title>
+		<!--!-->
+		<!--!-->
+		<!--!-->
+		<meta name="description" content="Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.">
+		<!--!-->
+		<meta name="robots" content="index, follow, max-image-preview:large">
+		<link rel="canonical" href="https://quark.soenneker.com/charts/area">
+		<!--!-->
+		<meta property="og:url" content="https://quark.soenneker.com/charts/area">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Quark Suite">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:title" content="Blazor Area Chart Examples | Quark Suite">
+		<!--!-->
+		<meta property="og:description" content="Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.">
+		<!--!-->
+		<meta name="twitter:card" content="summary_large_image">
+		<!--!-->
+		<meta name="twitter:title" content="Blazor Area Chart Examples | Quark Suite">
+		<!--!-->
+		<meta name="twitter:description" content="Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.">
+		<meta property="og:image" content="https://quark.soenneker.com/social-card.png">
+		<meta property="og:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta name="twitter:image" content="https://quark.soenneker.com/social-card.png">
+		<meta name="twitter:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
+		<script type="application/ld+json"><!--!-->{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quark.soenneker.com/#website","name":"Quark Suite","url":"https://quark.soenneker.com/","inLanguage":"en"},{"@type":"WebPage","@id":"https://quark.soenneker.com/charts/area#webpage","url":"https://quark.soenneker.com/charts/area","name":"Blazor Area Chart Examples | Quark Suite","description":"Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.","inLanguage":"en","isPartOf":{"@id":"https://quark.soenneker.com/#website"},"about":{"@type":"SoftwareSourceCode","name":"Soenneker.Quark.Suite","programmingLanguage":"C#","codeRepository":"https://github.com/soenneker/soenneker.quark.suite"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quark Suite","item":"https://quark.soenneker.com/"},{"@type":"ListItem","position":2,"name":"Blazor Area Chart Examples","item":"https://quark.soenneker.com/charts/area"}]}}]}</script>
+		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+	</head>
+	<body>
+		<div id="app">
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<!--!-->
+			<div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full min-h-svh flex flex-col bg-background text-foreground" style="--sidebar-width: calc(var(--spacing) * 72); --sidebar-width-icon: 3rem; --sidebar-width-mobile: 100vw; --header-height: 4.5rem;" data-slot="sidebar-wrapper">
+				<!--!-->
+				<header class="pointer-events-auto sticky top-0 z-50 w-full bg-background" data-slot="header">
+					<!--!-->
+					<div class="px-6" data-slot="div" _bl_3="">
+						<!--!-->
+						<div class="flex h-(--header-height) min-h-12 items-center **:data-[slot=separator]:h-4! group-has-data-[slot=designer]/layout:fixed:max-w-none 3xl:fixed:container" data-slot="div" _bl_4="">
+							<button type="button" data-slot="sidebar-trigger" data-variant="ghost" data-size="default" aria-label="Toggle Menu" aria-haspopup="dialog" aria-expanded="false" aria-controls="quark-sidebar-mobile-1" data-state="closed" class="pointer-events-auto shrink-0 cursor-pointer rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground px-4 py-2 has-[>svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 p-0! hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden">
+								<!--!-->
+								<div class="flex relative w-4 h-8 items-center justify-center" data-slot="div" _bl_5="">
+									<!--!-->
+									<div class="relative size-4" data-slot="div" _bl_9="">
+										<!--!-->
+										<span class="block left-0 absolute w-4 h-0.5 bg-foreground duration-200 transition-all ease-in-out" style="top: 4px; transform: rotate(0deg);" data-slot="span" _bl_13="">
+											<!--!-->
+										</span>
+										<!--!-->                                 
+										<!--!-->
+										<span class="block left-0 absolute w-4 h-0.5 bg-foreground duration-200 transition-all ease-in-out" style="top: 10px; transform: rotate(0deg);" data-slot="span" _bl_14="">
+											<!--!-->
+										</span>
+									</div>
+									<!--!-->                             
+									<!--!-->
+									<span class="sr-only" data-slot="span" _bl_10="">
+										<!--!-->Toggle Menu</span>
+								</div>
+								<!--!-->
+								<span class="flex text-lg font-medium leading-none h-8 items-center" data-slot="span" _bl_6="">
+									<!--!-->Menu</span>
+							</button>
+							<!--!-->
+							<a data-slot="button" data-variant="ghost" data-size="icon" aria-label="Quark Suite" class="hidden lg:flex hover:text-foreground text-sm font-medium whitespace-nowrap size-8 shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none border border-transparent focus-visible:border-ring hover:bg-muted dark:hover:bg-muted/50 rounded-lg focus-visible:ring-ring/50 outline-none transition-all group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 aria-expanded:bg-muted aria-expanded:text-foreground" href="https://quark.soenneker.com/">
+								<!--!-->
+								<img src="icon.png" aria-hidden="true" class="size-5 shrink-0 pointer-events-none object-contain" alt="" data-slot="image" loading="eager">
+								<!--!-->                         
+								<!--!-->
+								<span class="sr-only" data-slot="span" _bl_11="">
+									<!--!-->Quark Suite</span>
+							</a>
+							<nav class="hidden items-center gap-0 lg:flex">
+								<!--!-->
+								<!--!-->
+								<a data-slot="button" data-variant="ghost" data-size="sm" data-active="false" data-new="false" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 gap-1.5 rounded-md has-[>svg]:px-2.5 px-2.5 relative items-center" href="/">Home</a>
+								<!--!-->
+								<a data-slot="button" data-variant="ghost" data-size="sm" data-active="false" data-new="false" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 gap-1.5 rounded-md has-[>svg]:px-2.5 px-2.5 relative items-center" href="installation">Docs</a>
+								<!--!-->
+								<a data-slot="button" data-variant="ghost" data-size="sm" data-active="false" data-new="false" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 gap-1.5 rounded-md has-[>svg]:px-2.5 px-2.5 relative items-center" href="components">Components</a>
+								<!--!-->
+								<a data-slot="button" data-variant="ghost" data-size="sm" data-active="true" data-new="false" aria-current="page" class="inline-flex shrink-0 items-center justify-center text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 gap-1.5 rounded-md has-[>svg]:px-2.5 px-2.5 relative items-center bg-accent text-accent-foreground dark:bg-accent/50" href="charts/area">Charts</a>
+							</nav>
+							<!--!-->
+							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end" data-slot="div" _bl_7="">
+								<!--!-->
+								<div class="demo-header-search w-32 sm:w-52 shrink-0 focus-within:z-60 focus-within:w-auto sm:focus-within:z-auto sm:focus-within:w-52 focus-within:fixed sm:focus-within:static focus-within:inset-x-4 focus-within:top-4" b-vnkka51tjh="">
+									<!--!-->
+									<!--!-->
+									<search-bar-snippet class="block w-full" style="--search-snippet-width: 100%; --search-snippet-max-width: 100%; --search-snippet-min-width: 0; --search-snippet-background: var(--popover); --search-snippet-surface: var(--muted); --search-snippet-text-color: var(--popover-foreground); --search-snippet-text-secondary: var(--muted-foreground); --search-snippet-text-description: var(--muted-foreground); --search-snippet-border-color: var(--border); --search-snippet-hover-background: var(--accent); --search-snippet-primary-color: var(--foreground); --search-snippet-primary-hover: var(--foreground); --search-snippet-focus-ring: color-mix(in oklab, var(--ring) 35%, transparent); --search-snippet-font-family: var(--font-sans); --search-snippet-font-size-base: 14px; --search-snippet-font-size-sm: 12px; --search-snippet-spacing-sm: 8px; --search-snippet-spacing-md: 12px; --search-snippet-border-radius: 8px; --search-snippet-icon-size: 16px; --search-snippet-icon-margin-left: 0; --search-snippet-shadow: none;" data-slot="cloudflare-ai-search" api-url="https://b0949445-2d03-473b-b099-ee5d52d178dd.search.ai.cloudflare.com/" placeholder="Search" max-results="50" max-render-results="10" debounce-ms="250" show-url="true" _bl_17=""></search-bar-snippet>
+								</div>
+								<!--!-->                      
+								<!--!-->
+								<!--!-->
+								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:block ml-2 shrink-0 bg-border" data-slot="separator"></div>
+								<!--!-->                      
+								<!--!-->
+								<a aria-label="Quark source on GitHub" rel="noreferrer" data-slot="button" data-variant="ghost" data-size="sm" class="inline-flex hover:text-accent-foreground text-sm font-medium whitespace-nowrap px-3 h-8 shrink-0 gap-1.5 items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:border-ring hover:bg-accent dark:hover:bg-accent/50 rounded-md focus-visible:ring-ring/50 outline-none shadow-none transition-all focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 has-[>svg]:px-2.5" href="https://github.com/soenneker/soenneker.quark.suite" target="_blank">
+									<!--!-->
+									<svg viewBox="0 0 438.549 438.549">
+										<path fill="currentColor" d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"></path>
+									</svg>
+								</a>
+								<!--!-->                      
+								<!--!-->
+								<!--!-->
+								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:flex shrink-0 bg-border" data-slot="separator"></div>
+								<!--!-->                      
+								<!--!-->
+								<button title="Toggle viewport" data-slot="button" aria-pressed="true" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex hover:text-accent-foreground text-sm font-medium whitespace-nowrap size-8 shrink-0 gap-2 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border focus-visible:border-ring hover:bg-accent dark:hover:bg-accent/50 rounded-md focus-visible:ring-ring/50 outline-none transition-all focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4" data-variant="ghost" type="button" _bl_12="">
+									<!--!-->
+									<span class="sr-only" data-slot="span" _bl_15="">
+										<!--!-->Toggle viewport</span>
+									<!--!-->                         
+									<!--!-->
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" focusable="false" data-slot="icon">
+										<!--!-->
+										<path d="M2 3v18" xmlns="http://www.w3.org/2000/svg"></path>
+										<rect width="12" height="18" x="6" y="3" rx="2" xmlns="http://www.w3.org/2000/svg"></rect>
+										<path d="M22 3v18" xmlns="http://www.w3.org/2000/svg"></path>
+									</svg>
+								</button>
+								<!--!-->                      
+								<!--!-->
+								<!--!-->
+								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:flex shrink-0 bg-border" data-slot="separator"></div>
+								<!--!-->                      
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<button data-theme="system" aria-label="Toggle theme" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex text-sm font-medium whitespace-nowrap relative size-8 overflow-hidden shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all group/toggle extend-touch-target" data-variant="ghost" data-state="closed" type="button" data-slot="button" _bl_21="">
+									<!--!-->
+									<!--!-->
+									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_33="">
+										<!--!-->
+										<!--!-->
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out -rotate-90 scale-0 opacity-0" data-slot="span" _bl_63="">
+											<!--!-->
+											<!--!-->
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+												<!--!-->
+												<circle cx="12" cy="12" r="4" xmlns="http://www.w3.org/2000/svg"></circle>
+												<path d="M12 2v2" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="M12 20v2" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="m4.93 4.93 1.41 1.41" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="m17.66 17.66 1.41 1.41" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="M2 12h2" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="M20 12h2" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="m6.34 17.66-1.41 1.41" xmlns="http://www.w3.org/2000/svg"></path>
+												<path d="m19.07 4.93-1.41 1.41" xmlns="http://www.w3.org/2000/svg"></path>
+											</svg>
+										</span>
+										<!--!-->                 
+										<!--!-->
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-0 scale-100 opacity-100" data-slot="span" _bl_64="">
+											<!--!-->
+											<!--!-->
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+												<!--!-->
+												<rect width="20" height="14" x="2" y="3" rx="2" xmlns="http://www.w3.org/2000/svg"></rect>
+												<line x1="8" x2="16" y1="21" y2="21" xmlns="http://www.w3.org/2000/svg"></line>
+												<line x1="12" x2="12" y1="17" y2="21" xmlns="http://www.w3.org/2000/svg"></line>
+											</svg>
+										</span>
+										<!--!-->                 
+										<!--!-->
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-90 scale-0 opacity-0" data-slot="span" _bl_65="">
+											<!--!-->
+											<!--!-->
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+												<!--!-->
+												<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" xmlns="http://www.w3.org/2000/svg"></path>
+											</svg>
+										</span>
+									</span>
+									<!--!-->             
+									<!--!-->
+									<span class="sr-only" data-slot="span" _bl_34="">
+										<!--!-->Toggle theme</span>
+								</button>
+								<!--!-->     
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+							</div>
+						</div>
+					</div>
+				</header>
+				<!--!-->
+				<div class="px-2 grow" data-slot="div" _bl_2="">
+					<!--!-->
+					<!--!-->                  
+					<!--!-->
+					<main class="mx-auto w-full min-w-0 grow" data-slot="main">
+						<!--!-->
+						<!--!-->
+						<!--!-->
+						<!--!-->
+						<!--!-->
+						<!--!--> 
+						<!--!-->
+						<!--!-->
+						<!--!-->
+						<div class="chart-gallery-scope" b-1rtjhrbmh3="">
+							<!--!-->
+							<div class="chart-gallery" data-slot="div" _bl_8="">
+								<!--!-->
+								<section class="chart-gallery-hero" data-slot="section">
+									<!--!-->
+									<h1 class="text-4xl font-extrabold tracking-tight scroll-m-20 text-balance" data-slot="h1">Blazor Area Chart Examples</h1>
+									<!--!-->         
+									<!--!-->
+									<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+										<!--!-->A collection of ready-to-use chart components built with Quark Suite.<br b-1rtjhrbmh3="">
+										From basic charts to rich data displays, compose them in your Blazor apps.</p>
+									<!--!-->         
+									<!--!-->
+									<div class="chart-gallery-actions" data-slot="div" _bl_16="">
+										<!--!-->
+										<a href="#chart-examples" data-slot="anchor">Browse Charts</a>
+										<!--!-->             
+										<!--!-->
+										<a href="components/charts" data-slot="anchor">Documentation</a>
+									</div>
+								</section>
+								<!--!-->     
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<!--!-->
+								<div dir="ltr" data-orientation="horizontal" class="group/tabs data-[orientation=horizontal]:flex-col flex flex-col gap-2" data-slot="tabs">
+									<!--!-->
+									<div class="chart-gallery-tabs" data-slot="div" _bl_18="">
+										<!--!-->
+										<!--!-->
+										<!--!-->
+										<div role="tablist" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" aria-label="Chart types" class="group/tabs-list data-[variant=line]:rounded-none group-data-[orientation=horizontal]/tabs:h-8 group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col inline-flex text-muted-foreground p-[3px] w-fit gap-1 items-center justify-center bg-transparent rounded-none" data-variant="line" data-slot="tabs-list">
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="true" aria-controls="bradix-tabs-3-content-Area" data-state="active" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Area" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Area" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_24="">Area Charts</button>
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="false" aria-controls="bradix-tabs-3-content-Bar" data-state="inactive" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Bar" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Bar" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_25="">Bar Charts</button>
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="false" aria-controls="bradix-tabs-3-content-Line" data-state="inactive" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Line" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Line" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_26="">Line Charts</button>
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="false" aria-controls="bradix-tabs-3-content-Pie" data-state="inactive" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Pie" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Pie" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_27="">Pie Charts</button>
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="false" aria-controls="bradix-tabs-3-content-Radar" data-state="inactive" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Radar" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Radar" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_28="">Radar Charts</button>
+											<!--!-->
+											<!--!-->
+											<button type="button" role="tab" aria-selected="false" aria-controls="bradix-tabs-3-content-Radial" data-state="inactive" data-orientation="horizontal" data-bradix-roving-group="bradix-tabs-3" data-bradix-roving-item="" data-bradix-roving-item-id="bradix-tabs-3-trigger-Radial" data-bradix-roving-orientation="horizontal" data-bradix-roving-dir="ltr" data-bradix-roving-loop="true" data-bradix-prevent-nonprimary-mousedown="true" data-bradix-prevent-mousedown-when-disabled="true" id="bradix-tabs-3-trigger-Radial" tabindex="-1" class="relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-[state=active]:shadow-sm group-data-[variant=line]/tabs-list:data-[state=active]:shadow-none [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 group-data-[variant=line]/tabs-list:bg-transparent group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:border-transparent dark:group-data-[variant=line]/tabs-list:data-[state=active]:bg-transparent data-[state=active]:bg-background data-[state=active]:text-foreground dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-[orientation=horizontal]/tabs:after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:bottom-[-5px] group-data-[orientation=horizontal]/tabs:after:h-0.5 group-data-[orientation=vertical]/tabs:after:inset-y-0 group-data-[orientation=vertical]/tabs:after:-right-1 group-data-[orientation=vertical]/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-[state=active]:after:opacity-100 inline-flex text-sm font-medium relative rounded-md" data-slot="tabs-trigger" _bl_29="">Radial Charts</button>
+										</div>
+									</div>
+									<!--!-->         
+									<!--!-->
+									<!--!-->
+									<div role="tabpanel" aria-labelledby="bradix-tabs-3-trigger-Area" id="bradix-tabs-3-content-Area" tabindex="0" data-state="active" data-orientation="horizontal" class="text-sm flex-1 outline-none" data-slot="tabs-content">
+										<!--!-->
+										<section id="chart-examples" aria-labelledby="chart-heading" class="chart-gallery-examples" data-slot="section">
+											<!--!-->
+											<div class="chart-gallery-toolbar" data-slot="div" _bl_19="">
+												<!--!-->
+												<h2 id="chart-heading" class="text-3xl font-semibold tracking-tight scroll-m-20 border-b pb-2 transition-transition-colors first:mt-0" data-slot="h2">
+													<!--!-->
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" focusable="false" data-slot="icon">
+														<!--!-->
+														<path d="M3 3v16a2 2 0 0 0 2 2h16" xmlns="http://www.w3.org/2000/svg"></path>
+														<path d="M7 11.207a.5.5 0 0 1 .146-.353l2-2a.5.5 0 0 1 .708 0l3.292 3.292a.5.5 0 0 0 .708 0l4.292-4.292a.5.5 0 0 1 .854.353V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z" xmlns="http://www.w3.org/2000/svg"></path>
+													</svg>Area Chart</h2>
+												<!--!-->                     
+												<!--!-->
+												<div class="chart-gallery-code-actions" data-slot="div" _bl_22="">
+													<!--!-->
+													<button aria-label="Copy chart code" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_30="">
+														<!--!-->
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" focusable="false" data-slot="icon">
+															<!--!-->
+															<rect width="14" height="14" x="8" y="8" rx="2" ry="2" xmlns="http://www.w3.org/2000/svg"></rect>
+															<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" xmlns="http://www.w3.org/2000/svg"></path>
+														</svg>
+													</button>
+													<!--!-->
+													<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_31="">View Code</button>
+												</div>
+											</div>
+											<!--!-->
+											<!--!-->
+											<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card chart-gallery-featured" data-size="default" data-slot="card">
+												<!--!-->
+												<!--!-->
+												<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_36="">
+													<!--!-->
+													<div data-slot="div" _bl_44="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Interactive</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing total visitors for the last 3 months</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-size="default" class="relative w-fit group/native-select has-[select:disabled]:opacity-50" data-slot="native-select-wrapper" _bl_66="">
+														<select aria-label="Chart date range" class="appearance-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 text-sm py-1 pr-8 pl-2.5 w-full min-w-0 h-8 disabled:pointer-events-none select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" data-size="default" data-slot="native-select">
+															<!--!-->
+															<option value="90" class="text-[CanvasText] bg-[Canvas]" data-slot="native-select-option">Last 3 months</option>
+															<!--!-->
+															<option value="30" class="text-[CanvasText] bg-[Canvas]" data-slot="native-select-option">Last 30 days</option>
+															<!--!-->
+															<option value="7" class="text-[CanvasText] bg-[Canvas]" data-slot="native-select-option">Last 7 days</option>
+														</select>
+														<!--!-->     
+														<!--!-->
+														<!--!-->     
+														<!--!-->
+														<svg aria-hidden="true" data-slot="native-select-icon" class="text-muted-foreground absolute size-4 pointer-events-none select-none top-1/2 right-2.5 -translate-y-1/2 stroke-2 fill-none stroke-current [stroke-linecap:round] [stroke-linejoin:round]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+															<!--!-->
+															<path d="m6 9 6 6 6-6"></path>
+														</svg>
+													</div>
+												</div>
+												<!--!-->                         
+												<!--!-->
+												<div class="chart-gallery-featured-plot" data-slot="div" _bl_32="">
+													<!--!-->
+													<div aria-label="Area chart, daily visitors for the last 3 months" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="89" data-scroll-y-min="0" data-scroll-y-max="500" data-scroll-width="1492" data-scroll-height="230" _bl_37="">
+														<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:1500/300">
+															<svg viewBox="0 0 1500 300" role="group" aria-label="Area chart, daily visitors for the last 3 months" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																<!--!-->
+																<defs>
+																	<clipPath id="quark-chart-4-plot-clip">
+																		<rect x="4" y="26" width="1492" height="242"></rect>
+																	</clipPath>
+																	<linearGradient id="quark-chart-4-gradient-0" x1="0%" y1="0%" x2="0%" y2="100%">
+																		<stop offset="0%" stop-color="#60a5fa" stop-opacity="0.4"></stop>
+																		<!--!-->
+																		<stop offset="100%" stop-color="#60a5fa" stop-opacity="0.04"></stop>
+																	</linearGradient>
+																	<linearGradient id="quark-chart-4-gradient-1" x1="0%" y1="0%" x2="0%" y2="100%">
+																		<stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"></stop>
+																		<!--!-->
+																		<stop offset="100%" stop-color="#2563eb" stop-opacity="0.04"></stop>
+																	</linearGradient>
+																</defs>
+																<line x1="4" y1="32" x2="1496" y2="32" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<line x1="4" y1="78" x2="1496" y2="78" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<line x1="4" y1="124" x2="1496" y2="124" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<line x1="4" y1="170" x2="1496" y2="170" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<line x1="4" y1="216" x2="1496" y2="216" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<line x1="4" y1="262" x2="1496" y2="262" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																<g transform="translate(12.289 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Apr 1</text>
+																</g>
+																<g transform="translate(161.489 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Apr 10</text>
+																</g>
+																<g transform="translate(310.689 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Apr 19</text>
+																</g>
+																<g transform="translate(459.889 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Apr 28</text>
+																</g>
+																<g transform="translate(609.089 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>May 7</text>
+																</g>
+																<g transform="translate(758.289 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>May 16</text>
+																</g>
+																<g transform="translate(907.489 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>May 25</text>
+																</g>
+																<g transform="translate(1056.689 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Jun 3</text>
+																</g>
+																<g transform="translate(1205.889 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Jun 12</text>
+																</g>
+																<g transform="translate(1355.089 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Jun 21</text>
+																</g>
+																<g transform="translate(1487.711 284) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																	<text>Jun 29</text>
+																</g>
+																<g>
+																	<g data-slot="chart-plot" data-plot-width="1492">
+																		<!--!-->
+																		<rect x="4" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="20.578" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="37.156" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="53.733" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="70.311" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="86.889" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="103.467" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="120.044" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="136.622" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="153.2" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="169.778" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="186.356" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="202.933" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="219.511" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="236.089" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="252.667" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="269.244" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="285.822" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="302.4" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="318.978" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="335.556" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="352.133" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="368.711" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="385.289" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="401.867" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="418.444" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="435.022" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="451.6" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="468.178" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="484.756" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="501.333" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="517.911" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="534.489" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="551.067" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="567.644" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="584.222" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="600.8" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="617.378" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="633.956" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="650.533" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="667.111" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="683.689" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="700.267" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="716.844" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="733.422" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="750" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="766.578" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="783.156" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="799.733" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="816.311" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="832.889" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="849.467" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="866.044" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="882.622" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="899.2" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="915.778" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="932.356" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="948.933" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="965.511" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="982.089" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="998.667" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1015.244" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1031.822" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1048.4" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1064.978" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1081.556" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1098.133" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1114.711" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1131.289" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1147.867" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1164.444" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1181.022" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1197.6" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1214.178" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1230.756" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1247.333" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1263.911" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1280.489" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1297.067" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1313.644" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1330.222" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1346.8" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1363.378" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1379.956" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1396.533" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1413.111" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1429.689" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1446.267" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1462.844" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<rect x="1479.422" y="32" width="16.578" height="230" fill="transparent" class="quark-chart-hit-area"></rect>
+																		<path d="M12.289,262L12.289,229.8C17.815,204.04 23.341,152.52 28.867,152.52C34.393,152.52 39.919,226.12 45.444,226.12C50.97,226.12 56.496,91.8 62.022,91.8C67.548,91.8 73.074,108.36 78.6,108.36C84.126,108.36 89.652,104.373 95.178,96.4C100.704,88.427 106.23,55.92 111.756,55.92C117.281,55.92 122.807,166.32 128.333,166.32C133.859,166.32 139.385,68.8 144.911,68.8C150.437,68.8 155.963,109.127 161.489,122.16C167.015,135.193 172.541,147 178.067,147C183.593,147 189.119,145.773 194.644,143.32C200.17,140.867 205.696,111.12 211.222,111.12C216.748,111.12 222.274,229.8 227.8,229.8C233.326,229.8 238.852,140.56 244.378,140.56C249.904,140.56 255.43,202.2 260.956,202.2C266.481,202.2 272.007,55.92 277.533,55.92C283.059,55.92 288.585,57.453 294.111,60.52C299.637,63.587 305.163,216 310.689,216C316.215,216 321.741,185.793 327.267,163.56C332.793,141.327 338.319,82.6 343.844,82.6C349.37,82.6 354.896,133.967 360.422,152.52C365.948,171.073 371.474,185.333 377,193.92C382.526,202.507 388.052,206.8 393.578,206.8C399.104,206.8 404.63,201.127 410.156,191.16C415.681,181.193 421.207,166.473 426.733,147C432.259,127.527 437.785,74.32 443.311,74.32C448.837,74.32 454.363,131.207 459.889,152.52C465.415,173.833 470.941,190.393 476.467,202.2C481.993,214.007 487.519,223.36 493.044,223.36C498.57,223.36 504.096,220.907 509.622,216C515.148,211.093 520.674,196.833 526.2,180.12C531.726,163.407 537.252,115.72 542.778,115.72C548.304,115.72 553.83,202.2 559.356,202.2C564.881,202.2 570.407,80.76 575.933,80.76C581.459,80.76 586.985,109.587 592.511,110.2C598.037,110.813 603.563,111.12 609.089,111.12C614.615,111.12 620.141,83.52 625.667,83.52C631.193,83.52 636.719,206.8 642.244,206.8C647.77,206.8 653.296,122.16 658.822,122.16C664.348,122.16 669.874,171.073 675.4,188.4C680.926,205.727 686.452,226.12 691.978,226.12C697.504,226.12 703.03,55.92 708.556,55.92C714.081,55.92 719.607,216 725.133,216C730.659,216 736.185,188.86 741.711,168.16C747.237,147.46 752.763,91.8 758.289,91.8C763.815,91.8 769.341,146.233 774.867,166.32C780.393,186.407 785.919,201.74 791.444,212.32C796.97,222.9 802.496,229.8 808.022,229.8C813.548,229.8 819.074,226.12 824.6,218.76C830.126,211.4 835.652,197.14 841.178,179.2C846.704,161.26 852.23,111.12 857.756,111.12C863.281,111.12 868.807,193.92 874.333,193.92C879.859,193.92 885.385,68.8 890.911,68.8C896.437,68.8 901.963,94.56 907.489,94.56C913.015,94.56 918.541,93.64 924.067,91.8C929.593,89.96 935.119,60.52 940.644,60.52C946.17,60.52 951.696,180.12 957.222,180.12C962.748,180.12 968.274,91.8 973.8,91.8C979.326,91.8 984.852,138.26 990.378,154.36C995.904,170.46 1001.43,184.72 1006.956,188.4C1012.481,192.08 1018.007,193.92 1023.533,193.92C1029.059,193.92 1034.585,183.34 1040.111,170.92C1045.637,158.5 1051.163,119.4 1056.689,119.4C1062.215,119.4 1067.741,218.76 1073.267,218.76C1078.793,218.76 1084.319,110.2 1089.844,110.2C1095.37,110.2 1100.896,143.32 1106.422,152.52C1111.948,161.72 1117.474,166.32 1123,166.32C1128.526,166.32 1134.052,161.26 1139.578,151.6C1145.104,141.94 1150.63,108.36 1156.156,108.36C1161.681,108.36 1167.207,216 1172.733,216C1178.259,216 1183.785,115.72 1189.311,115.72C1194.837,115.72 1200.363,154.207 1205.889,166.32C1211.415,178.433 1216.941,188.4 1222.467,188.4C1227.993,188.4 1233.519,186.253 1239.044,181.96C1244.57,177.667 1250.096,163.407 1255.622,147C1261.148,130.593 1266.674,83.52 1272.2,83.52C1277.726,83.52 1283.252,146.54 1288.778,170.92C1294.304,195.3 1299.83,229.8 1305.356,229.8C1310.881,229.8 1316.407,80.76 1321.933,80.76C1327.459,80.76 1332.985,82.6 1338.511,82.6C1344.037,82.6 1349.563,55.92 1355.089,55.92C1360.615,55.92 1366.141,180.12 1371.667,180.12C1377.193,180.12 1382.719,96.4 1388.244,96.4C1393.77,96.4 1399.296,145.927 1404.822,163.56C1410.348,181.193 1415.874,195.453 1421.4,202.2C1426.926,208.947 1432.452,212.32 1437.978,212.32C1443.504,212.32 1449.03,204.807 1454.556,193.92C1460.081,183.033 1465.607,167.393 1471.133,147C1476.659,126.607 1482.185,96.707 1487.711,71.56L1487.711,262Z" fill="url(#quark-chart-4-gradient-0)" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																		<path d="M12.289,229.8C17.815,204.04 23.341,152.52 28.867,152.52C34.393,152.52 39.919,226.12 45.444,226.12C50.97,226.12 56.496,91.8 62.022,91.8C67.548,91.8 73.074,108.36 78.6,108.36C84.126,108.36 89.652,104.373 95.178,96.4C100.704,88.427 106.23,55.92 111.756,55.92C117.281,55.92 122.807,166.32 128.333,166.32C133.859,166.32 139.385,68.8 144.911,68.8C150.437,68.8 155.963,109.127 161.489,122.16C167.015,135.193 172.541,147 178.067,147C183.593,147 189.119,145.773 194.644,143.32C200.17,140.867 205.696,111.12 211.222,111.12C216.748,111.12 222.274,229.8 227.8,229.8C233.326,229.8 238.852,140.56 244.378,140.56C249.904,140.56 255.43,202.2 260.956,202.2C266.481,202.2 272.007,55.92 277.533,55.92C283.059,55.92 288.585,57.453 294.111,60.52C299.637,63.587 305.163,216 310.689,216C316.215,216 321.741,185.793 327.267,163.56C332.793,141.327 338.319,82.6 343.844,82.6C349.37,82.6 354.896,133.967 360.422,152.52C365.948,171.073 371.474,185.333 377,193.92C382.526,202.507 388.052,206.8 393.578,206.8C399.104,206.8 404.63,201.127 410.156,191.16C415.681,181.193 421.207,166.473 426.733,147C432.259,127.527 437.785,74.32 443.311,74.32C448.837,74.32 454.363,131.207 459.889,152.52C465.415,173.833 470.941,190.393 476.467,202.2C481.993,214.007 487.519,223.36 493.044,223.36C498.57,223.36 504.096,220.907 509.622,216C515.148,211.093 520.674,196.833 526.2,180.12C531.726,163.407 537.252,115.72 542.778,115.72C548.304,115.72 553.83,202.2 559.356,202.2C564.881,202.2 570.407,80.76 575.933,80.76C581.459,80.76 586.985,109.587 592.511,110.2C598.037,110.813 603.563,111.12 609.089,111.12C614.615,111.12 620.141,83.52 625.667,83.52C631.193,83.52 636.719,206.8 642.244,206.8C647.77,206.8 653.296,122.16 658.822,122.16C664.348,122.16 669.874,171.073 675.4,188.4C680.926,205.727 686.452,226.12 691.978,226.12C697.504,226.12 703.03,55.92 708.556,55.92C714.081,55.92 719.607,216 725.133,216C730.659,216 736.185,188.86 741.711,168.16C747.237,147.46 752.763,91.8 758.289,91.8C763.815,91.8 769.341,146.233 774.867,166.32C780.393,186.407 785.919,201.74 791.444,212.32C796.97,222.9 802.496,229.8 808.022,229.8C813.548,229.8 819.074,226.12 824.6,218.76C830.126,211.4 835.652,197.14 841.178,179.2C846.704,161.26 852.23,111.12 857.756,111.12C863.281,111.12 868.807,193.92 874.333,193.92C879.859,193.92 885.385,68.8 890.911,68.8C896.437,68.8 901.963,94.56 907.489,94.56C913.015,94.56 918.541,93.64 924.067,91.8C929.593,89.96 935.119,60.52 940.644,60.52C946.17,60.52 951.696,180.12 957.222,180.12C962.748,180.12 968.274,91.8 973.8,91.8C979.326,91.8 984.852,138.26 990.378,154.36C995.904,170.46 1001.43,184.72 1006.956,188.4C1012.481,192.08 1018.007,193.92 1023.533,193.92C1029.059,193.92 1034.585,183.34 1040.111,170.92C1045.637,158.5 1051.163,119.4 1056.689,119.4C1062.215,119.4 1067.741,218.76 1073.267,218.76C1078.793,218.76 1084.319,110.2 1089.844,110.2C1095.37,110.2 1100.896,143.32 1106.422,152.52C1111.948,161.72 1117.474,166.32 1123,166.32C1128.526,166.32 1134.052,161.26 1139.578,151.6C1145.104,141.94 1150.63,108.36 1156.156,108.36C1161.681,108.36 1167.207,216 1172.733,216C1178.259,216 1183.785,115.72 1189.311,115.72C1194.837,115.72 1200.363,154.207 1205.889,166.32C1211.415,178.433 1216.941,188.4 1222.467,188.4C1227.993,188.4 1233.519,186.253 1239.044,181.96C1244.57,177.667 1250.096,163.407 1255.622,147C1261.148,130.593 1266.674,83.52 1272.2,83.52C1277.726,83.52 1283.252,146.54 1288.778,170.92C1294.304,195.3 1299.83,229.8 1305.356,229.8C1310.881,229.8 1316.407,80.76 1321.933,80.76C1327.459,80.76 1332.985,82.6 1338.511,82.6C1344.037,82.6 1349.563,55.92 1355.089,55.92C1360.615,55.92 1366.141,180.12 1371.667,180.12C1377.193,180.12 1382.719,96.4 1388.244,96.4C1393.77,96.4 1399.296,145.927 1404.822,163.56C1410.348,181.193 1415.874,195.453 1421.4,202.2C1426.926,208.947 1432.452,212.32 1437.978,212.32C1443.504,212.32 1449.03,204.807 1454.556,193.92C1460.081,183.033 1465.607,167.393 1471.133,147C1476.659,126.607 1482.185,96.707 1487.711,71.56" fill="none" stroke="#60a5fa" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		<path d="M12.289,262L12.289,243.6C17.815,229.8 23.341,218.607 28.867,202.2C34.393,185.793 39.919,145.16 45.444,145.16C50.97,145.16 56.496,169.847 62.022,178.28C67.548,186.713 73.074,194.533 78.6,195.76C84.126,196.987 89.652,197.6 95.178,197.6C100.704,197.6 106.23,191.007 111.756,183.8C117.281,176.593 122.807,154.36 128.333,154.36C133.859,154.36 139.385,215.08 144.911,215.08C150.437,215.08 155.963,154.36 161.489,154.36C167.015,154.36 172.541,176.593 178.067,183.8C183.593,191.007 189.119,197.6 194.644,197.6C200.17,197.6 205.696,196.987 211.222,195.76C216.748,194.533 222.274,186.713 227.8,178.28C233.326,169.847 238.852,145.16 244.378,145.16C249.904,145.16 255.43,185.793 260.956,202.2C266.481,218.607 272.007,243.6 277.533,243.6C283.059,243.6 288.585,163.56 294.111,163.56C299.637,163.56 305.163,173.68 310.689,173.68C316.215,173.68 321.741,171.84 327.267,168.16C332.793,164.48 338.319,147 343.844,147C349.37,147 354.896,216 360.422,216C365.948,216 371.474,163.56 377,163.56C382.526,163.56 388.052,191.313 393.578,201.28C399.104,211.247 404.63,219.067 410.156,223.36C415.681,227.653 421.207,229.8 426.733,229.8C432.259,229.8 437.785,226.273 443.311,220.6C448.837,214.927 454.363,206.647 459.889,195.76C465.415,184.873 470.941,155.28 476.467,155.28C481.993,155.28 487.519,191.007 493.044,204.96C498.57,218.913 504.096,239 509.622,239C515.148,239 520.674,151.6 526.2,151.6C531.726,151.6 537.252,154.36 542.778,154.36C548.304,154.36 553.83,141.48 559.356,141.48C564.881,141.48 570.407,218.76 575.933,218.76C581.459,218.76 586.985,174.6 592.511,174.6C598.037,174.6 603.563,220.6 609.089,220.6C614.615,220.6 620.141,145.16 625.667,145.16C631.193,145.16 636.719,159.88 642.244,159.88C647.77,159.88 653.296,159.573 658.822,158.96C664.348,158.347 669.874,142.4 675.4,142.4C680.926,142.4 686.452,216 691.978,216C697.504,216 703.03,168.16 708.556,168.16C714.081,168.16 719.607,198.98 725.133,210.48C730.659,221.98 736.185,237.16 741.711,237.16C747.237,237.16 752.763,142.4 758.289,142.4C763.815,142.4 769.341,243.6 774.867,243.6C780.393,243.6 785.919,232.713 791.444,223.36C796.97,214.007 802.496,187.48 808.022,187.48C813.548,187.48 819.074,241.76 824.6,241.76C830.126,241.76 835.652,174.6 841.178,174.6C846.704,174.6 852.23,192.693 857.756,197.6C863.281,202.507 868.807,204.96 874.333,204.96C879.859,204.96 885.385,202.047 890.911,196.68C896.437,191.313 901.963,172.76 907.489,172.76C913.015,172.76 918.541,239 924.067,239C929.593,239 935.119,183.8 940.644,183.8C946.17,183.8 951.696,209.713 957.222,218.76C962.748,227.807 968.274,235.627 973.8,238.08C979.326,240.533 984.852,241.76 990.378,241.76C995.904,241.76 1001.43,236.393 1006.956,229.8C1012.481,223.207 1018.007,214.007 1023.533,202.2C1029.059,190.393 1034.585,158.96 1040.111,158.96C1045.637,158.96 1051.163,192.847 1056.689,205.88C1062.215,218.913 1067.741,237.16 1073.267,237.16C1078.793,237.16 1084.319,147 1089.844,147L1106.422,147C1111.948,147 1117.474,237.16 1123,237.16C1128.526,237.16 1134.052,218.913 1139.578,205.88C1145.104,192.847 1150.63,158.96 1156.156,158.96C1161.681,158.96 1167.207,190.393 1172.733,202.2C1178.259,214.007 1183.785,223.207 1189.311,229.8C1194.837,236.393 1200.363,241.76 1205.889,241.76C1211.415,241.76 1216.941,240.533 1222.467,238.08C1227.993,235.627 1233.519,227.807 1239.044,218.76C1244.57,209.713 1250.096,183.8 1255.622,183.8C1261.148,183.8 1266.674,239 1272.2,239C1277.726,239 1283.252,172.76 1288.778,172.76C1294.304,172.76 1299.83,191.313 1305.356,196.68C1310.881,202.047 1316.407,204.96 1321.933,204.96C1327.459,204.96 1332.985,202.507 1338.511,197.6C1344.037,192.693 1349.563,174.6 1355.089,174.6C1360.615,174.6 1366.141,241.76 1371.667,241.76C1377.193,241.76 1382.719,187.48 1388.244,187.48C1393.77,187.48 1399.296,214.007 1404.822,223.36C1410.348,232.713 1415.874,243.6 1421.4,243.6C1426.926,243.6 1432.452,142.4 1437.978,142.4C1443.504,142.4 1449.03,237.16 1454.556,237.16C1460.081,237.16 1465.607,221.98 1471.133,210.48C1476.659,198.98 1482.185,182.267 1487.711,168.16L1487.711,262Z" fill="url(#quark-chart-4-gradient-1)" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																		<path d="M12.289,243.6C17.815,229.8 23.341,218.607 28.867,202.2C34.393,185.793 39.919,145.16 45.444,145.16C50.97,145.16 56.496,169.847 62.022,178.28C67.548,186.713 73.074,194.533 78.6,195.76C84.126,196.987 89.652,197.6 95.178,197.6C100.704,197.6 106.23,191.007 111.756,183.8C117.281,176.593 122.807,154.36 128.333,154.36C133.859,154.36 139.385,215.08 144.911,215.08C150.437,215.08 155.963,154.36 161.489,154.36C167.015,154.36 172.541,176.593 178.067,183.8C183.593,191.007 189.119,197.6 194.644,197.6C200.17,197.6 205.696,196.987 211.222,195.76C216.748,194.533 222.274,186.713 227.8,178.28C233.326,169.847 238.852,145.16 244.378,145.16C249.904,145.16 255.43,185.793 260.956,202.2C266.481,218.607 272.007,243.6 277.533,243.6C283.059,243.6 288.585,163.56 294.111,163.56C299.637,163.56 305.163,173.68 310.689,173.68C316.215,173.68 321.741,171.84 327.267,168.16C332.793,164.48 338.319,147 343.844,147C349.37,147 354.896,216 360.422,216C365.948,216 371.474,163.56 377,163.56C382.526,163.56 388.052,191.313 393.578,201.28C399.104,211.247 404.63,219.067 410.156,223.36C415.681,227.653 421.207,229.8 426.733,229.8C432.259,229.8 437.785,226.273 443.311,220.6C448.837,214.927 454.363,206.647 459.889,195.76C465.415,184.873 470.941,155.28 476.467,155.28C481.993,155.28 487.519,191.007 493.044,204.96C498.57,218.913 504.096,239 509.622,239C515.148,239 520.674,151.6 526.2,151.6C531.726,151.6 537.252,154.36 542.778,154.36C548.304,154.36 553.83,141.48 559.356,141.48C564.881,141.48 570.407,218.76 575.933,218.76C581.459,218.76 586.985,174.6 592.511,174.6C598.037,174.6 603.563,220.6 609.089,220.6C614.615,220.6 620.141,145.16 625.667,145.16C631.193,145.16 636.719,159.88 642.244,159.88C647.77,159.88 653.296,159.573 658.822,158.96C664.348,158.347 669.874,142.4 675.4,142.4C680.926,142.4 686.452,216 691.978,216C697.504,216 703.03,168.16 708.556,168.16C714.081,168.16 719.607,198.98 725.133,210.48C730.659,221.98 736.185,237.16 741.711,237.16C747.237,237.16 752.763,142.4 758.289,142.4C763.815,142.4 769.341,243.6 774.867,243.6C780.393,243.6 785.919,232.713 791.444,223.36C796.97,214.007 802.496,187.48 808.022,187.48C813.548,187.48 819.074,241.76 824.6,241.76C830.126,241.76 835.652,174.6 841.178,174.6C846.704,174.6 852.23,192.693 857.756,197.6C863.281,202.507 868.807,204.96 874.333,204.96C879.859,204.96 885.385,202.047 890.911,196.68C896.437,191.313 901.963,172.76 907.489,172.76C913.015,172.76 918.541,239 924.067,239C929.593,239 935.119,183.8 940.644,183.8C946.17,183.8 951.696,209.713 957.222,218.76C962.748,227.807 968.274,235.627 973.8,238.08C979.326,240.533 984.852,241.76 990.378,241.76C995.904,241.76 1001.43,236.393 1006.956,229.8C1012.481,223.207 1018.007,214.007 1023.533,202.2C1029.059,190.393 1034.585,158.96 1040.111,158.96C1045.637,158.96 1051.163,192.847 1056.689,205.88C1062.215,218.913 1067.741,237.16 1073.267,237.16C1078.793,237.16 1084.319,147 1089.844,147L1106.422,147C1111.948,147 1117.474,237.16 1123,237.16C1128.526,237.16 1134.052,218.913 1139.578,205.88C1145.104,192.847 1150.63,158.96 1156.156,158.96C1161.681,158.96 1167.207,190.393 1172.733,202.2C1178.259,214.007 1183.785,223.207 1189.311,229.8C1194.837,236.393 1200.363,241.76 1205.889,241.76C1211.415,241.76 1216.941,240.533 1222.467,238.08C1227.993,235.627 1233.519,227.807 1239.044,218.76C1244.57,209.713 1250.096,183.8 1255.622,183.8C1261.148,183.8 1266.674,239 1272.2,239C1277.726,239 1283.252,172.76 1288.778,172.76C1294.304,172.76 1299.83,191.313 1305.356,196.68C1310.881,202.047 1316.407,204.96 1321.933,204.96C1327.459,204.96 1332.985,202.507 1338.511,197.6C1344.037,192.693 1349.563,174.6 1355.089,174.6C1360.615,174.6 1366.141,241.76 1371.667,241.76C1377.193,241.76 1382.719,187.48 1388.244,187.48C1393.77,187.48 1399.296,214.007 1404.822,223.36C1410.348,232.713 1415.874,243.6 1421.4,243.6C1426.926,243.6 1432.452,142.4 1437.978,142.4C1443.504,142.4 1449.03,237.16 1454.556,237.16C1460.081,237.16 1465.607,221.98 1471.133,210.48C1476.659,198.98 1482.185,182.267 1487.711,168.16" fill="none" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																	</g>
+																</g>
+																<!--!-->
+																<g>
+																	<g data-slot="chart-plot-overlay"></g>
+																</g>
+															</svg>
+														</div>
+														<!--!-->
+														<table class="quark-chart-sr-only sr-only">
+															<caption>Area chart, daily visitors for the last 3 months</caption>
+															<!--!-->
+															<thead>
+																<tr>
+																	<!--!-->
+																	<th>Label</th>
+																	<th>Desktop</th>
+																	<th>Mobile</th>
+																</tr>
+															</thead>
+															<!--!-->
+															<tbody>
+																<tr>
+																	<th>Apr 1</th>
+																	<td>70</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<th>Apr 2</th>
+																	<td>238</td>
+																	<td>130</td>
+																</tr>
+																<tr>
+																	<th>Apr 3</th>
+																	<td>78</td>
+																	<td>254</td>
+																</tr>
+																<tr>
+																	<th>Apr 4</th>
+																	<td>370</td>
+																	<td>182</td>
+																</tr>
+																<tr>
+																	<th>Apr 5</th>
+																	<td>334</td>
+																	<td>144</td>
+																</tr>
+																<tr>
+																	<th>Apr 6</th>
+																	<td>360</td>
+																	<td>140</td>
+																</tr>
+																<tr>
+																	<th>Apr 7</th>
+																	<td>448</td>
+																	<td>170</td>
+																</tr>
+																<tr>
+																	<th>Apr 8</th>
+																	<td>208</td>
+																	<td>234</td>
+																</tr>
+																<tr>
+																	<th>Apr 9</th>
+																	<td>420</td>
+																	<td>102</td>
+																</tr>
+																<tr>
+																	<th>Apr 10</th>
+																	<td>304</td>
+																	<td>234</td>
+																</tr>
+																<tr>
+																	<th>Apr 11</th>
+																	<td>250</td>
+																	<td>170</td>
+																</tr>
+																<tr>
+																	<th>Apr 12</th>
+																	<td>258</td>
+																	<td>140</td>
+																</tr>
+																<tr>
+																	<th>Apr 13</th>
+																	<td>328</td>
+																	<td>144</td>
+																</tr>
+																<tr>
+																	<th>Apr 14</th>
+																	<td>70</td>
+																	<td>182</td>
+																</tr>
+																<tr>
+																	<th>Apr 15</th>
+																	<td>264</td>
+																	<td>254</td>
+																</tr>
+																<tr>
+																	<th>Apr 16</th>
+																	<td>130</td>
+																	<td>130</td>
+																</tr>
+																<tr>
+																	<th>Apr 17</th>
+																	<td>448</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<th>Apr 18</th>
+																	<td>438</td>
+																	<td>214</td>
+																</tr>
+																<tr>
+																	<th>Apr 19</th>
+																	<td>100</td>
+																	<td>192</td>
+																</tr>
+																<tr>
+																	<th>Apr 20</th>
+																	<td>214</td>
+																	<td>204</td>
+																</tr>
+																<tr>
+																	<th>Apr 21</th>
+																	<td>390</td>
+																	<td>250</td>
+																</tr>
+																<tr>
+																	<th>Apr 22</th>
+																	<td>238</td>
+																	<td>100</td>
+																</tr>
+																<tr>
+																	<th>Apr 23</th>
+																	<td>148</td>
+																	<td>214</td>
+																</tr>
+																<tr>
+																	<th>Apr 24</th>
+																	<td>120</td>
+																	<td>132</td>
+																</tr>
+																<tr>
+																	<th>Apr 25</th>
+																	<td>154</td>
+																	<td>84</td>
+																</tr>
+																<tr>
+																	<th>Apr 26</th>
+																	<td>250</td>
+																	<td>70</td>
+																</tr>
+																<tr>
+																	<th>Apr 27</th>
+																	<td>408</td>
+																	<td>90</td>
+																</tr>
+																<tr>
+																	<th>Apr 28</th>
+																	<td>238</td>
+																	<td>144</td>
+																</tr>
+																<tr>
+																	<th>Apr 29</th>
+																	<td>130</td>
+																	<td>232</td>
+																</tr>
+																<tr>
+																	<th>Apr 30</th>
+																	<td>84</td>
+																	<td>124</td>
+																</tr>
+																<tr>
+																	<th>May 1</th>
+																	<td>100</td>
+																	<td>50</td>
+																</tr>
+																<tr>
+																	<th>May 2</th>
+																	<td>178</td>
+																	<td>240</td>
+																</tr>
+																<tr>
+																	<th>May 3</th>
+																	<td>318</td>
+																	<td>234</td>
+																</tr>
+																<tr>
+																	<th>May 4</th>
+																	<td>130</td>
+																	<td>262</td>
+																</tr>
+																<tr>
+																	<th>May 5</th>
+																	<td>394</td>
+																	<td>94</td>
+																</tr>
+																<tr>
+																	<th>May 6</th>
+																	<td>330</td>
+																	<td>190</td>
+																</tr>
+																<tr>
+																	<th>May 7</th>
+																	<td>328</td>
+																	<td>90</td>
+																</tr>
+																<tr>
+																	<th>May 8</th>
+																	<td>388</td>
+																	<td>254</td>
+																</tr>
+																<tr>
+																	<th>May 9</th>
+																	<td>120</td>
+																	<td>222</td>
+																</tr>
+																<tr>
+																	<th>May 10</th>
+																	<td>304</td>
+																	<td>224</td>
+																</tr>
+																<tr>
+																	<th>May 11</th>
+																	<td>160</td>
+																	<td>260</td>
+																</tr>
+																<tr>
+																	<th>May 12</th>
+																	<td>78</td>
+																	<td>100</td>
+																</tr>
+																<tr>
+																	<th>May 13</th>
+																	<td>448</td>
+																	<td>204</td>
+																</tr>
+																<tr>
+																	<th>May 14</th>
+																	<td>100</td>
+																	<td>112</td>
+																</tr>
+																<tr>
+																	<th>May 15</th>
+																	<td>204</td>
+																	<td>54</td>
+																</tr>
+																<tr>
+																	<th>May 16</th>
+																	<td>370</td>
+																	<td>260</td>
+																</tr>
+																<tr>
+																	<th>May 17</th>
+																	<td>208</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<th>May 18</th>
+																	<td>108</td>
+																	<td>84</td>
+																</tr>
+																<tr>
+																	<th>May 19</th>
+																	<td>70</td>
+																	<td>162</td>
+																</tr>
+																<tr>
+																	<th>May 20</th>
+																	<td>94</td>
+																	<td>44</td>
+																</tr>
+																<tr>
+																	<th>May 21</th>
+																	<td>180</td>
+																	<td>190</td>
+																</tr>
+																<tr>
+																	<th>May 22</th>
+																	<td>328</td>
+																	<td>140</td>
+																</tr>
+																<tr>
+																	<th>May 23</th>
+																	<td>148</td>
+																	<td>124</td>
+																</tr>
+																<tr>
+																	<th>May 24</th>
+																	<td>420</td>
+																	<td>142</td>
+																</tr>
+																<tr>
+																	<th>May 25</th>
+																	<td>364</td>
+																	<td>194</td>
+																</tr>
+																<tr>
+																	<th>May 26</th>
+																	<td>370</td>
+																	<td>50</td>
+																</tr>
+																<tr>
+																	<th>May 27</th>
+																	<td>438</td>
+																	<td>170</td>
+																</tr>
+																<tr>
+																	<th>May 28</th>
+																	<td>178</td>
+																	<td>94</td>
+																</tr>
+																<tr>
+																	<th>May 29</th>
+																	<td>370</td>
+																	<td>52</td>
+																</tr>
+																<tr>
+																	<th>May 30</th>
+																	<td>234</td>
+																	<td>44</td>
+																</tr>
+																<tr>
+																	<th>May 31</th>
+																	<td>160</td>
+																	<td>70</td>
+																</tr>
+																<tr>
+																	<th>Jun 1</th>
+																	<td>148</td>
+																	<td>130</td>
+																</tr>
+																<tr>
+																	<th>Jun 2</th>
+																	<td>198</td>
+																	<td>224</td>
+																</tr>
+																<tr>
+																	<th>Jun 3</th>
+																	<td>310</td>
+																	<td>122</td>
+																</tr>
+																<tr>
+																	<th>Jun 4</th>
+																	<td>94</td>
+																	<td>54</td>
+																</tr>
+																<tr>
+																	<th>Jun 5</th>
+																	<td>330</td>
+																	<td>250</td>
+																</tr>
+																<tr>
+																	<th>Jun 6</th>
+																	<td>238</td>
+																	<td>250</td>
+																</tr>
+																<tr>
+																	<th>Jun 7</th>
+																	<td>208</td>
+																	<td>54</td>
+																</tr>
+																<tr>
+																	<th>Jun 8</th>
+																	<td>240</td>
+																	<td>122</td>
+																</tr>
+																<tr>
+																	<th>Jun 9</th>
+																	<td>334</td>
+																	<td>224</td>
+																</tr>
+																<tr>
+																	<th>Jun 10</th>
+																	<td>100</td>
+																	<td>130</td>
+																</tr>
+																<tr>
+																	<th>Jun 11</th>
+																	<td>318</td>
+																	<td>70</td>
+																</tr>
+																<tr>
+																	<th>Jun 12</th>
+																	<td>208</td>
+																	<td>44</td>
+																</tr>
+																<tr>
+																	<th>Jun 13</th>
+																	<td>160</td>
+																	<td>52</td>
+																</tr>
+																<tr>
+																	<th>Jun 14</th>
+																	<td>174</td>
+																	<td>94</td>
+																</tr>
+																<tr>
+																	<th>Jun 15</th>
+																	<td>250</td>
+																	<td>170</td>
+																</tr>
+																<tr>
+																	<th>Jun 16</th>
+																	<td>388</td>
+																	<td>50</td>
+																</tr>
+																<tr>
+																	<th>Jun 17</th>
+																	<td>198</td>
+																	<td>194</td>
+																</tr>
+																<tr>
+																	<th>Jun 18</th>
+																	<td>70</td>
+																	<td>142</td>
+																</tr>
+																<tr>
+																	<th>Jun 19</th>
+																	<td>394</td>
+																	<td>124</td>
+																</tr>
+																<tr>
+																	<th>Jun 20</th>
+																	<td>390</td>
+																	<td>140</td>
+																</tr>
+																<tr>
+																	<th>Jun 21</th>
+																	<td>448</td>
+																	<td>190</td>
+																</tr>
+																<tr>
+																	<th>Jun 22</th>
+																	<td>178</td>
+																	<td>44</td>
+																</tr>
+																<tr>
+																	<th>Jun 23</th>
+																	<td>360</td>
+																	<td>162</td>
+																</tr>
+																<tr>
+																	<th>Jun 24</th>
+																	<td>214</td>
+																	<td>84</td>
+																</tr>
+																<tr>
+																	<th>Jun 25</th>
+																	<td>130</td>
+																	<td>40</td>
+																</tr>
+																<tr>
+																	<th>Jun 26</th>
+																	<td>108</td>
+																	<td>260</td>
+																</tr>
+																<tr>
+																	<th>Jun 27</th>
+																	<td>148</td>
+																	<td>54</td>
+																</tr>
+																<tr>
+																	<th>Jun 28</th>
+																	<td>250</td>
+																	<td>112</td>
+																</tr>
+																<tr>
+																	<th>Jun 29</th>
+																	<td>414</td>
+																	<td>204</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<!--!-->
+											<div class="chart-gallery-grid" data-slot="div" _bl_20="">
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_45="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Default</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_38="">
+														<!--!-->
+														<div aria-label="Area chart: Default, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_46="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Default, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-5-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79L424.833,222Z" fill="#60a5fa" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Default, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_47="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_67="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_48="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Linear</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_39="">
+														<!--!-->
+														<div aria-label="Area chart: Linear, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_49="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Linear, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-6-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21L127.5,64.925L201.833,99.945L276.167,81.405L350.5,114.365L424.833,111.79L424.833,222Z" fill="#60a5fa" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21L127.5,64.925L201.833,99.945L276.167,81.405L350.5,114.365L424.833,111.79" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Linear, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_50="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_68="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_51="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Step</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_40="">
+														<!--!-->
+														<div aria-label="Area chart: Step, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_52="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Step, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-7-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21H90.333V64.925H127.5H164.667V99.945H201.833H239V81.405H276.167H313.333V114.365H350.5H387.667V111.79H424.833L424.833,222Z" fill="#60a5fa" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21H90.333V64.925H127.5H164.667V99.945H201.833H239V81.405H276.167H313.333V114.365H350.5H387.667V111.79H424.833" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Step, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_53="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_69="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_54="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Stacked</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_41="">
+														<!--!-->
+														<div aria-label="Area chart: Stacked, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_55="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Stacked, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-8-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79L424.833,222Z" fill="#60a5fa" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																			<path d="M53.167,222L53.167,180.8C77.944,160.2 102.722,119 127.5,119C152.278,119 177.056,160.2 201.833,160.2C226.611,160.2 251.389,124.15 276.167,124.15C300.944,124.15 325.722,155.05 350.5,155.05C375.278,155.05 400.056,151.617 424.833,149.9L424.833,222Z" fill="#2563eb" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,180.8C77.944,160.2 102.722,119 127.5,119C152.278,119 177.056,160.2 201.833,160.2C226.611,160.2 251.389,124.15 276.167,124.15C300.944,124.15 325.722,155.05 350.5,155.05C375.278,155.05 400.056,151.617 424.833,149.9" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Stacked, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																		<th>Mobile</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																		<td>80</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																		<td>200</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																		<td>120</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																		<td>190</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																		<td>130</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																		<td>140</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_56="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_70="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_57="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Gradient</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_42="">
+														<!--!-->
+														<div aria-label="Area chart: Gradient, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_58="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Gradient, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-9-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																		<linearGradient id="quark-chart-9-gradient-0" x1="0%" y1="0%" x2="0%" y2="100%">
+																			<stop offset="0%" stop-color="#60a5fa" stop-opacity="0.65"></stop>
+																			<!--!-->
+																			<stop offset="100%" stop-color="#60a5fa" stop-opacity="0.03"></stop>
+																		</linearGradient>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79L424.833,222Z" fill="url(#quark-chart-9-gradient-0)" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Gradient, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_59="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_71="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+												<!--!-->
+												<!--!-->
+												<div class="group/card overflow-hidden py-4 ring-1 ring-foreground/10 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl flex text-card-foreground text-sm flex-col gap-4 bg-card rounded-xl chart-gallery-card" data-size="default" data-slot="card">
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-header" class="group/card-header @container/card-header auto-rows-min rounded-t-xl has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-4 group-data-[size=sm]/card:[.border-b]:pb-3 grid px-4 group-data-[size=sm]/card:px-3 gap-1 items-start" _bl_60="">
+														<!--!-->
+														<h3 class="text-2xl font-semibold tracking-tight scroll-m-20" data-slot="h3">Area Chart - Legend</h3>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">
+															<!--!-->January – June 2026</p>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<div class="chart-gallery-plot" data-slot="div" _bl_43="">
+														<!--!-->
+														<div aria-label="Area chart: Legend, monthly visitors" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="2" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="5" data-scroll-y-min="0" data-scroll-y-max="400" data-scroll-width="446" data-scroll-height="206" _bl_61="">
+															<div class="quark-chart-stage relative min-h-40 w-full" style="aspect-ratio:480/260">
+																<svg viewBox="0 0 480 260" role="group" aria-label="Area chart: Legend, monthly visitors" preserveAspectRatio="xMidYMid meet" class="h-full w-full overflow-visible">
+																	<!--!-->
+																	<defs>
+																		<clipPath id="quark-chart-10-plot-clip">
+																			<rect x="16" y="10" width="446" height="218"></rect>
+																		</clipPath>
+																	</defs>
+																	<line x1="16" y1="16" x2="462" y2="16" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="67.5" x2="462" y2="67.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="119" x2="462" y2="119" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="170.5" x2="462" y2="170.5" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<line x1="16" y1="222" x2="462" y2="222" class="quark-chart-grid" style="stroke:var(--border);stroke-width:1;vector-effect:non-scaling-stroke"></line>
+																	<g transform="translate(53.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jan</text>
+																	</g>
+																	<g transform="translate(127.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Feb</text>
+																	</g>
+																	<g transform="translate(201.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Mar</text>
+																	</g>
+																	<g transform="translate(276.167 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Apr</text>
+																	</g>
+																	<g transform="translate(350.5 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>May</text>
+																	</g>
+																	<g transform="translate(424.833 244) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
+																		<text>Jun</text>
+																	</g>
+																	<g>
+																		<g data-slot="chart-plot" data-plot-width="446">
+																			<!--!-->
+																			<rect x="16" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="90.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="164.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="239" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="313.333" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<rect x="387.667" y="16" width="74.333" height="206" fill="transparent" class="quark-chart-hit-area"></rect>
+																			<path d="M53.167,222L53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79L424.833,222Z" fill="#60a5fa" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,126.21C77.944,105.782 102.722,64.925 127.5,64.925C152.278,64.925 177.056,99.945 201.833,99.945C226.611,99.945 251.389,81.405 276.167,81.405C300.944,81.405 325.722,114.365 350.5,114.365C375.278,114.365 400.056,112.648 424.833,111.79" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																			<path d="M53.167,222L53.167,180.8C77.944,160.2 102.722,119 127.5,119C152.278,119 177.056,160.2 201.833,160.2C226.611,160.2 251.389,124.15 276.167,124.15C300.944,124.15 325.722,155.05 350.5,155.05C375.278,155.05 400.056,151.617 424.833,149.9L424.833,222Z" fill="#2563eb" fill-opacity="0.36" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-area"></path>
+																			<path d="M53.167,180.8C77.944,160.2 102.722,119 127.5,119C152.278,119 177.056,160.2 201.833,160.2C226.611,160.2 251.389,124.15 276.167,124.15C300.944,124.15 325.722,155.05 350.5,155.05C375.278,155.05 400.056,151.617 424.833,149.9" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark animate-in fade-in zoom-in-95 duration-500" data-slot="chart-line"></path>
+																		</g>
+																	</g>
+																	<!--!-->
+																	<g>
+																		<g data-slot="chart-plot-overlay"></g>
+																	</g>
+																</svg>
+															</div>
+															<!--!-->
+															<table class="quark-chart-sr-only sr-only">
+																<caption>Area chart: Legend, monthly visitors</caption>
+																<!--!-->
+																<thead>
+																	<tr>
+																		<!--!-->
+																		<th>Label</th>
+																		<th>Desktop</th>
+																		<th>Mobile</th>
+																	</tr>
+																</thead>
+																<!--!-->
+																<tbody>
+																	<tr>
+																		<th>Jan</th>
+																		<td>186</td>
+																		<td>80</td>
+																	</tr>
+																	<tr>
+																		<th>Feb</th>
+																		<td>305</td>
+																		<td>200</td>
+																	</tr>
+																	<tr>
+																		<th>Mar</th>
+																		<td>237</td>
+																		<td>120</td>
+																	</tr>
+																	<tr>
+																		<th>Apr</th>
+																		<td>273</td>
+																		<td>190</td>
+																	</tr>
+																	<tr>
+																		<th>May</th>
+																		<td>209</td>
+																		<td>130</td>
+																	</tr>
+																	<tr>
+																		<th>Jun</th>
+																		<td>214</td>
+																		<td>140</td>
+																	</tr>
+																</tbody>
+															</table>
+															<!--!-->
+															<div class="quark-chart-legend flex flex-wrap justify-center gap-x-4 gap-y-1.5 px-1 py-2.5" aria-label="Chart legend" role="group">
+																<button type="button" class="quark-chart-legend-item inline-flex items-center gap-1.5 rounded-md text-xs text-muted-foreground cursor-pointer px-2 py-1 hover:text-foreground focus-visible:outline focus-visible:outline-2" aria-pressed="false">
+																	<span class="quark-chart-legend-swatch inline-block size-2 rounded-sm" style="background:#60a5fa"></span>
+																	<span>Desktop</span>
+																</button>
+																<button type="button" class="quark-chart-legend-item inline-flex items-center gap-1.5 rounded-md text-xs text-muted-foreground cursor-pointer px-2 py-1 hover:text-foreground focus-visible:outline focus-visible:outline-2" aria-pressed="false">
+																	<span class="quark-chart-legend-swatch inline-block size-2 rounded-sm" style="background:#2563eb"></span>
+																	<span>Mobile</span>
+																</button>
+															</div>
+														</div>
+													</div>
+													<!--!-->                             
+													<!--!-->
+													<!--!-->
+													<div data-slot="card-footer" class="group-data-[size=sm]/card:p-3 block p-4 items-center border-t bg-muted/50 rounded-b-xl" _bl_62="">
+														<!--!-->
+														<strong data-slot="strong">Trending up by 5.2% this month 
+															<!--!-->
+															<span aria-hidden="true" data-slot="span" _bl_72="">
+																<!--!-->
+																<!--!-->↗</span>
+														</strong>
+														<!--!-->
+														<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Showing visitors for the last 6 months</p>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<!--!-->      
+			<!--!-->
+		</div>
+		<div id="blazor-error-ui">
+			An unhandled error has occurred.
+			<a href="" class="reload">Reload</a>
+			<a class="dismiss">🗙</a>
+		</div>
+		<script src="_framework/blazor.webassembly.js"></script>
+		<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;b7bb3279d7e34115b0079ebd3001b2f1&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+		<script src="https://quark.soenneker.com/_content/Soenneker.Blazor.Cloudflare.AiSearch/js/aisearchinterop.js" crossorigin="anonymous" type="module" data-soenneker-loaded="true"></script>
+		<div style="display:contents;" _bl_23="">
+			<!--!-->
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_35="">
+				<!--!-->
+			</div>
+		</div>
+	</body>
+</html>
