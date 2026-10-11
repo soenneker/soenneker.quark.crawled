@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="color-scheme: dark; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<script>
@@ -91,6 +91,8 @@
 		<meta name="twitter:image" content="https://quark.soenneker.com/social-card.png">
 		<meta name="twitter:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
 		<script type="application/ld+json"><!--!-->{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quark.soenneker.com/#website","name":"Quark Suite","url":"https://quark.soenneker.com/","inLanguage":"en"},{"@type":"WebPage","@id":"https://quark.soenneker.com/components/marquee#webpage","url":"https://quark.soenneker.com/components/marquee","name":"Blazor Marquee: Scrolling Content \u0026 Fade | Quark Suite","description":"Create scrolling content in Blazor with Quark Marquee. Compare the default animation, reversed direction, and a version without edge fading using Razor examples.","inLanguage":"en","isPartOf":{"@id":"https://quark.soenneker.com/#website"},"about":{"@type":"SoftwareSourceCode","name":"Soenneker.Quark.Suite","programmingLanguage":"C#","codeRepository":"https://github.com/soenneker/soenneker.quark.suite"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quark Suite","item":"https://quark.soenneker.com/"},{"@type":"ListItem","position":2,"name":"Blazor Marquee: Scrolling Content \u0026 Fade","item":"https://quark.soenneker.com/components/marquee"}]}}]}</script>
+		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/css/marquee.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://quark.soenneker.com/css/headersearch.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
@@ -161,7 +163,7 @@
 							<!--!-->
 							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end" data-slot="div" _bl_9="">
 								<!--!-->
-								<div class="demo-header-search w-32 sm:w-52 shrink-0 focus-within:z-60 focus-within:w-auto sm:focus-within:z-auto sm:focus-within:w-52 focus-within:fixed sm:focus-within:static focus-within:inset-x-4 focus-within:top-4" b-vnkka51tjh="">
+								<div class="demo-header-search w-32 sm:w-52 shrink-0 focus-within:z-60 focus-within:w-auto sm:focus-within:z-auto sm:focus-within:w-52 focus-within:fixed sm:focus-within:static focus-within:inset-x-4 focus-within:top-4">
 									<!--!-->
 									<!--!-->
 									<search-bar-snippet class="block w-full" style="--search-snippet-width: 100%; --search-snippet-max-width: 100%; --search-snippet-min-width: 0; --search-snippet-background: var(--popover); --search-snippet-surface: var(--muted); --search-snippet-text-color: var(--popover-foreground); --search-snippet-text-secondary: var(--muted-foreground); --search-snippet-text-description: var(--muted-foreground); --search-snippet-border-color: var(--border); --search-snippet-hover-background: var(--accent); --search-snippet-primary-color: var(--foreground); --search-snippet-primary-hover: var(--foreground); --search-snippet-focus-ring: color-mix(in oklab, var(--ring) 35%, transparent); --search-snippet-font-family: var(--font-sans); --search-snippet-font-size-base: 14px; --search-snippet-font-size-sm: 12px; --search-snippet-spacing-sm: 8px; --search-snippet-spacing-md: 12px; --search-snippet-border-radius: 8px; --search-snippet-icon-size: 16px; --search-snippet-icon-margin-left: 0; --search-snippet-shadow: none;" data-slot="cloudflare-ai-search" api-url="https://b0949445-2d03-473b-b099-ee5d52d178dd.search.ai.cloudflare.com/" placeholder="Search" max-results="50" max-render-results="10" debounce-ms="250" show-url="true" _bl_23=""></search-bar-snippet>
@@ -2247,21 +2249,6 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_252="">
 																		<!--!-->
-																		<!--!-->
-																		<style>@keyframes quark-marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-100% - var(--marquee-gap))); }
-}
-
-[data-slot="marquee"][data-pause-on-hover="true"]:hover [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-[data-slot="marquee"]:focus-within [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-																		</style>
 																		<div data-reverse="false" data-pause-on-hover="true" data-fade="true" class="group/marquee relative flex w-full overflow-hidden" style="--marquee-duration:40s; --marquee-gap:1rem; mask-image:linear-gradient(to right, transparent, black 10%, black calc(100% - 10%), transparent)" data-slot="marquee">
 																			<div data-slot="marquee-track" class="flex w-max min-w-full shrink-0 items-center justify-around [&amp;>*]:mx-[calc(var(--marquee-gap)/2)]" style="gap:var(--marquee-gap);animation:quark-marquee var(--marquee-duration) linear infinite;animation-direction:normal;">
 																				<!--!-->
@@ -2346,21 +2333,6 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_255="">
 																		<!--!-->
-																		<!--!-->
-																		<style>@keyframes quark-marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-100% - var(--marquee-gap))); }
-}
-
-[data-slot="marquee"][data-pause-on-hover="true"]:hover [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-[data-slot="marquee"]:focus-within [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-																		</style>
 																		<div data-reverse="true" data-pause-on-hover="true" data-fade="true" class="group/marquee relative flex w-full overflow-hidden" style="--marquee-duration:32s; --marquee-gap:1rem; mask-image:linear-gradient(to right, transparent, black 10%, black calc(100% - 10%), transparent)" data-slot="marquee">
 																			<div data-slot="marquee-track" class="flex w-max min-w-full shrink-0 items-center justify-around [&amp;>*]:mx-[calc(var(--marquee-gap)/2)]" style="gap:var(--marquee-gap);animation:quark-marquee var(--marquee-duration) linear infinite;animation-direction:reverse;">
 																				<!--!-->
@@ -2441,21 +2413,6 @@
 																	<!--!-->
 																	<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_258="">
 																		<!--!-->
-																		<!--!-->
-																		<style>@keyframes quark-marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-100% - var(--marquee-gap))); }
-}
-
-[data-slot="marquee"][data-pause-on-hover="true"]:hover [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-[data-slot="marquee"]:focus-within [data-slot="marquee-track"] {
-    animation-play-state: paused !important;
-}
-
-																		</style>
 																		<div data-reverse="false" data-pause-on-hover="true" data-fade="false" class="group/marquee relative flex w-full overflow-hidden" style="--marquee-duration:28s; --marquee-gap:0.75rem" data-slot="marquee">
 																			<div data-slot="marquee-track" class="flex w-max min-w-full shrink-0 items-center justify-around [&amp;>*]:mx-[calc(var(--marquee-gap)/2)]" style="gap:var(--marquee-gap);animation:quark-marquee var(--marquee-duration) linear infinite;animation-direction:normal;">
 																				<!--!-->
@@ -2529,9 +2486,9 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="reverse" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/marquee#reverse" data-slot="anchor">Reverse</a>
+													<a data-scrollspy-anchor="reverse" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/marquee#reverse" data-slot="anchor" data-active="true" aria-current="location">Reverse</a>
 													<!--!-->
-													<a data-scrollspy-anchor="no-fade" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/marquee#no-fade" data-slot="anchor" data-active="true" aria-current="location">No Fade</a>
+													<a data-scrollspy-anchor="no-fade" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/marquee#no-fade" data-slot="anchor">No Fade</a>
 												</nav>
 											</div>
 										</div>

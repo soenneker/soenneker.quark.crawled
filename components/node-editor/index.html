@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="color-scheme: dark; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<script>
@@ -91,6 +91,7 @@
 		<meta name="twitter:image" content="https://quark.soenneker.com/social-card.png">
 		<meta name="twitter:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
 		<script type="application/ld+json"><!--!-->{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quark.soenneker.com/#website","name":"Quark Suite","url":"https://quark.soenneker.com/","inLanguage":"en"},{"@type":"WebPage","@id":"https://quark.soenneker.com/components/node-editor#webpage","url":"https://quark.soenneker.com/components/node-editor","name":"Blazor Node Editor: Drag, Zoom \u0026 Connect | Quark Suite","description":"Build connected workflows in Blazor with Quark NodeEditor. Try dragging nodes, panning, zooming, selecting connections, and drawing links between output ports.","inLanguage":"en","isPartOf":{"@id":"https://quark.soenneker.com/#website"},"about":{"@type":"SoftwareSourceCode","name":"Soenneker.Quark.Suite","programmingLanguage":"C#","codeRepository":"https://github.com/soenneker/soenneker.quark.suite"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quark Suite","item":"https://quark.soenneker.com/"},{"@type":"ListItem","position":2,"name":"Blazor Node Editor: Drag, Zoom \u0026 Connect","item":"https://quark.soenneker.com/components/node-editor"}]}}]}</script>
+		<link rel="stylesheet" href="https://quark.soenneker.com/css/headersearch.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
@@ -161,7 +162,7 @@
 							<!--!-->
 							<div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end" data-slot="div" _bl_9="">
 								<!--!-->
-								<div class="demo-header-search w-32 sm:w-52 shrink-0 focus-within:z-60 focus-within:w-auto sm:focus-within:z-auto sm:focus-within:w-52 focus-within:fixed sm:focus-within:static focus-within:inset-x-4 focus-within:top-4" b-vnkka51tjh="">
+								<div class="demo-header-search w-32 sm:w-52 shrink-0 focus-within:z-60 focus-within:w-auto sm:focus-within:z-auto sm:focus-within:w-52 focus-within:fixed sm:focus-within:static focus-within:inset-x-4 focus-within:top-4">
 									<!--!-->
 									<!--!-->
 									<search-bar-snippet class="block w-full" style="--search-snippet-width: 100%; --search-snippet-max-width: 100%; --search-snippet-min-width: 0; --search-snippet-background: var(--popover); --search-snippet-surface: var(--muted); --search-snippet-text-color: var(--popover-foreground); --search-snippet-text-secondary: var(--muted-foreground); --search-snippet-text-description: var(--muted-foreground); --search-snippet-border-color: var(--border); --search-snippet-hover-background: var(--accent); --search-snippet-primary-color: var(--foreground); --search-snippet-primary-hover: var(--foreground); --search-snippet-focus-ring: color-mix(in oklab, var(--ring) 35%, transparent); --search-snippet-font-family: var(--font-sans); --search-snippet-font-size-base: 14px; --search-snippet-font-size-sm: 12px; --search-snippet-spacing-sm: 8px; --search-snippet-spacing-md: 12px; --search-snippet-border-radius: 8px; --search-snippet-icon-size: 16px; --search-snippet-icon-margin-left: 0; --search-snippet-shadow: none;" data-slot="cloudflare-ai-search" api-url="https://b0949445-2d03-473b-b099-ee5d52d178dd.search.ai.cloudflare.com/" placeholder="Search" max-results="50" max-render-results="10" debounce-ms="250" show-url="true" _bl_23=""></search-bar-snippet>
@@ -2349,65 +2350,65 @@
 															</div>
 															<!--!-->              
 															<!--!-->
-															<div id="quark-ne-3" role="application" aria-label="Node editor" class="quark-node-editor isolate focus-visible:ring-2 focus-visible:ring-ring min-h-96 data-[drop-target=true]:border-primary data-[drop-target=true]:ring-2 data-[drop-target=true]:ring-primary/15 text-foreground relative w-full h-[46rem] overflow-hidden border-0 bg-muted/20 rounded-none outline-none transition-colors" tabindex="0" aria-keyshortcuts="Control+Z Meta+Z Control+Y Meta+Shift+Z Control+D Meta+D Control+C Meta+C Control+V Meta+V" data-initialized="true" data-drop-target="false" data-slot="node-editor" _bl_237="" style="--node-editor-zoom: 0.7978436657681941;">
+															<div id="quark-ne-3" role="application" aria-label="Node editor" class="quark-node-editor isolate focus-visible:ring-2 focus-visible:ring-ring min-h-96 data-[drop-target=true]:border-primary data-[drop-target=true]:ring-2 data-[drop-target=true]:ring-primary/15 text-foreground relative w-full h-[46rem] overflow-hidden border-0 bg-muted/20 rounded-none outline-none transition-colors" tabindex="0" aria-keyshortcuts="Control+Z Meta+Z Control+Y Meta+Shift+Z Control+D Meta+D Control+C Meta+C Control+V Meta+V" data-initialized="false" data-drop-target="false" data-slot="node-editor" _bl_237="" style="--node-editor-zoom: 1;">
 																<!--!-->
-																<div class="quark-node-editor-background bg-[radial-gradient(circle_at_center,hsl(var(--border))_1px,transparent_1px)] bg-[length:20px_20px] [mask-image:linear-gradient(to_bottom,black,rgba(0,0,0,0.72))] inset-0 absolute pointer-events-none" data-slot="node-editor-background" style="background-size: 15.957px 15.957px; background-position: 135.216px 52.852px;"></div>
+																<div class="quark-node-editor-background bg-[radial-gradient(circle_at_center,hsl(var(--border))_1px,transparent_1px)] bg-[length:20px_20px] [mask-image:linear-gradient(to_bottom,black,rgba(0,0,0,0.72))] inset-0 absolute pointer-events-none" data-slot="node-editor-background" style="background-size: 20px 20px; background-position: 0px 0px;"></div>
 																<!--!-->      
 																<!--!-->
 																<!--!-->
-																<div class="top-0 left-0 absolute duration-150 transition-opacity quark-node-editor-viewport origin-top-left will-change-transform opacity-100" data-slot="node-editor-viewport" _bl_251="" style="transform: translate3d(135.216px, 52.852px, 0px) scale(0.798);">
+																<div class="top-0 left-0 absolute opacity-0 duration-150 transition-opacity quark-node-editor-viewport origin-top-left will-change-transform" data-slot="node-editor-viewport" _bl_251="" style="transform: translate3d(0px, 0px, 0px) scale(1);">
 																	<svg data-slot="node-editor-edge-layer" class="quark-node-editor-edge-layer pointer-events-none absolute left-0 top-0 overflow-visible" width="1" height="1" role="group" aria-label="Connections">
 																		<g data-add-handle-edge="substitute-fallback" data-source-node="substitute" data-source-port="alternate" data-target-x="830" data-target-y="363" class="pointer-events-none">
 																			<!--!-->
-																			<path data-add-handle-path="" class="fill-none stroke-muted-foreground/25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4" vector-effect="non-scaling-stroke" d="M 788.155 351.866 L 803.51 351.866 Q 809.077 351.866 809.077 357.433 L 809.077 357.433 Q 809.077 363 814.644 363 L 830 363"></path>
+																			<path data-add-handle-path="" class="fill-none stroke-muted-foreground/25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"></path>
 																		</g>
 																		<g data-edge-id="edge-1" data-source-node="ticket" data-source-port="next" data-target-node="ingredients" data-target-port="input" data-disabled="false" data-selectable="true" data-label-editable="true" data-selected="false" class="quark-node-editor-edge group pointer-events-auto cursor-pointer outline-none" role="button" aria-label="Connection from ticket to ingredients" aria-pressed="false" aria-disabled="false" aria-keyshortcuts="Enter Space F2 Delete Backspace" tabindex="0">
 																			<!--!-->
-																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke" d="M 244.048 178.035 L 244.048 220.043"></path>
-																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M 244.048 178.035 L 244.048 220.043"></path>
-																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="178.035"></circle>
-																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="220.043"></circle>
+																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke"></path>
+																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
 																		</g>
 																		<g data-edge-id="edge-2" data-source-node="ingredients" data-source-port="next" data-target-node="prepare" data-target-port="input" data-disabled="false" data-selectable="true" data-label-editable="false" data-selected="false" class="quark-node-editor-edge group pointer-events-auto cursor-pointer outline-none" role="button" aria-label="Ready to cook" aria-pressed="false" aria-disabled="false" aria-keyshortcuts="Enter Space Delete Backspace" tabindex="0">
 																			<!--!-->
-																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke" d="M 244.048 374.074 L 244.048 416.082"></path>
-																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M 244.048 374.074 L 244.048 416.082"></path>
-																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="374.074"></circle>
-																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="416.082"></circle>
-																			<g data-edge-label="" transform="translate(244.048 395.078)">
+																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke"></path>
+																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<g data-edge-label="">
 																				<!--!-->
-																				<rect data-edge-label-background="" x="-54.45402526855469" y="-10" width="108.90805053710938" height="20" rx="10" class="fill-muted"></rect>
+																				<rect data-edge-label-background="" x="-5" y="-10" width="10" height="20" rx="10" class="fill-muted"></rect>
 																				<text data-edge-label-text="" text-anchor="middle" dominant-baseline="middle" class="select-none fill-muted-foreground text-[11px] font-medium">Ready to cook</text>
 																			</g>
 																		</g>
 																		<g data-edge-id="edge-3" data-source-node="ingredients" data-source-port="alternate" data-target-node="substitute" data-target-port="input" data-disabled="false" data-selectable="true" data-label-editable="false" data-selected="false" class="quark-node-editor-edge group pointer-events-auto cursor-pointer outline-none" role="button" aria-label="Item missing" aria-pressed="false" aria-disabled="false" aria-keyshortcuts="Enter Space Delete Backspace" tabindex="0">
 																			<!--!-->
-																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke" d="M 388.076 327.861 L 440.688 327.861 Q 444.087 327.861 444.087 324.462 L 444.087 324.462 Q 444.087 321.063 447.487 321.063 L 500.098 321.063"></path>
-																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M 388.076 327.861 L 440.688 327.861 Q 444.087 327.861 444.087 324.462 L 444.087 324.462 Q 444.087 321.063 447.487 321.063 L 500.098 321.063"></path>
-																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="388.076" cy="327.861"></circle>
-																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="500.098" cy="321.063"></circle>
-																			<g data-edge-label="" transform="translate(444.087 324.462)">
+																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke"></path>
+																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<g data-edge-label="">
 																				<!--!-->
-																				<rect data-edge-label-background="" x="-49.079261779785156" y="-10" width="98.15852355957031" height="20" rx="10" class="fill-muted"></rect>
+																				<rect data-edge-label-background="" x="-5" y="-10" width="10" height="20" rx="10" class="fill-muted"></rect>
 																				<text data-edge-label-text="" text-anchor="middle" dominant-baseline="middle" class="select-none fill-muted-foreground text-[11px] font-medium">Item missing</text>
 																			</g>
 																		</g>
 																		<g data-edge-id="edge-4" data-source-node="prepare" data-source-port="next" data-target-node="plate" data-target-port="input" data-disabled="false" data-selectable="true" data-label-editable="true" data-selected="false" class="quark-node-editor-edge group pointer-events-auto cursor-pointer outline-none" role="button" aria-label="Connection from prepare to plate" aria-pressed="false" aria-disabled="false" aria-keyshortcuts="Enter Space F2 Delete Backspace" tabindex="0">
 																			<!--!-->
-																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke" d="M 244.048 570.112 L 244.048 612.12"></path>
-																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M 244.048 570.112 L 244.048 612.12"></path>
-																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="570.112"></circle>
-																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="244.048" cy="612.12"></circle>
+																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke"></path>
+																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
 																		</g>
 																		<g data-edge-id="edge-5" data-source-node="substitute" data-source-port="next" data-target-node="alert" data-target-port="input" data-disabled="false" data-selectable="true" data-label-editable="true" data-selected="false" class="quark-node-editor-edge group pointer-events-auto cursor-pointer outline-none" role="button" aria-label="Still unavailable" aria-pressed="false" aria-disabled="false" aria-keyshortcuts="Enter Space F2 Delete Backspace" tabindex="0">
 																			<!--!-->
-																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke" d="M 644.127 398.078 L 644.127 440.087"></path>
-																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M 644.127 398.078 L 644.127 440.087"></path>
-																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="644.127" cy="398.078"></circle>
-																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true" cx="644.127" cy="440.087"></circle>
-																			<g data-edge-label="" transform="translate(644.127 419.083)">
+																			<path data-edge-hit="" class="fill-none stroke-transparent" stroke-width="14" vector-effect="non-scaling-stroke"></path>
+																			<path data-edge-path="" class="fill-none stroke-muted-foreground/35 transition-[stroke,opacity] duration-150 group-data-[disabled=true]:opacity-40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+																			<circle data-edge-endpoint="source" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<circle data-edge-endpoint="target" r="5" class="pointer-events-none fill-background stroke-primary opacity-0 transition-opacity group-data-[selected=true]:pointer-events-auto group-data-[selected=true]:cursor-pointer group-data-[selected=true]:opacity-100" stroke-width="2" vector-effect="non-scaling-stroke" aria-hidden="true"></circle>
+																			<g data-edge-label="">
 																				<!--!-->
-																				<rect data-edge-label-background="" x="-59.05537414550781" y="-10" width="118.11074829101562" height="20" rx="10" class="fill-muted"></rect>
+																				<rect data-edge-label-background="" x="-5" y="-10" width="10" height="20" rx="10" class="fill-muted"></rect>
 																				<text data-edge-label-text="" text-anchor="middle" dominant-baseline="middle" class="select-none fill-muted-foreground text-[11px] font-medium">Still unavailable</text>
 																			</g>
 																		</g>
@@ -2906,7 +2907,7 @@
 																	</span>
 																	<!--!-->                     
 																	<!--!-->
-																	<small class="text-muted-foreground text-sm font-medium leading-none" data-slot="small">6 nodes · 5 connections · 80%</small>
+																	<small class="text-muted-foreground text-sm font-medium leading-none" data-slot="small">6 nodes · 5 connections · 100%</small>
 																</div>
 																<!--!-->      
 																<!--!-->
