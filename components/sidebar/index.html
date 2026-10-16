@@ -1285,6 +1285,18 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -3655,7 +3667,7 @@
 																</div>
 																<div role="presentation" aria-hidden="true" style="width: 624px;"></div>
 																<div data-mprt="4" class="overlayWidgets" style="width: 638px;">
-																	<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute;">
+																	<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 624px; position: absolute; right: 50%; top: 0px;">
 																		<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
 																		<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 490px;">
 																			<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
@@ -4338,7 +4350,7 @@
 																										<!--!-->
 																										<div data-sidebar="menu-skeleton-icon" class="size-4 bg-muted rounded-md animate-pulse" data-slot="skeleton"></div>
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 78%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 75%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																								<!--!-->                                         
@@ -4349,7 +4361,7 @@
 																										<!--!-->
 																										<div data-sidebar="menu-skeleton-icon" class="size-4 bg-muted rounded-md animate-pulse" data-slot="skeleton"></div>
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 88%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 58%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																								<!--!-->                                         
@@ -4358,7 +4370,7 @@
 																									<!--!-->
 																									<div class="flex px-2 h-8 gap-2 items-center rounded-md" data-sidebar="menu-skeleton" data-slot="sidebar-menu-skeleton">
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 51%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 63%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																							</ul>
@@ -4935,7 +4947,7 @@
 												<!--!-->         
 												<!--!-->
 												<div class="group/code-editor relative w-full min-w-0" _bl_31="">
-													<div readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 343px;" _bl_32="" data-keybinding-context="2" data-mode-id="plaintext">
+													<div readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; height: 343px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_32="" data-keybinding-context="2" data-mode-id="plaintext">
 														<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/2" style="width: 640px; height: 343px;">
 															<div data-mprt="3" class="overflow-guard" style="width: 640px; height: 343px;">
 																<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -5171,7 +5183,14 @@
 																	</div>
 																</div>
 																<div role="presentation" aria-hidden="true" style="width: 626px;"></div>
-																<div data-mprt="4" class="overlayWidgets" style="width: 640px;"></div>
+																<div data-mprt="4" class="overlayWidgets" style="width: 640px;">
+																	<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 626px; position: absolute; right: 50%; top: 0px;">
+																		<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																		<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 1184px;">
+																			<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																		</div>
+																	</div>
+																</div>
 																<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 559px; width: 67px; height: 343px;">
 																	<div class="minimap-shadow-visible" style="height: 343px;"></div>
 																	<canvas width="67" height="343" style="position: absolute; left: 0px; width: 67px; height: 343px;"></canvas>
@@ -5206,13 +5225,13 @@
 													<!--!-->
 													<a data-scrollspy-anchor="rtl-support" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#rtl-support" data-slot="anchor">RTL Support</a>
 													<!--!-->
-													<a data-scrollspy-anchor="collapsible-group-label" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#collapsible-group-label" data-slot="anchor" data-active="true" aria-current="location">Collapsible Group Label</a>
+													<a data-scrollspy-anchor="collapsible-group-label" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#collapsible-group-label" data-slot="anchor">Collapsible Group Label</a>
 													<!--!-->
 													<a data-scrollspy-anchor="skeleton" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#skeleton" data-slot="anchor">Skeleton</a>
 													<!--!-->
 													<a data-scrollspy-anchor="mobile" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#mobile" data-slot="anchor">Mobile</a>
 													<!--!-->
-													<a data-scrollspy-anchor="controlled-sidebar" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#controlled-sidebar" data-slot="anchor">Controlled Sidebar</a>
+													<a data-scrollspy-anchor="controlled-sidebar" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#controlled-sidebar" data-slot="anchor" data-active="true" aria-current="location">Controlled Sidebar</a>
 												</nav>
 											</div>
 										</div>

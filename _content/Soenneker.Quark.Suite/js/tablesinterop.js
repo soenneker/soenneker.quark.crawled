@@ -55,7 +55,6 @@ function restoreLayout(state) {
 function measure(state) {
     const { table, columns, measured, styled, styles } = state;
     const height = table.offsetHeight;
-    const scrollLeft = state.container.scrollLeft;
     measured.length = 0;
     try {
         // Ask the browser for intrinsic widths on the existing DOM, then restore before paint.
@@ -97,7 +96,6 @@ function measure(state) {
     } finally {
         for (let i = 0; i < styled.length; i++) styled[i].style.cssText = styles[i];
         styled.length = styles.length = 0;
-        state.container.scrollLeft = scrollLeft;
     }
 }
 
@@ -129,6 +127,30 @@ function observe(state) {
         attributes: true, attributeFilter: observedAttributes });
 }
 
+function textNeedsMeasurement(state) {
+    const minWidth = Number.isFinite(state.options?.minWidth) && state.options.minWidth > 0 ? state.options.minWidth : 64;
+    const maxWidth = Math.max(minWidth, Number.isFinite(state.options?.maxWidth) && state.options.maxWidth > 0 ? state.options.maxWidth : 640);
+    for (const cell of state.changedCells) {
+        if (!cell.isConnected || cell.colSpan !== 1) continue;
+        // A capped column cannot grow further, even when its content wraps.
+        const bounds = cell.getBoundingClientRect();
+        if (bounds.width >= maxWidth) continue;
+        if (cell.scrollWidth > cell.clientWidth) return true;
+        // Check text in the existing fixed layout, without temporarily changing
+        // styles. Multiple line fragments mean the content has exhausted its reserve.
+        const walker = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+        const range = document.createRange();
+        let node;
+        while ((node = walker.nextNode())) {
+            range.selectNodeContents(node);
+            const fragments = range.getClientRects();
+            if (fragments.length > 1) return true;
+            if (fragments.length && (fragments[0].right > bounds.right || fragments[0].left < bounds.left)) return true;
+        }
+    }
+    return false;
+}
+
 function update(state) {
     state.frame = 0;
     const { table, columns, container } = state;
@@ -136,6 +158,14 @@ function update(state) {
     const containerStyle = getComputedStyle(container);
     const available = Math.floor(container.clientWidth - parseFloat(containerStyle.paddingLeft) - parseFloat(containerStyle.paddingRight));
     if (available <= 0) return;
+    if (!state.measureRequired && !state.reset && state.widths && available === state.available &&
+        !textNeedsMeasurement(state)) {
+        state.changedCells.clear();
+        return;
+    }
+    state.changedCells.clear();
+    state.measureRequired = false;
+    const scrollLeft = container.scrollLeft;
 
     // Pause observation for our own writes, so measuring and applying widths cannot feed back into themselves.
     state.mutations.disconnect();
@@ -144,14 +174,17 @@ function update(state) {
             restoreLayout(state);
             return;
         }
+        // Read computed styles before intrinsic measurement changes the layout.
+        // Reading them after restoration forces style/layout synchronization
+        // immediately before applying the final column widths.
+        const tableStyle = getComputedStyle(table);
+        const separate = tableStyle.borderCollapse === 'separate';
+        const borderSpacing = separate ? parseFloat(tableStyle.borderSpacing) : 0;
+        const borders = separate ? parseFloat(tableStyle.borderLeftWidth) + parseFloat(tableStyle.borderRightWidth) : 0;
         const measured = measure(state);
         // Do not relearn widths from an empty/loading/detail row between pages.
         if (!measured.length) return;
-        const tableStyle = getComputedStyle(table);
-        const spacing = tableStyle.borderCollapse === 'separate'
-            ? parseFloat(tableStyle.borderSpacing) * (measured.length + 1)
-                + parseFloat(tableStyle.borderLeftWidth) + parseFloat(tableStyle.borderRightWidth)
-            : 0;
+        const spacing = borderSpacing * (measured.length + 1) + borders;
         const reset = state.reset || spacing !== state.spacing || available !== state.available || measured.length !== state.widths?.length;
         // Reset the existing buffer instead of allocating a new array on resize.
         if (reset && state.widths) {
@@ -185,6 +218,9 @@ function update(state) {
         if (table.style.width !== state.appliedWidth || table.style.getPropertyPriority('width') !== 'important')
             table.style.setProperty('width', state.appliedWidth, 'important');
     } finally {
+        // Restore scroll only after final widths are installed. Doing this inside
+        // measure() forces an intermediate layout using the old column widths.
+        container.scrollLeft = scrollLeft;
         if (!state.disposed) observe(state);
     }
 }
@@ -192,7 +228,8 @@ function update(state) {
 export function initialize(table, columns, options) {
     if (!table?.isConnected || !table.parentElement || !columns || tables.has(table)) return;
     const state = { table, columns, container: table.parentElement, options, widths: null, measured: [], styled: [], styles: [], available: 0, reset: true,
-        frame: 0, disposed: false, layout: saveStyle(table, 'table-layout'), width: saveStyle(table, 'width') };
+        frame: 0, disposed: false, measureRequired: true, changedCells: new Set(),
+        layout: saveStyle(table, 'table-layout'), width: saveStyle(table, 'width') };
     const render = () => update(state);
     const schedule = () => {
         if (!state.disposed && !state.frame) state.frame = requestAnimationFrame(render);
@@ -200,6 +237,16 @@ export function initialize(table, columns, options) {
     state.mutations = new MutationObserver(records => {
         for (const record of records) {
             if (table.tHead?.contains(record.target)) state.reset = true;
+            const textReplacement = record.type === 'childList' &&
+                [...record.addedNodes, ...record.removedNodes].every(node => node.nodeType === Node.TEXT_NODE);
+            if (record.type === 'characterData' || textReplacement) {
+                const element = record.type === 'characterData' ? record.target.parentElement : record.target;
+                const cell = element?.closest('td, th');
+                if (cell?.closest('table') === table) state.changedCells.add(cell);
+                else state.measureRequired = true;
+            } else {
+                state.measureRequired = true;
+            }
         }
         schedule();
     });
@@ -209,8 +256,12 @@ export function initialize(table, columns, options) {
             schedule();
         }
     });
-    state.load = schedule;
-    state.fonts = schedule;
+    const invalidate = () => {
+        state.measureRequired = true;
+        schedule();
+    };
+    state.load = invalidate;
+    state.fonts = invalidate;
     tables.set(table, state);
     observe(state);
     state.resize.observe(state.container);

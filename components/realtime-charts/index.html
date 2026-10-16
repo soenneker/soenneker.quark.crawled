@@ -2251,7 +2251,7 @@
 																<div class="p-4 sm:p-6 w-full max-w-4xl border bg-card rounded-xl" data-slot="div" _bl_244="">
 																	<!--!-->
 																	<!--!-->
-																	<div aria-label="Live request status" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="3" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="2" data-scroll-y-min="0" data-scroll-y-max="100" data-scroll-width="728" data-scroll-height="266" _bl_250="">
+																	<div aria-label="Live request status" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="false" data-scroll-paused="false" data-scroll-version="3" data-scroll-duration="200" data-scroll-x-min="0" data-scroll-x-max="2" data-scroll-y-min="0" data-scroll-y-max="60" data-scroll-width="728" data-scroll-height="266" _bl_250="">
 																		<div class="quark-chart-header" data-slot="chart-header">
 																			<!--!-->
 																			<div class="flex mb-4 gap-4 items-center justify-between" data-slot="div" _bl_256="">
@@ -2277,11 +2277,12 @@
 																						<rect x="54" y="10" width="728" height="278"></rect>
 																					</clipPath>
 																				</defs>
-																				<path d="M400,18A142,142 0 1 1 259.871,182.973L313.12,174.243A88.04,88.04 0 1 0 400,71.96Z" data-radial-geometry="400 160 142 -90 260.69 88.04" fill="var(--series-1)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Completed: 84"></path>
-																				<path d="M259.871,182.973A142,142 0 0 1 362.011,23.176L376.447,75.169A88.04,88.04 0 0 0 313.12,174.243Z" data-radial-geometry="400 160 142 170.69 83.793 88.04" fill="var(--series-2)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Processing: 27"></path>
-																				<path d="M362.011,23.176A142,142 0 0 1 400,18L400,71.96A88.04,88.04 0 0 0 376.447,75.169Z" data-radial-geometry="400 160 142 254.483 15.517 88.04" fill="var(--series-3)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Failed: 5"></path>
+																				<path d="M400,18A142,142 0 1 1 305.837,266.289L341.619,225.899A88.04,88.04 0 1 0 400,71.96Z" data-radial-geometry="400 160 142 -90 221.538 88.04" fill="var(--series-1)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Completed: 56"></path>
+																				<path d="M305.837,266.289A142,142 0 0 1 370.796,21.035L381.894,73.842A88.04,88.04 0 0 0 341.619,225.899Z" data-radial-geometry="400 160 142 131.538 126.593 88.04" fill="var(--series-2)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Processing: 32"></path>
+																				<path d="M370.796,21.035A142,142 0 0 1 400,18L400,71.96A88.04,88.04 0 0 0 381.894,73.842Z" data-radial-geometry="400 160 142 258.132 11.868 88.04" fill="var(--series-3)" fill-opacity="1" class="quark-chart-mark" data-slot="chart-slice" tabindex="0" role="button" aria-label="Failed: 3"></path>
 																				<!--!-->
 																				<g>
+																					<!--!-->
 																					<g data-slot="chart-plot-overlay"></g>
 																				</g>
 																			</svg>
@@ -2301,15 +2302,15 @@
 																			<tbody>
 																				<tr>
 																					<th>Completed</th>
-																					<td>84</td>
+																					<td>56</td>
 																				</tr>
 																				<tr>
 																					<th>Processing</th>
-																					<td>27</td>
+																					<td>32</td>
 																				</tr>
 																				<tr>
 																					<th>Failed</th>
-																					<td>5</td>
+																					<td>3</td>
 																				</tr>
 																			</tbody>
 																		</table>
@@ -2362,7 +2363,7 @@
 																	<!--!-->
 																	<div data-slot="div" _bl_251="">
 																		<!--!-->
-																		<div aria-label="Live request latency" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="true" data-scroll-paused="false" data-scroll-version="5" data-scroll-duration="500" data-scroll-x-min="1792017376478" data-scroll-x-max="1792017406478" data-scroll-y-min="60" data-scroll-y-max="140" data-scroll-width="728" data-scroll-height="266" _bl_257="">
+																		<div aria-label="Live request latency" class="quark-chart relative min-w-0 text-foreground w-full" data-slot="chart" aria-busy="false" data-radial-animated="false" data-scroll-enabled="true" data-scroll-paused="false" data-scroll-version="5" data-scroll-duration="500" data-scroll-x-min="1792181380799" data-scroll-x-max="1792181410799" data-scroll-y-min="60" data-scroll-y-max="140" data-scroll-width="728" data-scroll-height="266" _bl_257="">
 																			<div class="quark-chart-header" data-slot="chart-header">
 																				<div class="mb-4 flex items-center justify-between gap-4">
 																					<!--!-->
@@ -2408,99 +2409,113 @@
 																						<text>60ms</text>
 																					</g>
 																					<g transform="translate(54 304) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
-																						<text>22:36:16.478</text>
+																						<text>20:09:40.799</text>
 																					</g>
 																					<g transform="translate(236 304) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
-																						<text>22:36:23.978</text>
+																						<text>20:09:48.299</text>
 																					</g>
 																					<g transform="translate(418 304) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
-																						<text>22:36:31.478</text>
+																						<text>20:09:55.799</text>
 																					</g>
 																					<g transform="translate(600 304) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
-																						<text>22:36:38.978</text>
+																						<text>20:10:03.299</text>
 																					</g>
 																					<g transform="translate(782 304) rotate(0)" class="quark-chart-axis-label" style="fill:var(--muted-foreground);font-size:11px;user-select:none" text-anchor="middle">
-																						<text>22:36:46.478</text>
+																						<text>20:10:10.799</text>
 																					</g>
 																					<g clip-path="url(#quark-chart-5-plot-clip)">
-																						<g data-slot="chart-plot" data-plot-width="728" style="touch-action: none; transform: translateX(10.1118px);">
-																							<!--!-->
-																							<rect x="54" y="16" width="6.067" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="60.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="72.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="84.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="96.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="108.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="120.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="132.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="145" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="157.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="169.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="181.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="193.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="205.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="217.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="229.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="242.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="254.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="266.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="278.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="290.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="302.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="314.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="327" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="339.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="351.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="363.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="375.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="387.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="399.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="411.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="424.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="436.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="448.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="460.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="472.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="484.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="496.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="509" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="521.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="533.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="545.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="557.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="569.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="581.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="593.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="606.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="618.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="630.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="642.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="654.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="666.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="678.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="691" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="703.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="715.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="727.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="739.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="751.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="763.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<rect x="775.933" y="16" width="6.067" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
-																							<path d="M745.6,143.244C749.644,124.752 753.689,87.768 757.733,87.768C761.778,87.768 765.822,101.682 769.867,107.283C773.911,112.885 777.956,116.679 782,121.376" fill="none" stroke="var(--series-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark" data-slot="chart-line" pointer-events="none"></path>
-																							<circle cx="745.6" cy="143.244" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="API, 22:36:44.978: 101.73ms"></circle>
-																							<circle cx="757.733" cy="87.768" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="API, 22:36:45.478: 118.42ms"></circle>
-																							<circle cx="769.867" cy="107.283" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="API, 22:36:45.978: 112.55ms"></circle>
-																							<circle cx="782" cy="121.376" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="API, 22:36:46.478: 108.31ms"></circle>
-																							<path d="M745.6,225.784C749.644,231.056 753.689,241.6 757.733,241.6C761.778,241.6 765.822,168.432 769.867,168.432C773.911,168.432 777.956,194.293 782,207.223" fill="none" stroke="var(--series-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark" data-slot="chart-line" pointer-events="none"></path>
-																							<circle cx="745.6" cy="225.784" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="Worker, 22:36:44.978: 76.91ms"></circle>
-																							<circle cx="757.733" cy="241.6" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="Worker, 22:36:45.478: 72.15ms"></circle>
-																							<circle cx="769.867" cy="168.432" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="Worker, 22:36:45.978: 94.16ms"></circle>
-																							<circle cx="782" cy="207.223" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none transition-colors" tabindex="0" role="button" aria-label="Worker, 22:36:46.478: 82.49ms"></circle>
-																						</g>
+																						<!--!-->
+																						<foreignObject width="800" height="320" style="overflow:visible;pointer-events:none">
+																							<div xmlns="http://www.w3.org/1999/xhtml" data-slot="chart-scroll-layer" style="width:100%;height:100%;will-change:transform;pointer-events:none">
+																								<svg viewBox="0 0 800 320" width="100%" height="100%" style="overflow:visible;pointer-events:none">
+																									<g data-slot="chart-plot" data-plot-width="728" style="touch-action:none;pointer-events:auto">
+																										<!--!-->
+																										<rect x="54" y="16" width="6.067" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="60.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="72.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="84.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="96.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="108.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="120.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="132.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="145" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="157.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="169.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="181.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="193.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="205.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="217.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="229.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="242.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="254.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="266.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="278.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="290.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="302.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="314.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="327" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="339.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="351.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="363.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="375.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="387.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="399.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="411.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="424.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="436.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="448.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="460.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="472.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="484.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="496.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="509" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="521.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="533.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="545.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="557.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="569.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="581.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="593.933" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="606.067" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="618.2" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="630.333" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="642.467" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="654.6" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="666.733" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="678.867" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="691" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="703.133" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="715.267" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="727.4" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="739.533" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="751.667" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="763.8" y="16" width="12.133" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<rect x="775.933" y="16" width="6.067" height="266" fill="transparent" class="quark-chart-range-hit-area cursor-crosshair" data-slot="chart-range-hit-area" style="touch-action:none"></rect>
+																										<path d="M745.6,76.146C749.644,86.637 753.689,99.654 757.733,107.617C761.778,115.58 765.822,123.923 769.867,123.923C773.911,123.923 777.956,96.483 782,82.763" fill="none" stroke="var(--series-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark" data-slot="chart-line" pointer-events="none"></path>
+																										<circle cx="745.6" cy="76.146" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="API, 20:10:09.299: 121.91ms"></circle>
+																										<circle cx="757.733" cy="107.617" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="API, 20:10:09.799: 112.45ms"></circle>
+																										<circle cx="769.867" cy="123.923" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="API, 20:10:10.299: 107.54ms"></circle>
+																										<circle cx="782" cy="82.763" r="3" fill="var(--background)" stroke="var(--series-1)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="API, 20:10:10.799: 119.92ms"></circle>
+																										<path d="M745.6,198.428C749.644,203.135 753.689,212.549 757.733,212.549C761.778,212.549 765.822,178.306 769.867,178.306C773.911,178.306 777.956,188.246 782,193.216" fill="none" stroke="var(--series-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" class="quark-chart-mark" data-slot="chart-line" pointer-events="none"></path>
+																										<circle cx="745.6" cy="198.428" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="Worker, 20:10:09.299: 85.13ms"></circle>
+																										<circle cx="757.733" cy="212.549" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="Worker, 20:10:09.799: 80.89ms"></circle>
+																										<circle cx="769.867" cy="178.306" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="Worker, 20:10:10.299: 91.19ms"></circle>
+																										<circle cx="782" cy="193.216" r="3" fill="var(--background)" stroke="var(--series-2)" stroke-width="2" vector-effect="non-scaling-stroke" class="quark-chart-point cursor-pointer outline-none" tabindex="0" role="button" aria-label="Worker, 20:10:10.799: 86.7ms"></circle>
+																									</g>
+																								</svg>
+																							</div>
+																						</foreignObject>
 																					</g>
 																					<!--!-->
 																					<g clip-path="url(#quark-chart-5-plot-clip)">
-																						<g data-slot="chart-plot-overlay" style="transform: translateX(10.1118px);"></g>
+																						<!--!-->
+																						<foreignObject width="800" height="320" style="overflow:visible;pointer-events:none">
+																							<div xmlns="http://www.w3.org/1999/xhtml" data-slot="chart-scroll-overlay-layer" style="width:100%;height:100%;will-change:transform;pointer-events:none">
+																								<svg viewBox="0 0 800 320" width="100%" height="100%" style="overflow:visible;pointer-events:none">
+																									<g data-slot="chart-plot-overlay"></g>
+																								</svg>
+																							</div>
+																						</foreignObject>
 																					</g>
 																				</svg>
 																			</div>
@@ -2519,309 +2534,309 @@
 																				<!--!-->
 																				<tbody>
 																					<tr>
-																						<th>22:36:16.478</th>
+																						<th>20:09:40.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:16.978</th>
+																						<th>20:09:41.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:17.478</th>
+																						<th>20:09:41.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:17.978</th>
+																						<th>20:09:42.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:18.478</th>
+																						<th>20:09:42.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:18.978</th>
+																						<th>20:09:43.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:19.478</th>
+																						<th>20:09:43.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:19.978</th>
+																						<th>20:09:44.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:20.478</th>
+																						<th>20:09:44.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:20.978</th>
+																						<th>20:09:45.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:21.478</th>
+																						<th>20:09:45.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:21.978</th>
+																						<th>20:09:46.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:22.478</th>
+																						<th>20:09:46.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:22.978</th>
+																						<th>20:09:47.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:23.478</th>
+																						<th>20:09:47.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:23.978</th>
+																						<th>20:09:48.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:24.478</th>
+																						<th>20:09:48.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:24.978</th>
+																						<th>20:09:49.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:25.478</th>
+																						<th>20:09:49.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:25.978</th>
+																						<th>20:09:50.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:26.478</th>
+																						<th>20:09:50.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:26.978</th>
+																						<th>20:09:51.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:27.478</th>
+																						<th>20:09:51.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:27.978</th>
+																						<th>20:09:52.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:28.478</th>
+																						<th>20:09:52.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:28.978</th>
+																						<th>20:09:53.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:29.478</th>
+																						<th>20:09:53.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:29.978</th>
+																						<th>20:09:54.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:30.478</th>
+																						<th>20:09:54.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:30.978</th>
+																						<th>20:09:55.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:31.478</th>
+																						<th>20:09:55.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:31.978</th>
+																						<th>20:09:56.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:32.478</th>
+																						<th>20:09:56.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:32.978</th>
+																						<th>20:09:57.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:33.478</th>
+																						<th>20:09:57.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:33.978</th>
+																						<th>20:09:58.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:34.478</th>
+																						<th>20:09:58.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:34.978</th>
+																						<th>20:09:59.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:35.478</th>
+																						<th>20:09:59.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:35.978</th>
+																						<th>20:10:00.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:36.478</th>
+																						<th>20:10:00.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:36.978</th>
+																						<th>20:10:01.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:37.478</th>
+																						<th>20:10:01.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:37.978</th>
+																						<th>20:10:02.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:38.478</th>
+																						<th>20:10:02.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:38.978</th>
+																						<th>20:10:03.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:39.478</th>
+																						<th>20:10:03.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:39.978</th>
+																						<th>20:10:04.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:40.478</th>
+																						<th>20:10:04.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:40.978</th>
+																						<th>20:10:05.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:41.478</th>
+																						<th>20:10:05.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:41.978</th>
+																						<th>20:10:06.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:42.478</th>
+																						<th>20:10:06.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:42.978</th>
+																						<th>20:10:07.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:43.478</th>
+																						<th>20:10:07.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:43.978</th>
+																						<th>20:10:08.299</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:44.478</th>
+																						<th>20:10:08.799</th>
 																						<td></td>
 																						<td></td>
 																					</tr>
 																					<tr>
-																						<th>22:36:44.978</th>
-																						<td>101.73115617957794</td>
-																						<td>76.90692515034895</td>
+																						<th>20:10:09.299</th>
+																						<td>121.91091004744109</td>
+																						<td>85.13446549966366</td>
 																					</tr>
 																					<tr>
-																						<th>22:36:45.478</th>
-																						<td>118.41556135503365</td>
-																						<td>72.15029909897378</td>
+																						<th>20:10:09.799</th>
+																						<td>112.44599472189144</td>
+																						<td>80.8875449745762</td>
 																					</tr>
 																					<tr>
-																						<th>22:36:45.978</th>
-																						<td>112.54632646462433</td>
-																						<td>94.15577925705153</td>
+																						<th>20:10:10.299</th>
+																						<td>107.54184777084038</td>
+																						<td>91.18621537913553</td>
 																					</tr>
 																					<tr>
-																						<th>22:36:46.478</th>
-																						<td>108.30788107746041</td>
-																						<td>82.48925404469068</td>
+																						<th>20:10:10.799</th>
+																						<td>119.92075837960589</td>
+																						<td>86.70206914684942</td>
 																					</tr>
 																				</tbody>
 																			</table>
@@ -2907,9 +2922,9 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="realtime-donut-chart" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/realtime-charts#realtime-donut-chart" data-slot="anchor">Realtime donut chart</a>
+													<a data-scrollspy-anchor="realtime-donut-chart" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/realtime-charts#realtime-donut-chart" data-slot="anchor" data-active="true" aria-current="location">Realtime donut chart</a>
 													<!--!-->
-													<a data-scrollspy-anchor="realtime-line-chart" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/realtime-charts#realtime-line-chart" data-slot="anchor" data-active="true" aria-current="location">Realtime line chart</a>
+													<a data-scrollspy-anchor="realtime-line-chart" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/realtime-charts#realtime-line-chart" data-slot="anchor">Realtime line chart</a>
 												</nav>
 											</div>
 										</div>
