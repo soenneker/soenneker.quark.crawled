@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="color-scheme: dark; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<script>
@@ -85,11 +85,11 @@
 		<!--!-->
 		<meta name="twitter:description" content="Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.">
 		<meta property="og:image" content="https://quark.soenneker.com/social-card.png">
-		<meta property="og:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
+		<meta property="og:image:alt" content="Quark Suite — Blazor components powered by shadcn/ui">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
 		<meta name="twitter:image" content="https://quark.soenneker.com/social-card.png">
-		<meta name="twitter:image:alt" content="Quark Suite — Blazor components inspired by shadcn/ui">
+		<meta name="twitter:image:alt" content="Quark Suite — Blazor components powered by shadcn/ui">
 		<script type="application/ld+json"><!--!-->{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quark.soenneker.com/#website","name":"Quark Suite","url":"https://quark.soenneker.com/","inLanguage":"en"},{"@type":"WebPage","@id":"https://quark.soenneker.com/charts/area#webpage","url":"https://quark.soenneker.com/charts/area","name":"Blazor Area Chart Examples | Quark Suite","description":"Build Blazor area charts with Quark. Compare linear, stepped, stacked, and gradient fills, legends, and an interactive date-range example with Razor code.","inLanguage":"en","isPartOf":{"@id":"https://quark.soenneker.com/#website"},"about":{"@type":"SoftwareSourceCode","name":"Soenneker.Quark.Suite","programmingLanguage":"C#","codeRepository":"https://github.com/soenneker/soenneker.quark.suite"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quark Suite","item":"https://quark.soenneker.com/"},{"@type":"ListItem","position":2,"name":"Blazor Area Chart Examples","item":"https://quark.soenneker.com/charts/area"}]}}]}</script>
 		<link rel="stylesheet" href="https://quark.soenneker.com/css/headersearch.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 		<link rel="stylesheet" href="https://quark.soenneker.com/css/chartgallery.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
@@ -171,7 +171,7 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:block ml-2 shrink-0 bg-border" data-slot="separator"></div>
+								<div role="none" data-orientation="vertical" class="data-[auto-stretch=true]:self-stretch data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px hidden lg:block ml-2 shrink-0 bg-border" data-auto-stretch="true" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<a aria-label="Quark source on GitHub" rel="noreferrer" data-slot="button" data-variant="ghost" data-size="sm" class="inline-flex hover:text-accent-foreground text-sm font-medium whitespace-nowrap px-3 h-8 shrink-0 gap-1.5 items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:border-ring hover:bg-accent dark:hover:bg-accent/50 rounded-md focus-visible:ring-ring/50 outline-none shadow-none transition-all focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 has-[>svg]:px-2.5" href="https://github.com/soenneker/soenneker.quark.suite" target="_blank">
@@ -183,10 +183,10 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:flex shrink-0 bg-border" data-slot="separator"></div>
+								<div role="none" data-orientation="vertical" class="data-[auto-stretch=true]:self-stretch data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px hidden lg:flex shrink-0 bg-border" data-auto-stretch="true" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
-								<button title="Toggle viewport" data-slot="button" aria-pressed="true" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex hover:text-accent-foreground text-sm font-medium whitespace-nowrap size-8 shrink-0 gap-2 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border focus-visible:border-ring hover:bg-accent dark:hover:bg-accent/50 rounded-md focus-visible:ring-ring/50 outline-none transition-all focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4" data-variant="ghost" type="button" _bl_12="">
+								<button title="Toggle viewport" data-slot="button" aria-pressed="true" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex hover:text-accent-foreground text-sm font-medium whitespace-nowrap size-8 shrink-0 gap-2 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border focus-visible:border-ring hover:bg-accent dark:hover:bg-accent/50 rounded-md focus-visible:ring-ring/50 outline-none transition-all focus-visible:ring-[3px] aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4" data-variant="ghost" type="button" _bl_12="">
 									<!--!-->
 									<span class="sr-only" data-slot="span" _bl_15="">
 										<!--!-->Toggle viewport</span>
@@ -202,7 +202,7 @@
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
-								<div role="none" data-orientation="vertical" class="data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px data-[orientation=vertical]:self-stretch hidden lg:flex shrink-0 bg-border" data-slot="separator"></div>
+								<div role="none" data-orientation="vertical" class="data-[auto-stretch=true]:self-stretch data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px hidden lg:flex shrink-0 bg-border" data-auto-stretch="true" data-slot="separator"></div>
 								<!--!-->                      
 								<!--!-->
 								<!--!-->
@@ -214,7 +214,7 @@
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<button data-theme="system" aria-label="Toggle theme" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex text-sm font-medium whitespace-nowrap relative size-8 overflow-hidden shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all group/toggle extend-touch-target" data-slot="button" data-variant="ghost" data-state="closed" type="button" _bl_22="">
+								<button data-theme="system" aria-label="Toggle theme" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex text-sm font-medium whitespace-nowrap relative size-8 overflow-hidden shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all group/toggle extend-touch-target" data-slot="button" data-variant="ghost" data-state="closed" type="button" _bl_22="">
 									<!--!-->
 									<!--!-->
 									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_43="">
@@ -348,7 +348,7 @@
 									<!--!-->         
 									<!--!-->
 									<!--!-->
-									<div role="tabpanel" aria-labelledby="bradix-tabs-4-trigger-Area" id="bradix-tabs-4-content-Area" tabindex="0" data-state="active" data-orientation="horizontal" class="text-sm flex-1 outline-none" data-slot="tabs-content">
+									<div role="tabpanel" aria-labelledby="bradix-tabs-4-trigger-Area" id="bradix-tabs-4-content-Area" tabindex="0" data-state="active" data-orientation="horizontal" class="text-sm flex-1 outline-hidden" data-slot="tabs-content">
 										<!--!-->
 										<section id="chart-examples" aria-labelledby="chart-heading" class="chart-gallery-examples" data-slot="section">
 											<!--!-->
@@ -365,7 +365,7 @@
 												<!--!-->
 												<div class="chart-gallery-code-actions" data-slot="div" _bl_21="">
 													<!--!-->
-													<button aria-label="Copy chart code" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_31="">
+													<button aria-label="Copy chart code" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all" data-variant="outline" type="button" data-slot="button" _bl_31="">
 														<!--!-->
 														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="inline-block align-middle size-4 shrink-0" focusable="false" data-slot="icon">
 															<!--!-->
@@ -374,7 +374,7 @@
 														</svg>
 													</button>
 													<!--!-->
-													<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_32="">View Code</button>
+													<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 rounded-lg px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all" data-variant="outline" type="button" data-slot="button" _bl_32="">View Code</button>
 												</div>
 											</div>
 											<!--!-->
@@ -394,7 +394,7 @@
 													<!--!-->
 													<!--!-->
 													<div data-size="default" class="relative w-fit group/native-select has-[select:disabled]:opacity-50" data-slot="native-select-wrapper" _bl_64="">
-														<select aria-label="Chart date range" class="appearance-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 text-sm py-1 pr-8 pl-2.5 w-full min-w-0 h-8 disabled:pointer-events-none select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" data-size="default" data-slot="native-select">
+														<select aria-label="Chart date range" class="appearance-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 text-sm py-1 pr-8 pl-2.5 w-full min-w-0 h-8 disabled:pointer-events-none select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors scheme-light dark:scheme-dark" data-size="default" data-slot="native-select">
 															<!--!-->
 															<option value="90" class="text-[CanvasText] bg-[Canvas]" data-slot="native-select-option">Last 3 months</option>
 															<!--!-->
