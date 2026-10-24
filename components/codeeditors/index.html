@@ -57,7 +57,7 @@
 		</script>
 		<link href="css/quark-tailwind.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link href="Soenneker.Quark.Suite.Demo.styles.css" rel="stylesheet">
+		<link href="css/chartgallery.css" rel="stylesheet">
 		
 		<!--!-->
 		<!--!-->
@@ -1285,6 +1285,18 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -1408,10 +1420,11 @@
 								<button data-theme="system" aria-label="Toggle theme" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex text-sm font-medium whitespace-nowrap relative size-8 overflow-hidden shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all group/toggle extend-touch-target" data-slot="button" data-variant="ghost" data-state="closed" type="button" _bl_260="">
 									<!--!-->
 									<!--!-->
-									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_288="">
+									<!--!-->
+									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_304="">
 										<!--!-->
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out -rotate-90 scale-0 opacity-0" data-slot="span" _bl_317="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out -rotate-90 scale-0 opacity-0" data-slot="span" _bl_321="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -1429,7 +1442,7 @@
 										</span>
 										<!--!-->                 
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-0 scale-100 opacity-100" data-slot="span" _bl_318="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-0 scale-100 opacity-100" data-slot="span" _bl_322="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -1441,7 +1454,7 @@
 										</span>
 										<!--!-->                 
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-90 scale-0 opacity-0" data-slot="span" _bl_319="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-90 scale-0 opacity-0" data-slot="span" _bl_323="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -1452,7 +1465,7 @@
 									</span>
 									<!--!-->             
 									<!--!-->
-									<span class="sr-only" data-slot="span" _bl_289="">
+									<span class="sr-only" data-slot="span" _bl_305="">
 										<!--!-->Toggle theme</span>
 								</button>
 								<!--!-->     
@@ -3495,7 +3508,7 @@
 																<!--!-->
 																<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_273="">
 																	<!--!-->
-																	<div class="grid w-full gap-4" data-slot="div" _bl_290="">
+																	<div class="grid w-full gap-4" data-slot="div" _bl_288="">
 																		<!--!-->
 																		<div class="grid p-3 gap-3 border bg-muted/30 rounded-lg sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto]" data-slot="div" _bl_306="">
 																			<!--!-->
@@ -3505,7 +3518,7 @@
 																			<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" role="group" data-orientation="vertical" data-slot="field">
 																				<!--!-->
 																				<!--!-->
-																				<label for="quark-field-5-control" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_324="">Language</label>
+																				<label for="quark-field-5-control" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_325="">Language</label>
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
@@ -3517,13 +3530,13 @@
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
-																				<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_334="">
+																				<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_335="">
 																					<!--!-->
-																					<div style="display:contents;" _bl_338="">
-																						<button type="button" role="combobox" aria-controls="bradix-select-14-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between disabled:opacity-50 select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors" data-size="default" id="quark-field-5-control" data-slot="select-trigger" _bl_339="">
+																					<div style="display:contents;" _bl_339="">
+																						<button type="button" role="combobox" aria-controls="bradix-select-14-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between disabled:opacity-50 select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors" data-size="default" id="quark-field-5-control" data-slot="select-trigger" _bl_340="">
 																							<!--!-->
 																							<!--!-->
-																							<span style="pointer-events:none;" data-slot="select-value" _bl_344="">C#</span>
+																							<span style="pointer-events:none;" data-slot="select-value" _bl_345="">C#</span>
 																							<!--!-->     
 																							<!--!-->
 																							<span aria-hidden="true" class="pointer-events-none size-4 text-muted-foreground shrink-0">
@@ -3549,7 +3562,7 @@
 																			<div class="group/field data-[invalid=true]:text-destructive flex-col *:w-full [&amp;>.sr-only]:w-auto flex w-full gap-2" role="group" data-orientation="vertical" data-slot="field">
 																				<!--!-->
 																				<!--!-->
-																				<label for="quark-field-6-control" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_325="">Theme</label>
+																				<label for="quark-field-6-control" class="group/field-label peer/field-label flex gap-2 leading-snug group-data-[disabled=true]/field:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 has-[[data-state=checked]]:border-primary/30 has-[[data-state=checked]]:bg-primary/5 has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-lg has-[>[data-slot=field]]:border *:data-[slot=field]:p-2.5 dark:has-[[data-state=checked]]:border-primary/20 dark:has-[[data-state=checked]]:bg-primary/10 text-sm font-medium leading-snug items-center select-none" data-slot="field-label" _bl_326="">Theme</label>
 																				<!--!-->                         
 																				<!--!-->
 																				<!--!-->
@@ -3561,13 +3574,13 @@
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
-																				<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_336="">
+																				<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_337="">
 																					<!--!-->
-																					<div style="display:contents;" _bl_341="">
-																						<button type="button" role="combobox" aria-controls="bradix-select-15-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between disabled:opacity-50 select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors" data-size="default" id="quark-field-6-control" data-slot="select-trigger" _bl_342="">
+																					<div style="display:contents;" _bl_342="">
+																						<button type="button" role="combobox" aria-controls="bradix-select-15-content" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 flex text-sm whitespace-nowrap py-2 pr-2 pl-2.5 w-full gap-1.5 items-center justify-between disabled:opacity-50 select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors" data-size="default" id="quark-field-6-control" data-slot="select-trigger" _bl_343="">
 																							<!--!-->
 																							<!--!-->
-																							<span style="pointer-events:none;" data-slot="select-value" _bl_347="">Auto</span>
+																							<span style="pointer-events:none;" data-slot="select-value" _bl_348="">Auto</span>
 																							<!--!-->     
 																							<!--!-->
 																							<span aria-hidden="true" class="pointer-events-none size-4 text-muted-foreground shrink-0">
@@ -3587,7 +3600,7 @@
 																			</div>
 																			<!--!-->                      
 																			<!--!-->
-																			<div class="grid gap-2 self-end grid-cols-3 sm:col-span-2 lg:col-span-1 lg:min-w-64" data-slot="div" _bl_320="">
+																			<div class="grid gap-2 self-end grid-cols-3 sm:col-span-2 lg:col-span-1 lg:min-w-64" data-slot="div" _bl_317="">
 																				<!--!-->
 																				<!--!-->
 																				<!--!-->
@@ -3598,7 +3611,7 @@
 																						<label for="quark-field-8-control" class="flex items-center gap-2 text-sm font-medium leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
 																							<!--!-->
 																							<!--!-->
-																							<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="quark-field-8-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_331="" data-bradix-checkbox-root="">
+																							<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="quark-field-8-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_332="" data-bradix-checkbox-root="">
 																								<!--!-->
 																								<span data-state="checked" style="pointer-events: none;" data-slot="checkbox-indicator" class="grid place-content-center text-current print:text-black transition-none [&amp;>svg]:size-3.5">
 																									<!--!-->
@@ -3623,7 +3636,7 @@
 																						<label for="quark-field-9-control" class="flex items-center gap-2 text-sm font-medium leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
 																							<!--!-->
 																							<!--!-->
-																							<button type="button" role="checkbox" aria-checked="false" data-state="unchecked" value="on" id="quark-field-9-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_332="" data-bradix-checkbox-root="">
+																							<button type="button" role="checkbox" aria-checked="false" data-state="unchecked" value="on" id="quark-field-9-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_333="" data-bradix-checkbox-root="">
 																								<!--!-->
 																							</button>Map
 																							<!--!-->
@@ -3641,7 +3654,7 @@
 																						<label for="quark-field-10-control" class="flex items-center gap-2 text-sm font-medium leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
 																							<!--!-->
 																							<!--!-->
-																							<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="quark-field-10-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_333="" data-bradix-checkbox-root="">
+																							<button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" id="quark-field-10-control" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_334="" data-bradix-checkbox-root="">
 																								<!--!-->
 																								<span data-state="checked" style="pointer-events: none;" data-slot="checkbox-indicator" class="grid place-content-center text-current print:text-black transition-none [&amp;>svg]:size-3.5">
 																									<!--!-->
@@ -3660,8 +3673,20 @@
 																		<!--!-->                  
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0" _bl_307="">
-																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 180px; height: 267px;" _bl_308="" data-keybinding-context="2" data-mode-id="csharp">
-																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/2" style="width: 606px; height: 267px;">
+																			<button type="button" class="absolute top-2 right-2 z-10 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-lg border border-border bg-background/95 text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0" title="Copy" aria-label="Copy">
+																				<!--!-->
+																				<span class="sr-only" data-slot="span" _bl_318="">
+																					<!--!-->Copy</span>
+																				<!--!-->             
+																				<!--!-->
+																				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
+																					<!--!-->
+																					<rect width="14" height="14" x="8" y="8" rx="2" ry="2" xmlns="http://www.w3.org/2000/svg"></rect>
+																					<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" xmlns="http://www.w3.org/2000/svg"></path>
+																				</svg>
+																			</button>
+																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 180px; height: 267px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_308="" data-keybinding-context="1" data-mode-id="csharp">
+																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/1" style="width: 606px; height: 267px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 606px; height: 267px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="both" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 33.6094px; text-wrap: wrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; width: 521px; height: 19px;"></div>
 																						<textarea class="ime-text-area" readonly="true" tabindex="-1" aria-hidden="true"></textarea>
@@ -3686,6 +3711,7 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
 																								</div>
 																								<div style="top:95px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
 																								</div>
 																								<div style="top:114px;height:19px;line-height:19px;">
@@ -3698,6 +3724,7 @@
 																									<div class="line-numbers" style="left:0px;width:42px;">9</div>
 																								</div>
 																								<div style="top:171px;height:19px;line-height:19px;">
+																									<div class="cldr codicon codicon-folding-expanded" title="Click to collapse the range." style="left:42px;width:26px;"></div>
 																									<div class="line-numbers" style="left:0px;width:42px;">10</div>
 																								</div>
 																								<div style="top:190px;height:19px;line-height:19px;">
@@ -3749,7 +3776,9 @@
 																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 538px; height: 495px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">using&nbsp;System;</span>
+																											<span class="mtk8">using</span>
+																											<span class="mtk1">&nbsp;System</span>
+																											<span class="mtk9">;</span>
 																										</span>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
@@ -3759,7 +3788,9 @@
 																									</div>
 																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">namespace&nbsp;Demo;</span>
+																											<span class="mtk8">namespace</span>
+																											<span class="mtk1">&nbsp;Demo</span>
+																											<span class="mtk9">;</span>
 																										</span>
 																									</div>
 																									<div style="top:57px;height:19px;line-height:19px;" class="view-line">
@@ -3769,21 +3800,40 @@
 																									</div>
 																									<div style="top:76px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">public&nbsp;sealed&nbsp;class&nbsp;Example</span>
+																											<span class="mtk8">public</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">sealed</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">class</span>
+																											<span class="mtk1">&nbsp;Example</span>
 																										</span>
 																									</div>
 																									<div style="top:95px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1 bracket-highlighting-0">{</span>
+																											<span class="mtk9 bracket-highlighting-0">{</span>
 																										</span>
 																									</div>
 																									<div style="top:114px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;Message</span>
-																											<span class="mtk1 bracket-highlighting-1">{</span>
-																											<span class="mtk1">&nbsp;get;&nbsp;set;</span>
-																											<span class="mtk1 bracket-highlighting-1">}</span>
-																											<span class="mtk1">&nbsp;=&nbsp;"Hello,&nbsp;Monaco!";</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">public</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">string</span>
+																											<span class="mtk1">&nbsp;Message</span>
+																											<span class="mtk9 bracket-highlighting-1">{</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">get</span>
+																											<span class="mtk9">;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">set</span>
+																											<span class="mtk9">;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk9 bracket-highlighting-1">}</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk9">=</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk5">"Hello,&nbsp;Monaco!"</span>
+																											<span class="mtk9">;</span>
 																										</span>
 																									</div>
 																									<div style="top:133px;height:19px;line-height:19px;" class="view-line">
@@ -3793,35 +3843,41 @@
 																									</div>
 																									<div style="top:152px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;Save</span>
-																											<span class="mtk1 bracket-highlighting-1">(</span>
-																											<span class="mtk1 bracket-highlighting-1">)</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">public</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">void</span>
+																											<span class="mtk1">&nbsp;Save</span>
+																											<span class="mtk9 bracket-highlighting-1">(</span>
+																											<span class="mtk9 bracket-highlighting-1">)</span>
 																										</span>
 																									</div>
 																									<div style="top:171px;height:19px;line-height:19px;" class="view-line">
 																										<span>
 																											<span class="mtk1"></span>
-																											<span class="mtk1 bracket-highlighting-1">{</span>
+																											<span class="mtk9 bracket-highlighting-1">{</span>
 																										</span>
 																									</div>
 																									<div style="top:190px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine</span>
-																											<span class="mtk1 bracket-highlighting-2">(</span>
+																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console</span>
+																											<span class="mtk9">.</span>
+																											<span class="mtk1">WriteLine</span>
+																											<span class="mtk9 bracket-highlighting-2">(</span>
 																											<span class="mtk1">Message</span>
-																											<span class="mtk1 bracket-highlighting-2">)</span>
-																											<span class="mtk1">;</span>
+																											<span class="mtk9 bracket-highlighting-2">)</span>
+																											<span class="mtk9">;</span>
 																										</span>
 																									</div>
 																									<div style="top:209px;height:19px;line-height:19px;" class="view-line">
 																										<span>
 																											<span class="mtk1"></span>
-																											<span class="mtk1 bracket-highlighting-1">}</span>
+																											<span class="mtk9 bracket-highlighting-1">}</span>
 																										</span>
 																									</div>
 																									<div style="top:228px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1 bracket-highlighting-0">}</span>
+																											<span class="mtk9 bracket-highlighting-0">}</span>
 																										</span>
 																									</div>
 																								</div>
@@ -3834,12 +3890,19 @@
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 524px;"></div>
 																							</div>
 																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="267" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 267px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 267px; right: 0px; top: 0px;">
+																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 267px; right: 0px; top: 0px;">
 																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 144px;"></div>
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 606px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 606px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 606px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 592px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 524px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 267px;">
 																							<div class="minimap-shadow-hidden" style="height: 267px;"></div>
 																							<canvas width="0" height="267" style="position: absolute; left: 0px; width: 0px; height: 267px;"></canvas>
@@ -3853,6 +3916,7 @@
 																					<div data-mprt="2" class="overflowingContentWidgets"></div>
 																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																				</div>
+																				<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																			</div>
 																		</div>
 																	</div>
@@ -3873,10 +3937,10 @@
 																<!--!-->
 																<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_275="">
 																	<!--!-->
-																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_291=""></div>
+																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_289=""></div>
 																	<!--!-->                             
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_292="">
+																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_290="">
 																		<!--!-->                                 View Code
 																	</button>
 																</div>
@@ -3909,13 +3973,13 @@
 																<!--!-->
 																<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_276="">
 																	<!--!-->
-																	<div class="grid w-full gap-3" data-slot="div" _bl_293="">
+																	<div class="grid w-full gap-3" data-slot="div" _bl_291="">
 																		<!--!-->
 																		<div class="flex items-center gap-2">
 																			<label for="quark-check-4" class="flex items-center gap-2 text-sm font-medium leading-none select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50">
 																				<!--!-->
 																				<!--!-->
-																				<button type="button" role="checkbox" aria-checked="false" data-state="unchecked" value="on" id="quark-check-4" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_323="" data-bradix-checkbox-root="">
+																				<button type="button" role="checkbox" aria-checked="false" data-state="unchecked" value="on" id="quark-check-4" data-slot="checkbox" data-size="size-4" class="peer relative flex shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-hidden print:border-black print:data-[state=checked]:border-black print:data-[state=indeterminate]:border-black print:data-[state=checked]:bg-transparent print:data-[state=indeterminate]:bg-transparent group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary size-4" _bl_324="" data-bradix-checkbox-root="">
 																					<!--!-->
 																				</button>Simulate save failure
 																				<!--!-->
@@ -3924,8 +3988,8 @@
 																		<!--!-->                 
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0" _bl_309="">
-																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 180px; height: 172px;" _bl_310="" data-keybinding-context="1" data-mode-id="csharp">
-																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/1" style="width: 606px; height: 180px;">
+																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 180px; height: 172px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_310="" data-keybinding-context="2" data-mode-id="csharp">
+																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/2" style="width: 606px; height: 180px;">
 																					<div data-mprt="3" class="overflow-guard" style="width: 606px; height: 180px;">
 																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="both" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
 																						<textarea class="ime-text-area" readonly="true" tabindex="-1" aria-hidden="true"></textarea>
@@ -3956,16 +4020,29 @@
 																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 538px; height: 199px;">
 																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">//&nbsp;Edit&nbsp;this&nbsp;code&nbsp;to&nbsp;see&nbsp;the&nbsp;autosave&nbsp;indicator.</span>
+																											<span class="mtk7">//&nbsp;Edit&nbsp;this&nbsp;code&nbsp;to&nbsp;see&nbsp;the&nbsp;autosave&nbsp;indicator.</span>
 																										</span>
 																									</div>
 																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
 																										<span>
-																											<span class="mtk1">public&nbsp;string&nbsp;Message</span>
-																											<span class="mtk1 bracket-highlighting-0">{</span>
-																											<span class="mtk1">&nbsp;get;&nbsp;set;</span>
-																											<span class="mtk1 bracket-highlighting-0">}</span>
-																											<span class="mtk1">&nbsp;=&nbsp;"Hello,&nbsp;autosave!";</span>
+																											<span class="mtk8">public</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">string</span>
+																											<span class="mtk1">&nbsp;Message</span>
+																											<span class="mtk9 bracket-highlighting-0">{</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">get</span>
+																											<span class="mtk9">;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk8">set</span>
+																											<span class="mtk9">;</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk9 bracket-highlighting-0">}</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk9">=</span>
+																											<span class="mtk1"></span>
+																											<span class="mtk5">"Hello,&nbsp;autosave!"</span>
+																											<span class="mtk9">;</span>
 																										</span>
 																									</div>
 																								</div>
@@ -3983,7 +4060,14 @@
 																							</div>
 																						</div>
 																						<div role="presentation" aria-hidden="true" style="width: 606px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 606px;"></div>
+																						<div data-mprt="4" class="overlayWidgets" style="width: 606px;">
+																							<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 592px; position: absolute; right: 50%; top: 0px;">
+																								<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																								<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 524px;">
+																									<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																								</div>
+																							</div>
+																						</div>
 																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 180px;">
 																							<div class="minimap-shadow-hidden" style="height: 180px;"></div>
 																							<canvas width="0" height="180" style="position: absolute; left: 0px; width: 0px; height: 180px;"></canvas>
@@ -4034,10 +4118,10 @@
 																<!--!-->
 																<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_278="">
 																	<!--!-->
-																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_294=""></div>
+																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_292=""></div>
 																	<!--!-->                             
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_295="">
+																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_293="">
 																		<!--!-->                                 View Code
 																	</button>
 																</div>
@@ -4070,8 +4154,8 @@
 																<!--!-->
 																<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_279="">
 																	<!--!-->
-																	<div class="group/code-editor relative w-full min-w-0" _bl_296="">
-																		<div readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 120px; height: 115px;" _bl_297="" data-keybinding-context="3" data-mode-id="csharp">
+																	<div class="group/code-editor relative w-full min-w-0" _bl_294="">
+																		<div readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 120px; height: 115px;" _bl_295="" data-keybinding-context="3" data-mode-id="csharp">
 																			<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/3" style="width: 606px; height: 120px;">
 																				<div data-mprt="3" class="overflow-guard" style="width: 606px; height: 120px;">
 																					<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 25.207px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
@@ -4199,10 +4283,10 @@
 																<!--!-->
 																<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_281="">
 																	<!--!-->
-																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_298=""></div>
+																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_296=""></div>
 																	<!--!-->                             
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_299="">
+																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_297="">
 																		<!--!-->                                 View Code
 																	</button>
 																</div>
@@ -4235,225 +4319,17 @@
 																<!--!-->
 																<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_282="">
 																	<!--!-->
-																	<div class="grid w-full gap-4 md:grid-cols-2" data-slot="div" _bl_300="">
+																	<div class="grid w-full gap-4 md:grid-cols-2" data-slot="div" _bl_298="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0" _bl_311="">
-																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 100px; height: 96px;" _bl_312="" data-keybinding-context="4" data-mode-id="javascript">
-																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/4" style="width: 295px; height: 100px;">
-																					<div data-mprt="3" class="overflow-guard" style="width: 295px; height: 100px;">
-																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="both" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 33.6094px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
-																						<textarea class="ime-text-area" readonly="true" tabindex="-1" aria-hidden="true"></textarea>
-																						<div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 138px; width: 68px;">
-																							<div class="glyph-margin" style="left: 0px; width: 0px; height: 138px;"></div>
-																							<div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 138px;">
-																								<div style="top:0px;height:19px;line-height:19px;">
-																									<div class="current-line current-line-margin-both" style="width:68px"></div>
-																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
-																								</div>
-																								<div style="top:19px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
-																								</div>
-																								<div style="top:38px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
-																								</div>
-																							</div>
-																							<div class="glyph-margin-widgets" style="position: absolute; top: 0px;"></div>
-																						</div>
-																						<div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="6" style="position: absolute; overflow: hidden; left: 68px; width: 227px; height: 100px;">
-																							<div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1.67772e+07px; height: 1.67772e+07px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;">
-																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 383px;">
-																									<div style="top:0px;height:19px;line-height:19px;">
-																										<div class="current-line current-line-exact" style="width:383px;"></div>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;"></div>
-																									<div style="top:38px;height:19px;line-height:19px;"></div>
-																								</div>
-																								<div role="presentation" aria-hidden="true" class="view-rulers"></div>
-																								<div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 383px; height: 138px;">
-																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">const&nbsp;message&nbsp;=&nbsp;'Try&nbsp;adding&nbsp;more&nbsp;lines';</span>
-																										</span>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span></span>
-																										</span>
-																									</div>
-																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">console.log</span>
-																											<span class="mtk1 bracket-highlighting-0">(</span>
-																											<span class="mtk1">message</span>
-																											<span class="mtk1 bracket-highlighting-0">)</span>
-																											<span class="mtk1">;</span>
-																										</span>
-																									</div>
-																								</div>
-																								<div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div>
-																								<div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid">
-																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
-																								</div>
-																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 213px; height: 12px; left: 0px; bottom: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 126px;"></div>
-																							</div>
-																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="100" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 100px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 100px; right: 0px; top: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 72px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" style="width: 295px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 295px;"></div>
-																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 100px;">
-																							<div class="minimap-shadow-hidden" style="height: 100px;"></div>
-																							<canvas width="0" height="100" style="position: absolute; left: 0px; width: 0px; height: 100px;"></canvas>
-																							<canvas class="minimap-decorations-layer" width="0" height="100" style="position: absolute; left: 0px; width: 0px; height: 100px;"></canvas>
-																							<div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;">
-																								<div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" class="blockDecorations-container"></div>
-																					</div>
-																					<div data-mprt="2" class="overflowingContentWidgets"></div>
-																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
-																				</div>
-																			</div>
+																			<pre style="position:absolute;inset:0;margin:0;overflow:hidden;white-space:pre;padding:10px;font:14px/20px monospace;pointer-events:none">const message = 'Try adding more lines';  console.log(message);</pre>
+																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0; min-height: 100px" _bl_312=""></div>
 																		</div>
 																		<!--!-->                  
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0" _bl_313="">
-																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 140px; height: 153px;" _bl_314="" data-keybinding-context="6" data-mode-id="json">
-																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/6" style="width: 295px; height: 153px;">
-																					<div data-mprt="3" class="overflow-guard" style="width: 295px; height: 153px;">
-																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="both" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 16.8047px; text-wrap: nowrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; height: 19px;"></div>
-																						<textarea class="ime-text-area" readonly="true" tabindex="-1" aria-hidden="true"></textarea>
-																						<div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 267px; width: 68px;">
-																							<div class="glyph-margin" style="left: 0px; width: 0px; height: 267px;"></div>
-																							<div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 267px;">
-																								<div style="top:0px;height:19px;line-height:19px;">
-																									<div class="current-line current-line-margin-both" style="width:68px"></div>
-																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
-																								</div>
-																								<div style="top:19px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
-																								</div>
-																								<div style="top:38px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
-																								</div>
-																								<div style="top:57px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">4</div>
-																								</div>
-																								<div style="top:76px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">5</div>
-																								</div>
-																								<div style="top:95px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">6</div>
-																								</div>
-																								<div style="top:114px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">7</div>
-																								</div>
-																							</div>
-																							<div class="glyph-margin-widgets" style="position: absolute; top: 0px;"></div>
-																						</div>
-																						<div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="6" style="position: absolute; overflow: hidden; left: 68px; width: 227px; height: 153px;">
-																							<div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1.67772e+07px; height: 1.67772e+07px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;">
-																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 265px;">
-																									<div style="top:0px;height:19px;line-height:19px;">
-																										<div class="current-line current-line-exact" style="width:265px;"></div>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;">
-																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
-																									</div>
-																									<div style="top:38px;height:19px;line-height:19px;">
-																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
-																									</div>
-																									<div style="top:57px;height:19px;line-height:19px;">
-																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
-																										<div class="core-guide core-guide-indent lvl-1 vertical" style="left:16.8046875px;width:8.40234375px"></div>
-																									</div>
-																									<div style="top:76px;height:19px;line-height:19px;">
-																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
-																										<div class="core-guide core-guide-indent lvl-1 vertical" style="left:16.8046875px;width:8.40234375px"></div>
-																									</div>
-																									<div style="top:95px;height:19px;line-height:19px;">
-																										<div class="core-guide core-guide-indent lvl-0 vertical" style="left:0px;width:8.40234375px"></div>
-																									</div>
-																									<div style="top:114px;height:19px;line-height:19px;"></div>
-																								</div>
-																								<div role="presentation" aria-hidden="true" class="view-rulers"></div>
-																								<div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 265px; height: 267px;">
-																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1 bracket-highlighting-0">{</span>
-																										</span>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;"name":&nbsp;"quark-demo",</span>
-																										</span>
-																									</div>
-																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;"features":</span>
-																											<span class="mtk1 bracket-highlighting-1">[</span>
-																										</span>
-																									</div>
-																									<div style="top:57px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;"syntax-highlighting",</span>
-																										</span>
-																									</div>
-																									<div style="top:76px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;"auto-height"</span>
-																										</span>
-																									</div>
-																									<div style="top:95px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1"></span>
-																											<span class="mtk1 bracket-highlighting-1">]</span>
-																										</span>
-																									</div>
-																									<div style="top:114px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1 bracket-highlighting-0">}</span>
-																										</span>
-																									</div>
-																								</div>
-																								<div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div>
-																								<div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid">
-																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
-																								</div>
-																							</div>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 213px; height: 12px; left: 0px; bottom: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 182px;"></div>
-																							</div>
-																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="153" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 153px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 153px; right: 0px; top: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 87px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" style="width: 295px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 295px;"></div>
-																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 153px;">
-																							<div class="minimap-shadow-hidden" style="height: 153px;"></div>
-																							<canvas width="0" height="153" style="position: absolute; left: 0px; width: 0px; height: 153px;"></canvas>
-																							<canvas class="minimap-decorations-layer" width="0" height="153" style="position: absolute; left: 0px; width: 0px; height: 153px;"></canvas>
-																							<div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;">
-																								<div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" class="blockDecorations-container"></div>
-																					</div>
-																					<div data-mprt="2" class="overflowingContentWidgets"></div>
-																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
-																				</div>
-																			</div>
+																			<pre style="position:absolute;inset:0;margin:0;overflow:hidden;white-space:pre;padding:10px;font:14px/20px monospace;pointer-events:none">{   "name": "quark-demo",   "features": [     "syntax-highlighting",     "auto-height"   ] }</pre>
+																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0; min-height: 140px" _bl_314=""></div>
 																		</div>
 																	</div>
 																</div>
@@ -4473,10 +4349,10 @@
 																<!--!-->
 																<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_284="">
 																	<!--!-->
-																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_301=""></div>
+																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_299=""></div>
 																	<!--!-->                             
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_302="">
+																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_300="">
 																		<!--!-->                                 View Code
 																	</button>
 																</div>
@@ -4509,92 +4385,15 @@
 																<!--!-->
 																<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_285="">
 																	<!--!-->
-																	<div class="grid w-full gap-3" data-slot="div" _bl_303="">
+																	<div class="grid w-full gap-3" data-slot="div" _bl_301="">
 																		<!--!-->
 																		<div class="group/code-editor relative w-full min-w-0" _bl_315="">
-																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 220px; height: 210px;" _bl_316="" data-keybinding-context="5" data-mode-id="markdown">
-																				<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/5" style="width: 606px; height: 220px;">
-																					<div data-mprt="3" class="overflow-guard" style="width: 606px; height: 220px;">
-																						<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="both" aria-roledescription="editor" aria-label="Code editor" style="tab-size: 33.6094px; text-wrap: wrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; width: 521px; height: 19px;"></div>
-																						<textarea class="ime-text-area" readonly="true" tabindex="-1" aria-hidden="true"></textarea>
-																						<div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 258px; width: 68px;">
-																							<div class="glyph-margin" style="left: 0px; width: 0px; height: 258px;"></div>
-																							<div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																							<div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 68px; height: 258px;">
-																								<div style="top:0px;height:19px;line-height:19px;">
-																									<div class="current-line current-line-margin-both" style="width:68px"></div>
-																									<div class="line-numbers active-line-number" style="left:0px;width:42px;">1</div>
-																								</div>
-																								<div style="top:19px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">2</div>
-																								</div>
-																								<div style="top:38px;height:19px;line-height:19px;">
-																									<div class="line-numbers" style="left:0px;width:42px;">3</div>
-																								</div>
-																							</div>
-																							<div class="glyph-margin-widgets" style="position: absolute; top: 0px;"></div>
-																						</div>
-																						<div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="6" style="position: absolute; overflow: hidden; left: 68px; width: 538px; height: 220px;">
-																							<div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1.67772e+07px; height: 1.67772e+07px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;">
-																								<div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; height: 0px; width: 538px;">
-																									<div style="top:0px;height:19px;line-height:19px;">
-																										<div class="current-line current-line-exact" style="width:538px;"></div>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;"></div>
-																									<div style="top:38px;height:19px;line-height:19px;"></div>
-																								</div>
-																								<div role="presentation" aria-hidden="true" class="view-rulers"></div>
-																								<div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
-																								<div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="8" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; width: 538px; height: 258px;">
-																									<div style="top:0px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">#&nbsp;File&nbsp;drop</span>
-																										</span>
-																									</div>
-																									<div style="top:19px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span></span>
-																										</span>
-																									</div>
-																									<div style="top:38px;height:19px;line-height:19px;" class="view-line">
-																										<span>
-																											<span class="mtk1">Drop&nbsp;images&nbsp;or&nbsp;PDFs&nbsp;anywhere&nbsp;in&nbsp;this&nbsp;editor.</span>
-																										</span>
-																									</div>
-																								</div>
-																								<div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div>
-																								<div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid">
-																									<div class="cursor  monaco-mouse-cursor-text " style="height: 19px; top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; padding-left: 0px; width: 2px;"></div>
-																								</div>
-																							</div>
-																							<div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 524px; height: 12px; left: 0px; bottom: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 524px;"></div>
-																							</div>
-																							<canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="220" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 220px; display: block;"></canvas>
-																							<div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 14px; height: 220px; right: 0px; top: 0px;">
-																								<div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 187px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" style="width: 606px;"></div>
-																						<div data-mprt="4" class="overlayWidgets" style="width: 606px;"></div>
-																						<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 220px;">
-																							<div class="minimap-shadow-hidden" style="height: 220px;"></div>
-																							<canvas width="0" height="220" style="position: absolute; left: 0px; width: 0px; height: 220px;"></canvas>
-																							<canvas class="minimap-decorations-layer" width="0" height="220" style="position: absolute; left: 0px; width: 0px; height: 220px;"></canvas>
-																							<div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;">
-																								<div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div>
-																							</div>
-																						</div>
-																						<div role="presentation" aria-hidden="true" class="blockDecorations-container"></div>
-																					</div>
-																					<div data-mprt="2" class="overflowingContentWidgets"></div>
-																					<div data-mprt="5" class="overflowingOverlayWidgets"></div>
-																				</div>
-																			</div>
+																			<pre style="position:absolute;inset:0;margin:0;overflow:hidden;white-space:pre;padding:10px;font:14px/20px monospace;pointer-events:none"># File drop  Drop images or PDFs anywhere in this editor.</pre>
+																			<div class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0; min-height: 220px" _bl_316=""></div>
 																			<div hidden="" data-code-editor-drop-overlay="" class="pointer-events-none absolute inset-0 z-50 flex items-center justify-center rounded-lg border-2 border-primary bg-[color-mix(in_oklch,var(--surface),transparent_8%)] font-semibold text-primary">Drop files to insert</div>
 																			<!--!-->         
 																			<!--!-->
-																			<input id="code-editor-file-input-7" class="sr-only" tabindex="-1" aria-hidden="true" accept="image/*,.pdf" multiple="" type="file" _bl_322="">
+																			<input id="code-editor-file-input-7" class="sr-only" tabindex="-1" aria-hidden="true" accept="image/*,.pdf" multiple="" type="file" _bl_320="">
 																		</div>
 																		<!--!-->                 
 																		<!--!-->
@@ -4619,10 +4418,10 @@
 																<!--!-->
 																<div class="flex pb-4 inset-0 absolute items-center justify-center pointer-events-none" data-slot="div" _bl_287="">
 																	<!--!-->
-																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_304=""></div>
+																	<div class="inset-0 absolute bg-gradient-to-t from-background via-background/90 via-35% to-background/10 backdrop-blur-[1px]" data-slot="div" _bl_302=""></div>
 																	<!--!-->                             
 																	<!--!-->
-																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_305="">
+																	<button class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] leading-normal in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 [&amp;_svg[data-slot=icon]]:size-3.5 inline-flex text-foreground text-sm font-medium whitespace-nowrap relative shrink-0 items-center justify-center disabled:opacity-50 z-10 pointer-events-auto select-none cursor-pointer disabled:cursor-not-allowed border border-input bg-background hover:bg-muted rounded-lg outline-hidden shadow-none transition-all" data-variant="outline" type="button" data-slot="button" _bl_303="">
 																		<!--!-->                                 View Code
 																	</button>
 																</div>
@@ -4638,18 +4437,18 @@
 									<!--!-->
 									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
 										<!--!-->
-										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_392="">
+										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_393="">
 											<!--!-->
 											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
 											<!--!-->             
 											<!--!-->
-											<div class="contents" data-slot="scrollspy" _bl_393="" data-scrollspy-initialized="true">
+											<div class="contents" data-slot="scrollspy" _bl_394="" data-scrollspy-initialized="true">
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="autosave" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/codeeditors#autosave" data-slot="anchor">Autosave</a>
+													<a data-scrollspy-anchor="autosave" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/codeeditors#autosave" data-slot="anchor" data-active="true" aria-current="location">Autosave</a>
 													<!--!-->
-													<a data-scrollspy-anchor="read-only" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/codeeditors#read-only" data-slot="anchor" data-active="true" aria-current="location">Read-only</a>
+													<a data-scrollspy-anchor="read-only" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/codeeditors#read-only" data-slot="anchor">Read-only</a>
 													<!--!-->
 													<a data-scrollspy-anchor="auto-height" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/codeeditors#auto-height" data-slot="anchor">Auto height</a>
 													<!--!-->
@@ -4674,9 +4473,9 @@
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
 		<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;b7bb3279d7e34115b0079ebd3001b2f1&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
-		<div style="display:contents;" _bl_337="">
+		<div style="display:contents;" _bl_338="">
 			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_343="">
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_344="">
 				<!--!-->
 				<div hidden="" style="display:none;">
 					<!--!-->
@@ -4689,8 +4488,8 @@
 
 					</style>
 					<!--!-->
-					<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;" data-position="item-aligned" _bl_348="">
-						<div style="min-width:100%;display:block;" _bl_349="">
+					<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;" data-position="item-aligned" _bl_349="">
+						<div style="min-width:100%;display:block;" _bl_350="">
 							<!--!-->
 							<!--!-->
 							<!--!-->
@@ -4698,9 +4497,9 @@
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-15-item-auto-text" aria-selected="false" data-value="auto" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_360="">
+								<div role="option" aria-labelledby="bradix-select-15-item-auto-text" aria-selected="false" data-value="auto" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_361="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_384="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_385="">
 										<!--!-->
 										<!--!-->
 										<span aria-hidden="true">
@@ -4713,46 +4512,46 @@
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-15-item-auto-text" _bl_385="">Auto</span>
+									<span id="bradix-select-15-item-auto-text" _bl_386="">Auto</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-15-item-vs-text" aria-selected="false" data-value="vs" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_361="">
+								<div role="option" aria-labelledby="bradix-select-15-item-vs-text" aria-selected="false" data-value="vs" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_362="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_386="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_387="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-15-item-vs-text" _bl_387="">Light</span>
+									<span id="bradix-select-15-item-vs-text" _bl_388="">Light</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-15-item-vs-dark-text" aria-selected="false" data-value="vs-dark" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_362="">
+								<div role="option" aria-labelledby="bradix-select-15-item-vs-dark-text" aria-selected="false" data-value="vs-dark" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_363="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_388="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_389="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-15-item-vs-dark-text" _bl_389="">Dark</span>
+									<span id="bradix-select-15-item-vs-dark-text" _bl_390="">Dark</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-15-item-hc-black-text" aria-selected="false" data-value="hc-black" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_363="">
+								<div role="option" aria-labelledby="bradix-select-15-item-hc-black-text" aria-selected="false" data-value="hc-black" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_364="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_390="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_391="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-15-item-hc-black-text" _bl_391="">High contrast</span>
+									<span id="bradix-select-15-item-hc-black-text" _bl_392="">High contrast</span>
 								</div>
 							</div>
 						</div>
@@ -4763,9 +4562,9 @@
 				</div>
 			</div>
 		</div>
-		<div style="display:contents;" _bl_335="">
+		<div style="display:contents;" _bl_336="">
 			<!--!-->
-			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_340="">
+			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_341="">
 				<!--!-->
 				<div hidden="" style="display:none;">
 					<!--!-->
@@ -4778,8 +4577,8 @@
 
 					</style>
 					<!--!-->
-					<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;" data-position="item-aligned" _bl_345="">
-						<div style="min-width:100%;display:block;" _bl_346="">
+					<div data-radix-select-viewport="" role="presentation" style="position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;" data-position="item-aligned" _bl_346="">
+						<div style="min-width:100%;display:block;" _bl_347="">
 							<!--!-->
 							<!--!-->
 							<!--!-->
@@ -4787,9 +4586,9 @@
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-csharp-text" aria-selected="false" data-value="csharp" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_350="">
+								<div role="option" aria-labelledby="bradix-select-14-item-csharp-text" aria-selected="false" data-value="csharp" data-state="checked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_351="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_364="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_365="">
 										<!--!-->
 										<!--!-->
 										<span aria-hidden="true">
@@ -4802,124 +4601,124 @@
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-csharp-text" _bl_365="">C#</span>
+									<span id="bradix-select-14-item-csharp-text" _bl_366="">C#</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-json-text" aria-selected="false" data-value="json" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_351="">
+								<div role="option" aria-labelledby="bradix-select-14-item-json-text" aria-selected="false" data-value="json" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_352="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_366="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_367="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-json-text" _bl_367="">JSON</span>
+									<span id="bradix-select-14-item-json-text" _bl_368="">JSON</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-xml-text" aria-selected="false" data-value="xml" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_352="">
+								<div role="option" aria-labelledby="bradix-select-14-item-xml-text" aria-selected="false" data-value="xml" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_353="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_368="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_369="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-xml-text" _bl_369="">XML</span>
+									<span id="bradix-select-14-item-xml-text" _bl_370="">XML</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-javascript-text" aria-selected="false" data-value="javascript" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_353="">
+								<div role="option" aria-labelledby="bradix-select-14-item-javascript-text" aria-selected="false" data-value="javascript" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_354="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_370="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_371="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-javascript-text" _bl_371="">JavaScript</span>
+									<span id="bradix-select-14-item-javascript-text" _bl_372="">JavaScript</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-typescript-text" aria-selected="false" data-value="typescript" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_354="">
+								<div role="option" aria-labelledby="bradix-select-14-item-typescript-text" aria-selected="false" data-value="typescript" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_355="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_372="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_373="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-typescript-text" _bl_373="">TypeScript</span>
+									<span id="bradix-select-14-item-typescript-text" _bl_374="">TypeScript</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-html-text" aria-selected="false" data-value="html" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_355="">
+								<div role="option" aria-labelledby="bradix-select-14-item-html-text" aria-selected="false" data-value="html" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_356="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_374="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_375="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-html-text" _bl_375="">HTML</span>
+									<span id="bradix-select-14-item-html-text" _bl_376="">HTML</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-css-text" aria-selected="false" data-value="css" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_356="">
+								<div role="option" aria-labelledby="bradix-select-14-item-css-text" aria-selected="false" data-value="css" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_357="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_376="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_377="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-css-text" _bl_377="">CSS</span>
+									<span id="bradix-select-14-item-css-text" _bl_378="">CSS</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-sql-text" aria-selected="false" data-value="sql" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_357="">
+								<div role="option" aria-labelledby="bradix-select-14-item-sql-text" aria-selected="false" data-value="sql" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_358="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_378="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_379="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-sql-text" _bl_379="">SQL</span>
+									<span id="bradix-select-14-item-sql-text" _bl_380="">SQL</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-yaml-text" aria-selected="false" data-value="yaml" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_358="">
+								<div role="option" aria-labelledby="bradix-select-14-item-yaml-text" aria-selected="false" data-value="yaml" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_359="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_380="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_381="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-yaml-text" _bl_381="">YAML</span>
+									<span id="bradix-select-14-item-yaml-text" _bl_382="">YAML</span>
 								</div>
 								<!--!-->
 								<!--!-->
 								<!--!-->
-								<div role="option" aria-labelledby="bradix-select-14-item-markdown-text" aria-selected="false" data-value="markdown" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_359="">
+								<div role="option" aria-labelledby="bradix-select-14-item-markdown-text" aria-selected="false" data-value="markdown" data-state="unchecked" tabindex="-1" class="not-data-[variant=destructive]:focus:**:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 flex focus:text-accent-foreground text-sm pr-8 pl-1.5 py-1 relative w-full gap-1.5 items-center select-none cursor-default focus:bg-accent rounded-md outline-hidden" data-slot="select-item" _bl_360="">
 									<!--!-->
-									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_382="">
+									<span class="flex right-2 absolute size-4 items-center justify-center" data-slot="select-item-indicator" _bl_383="">
 										<!--!-->
 										<!--!-->
 									</span>
 									<!--!-->     
 									<!--!-->
-									<span id="bradix-select-14-item-markdown-text" _bl_383="">Markdown</span>
+									<span id="bradix-select-14-item-markdown-text" _bl_384="">Markdown</span>
 								</div>
 							</div>
 						</div>

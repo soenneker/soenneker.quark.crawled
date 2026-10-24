@@ -57,7 +57,7 @@
 		</script>
 		<link href="css/quark-tailwind.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		<link href="Soenneker.Quark.Suite.Demo.styles.css" rel="stylesheet">
+		<link href="css/chartgallery.css" rel="stylesheet">
 		
 		<!--!-->
 		<!--!-->
@@ -218,10 +218,11 @@
 								<button data-theme="system" aria-label="Toggle theme" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-lg inline-flex text-sm font-medium whitespace-nowrap relative size-8 overflow-hidden shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all group/toggle extend-touch-target" data-slot="button" data-variant="ghost" data-state="closed" type="button" _bl_247="">
 									<!--!-->
 									<!--!-->
-									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_262="">
+									<!--!-->
+									<span aria-hidden="true" class="grid relative size-4.5 overflow-hidden place-items-center" data-slot="span" _bl_268="">
 										<!--!-->
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out -rotate-90 scale-0 opacity-0" data-slot="span" _bl_272="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out -rotate-90 scale-0 opacity-0" data-slot="span" _bl_274="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -239,7 +240,7 @@
 										</span>
 										<!--!-->                 
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-0 scale-100 opacity-100" data-slot="span" _bl_273="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-0 scale-100 opacity-100" data-slot="span" _bl_275="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -251,7 +252,7 @@
 										</span>
 										<!--!-->                 
 										<!--!-->
-										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-90 scale-0 opacity-0" data-slot="span" _bl_274="">
+										<span class="absolute inset-0 grid place-items-center transition-all duration-300 ease-out rotate-90 scale-0 opacity-0" data-slot="span" _bl_276="">
 											<!--!-->
 											<!--!-->
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4.5 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -262,7 +263,7 @@
 									</span>
 									<!--!-->             
 									<!--!-->
-									<span class="sr-only" data-slot="span" _bl_263="">
+									<span class="sr-only" data-slot="span" _bl_269="">
 										<!--!-->Toggle theme</span>
 								</button>
 								<!--!-->     
@@ -2310,37 +2311,36 @@
 															<div class="demo-section-preview-inner mx-auto flex w-full max-w-full flex-col items-center justify-center [&amp;_img]:mx-auto [&amp;_img]:block [&amp;_img]:max-h-72 [&amp;_img]:max-w-full" data-slot="div" _bl_249="">
 																<!--!-->
 																<div class="session-replay overflow-hidden rounded-xl border bg-card text-card-foreground" data-slot="session-replay">
-																	<div class="session-replay-stage" data-slot="session-replay-viewport" data-ready="false" aria-busy="true">
-																		<div class="session-replay-host" data-slot="session-replay-host" _bl_256=""></div>
-																		<div class="session-replay-status" role="status">
-																			<!--!-->
-																			<span class="session-replay-loader" aria-hidden="true"></span>
-																			
-																			<!--!-->
-																			<span data-slot="span" _bl_283="">
-																				<!--!-->Loading recording…</span>
+																	<div class="session-replay-stage" data-slot="session-replay-viewport" data-ready="true" aria-busy="false">
+																		<div class="session-replay-host" data-slot="session-replay-host" _bl_256="" style="overflow: hidden; min-width: 0px; width: 100%; height: 326.25px;">
+																			<div class="replayer-wrapper" style="width: 960px; transform-origin: left top; transform: scale(0.604167); margin-left: 0px;">
+																				<div class="replayer-mouse"></div>
+																				<canvas class="replayer-mouse-tail" width="960" height="540" style="display: inherit;"></canvas>
+																				<iframe sandbox="allow-same-origin" scrolling="no" width="960" height="540" style="display: inherit; pointer-events: none;"></iframe>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="session-replay-controls" data-slot="session-replay-controls">
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="touch-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-40 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col flex relative w-full items-center select-none session-replay-timeline" style="--radix-slider-thumb-transform: translateX(-50%)" data-orientation="horizontal" data-disabled="" aria-disabled="true" dir="ltr" data-slot="slider" role="group" _bl_275="">
+																		<span class="touch-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-40 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col flex relative w-full items-center select-none session-replay-timeline" style="--radix-slider-thumb-transform: translateX(-50%)" data-orientation="horizontal" dir="ltr" data-slot="slider" role="group" _bl_272="">
 																			<!--!-->
-																			<span class="relative grow overflow-hidden rounded-full bg-muted data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1" data-orientation="horizontal" data-disabled="" data-slot="slider-track">
+																			<span class="relative grow overflow-hidden rounded-full bg-muted data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1" data-orientation="horizontal" data-slot="slider-track">
 																				<!--!-->
-																				<span class="absolute bg-primary select-none data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full" data-orientation="horizontal" data-disabled="" style="left: 0%; right: 100%;" data-slot="slider-range"></span>
+																				<span class="absolute bg-primary select-none data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full" data-orientation="horizontal" style="left: 0%; right: 100%;" data-slot="slider-range"></span>
 																			</span>
 																			<!--!-->
 																			<span style="--bradix-slider-thumb-percent: 0; --bradix-slider-thumb-direction: 1; position: absolute; left: calc(0% + var(--bradix-slider-thumb-in-bounds-offset, 0px)); transform: translateX(-50%); --bradix-slider-thumb-in-bounds-offset: 5px;">
-																				<span class="relative block size-3 shrink-0 rounded-full border border-ring bg-white ring-ring/50 transition-[color,box-shadow] select-none after:absolute after:-inset-2 hover:ring-3 focus-visible:ring-3 focus-visible:outline-hidden active:ring-3 disabled:pointer-events-none disabled:opacity-50" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="1" aria-orientation="horizontal" aria-disabled="true" data-orientation="horizontal" data-disabled="" data-slot="slider-thumb" tabindex="-1" _bl_277="" aria-valuenow="0"></span>
+																				<span class="relative block size-3 shrink-0 rounded-full border border-ring bg-white ring-ring/50 transition-[color,box-shadow] select-none after:absolute after:-inset-2 hover:ring-3 focus-visible:ring-3 focus-visible:outline-hidden active:ring-3 disabled:pointer-events-none disabled:opacity-50" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="16000" aria-orientation="horizontal" data-orientation="horizontal" data-slot="slider-thumb" tabindex="0" _bl_277="" aria-valuenow="0"></span>
 																			</span>
 																		</span>
+																		<!--!-->     
 																		<!--!-->
 																		<div class="session-replay-toolbar">
 																			<div class="session-replay-actions">
 																				<!--!-->
-																				<button title="Play" aria-label="Play recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-play" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_264="">
+																				<button title="Play" aria-label="Play recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-play" data-variant="ghost" type="button" data-slot="button" _bl_262="">
 																					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 																						<!--!-->
 																						<path d="m8 5 11 7-11 7z"></path>
@@ -2348,7 +2348,7 @@
 																				</button>
 																				<!--!-->                     
 																				<!--!-->
-																				<button title="Restart" aria-label="Restart recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-restart" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_265="">
+																				<button title="Restart" aria-label="Restart recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-restart" data-variant="ghost" type="button" data-slot="button" _bl_263="">
 																					<!--!-->
 																					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 																						<path d="M3 10a9 9 0 1 1 2.6 8.4M3 4v6h6"></path>
@@ -2359,14 +2359,14 @@
 																					<span>0:00</span>
 																					<!--!-->
 																					<span class="session-replay-time-divider">/</span>
-																					<span class="session-replay-duration">0:00</span>
+																					<span class="session-replay-duration">0:16</span>
 																				</span>
 																			</div>
 																			<!--!-->                 
 																			<!--!-->
 																			<!--!-->
 																			<div data-size="default" class="relative w-fit group/native-select has-[select:disabled]:opacity-50" data-slot="native-select-wrapper" _bl_270="">
-																				<select title="Playback speed" disabled="" aria-label="Playback speed" class="appearance-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 text-sm py-1 pr-8 pl-2.5 w-full min-w-0 h-8 disabled:pointer-events-none select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors scheme-light dark:scheme-dark session-replay-speed" data-size="default" data-slot="native-select">
+																				<select title="Playback speed" aria-label="Playback speed" class="appearance-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:ring-3 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 text-sm py-1 pr-8 pl-2.5 w-full min-w-0 h-8 disabled:pointer-events-none select-none disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-hidden transition-colors scheme-light dark:scheme-dark session-replay-speed" data-size="default" data-slot="native-select">
 																					<!--!-->
 																					<option value="0.5" class="text-[CanvasText] bg-[Canvas]" data-slot="native-select-option">0.5×</option>
 																					<!--!-->
@@ -2450,11 +2450,11 @@
 																			</svg>
 																			
 																			<!--!-->
-																			<span data-slot="span" _bl_266="">
+																			<span data-slot="span" _bl_264="">
 																				<!--!-->No recording available</span>
 																			<!--!-->                     
 																			<!--!-->
-																			<span class="session-replay-hint" data-slot="span" _bl_267="">
+																			<span class="session-replay-hint" data-slot="span" _bl_265="">
 																				<!--!-->Your session will appear here.</span>
 																		</div>
 																	</div>
@@ -2462,7 +2462,7 @@
 																		<!--!-->
 																		<!--!-->
 																		<!--!-->
-																		<span class="touch-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-40 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col flex relative w-full items-center select-none session-replay-timeline" style="--radix-slider-thumb-transform: translateX(-50%)" data-orientation="horizontal" data-disabled="" aria-disabled="true" dir="ltr" data-slot="slider" role="group" _bl_276="">
+																		<span class="touch-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-40 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col flex relative w-full items-center select-none session-replay-timeline" style="--radix-slider-thumb-transform: translateX(-50%)" data-orientation="horizontal" data-disabled="" aria-disabled="true" dir="ltr" data-slot="slider" role="group" _bl_273="">
 																			<!--!-->
 																			<span class="relative grow overflow-hidden rounded-full bg-muted data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1" data-orientation="horizontal" data-disabled="" data-slot="slider-track">
 																				<!--!-->
@@ -2473,11 +2473,12 @@
 																				<span class="relative block size-3 shrink-0 rounded-full border border-ring bg-white ring-ring/50 transition-[color,box-shadow] select-none after:absolute after:-inset-2 hover:ring-3 focus-visible:ring-3 focus-visible:outline-hidden active:ring-3 disabled:pointer-events-none disabled:opacity-50" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="1" aria-orientation="horizontal" aria-disabled="true" data-orientation="horizontal" data-disabled="" data-slot="slider-thumb" tabindex="-1" _bl_278="" aria-valuenow="0"></span>
 																			</span>
 																		</span>
+																		<!--!-->     
 																		<!--!-->
 																		<div class="session-replay-toolbar">
 																			<div class="session-replay-actions">
 																				<!--!-->
-																				<button title="Play" aria-label="Play recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-play" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_268="">
+																				<button title="Play" aria-label="Play recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-play" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_266="">
 																					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 																						<!--!-->
 																						<path d="m8 5 11 7-11 7z"></path>
@@ -2485,7 +2486,7 @@
 																				</button>
 																				<!--!-->                     
 																				<!--!-->
-																				<button title="Restart" aria-label="Restart recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-restart" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_269="">
+																				<button title="Restart" aria-label="Restart recording" class="group/button bg-clip-padding focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg inline-flex text-sm font-medium whitespace-nowrap shrink-0 items-center justify-center disabled:opacity-50 disabled:pointer-events-none select-none cursor-pointer disabled:cursor-not-allowed border outline-hidden transition-all session-replay-restart" data-variant="ghost" type="button" disabled="" data-slot="button" _bl_267="">
 																					<!--!-->
 																					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 																						<path d="M3 10a9 9 0 1 1 2.6 8.4M3 4v6h6"></path>
@@ -2570,9 +2571,9 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="session-replay" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/session-replay#session-replay" data-slot="anchor">Session replay</a>
+													<a data-scrollspy-anchor="session-replay" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/session-replay#session-replay" data-slot="anchor" data-active="true" aria-current="location">Session replay</a>
 													<!--!-->
-													<a data-scrollspy-anchor="empty-state" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/session-replay#empty-state" data-slot="anchor" data-active="true" aria-current="location">Empty state</a>
+													<a data-scrollspy-anchor="empty-state" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/session-replay#empty-state" data-slot="anchor">Empty state</a>
 												</nav>
 											</div>
 										</div>
