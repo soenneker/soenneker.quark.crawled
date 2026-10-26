@@ -1,912 +1,1096 @@
 //! Licensed to the .NET Foundation under one or more agreements.
 //! The .NET Foundation licenses this file to you under the MIT license.
 
-var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,4,1,96,0,0,3,2,1,0,10,8,1,6,0,6,64,25,11,11])),o=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,15,1,13,0,65,1,253,15,65,2,253,15,253,128,2,11])),n=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,10,1,8,0,65,0,253,15,253,98,11])),r=Symbol.for("wasm promise_control");function i(e,t){let o=null;const n=new Promise((function(n,r){o={isDone:!1,promise:null,resolve:t=>{o.isDone||(o.isDone=!0,n(t),e&&e())},reject:e=>{o.isDone||(o.isDone=!0,r(e),t&&t())}}}));o.promise=n;const i=n;return i[r]=o,{promise:i,promise_control:o}}function s(e){return e[r]}function a(e){e&&function(e){return void 0!==e[r]}(e)||Be(!1,"Promise is not controllable")}const l="__mono_message__",c=["debug","log","trace","warn","info","error"],d="MONO_WASM: ";let u,f,m,g,p,h;function w(e){g=e}function b(e){if(Pe.diagnosticTracing){const t="function"==typeof e?e():e;console.debug(d+t)}}function y(e,...t){console.info(d+e,...t)}function v(e,...t){console.info(e,...t)}function E(e,...t){console.warn(d+e,...t)}function _(e,...t){if(t&&t.length>0&&t[0]&&"object"==typeof t[0]){if(t[0].silent)return;if(t[0].toString)return void console.error(d+e,t[0].toString())}console.error(d+e,...t)}function x(e,t,o){return function(...n){try{let r=n[0];if(void 0===r)r="undefined";else if(null===r)r="null";else if("function"==typeof r)r=r.toString();else if("string"!=typeof r)try{r=JSON.stringify(r)}catch(e){r=r.toString()}t(o?JSON.stringify({method:e,payload:r,arguments:n.slice(1)}):[e+r,...n.slice(1)])}catch(e){m.error(`proxyConsole failed: ${e}`)}}}function j(e,t,o){f=t,g=e,m={...t};const n=`${o}/console`.replace("https://","wss://").replace("http://","ws://");u=new WebSocket(n),u.addEventListener("error",A),u.addEventListener("close",S),function(){for(const e of c)f[e]=x(`console.${e}`,T,!0)}()}function R(e){let t=30;const o=()=>{u?0==u.bufferedAmount||0==t?(e&&v(e),function(){for(const e of c)f[e]=x(`console.${e}`,m.log,!1)}(),u.removeEventListener("error",A),u.removeEventListener("close",S),u.close(1e3,e),u=void 0):(t--,globalThis.setTimeout(o,100)):e&&m&&m.log(e)};o()}function T(e){u&&u.readyState===WebSocket.OPEN?u.send(e):m.log(e)}function A(e){m.error(`[${g}] proxy console websocket error: ${e}`,e)}function S(e){m.debug(`[${g}] proxy console websocket closed: ${e}`,e)}function D(){Pe.preferredIcuAsset=O(Pe.config);let e="invariant"==Pe.config.globalizationMode;if(!e)if(Pe.preferredIcuAsset)Pe.diagnosticTracing&&b("ICU data archive(s) available, disabling invariant mode");else{if("custom"===Pe.config.globalizationMode||"all"===Pe.config.globalizationMode||"sharded"===Pe.config.globalizationMode){const e="invariant globalization mode is inactive and no ICU data archives are available";throw _(`ERROR: ${e}`),new Error(e)}Pe.diagnosticTracing&&b("ICU data archive(s) not available, using invariant globalization mode"),e=!0,Pe.preferredIcuAsset=null}const t="DOTNET_SYSTEM_GLOBALIZATION_INVARIANT",o=Pe.config.environmentVariables;if(void 0===o[t]&&e&&(o[t]="1"),void 0===o.TZ)try{const e=Intl.DateTimeFormat().resolvedOptions().timeZone||null;e&&(o.TZ=e)}catch(e){y("failed to detect timezone, will fallback to UTC")}}function O(e){var t;if((null===(t=e.resources)||void 0===t?void 0:t.icu)&&"invariant"!=e.globalizationMode){const t=e.applicationCulture||(ke?globalThis.navigator&&globalThis.navigator.languages&&globalThis.navigator.languages[0]:Intl.DateTimeFormat().resolvedOptions().locale),o=e.resources.icu;let n=null;if("custom"===e.globalizationMode){if(o.length>=1)return o[0].name}else t&&"all"!==e.globalizationMode?"sharded"===e.globalizationMode&&(n=function(e){const t=e.split("-")[0];return"en"===t||["fr","fr-FR","it","it-IT","de","de-DE","es","es-ES"].includes(e)?"icudt_EFIGS.dat":["zh","ko","ja"].includes(t)?"icudt_CJK.dat":"icudt_no_CJK.dat"}(t)):n="icudt.dat";if(n)for(let e=0;e<o.length;e++){const t=o[e];if(t.virtualPath===n)return t.name}}return e.globalizationMode="invariant",null}(new Date).valueOf();const C=class{constructor(e){this.url=e}toString(){return this.url}};async function k(e,t){try{const o="function"==typeof globalThis.fetch;if(Se){const n=e.startsWith("file://");if(!n&&o)return globalThis.fetch(e,t||{credentials:"same-origin"});p||(h=Ne.require("url"),p=Ne.require("fs")),n&&(e=h.fileURLToPath(e));const r=await p.promises.readFile(e);return{ok:!0,headers:{length:0,get:()=>null},url:e,arrayBuffer:()=>r,json:()=>JSON.parse(r),text:()=>{throw new Error("NotImplementedException")}}}if(o)return globalThis.fetch(e,t||{credentials:"same-origin"});if("function"==typeof read)return{ok:!0,url:e,headers:{length:0,get:()=>null},arrayBuffer:()=>new Uint8Array(read(e,"binary")),json:()=>JSON.parse(read(e,"utf8")),text:()=>read(e,"utf8")}}catch(t){return{ok:!1,url:e,status:500,headers:{length:0,get:()=>null},statusText:"ERR28: "+t,arrayBuffer:()=>{throw t},json:()=>{throw t},text:()=>{throw t}}}throw new Error("No fetch implementation available")}function I(e){return"string"!=typeof e&&Be(!1,"url must be a string"),!M(e)&&0!==e.indexOf("./")&&0!==e.indexOf("../")&&globalThis.URL&&globalThis.document&&globalThis.document.baseURI&&(e=new URL(e,globalThis.document.baseURI).toString()),e}const U=/^[a-zA-Z][a-zA-Z\d+\-.]*?:\/\//,P=/[a-zA-Z]:[\\/]/;function M(e){return Se||Ie?e.startsWith("/")||e.startsWith("\\")||-1!==e.indexOf("///")||P.test(e):U.test(e)}let L,N=0;const $=[],z=[],W=new Map,F={"js-module-threads":!0,"js-module-runtime":!0,"js-module-dotnet":!0,"js-module-native":!0,"js-module-diagnostics":!0},B={...F,"js-module-library-initializer":!0},V={...F,dotnetwasm:!0,heap:!0,manifest:!0},q={...B,manifest:!0},H={...B,dotnetwasm:!0},J={dotnetwasm:!0,symbols:!0},Z={...B,dotnetwasm:!0,symbols:!0},Q={symbols:!0};function G(e){return!("icu"==e.behavior&&e.name!=Pe.preferredIcuAsset)}function K(e,t,o){null!=t||(t=[]),Be(1==t.length,`Expect to have one ${o} asset in resources`);const n=t[0];return n.behavior=o,X(n),e.push(n),n}function X(e){V[e.behavior]&&W.set(e.behavior,e)}function Y(e){Be(V[e],`Unknown single asset behavior ${e}`);const t=W.get(e);if(t&&!t.resolvedUrl)if(t.resolvedUrl=Pe.locateFile(t.name),F[t.behavior]){const e=ge(t);e?("string"!=typeof e&&Be(!1,"loadBootResource response for 'dotnetjs' type should be a URL string"),t.resolvedUrl=e):t.resolvedUrl=ce(t.resolvedUrl,t.behavior)}else if("dotnetwasm"!==t.behavior)throw new Error(`Unknown single asset behavior ${e}`);return t}function ee(e){const t=Y(e);return Be(t,`Single asset for ${e} not found`),t}let te=!1;async function oe(){if(!te){te=!0,Pe.diagnosticTracing&&b("mono_download_assets");try{const e=[],t=[],o=(e,t)=>{!Z[e.behavior]&&G(e)&&Pe.expected_instantiated_assets_count++,!H[e.behavior]&&G(e)&&(Pe.expected_downloaded_assets_count++,t.push(se(e)))};for(const t of $)o(t,e);for(const e of z)o(e,t);Pe.allDownloadsQueued.promise_control.resolve(),Promise.all([...e,...t]).then((()=>{Pe.allDownloadsFinished.promise_control.resolve()})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e})),await Pe.runtimeModuleLoaded.promise;const n=async e=>{const t=await e;if(t.buffer){if(!Z[t.behavior]){t.buffer&&"object"==typeof t.buffer||Be(!1,"asset buffer must be array-like or buffer-like or promise of these"),"string"!=typeof t.resolvedUrl&&Be(!1,"resolvedUrl must be string");const e=t.resolvedUrl,o=await t.buffer,n=new Uint8Array(o);pe(t),await Ue.beforeOnRuntimeInitialized.promise,Ue.instantiate_asset(t,e,n)}}else J[t.behavior]?("symbols"===t.behavior&&(await Ue.instantiate_symbols_asset(t),pe(t)),J[t.behavior]&&++Pe.actual_downloaded_assets_count):(t.isOptional||Be(!1,"Expected asset to have the downloaded buffer"),!H[t.behavior]&&G(t)&&Pe.expected_downloaded_assets_count--,!Z[t.behavior]&&G(t)&&Pe.expected_instantiated_assets_count--)},r=[],i=[];for(const t of e)r.push(n(t));for(const e of t)i.push(n(e));Promise.all(r).then((()=>{Ce||Ue.coreAssetsInMemory.promise_control.resolve()})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e})),Promise.all(i).then((async()=>{Ce||(await Ue.coreAssetsInMemory.promise,Ue.allAssetsInMemory.promise_control.resolve())})).catch((e=>{throw Pe.err("Error in mono_download_assets: "+e),Xe(1,e),e}))}catch(e){throw Pe.err("Error in mono_download_assets: "+e),e}}}let ne=!1;function re(){if(ne)return;ne=!0;const e=Pe.config,t=[];if(e.assets)for(const t of e.assets)"object"!=typeof t&&Be(!1,`asset must be object, it was ${typeof t} : ${t}`),"string"!=typeof t.behavior&&Be(!1,"asset behavior must be known string"),"string"!=typeof t.name&&Be(!1,"asset name must be string"),t.resolvedUrl&&"string"!=typeof t.resolvedUrl&&Be(!1,"asset resolvedUrl could be string"),t.hash&&"string"!=typeof t.hash&&Be(!1,"asset resolvedUrl could be string"),t.pendingDownload&&"object"!=typeof t.pendingDownload&&Be(!1,"asset pendingDownload could be object"),t.isCore?$.push(t):z.push(t),X(t);else if(e.resources){const o=e.resources;o.wasmNative||Be(!1,"resources.wasmNative must be defined"),o.jsModuleNative||Be(!1,"resources.jsModuleNative must be defined"),o.jsModuleRuntime||Be(!1,"resources.jsModuleRuntime must be defined"),K(z,o.wasmNative,"dotnetwasm"),K(t,o.jsModuleNative,"js-module-native"),K(t,o.jsModuleRuntime,"js-module-runtime"),o.jsModuleDiagnostics&&K(t,o.jsModuleDiagnostics,"js-module-diagnostics");const n=(e,t,o)=>{const n=e;n.behavior=t,o?(n.isCore=!0,$.push(n)):z.push(n)};if(o.coreAssembly)for(let e=0;e<o.coreAssembly.length;e++)n(o.coreAssembly[e],"assembly",!0);if(o.assembly)for(let e=0;e<o.assembly.length;e++)n(o.assembly[e],"assembly",!o.coreAssembly);if(0!=e.debugLevel&&Pe.isDebuggingSupported()){if(o.corePdb)for(let e=0;e<o.corePdb.length;e++)n(o.corePdb[e],"pdb",!0);if(o.pdb)for(let e=0;e<o.pdb.length;e++)n(o.pdb[e],"pdb",!o.corePdb)}if(e.loadAllSatelliteResources&&o.satelliteResources)for(const e in o.satelliteResources)for(let t=0;t<o.satelliteResources[e].length;t++){const r=o.satelliteResources[e][t];r.culture=e,n(r,"resource",!o.coreAssembly)}if(o.coreVfs)for(let e=0;e<o.coreVfs.length;e++)n(o.coreVfs[e],"vfs",!0);if(o.vfs)for(let e=0;e<o.vfs.length;e++)n(o.vfs[e],"vfs",!o.coreVfs);const r=O(e);if(r&&o.icu)for(let e=0;e<o.icu.length;e++){const t=o.icu[e];t.name===r&&n(t,"icu",!1)}if(o.wasmSymbols)for(let e=0;e<o.wasmSymbols.length;e++)n(o.wasmSymbols[e],"symbols",!1)}if(e.appsettings)for(let t=0;t<e.appsettings.length;t++){const o=e.appsettings[t],n=he(o);"appsettings.json"!==n&&n!==`appsettings.${e.applicationEnvironment}.json`||z.push({name:o,behavior:"vfs",cache:"no-cache",useCredentials:!0})}e.assets=[...$,...z,...t]}async function ie(e){const t=await se(e);return await t.pendingDownloadInternal.response,t.buffer}async function se(e){try{return await ae(e)}catch(t){if(!Pe.enableDownloadRetry)throw t;if(Ie||Se)throw t;if(e.pendingDownload&&e.pendingDownloadInternal==e.pendingDownload)throw t;if(e.resolvedUrl&&-1!=e.resolvedUrl.indexOf("file://"))throw t;if(t&&404==t.status)throw t;e.pendingDownloadInternal=void 0,await Pe.allDownloadsQueued.promise;try{return Pe.diagnosticTracing&&b(`Retrying download '${e.name}'`),await ae(e)}catch(t){return e.pendingDownloadInternal=void 0,await new Promise((e=>globalThis.setTimeout(e,100))),Pe.diagnosticTracing&&b(`Retrying download (2) '${e.name}' after delay`),await ae(e)}}}async function ae(e){for(;L;)await L.promise;try{++N,N==Pe.maxParallelDownloads&&(Pe.diagnosticTracing&&b("Throttling further parallel downloads"),L=i());const t=await async function(e){if(e.pendingDownload&&(e.pendingDownloadInternal=e.pendingDownload),e.pendingDownloadInternal&&e.pendingDownloadInternal.response)return e.pendingDownloadInternal.response;if(e.buffer){const t=await e.buffer;return e.resolvedUrl||(e.resolvedUrl="undefined://"+e.name),e.pendingDownloadInternal={url:e.resolvedUrl,name:e.name,response:Promise.resolve({ok:!0,arrayBuffer:()=>t,json:()=>JSON.parse(new TextDecoder("utf-8").decode(t)),text:()=>{throw new Error("NotImplementedException")},headers:{get:()=>{}}})},e.pendingDownloadInternal.response}const t=e.loadRemote&&Pe.config.remoteSources?Pe.config.remoteSources:[""];let o;for(let n of t){n=n.trim(),"./"===n&&(n="");const t=le(e,n);e.name===t?Pe.diagnosticTracing&&b(`Attempting to download '${t}'`):Pe.diagnosticTracing&&b(`Attempting to download '${t}' for ${e.name}`);try{e.resolvedUrl=t;const n=fe(e);if(e.pendingDownloadInternal=n,o=await n.response,!o||!o.ok)continue;return o}catch(e){o||(o={ok:!1,url:t,status:0,statusText:""+e});continue}}const n=e.isOptional||e.name.match(/\.pdb$/)&&Pe.config.ignorePdbLoadErrors;if(o||Be(!1,`Response undefined ${e.name}`),!n){const t=new Error(`download '${o.url}' for ${e.name} failed ${o.status} ${o.statusText}`);throw t.status=o.status,t}y(`optional download '${o.url}' for ${e.name} failed ${o.status} ${o.statusText}`)}(e);return t?(J[e.behavior]||(e.buffer=await t.arrayBuffer(),++Pe.actual_downloaded_assets_count),e):e}finally{if(--N,L&&N==Pe.maxParallelDownloads-1){Pe.diagnosticTracing&&b("Resuming more parallel downloads");const e=L;L=void 0,e.promise_control.resolve()}}}function le(e,t){let o;return null==t&&Be(!1,`sourcePrefix must be provided for ${e.name}`),e.resolvedUrl?o=e.resolvedUrl:(o=""===t?"assembly"===e.behavior||"pdb"===e.behavior?e.name:"resource"===e.behavior&&e.culture&&""!==e.culture?`${e.culture}/${e.name}`:e.name:t+e.name,o=ce(Pe.locateFile(o),e.behavior)),o&&"string"==typeof o||Be(!1,"attemptUrl need to be path or url string"),o}function ce(e,t){return Pe.modulesUniqueQuery&&q[t]&&(e+=Pe.modulesUniqueQuery),e}let de=0;const ue=new Set;function fe(e){try{e.resolvedUrl||Be(!1,"Request's resolvedUrl must be set");const t=function(e){let t=e.resolvedUrl;if(Pe.loadBootResource){const o=ge(e);if(o instanceof Promise)return o;"string"==typeof o&&(t=o)}const o={};return e.cache?o.cache=e.cache:Pe.config.disableNoCacheFetch||(o.cache="no-cache"),e.useCredentials?o.credentials="include":!Pe.config.disableIntegrityCheck&&e.hash&&(o.integrity=e.hash),Pe.fetch_like(t,o)}(e),o={name:e.name,url:e.resolvedUrl,response:t};return ue.add(e.name),o.response.then((()=>{"assembly"==e.behavior&&Pe.loadedAssemblies.push(e.name),de++,Pe.onDownloadResourceProgress&&Pe.onDownloadResourceProgress(de,ue.size)})),o}catch(t){const o={ok:!1,url:e.resolvedUrl,status:500,statusText:"ERR29: "+t,arrayBuffer:()=>{throw t},json:()=>{throw t}};return{name:e.name,url:e.resolvedUrl,response:Promise.resolve(o)}}}const me={resource:"assembly",assembly:"assembly",pdb:"pdb",icu:"globalization",vfs:"configuration",manifest:"manifest",dotnetwasm:"dotnetwasm","js-module-dotnet":"dotnetjs","js-module-native":"dotnetjs","js-module-runtime":"dotnetjs","js-module-threads":"dotnetjs"};function ge(e){var t;if(Pe.loadBootResource){const o=null!==(t=e.hash)&&void 0!==t?t:"",n=e.resolvedUrl,r=me[e.behavior];if(r){const t=Pe.loadBootResource(r,e.name,n,o,e.behavior);return"string"==typeof t?I(t):t}}}function pe(e){e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null}function he(e){let t=e.lastIndexOf("/");return t>=0&&t++,e.substring(t)}async function we(e){e&&await Promise.all((null!=e?e:[]).map((e=>async function(e){try{const t=e.name;if(!e.moduleExports){const o=ce(Pe.locateFile(t),"js-module-library-initializer");Pe.diagnosticTracing&&b(`Attempting to import '${o}' for ${e}`),e.moduleExports=await import(/*! webpackIgnore: true */o)}Pe.libraryInitializers.push({scriptName:t,exports:e.moduleExports})}catch(t){E(`Failed to import library initializer '${e}': ${t}`)}}(e))))}async function be(e,t){if(!Pe.libraryInitializers)return;const o=[];for(let n=0;n<Pe.libraryInitializers.length;n++){const r=Pe.libraryInitializers[n];r.exports[e]&&o.push(ye(r.scriptName,e,(()=>r.exports[e](...t))))}await Promise.all(o)}async function ye(e,t,o){try{await o()}catch(o){throw E(`Failed to invoke '${t}' on library initializer '${e}': ${o}`),Xe(1,o),o}}function ve(e,t){if(e===t)return e;const o={...t};return void 0!==o.assets&&o.assets!==e.assets&&(o.assets=[...e.assets||[],...o.assets||[]]),void 0!==o.resources&&(o.resources=_e(e.resources||{assembly:[],jsModuleNative:[],jsModuleRuntime:[],wasmNative:[]},o.resources)),void 0!==o.environmentVariables&&(o.environmentVariables={...e.environmentVariables||{},...o.environmentVariables||{}}),void 0!==o.runtimeOptions&&o.runtimeOptions!==e.runtimeOptions&&(o.runtimeOptions=[...e.runtimeOptions||[],...o.runtimeOptions||[]]),Object.assign(e,o)}function Ee(e,t){if(e===t)return e;const o={...t};return o.config&&(e.config||(e.config={}),o.config=ve(e.config,o.config)),Object.assign(e,o)}function _e(e,t){if(e===t)return e;const o={...t};return void 0!==o.coreAssembly&&(o.coreAssembly=[...e.coreAssembly||[],...o.coreAssembly||[]]),void 0!==o.assembly&&(o.assembly=[...e.assembly||[],...o.assembly||[]]),void 0!==o.lazyAssembly&&(o.lazyAssembly=[...e.lazyAssembly||[],...o.lazyAssembly||[]]),void 0!==o.corePdb&&(o.corePdb=[...e.corePdb||[],...o.corePdb||[]]),void 0!==o.pdb&&(o.pdb=[...e.pdb||[],...o.pdb||[]]),void 0!==o.jsModuleWorker&&(o.jsModuleWorker=[...e.jsModuleWorker||[],...o.jsModuleWorker||[]]),void 0!==o.jsModuleNative&&(o.jsModuleNative=[...e.jsModuleNative||[],...o.jsModuleNative||[]]),void 0!==o.jsModuleDiagnostics&&(o.jsModuleDiagnostics=[...e.jsModuleDiagnostics||[],...o.jsModuleDiagnostics||[]]),void 0!==o.jsModuleRuntime&&(o.jsModuleRuntime=[...e.jsModuleRuntime||[],...o.jsModuleRuntime||[]]),void 0!==o.wasmSymbols&&(o.wasmSymbols=[...e.wasmSymbols||[],...o.wasmSymbols||[]]),void 0!==o.wasmNative&&(o.wasmNative=[...e.wasmNative||[],...o.wasmNative||[]]),void 0!==o.icu&&(o.icu=[...e.icu||[],...o.icu||[]]),void 0!==o.satelliteResources&&(o.satelliteResources=function(e,t){if(e===t)return e;for(const o in t)e[o]=[...e[o]||[],...t[o]||[]];return e}(e.satelliteResources||{},o.satelliteResources||{})),void 0!==o.modulesAfterConfigLoaded&&(o.modulesAfterConfigLoaded=[...e.modulesAfterConfigLoaded||[],...o.modulesAfterConfigLoaded||[]]),void 0!==o.modulesAfterRuntimeReady&&(o.modulesAfterRuntimeReady=[...e.modulesAfterRuntimeReady||[],...o.modulesAfterRuntimeReady||[]]),void 0!==o.extensions&&(o.extensions={...e.extensions||{},...o.extensions||{}}),void 0!==o.vfs&&(o.vfs=[...e.vfs||[],...o.vfs||[]]),Object.assign(e,o)}function xe(){const e=Pe.config;if(e.environmentVariables=e.environmentVariables||{},e.runtimeOptions=e.runtimeOptions||[],e.resources=e.resources||{assembly:[],jsModuleNative:[],jsModuleWorker:[],jsModuleRuntime:[],wasmNative:[],vfs:[],satelliteResources:{}},e.assets){Pe.diagnosticTracing&&b("config.assets is deprecated, use config.resources instead");for(const t of e.assets){const o={};switch(t.behavior){case"assembly":o.assembly=[t];break;case"pdb":o.pdb=[t];break;case"resource":o.satelliteResources={},o.satelliteResources[t.culture]=[t];break;case"icu":o.icu=[t];break;case"symbols":o.wasmSymbols=[t];break;case"vfs":o.vfs=[t];break;case"dotnetwasm":o.wasmNative=[t];break;case"js-module-threads":o.jsModuleWorker=[t];break;case"js-module-runtime":o.jsModuleRuntime=[t];break;case"js-module-native":o.jsModuleNative=[t];break;case"js-module-diagnostics":o.jsModuleDiagnostics=[t];break;case"js-module-dotnet":break;default:throw new Error(`Unexpected behavior ${t.behavior} of asset ${t.name}`)}_e(e.resources,o)}}e.debugLevel,e.applicationEnvironment||(e.applicationEnvironment="Production"),e.applicationCulture&&(e.environmentVariables.LANG=`${e.applicationCulture}.UTF-8`),Ue.diagnosticTracing=Pe.diagnosticTracing=!!e.diagnosticTracing,Ue.waitForDebugger=e.waitForDebugger,Pe.maxParallelDownloads=e.maxParallelDownloads||Pe.maxParallelDownloads,Pe.enableDownloadRetry=void 0!==e.enableDownloadRetry?e.enableDownloadRetry:Pe.enableDownloadRetry}let je=!1;async function Re(e){var t;if(je)return void await Pe.afterConfigLoaded.promise;let o;try{if(e.configSrc||Pe.config&&0!==Object.keys(Pe.config).length&&(Pe.config.assets||Pe.config.resources)||(e.configSrc="dotnet.boot.js"),o=e.configSrc,je=!0,o&&(Pe.diagnosticTracing&&b("mono_wasm_load_config"),await async function(e){const t=e.configSrc,o=Pe.locateFile(t);let n=null;void 0!==Pe.loadBootResource&&(n=Pe.loadBootResource("manifest",t,o,"","manifest"));let r,i=null;if(n)if("string"==typeof n)n.includes(".json")?(i=await s(I(n)),r=await Ae(i)):r=(await import(I(n))).config;else{const e=await n;"function"==typeof e.json?(i=e,r=await Ae(i)):r=e.config}else o.includes(".json")?(i=await s(ce(o,"manifest")),r=await Ae(i)):r=(await import(ce(o,"manifest"))).config;function s(e){return Pe.fetch_like(e,{method:"GET",credentials:"include",cache:"no-cache"})}Pe.config.applicationEnvironment&&(r.applicationEnvironment=Pe.config.applicationEnvironment),ve(Pe.config,r)}(e)),xe(),await we(null===(t=Pe.config.resources)||void 0===t?void 0:t.modulesAfterConfigLoaded),await be("onRuntimeConfigLoaded",[Pe.config]),e.onConfigLoaded)try{await e.onConfigLoaded(Pe.config,Le),xe()}catch(e){throw _("onConfigLoaded() failed",e),e}xe(),Pe.afterConfigLoaded.promise_control.resolve(Pe.config)}catch(t){const n=`Failed to load config file ${o} ${t} ${null==t?void 0:t.stack}`;throw Pe.config=e.config=Object.assign(Pe.config,{message:n,error:t,isError:!0}),Xe(1,new Error(n)),t}}function Te(){return!!globalThis.navigator&&(Pe.isChromium||Pe.isFirefox)}async function Ae(e){const t=Pe.config,o=await e.json();t.applicationEnvironment||o.applicationEnvironment||(o.applicationEnvironment=e.headers.get("Blazor-Environment")||e.headers.get("DotNet-Environment")||void 0),o.environmentVariables||(o.environmentVariables={});const n=e.headers.get("DOTNET-MODIFIABLE-ASSEMBLIES");n&&(o.environmentVariables.DOTNET_MODIFIABLE_ASSEMBLIES=n);const r=e.headers.get("ASPNETCORE-BROWSER-TOOLS");return r&&(o.environmentVariables.__ASPNETCORE_BROWSER_TOOLS=r),o}"function"!=typeof importScripts||globalThis.onmessage||(globalThis.dotnetSidecar=!0);const Se="object"==typeof process&&"object"==typeof process.versions&&"string"==typeof process.versions.node,De="function"==typeof importScripts,Oe=De&&"undefined"!=typeof dotnetSidecar,Ce=De&&!Oe,ke="object"==typeof window||De&&!Se,Ie=!ke&&!Se;let Ue={},Pe={},Me={},Le={},Ne={},$e=!1;const ze={},We={config:ze},Fe={mono:{},binding:{},internal:Ne,module:We,loaderHelpers:Pe,runtimeHelpers:Ue,diagnosticHelpers:Me,api:Le};function Be(e,t){if(e)return;const o="Assert failed: "+("function"==typeof t?t():t),n=new Error(o);_(o,n),Ue.nativeAbort(n)}function Ve(){return void 0!==Pe.exitCode}function qe(){return Ue.runtimeReady&&!Ve()}function He(){Ve()&&Be(!1,`.NET runtime already exited with ${Pe.exitCode} ${Pe.exitReason}. You can use runtime.runMain() which doesn't exit the runtime.`),Ue.runtimeReady||Be(!1,".NET runtime didn't start yet. Please call dotnet.create() first.")}function Je(){ke&&(globalThis.addEventListener("unhandledrejection",et),globalThis.addEventListener("error",tt))}let Ze,Qe;function Ge(e){Qe&&Qe(e),Xe(e,Pe.exitReason)}function Ke(e){Ze&&Ze(e||Pe.exitReason),Xe(1,e||Pe.exitReason)}function Xe(t,o){var n,r;const i=o&&"object"==typeof o;t=i&&"number"==typeof o.status?o.status:void 0===t?-1:t;const s=i&&"string"==typeof o.message?o.message:""+o;(o=i?o:Ue.ExitStatus?function(e,t){const o=new Ue.ExitStatus(e);return o.message=t,o.toString=()=>t,o}(t,s):new Error("Exit with code "+t+" "+s)).status=t,o.message||(o.message=s);const a=""+(o.stack||(new Error).stack);try{Object.defineProperty(o,"stack",{get:()=>a})}catch(e){}const l=!!o.silent;if(o.silent=!0,Ve())Pe.diagnosticTracing&&b("mono_exit called after exit");else{try{We.onAbort==Ke&&(We.onAbort=Ze),We.onExit==Ge&&(We.onExit=Qe),ke&&(globalThis.removeEventListener("unhandledrejection",et),globalThis.removeEventListener("error",tt)),Ue.runtimeReady?(Ue.jiterpreter_dump_stats&&Ue.jiterpreter_dump_stats(!1),0===t&&(null===(n=Pe.config)||void 0===n?void 0:n.interopCleanupOnExit)&&Ue.forceDisposeProxies(!0,!0),e&&0!==t&&(null===(r=Pe.config)||void 0===r||r.dumpThreadsOnNonZeroExit)):(Pe.diagnosticTracing&&b(`abort_startup, reason: ${o}`),function(e){Pe.allDownloadsQueued.promise_control.reject(e),Pe.allDownloadsFinished.promise_control.reject(e),Pe.afterConfigLoaded.promise_control.reject(e),Pe.wasmCompilePromise.promise_control.reject(e),Pe.runtimeModuleLoaded.promise_control.reject(e),Ue.dotnetReady&&(Ue.dotnetReady.promise_control.reject(e),Ue.afterInstantiateWasm.promise_control.reject(e),Ue.beforePreInit.promise_control.reject(e),Ue.afterPreInit.promise_control.reject(e),Ue.afterPreRun.promise_control.reject(e),Ue.beforeOnRuntimeInitialized.promise_control.reject(e),Ue.afterOnRuntimeInitialized.promise_control.reject(e),Ue.afterPostRun.promise_control.reject(e))}(o))}catch(e){E("mono_exit A failed",e)}try{l||(function(e,t){if(0!==e&&t){const e=Ue.ExitStatus&&t instanceof Ue.ExitStatus?b:_;"string"==typeof t?e(t):(void 0===t.stack&&(t.stack=(new Error).stack+""),t.message?e(Ue.stringify_as_error_with_stack?Ue.stringify_as_error_with_stack(t.message+"\n"+t.stack):t.message+"\n"+t.stack):e(JSON.stringify(t)))}!Ce&&Pe.config&&(Pe.config.logExitCode?Pe.config.forwardConsoleLogsToWS?R("WASM EXIT "+e):v("WASM EXIT "+e):Pe.config.forwardConsoleLogsToWS&&R())}(t,o),function(e){if(ke&&!Ce&&Pe.config&&Pe.config.appendElementOnExit&&document){const t=document.createElement("label");t.id="tests_done",0!==e&&(t.style.background="red"),t.innerHTML=""+e,document.body.appendChild(t)}}(t))}catch(e){E("mono_exit B failed",e)}Pe.exitCode=t,Pe.exitReason||(Pe.exitReason=o),!Ce&&Ue.runtimeReady&&We.runtimeKeepalivePop()}if(Pe.config&&Pe.config.asyncFlushOnExit&&0===t)throw(async()=>{try{await async function(){try{const e=await import(/*! webpackIgnore: true */"process"),t=e=>new Promise(((t,o)=>{e.on("error",o),e.end("","utf8",t)})),o=t(e.stderr),n=t(e.stdout);let r;const i=new Promise((e=>{r=setTimeout((()=>e("timeout")),1e3)}));await Promise.race([Promise.all([n,o]),i]),clearTimeout(r)}catch(e){_(`flushing std* streams failed: ${e}`)}}()}finally{Ye(t,o)}})(),o;Ye(t,o)}function Ye(e,t){if(Ue.runtimeReady&&Ue.nativeExit)try{Ue.nativeExit(e)}catch(e){!Ue.ExitStatus||e instanceof Ue.ExitStatus||E("set_exit_code_and_quit_now failed: "+e.toString())}if(0!==e||!ke)throw Se&&Ne.process?Ne.process.exit(e):Ue.quit&&Ue.quit(e,t),t}function et(e){ot(e,e.reason,"rejection")}function tt(e){ot(e,e.error,"error")}function ot(e,t,o){e.preventDefault();try{t||(t=new Error("Unhandled "+o)),void 0===t.stack&&(t.stack=(new Error).stack),t.stack=t.stack+"",t.silent||(_("Unhandled error:",t),Xe(1,t))}catch(e){}}!function(e){if($e)throw new Error("Loader module already loaded");$e=!0,Ue=e.runtimeHelpers,Pe=e.loaderHelpers,Me=e.diagnosticHelpers,Le=e.api,Ne=e.internal,Object.assign(Le,{INTERNAL:Ne,invokeLibraryInitializers:be}),Object.assign(e.module,{config:ve(ze,{environmentVariables:{}})});const r={mono_wasm_bindings_is_ready:!1,config:e.module.config,diagnosticTracing:!1,nativeAbort:e=>{throw e||new Error("abort")},nativeExit:e=>{throw new Error("exit:"+e)}},l={gitHash:"4099f83977f4d29604a9aeb971fb0a7bc1d5f699",config:e.module.config,diagnosticTracing:!1,maxParallelDownloads:16,enableDownloadRetry:!0,_loaded_files:[],loadedFiles:[],loadedAssemblies:[],libraryInitializers:[],workerNextNumber:1,actual_downloaded_assets_count:0,actual_instantiated_assets_count:0,expected_downloaded_assets_count:0,expected_instantiated_assets_count:0,afterConfigLoaded:i(),allDownloadsQueued:i(),allDownloadsFinished:i(),wasmCompilePromise:i(),runtimeModuleLoaded:i(),loadingWorkers:i(),is_exited:Ve,is_runtime_running:qe,assert_runtime_running:He,mono_exit:Xe,createPromiseController:i,getPromiseController:s,assertIsControllablePromise:a,mono_download_assets:oe,resolve_single_asset_path:ee,setup_proxy_console:j,set_thread_prefix:w,installUnhandledErrorHandler:Je,retrieve_asset_download:ie,invokeLibraryInitializers:be,isDebuggingSupported:Te,exceptions:t,simd:n,relaxedSimd:o};Object.assign(Ue,r),Object.assign(Pe,l)}(Fe);let nt,rt,it,st=!1,at=!1;async function lt(e){if(!at){if(at=!0,ke&&Pe.config.forwardConsoleLogsToWS&&void 0!==globalThis.WebSocket&&j("main",globalThis.console,globalThis.location.origin),We||Be(!1,"Null moduleConfig"),Pe.config||Be(!1,"Null moduleConfig.config"),"function"==typeof e){const t=e(Fe.api);if(t.ready)throw new Error("Module.ready couldn't be redefined.");Object.assign(We,t),Ee(We,t)}else{if("object"!=typeof e)throw new Error("Can't use moduleFactory callback of createDotnetRuntime function.");Ee(We,e)}await async function(e){if(Se){const e=await import(/*! webpackIgnore: true */"process"),t=14;if(e.versions.node.split(".")[0]<t)throw new Error(`NodeJS at '${e.execPath}' has too low version '${e.versions.node}', please use at least ${t}. See also https://aka.ms/dotnet-wasm-features`)}const t=/*! webpackIgnore: true */import.meta.url,o=t.indexOf("?");var n;if(o>0&&(Pe.modulesUniqueQuery=t.substring(o)),Pe.scriptUrl=t.replace(/\\/g,"/").replace(/[?#].*/,""),Pe.scriptDirectory=(n=Pe.scriptUrl).slice(0,n.lastIndexOf("/"))+"/",Pe.locateFile=e=>"URL"in globalThis&&globalThis.URL!==C?new URL(e,Pe.scriptDirectory).toString():M(e)?e:Pe.scriptDirectory+e,Pe.fetch_like=k,Pe.out=console.log,Pe.err=console.error,Pe.onDownloadResourceProgress=e.onDownloadResourceProgress,ke&&globalThis.navigator){const e=globalThis.navigator,t=e.userAgentData&&e.userAgentData.brands;t&&t.length>0?Pe.isChromium=t.some((e=>"Google Chrome"===e.brand||"Microsoft Edge"===e.brand||"Chromium"===e.brand)):e.userAgent&&(Pe.isChromium=e.userAgent.includes("Chrome"),Pe.isFirefox=e.userAgent.includes("Firefox"))}Ne.require=Se?await import(/*! webpackIgnore: true */"module").then((e=>e.createRequire(/*! webpackIgnore: true */import.meta.url))):Promise.resolve((()=>{throw new Error("require not supported")})),void 0===globalThis.URL&&(globalThis.URL=C)}(We)}}async function ct(e){return await lt(e),Ze=We.onAbort,Qe=We.onExit,We.onAbort=Ke,We.onExit=Ge,We.ENVIRONMENT_IS_PTHREAD?async function(){(function(){const e=new MessageChannel,t=e.port1,o=e.port2;t.addEventListener("message",(e=>{var n,r;n=JSON.parse(e.data.config),r=JSON.parse(e.data.monoThreadInfo),st?Pe.diagnosticTracing&&b("mono config already received"):(ve(Pe.config,n),Ue.monoThreadInfo=r,xe(),Pe.diagnosticTracing&&b("mono config received"),st=!0,Pe.afterConfigLoaded.promise_control.resolve(Pe.config),ke&&n.forwardConsoleLogsToWS&&void 0!==globalThis.WebSocket&&Pe.setup_proxy_console("worker-idle",console,globalThis.location.origin)),t.close(),o.close()}),{once:!0}),t.start(),self.postMessage({[l]:{monoCmd:"preload",port:o}},[o])})(),await Pe.afterConfigLoaded.promise,function(){const e=Pe.config;e.assets||Be(!1,"config.assets must be defined");for(const t of e.assets)X(t),Q[t.behavior]&&z.push(t)}(),setTimeout((async()=>{try{await oe()}catch(e){Xe(1,e)}}),0);const e=dt(),t=await Promise.all(e);return await ut(t),We}():async function(){var e;await Re(We),re();const t=dt();(async function(){try{const e=ee("dotnetwasm");await se(e),e&&e.pendingDownloadInternal&&e.pendingDownloadInternal.response||Be(!1,"Can't load dotnet.native.wasm");const t=await e.pendingDownloadInternal.response,o=t.headers&&t.headers.get?t.headers.get("Content-Type"):void 0;let n;if("function"==typeof WebAssembly.compileStreaming&&"application/wasm"===o)n=await WebAssembly.compileStreaming(t);else{ke&&"application/wasm"!==o&&E('WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.');const e=await t.arrayBuffer();Pe.diagnosticTracing&&b("instantiate_wasm_module buffered"),n=Ie?await Promise.resolve(new WebAssembly.Module(e)):await WebAssembly.compile(e)}e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null,Pe.wasmCompilePromise.promise_control.resolve(n)}catch(e){Pe.wasmCompilePromise.promise_control.reject(e)}})(),setTimeout((async()=>{try{D(),await oe()}catch(e){Xe(1,e)}}),0);const o=await Promise.all(t);return await ut(o),await Ue.dotnetReady.promise,await we(null===(e=Pe.config.resources)||void 0===e?void 0:e.modulesAfterRuntimeReady),await be("onRuntimeReady",[Fe.api]),Le}()}function dt(){const e=ee("js-module-runtime"),t=ee("js-module-native");if(nt&&rt)return[nt,rt,it];"object"==typeof e.moduleExports?nt=e.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${e.resolvedUrl}' for ${e.name}`),nt=import(/*! webpackIgnore: true */e.resolvedUrl)),"object"==typeof t.moduleExports?rt=t.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${t.resolvedUrl}' for ${t.name}`),rt=import(/*! webpackIgnore: true */t.resolvedUrl));const o=Y("js-module-diagnostics");return o&&("object"==typeof o.moduleExports?it=o.moduleExports:(Pe.diagnosticTracing&&b(`Attempting to import '${o.resolvedUrl}' for ${o.name}`),it=import(/*! webpackIgnore: true */o.resolvedUrl))),[nt,rt,it]}async function ut(e){const{initializeExports:t,initializeReplacements:o,configureRuntimeStartup:n,configureEmscriptenStartup:r,configureWorkerStartup:i,setRuntimeGlobals:s,passEmscriptenInternals:a}=e[0],{default:l}=e[1],c=e[2];s(Fe),t(Fe),c&&c.setRuntimeGlobals(Fe),await n(We),Pe.runtimeModuleLoaded.promise_control.resolve(),l((e=>(Object.assign(We,{ready:e.ready,__dotnet_runtime:{initializeReplacements:o,configureEmscriptenStartup:r,configureWorkerStartup:i,passEmscriptenInternals:a}}),We))).catch((e=>{if(e.message&&e.message.toLowerCase().includes("out of memory"))throw new Error(".NET runtime has failed to start, because too much memory was requested. Please decrease the memory by adjusting EmccMaximumHeapSize. See also https://aka.ms/dotnet-wasm-features");throw e}))}const ft=new class{withModuleConfig(e){try{return Ee(We,e),this}catch(e){throw Xe(1,e),e}}withOnConfigLoaded(e){try{return Ee(We,{onConfigLoaded:e}),this}catch(e){throw Xe(1,e),e}}withConsoleForwarding(){try{return ve(ze,{forwardConsoleLogsToWS:!0}),this}catch(e){throw Xe(1,e),e}}withExitOnUnhandledError(){try{return ve(ze,{exitOnUnhandledError:!0}),Je(),this}catch(e){throw Xe(1,e),e}}withAsyncFlushOnExit(){try{return ve(ze,{asyncFlushOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withExitCodeLogging(){try{return ve(ze,{logExitCode:!0}),this}catch(e){throw Xe(1,e),e}}withElementOnExit(){try{return ve(ze,{appendElementOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withInteropCleanupOnExit(){try{return ve(ze,{interopCleanupOnExit:!0}),this}catch(e){throw Xe(1,e),e}}withDumpThreadsOnNonZeroExit(){try{return ve(ze,{dumpThreadsOnNonZeroExit:!0}),this}catch(e){throw Xe(1,e),e}}withWaitingForDebugger(e){try{return ve(ze,{waitForDebugger:e}),this}catch(e){throw Xe(1,e),e}}withInterpreterPgo(e,t){try{return ve(ze,{interpreterPgo:e,interpreterPgoSaveDelay:t}),ze.runtimeOptions?ze.runtimeOptions.push("--interp-pgo-recording"):ze.runtimeOptions=["--interp-pgo-recording"],this}catch(e){throw Xe(1,e),e}}withConfig(e){try{return ve(ze,e),this}catch(e){throw Xe(1,e),e}}withConfigSrc(e){try{return e&&"string"==typeof e||Be(!1,"must be file path or URL"),Ee(We,{configSrc:e}),this}catch(e){throw Xe(1,e),e}}withVirtualWorkingDirectory(e){try{return e&&"string"==typeof e||Be(!1,"must be directory path"),ve(ze,{virtualWorkingDirectory:e}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariable(e,t){try{const o={};return o[e]=t,ve(ze,{environmentVariables:o}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariables(e){try{return e&&"object"==typeof e||Be(!1,"must be dictionary object"),ve(ze,{environmentVariables:e}),this}catch(e){throw Xe(1,e),e}}withDiagnosticTracing(e){try{return"boolean"!=typeof e&&Be(!1,"must be boolean"),ve(ze,{diagnosticTracing:e}),this}catch(e){throw Xe(1,e),e}}withDebugging(e){try{return null!=e&&"number"==typeof e||Be(!1,"must be number"),ve(ze,{debugLevel:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArguments(...e){try{return e&&Array.isArray(e)||Be(!1,"must be array of strings"),ve(ze,{applicationArguments:e}),this}catch(e){throw Xe(1,e),e}}withRuntimeOptions(e){try{return e&&Array.isArray(e)||Be(!1,"must be array of strings"),ze.runtimeOptions?ze.runtimeOptions.push(...e):ze.runtimeOptions=e,this}catch(e){throw Xe(1,e),e}}withMainAssembly(e){try{return ve(ze,{mainAssemblyName:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArgumentsFromQuery(){try{if(!globalThis.window)throw new Error("Missing window to the query parameters from");if(void 0===globalThis.URLSearchParams)throw new Error("URLSearchParams is supported");const e=new URLSearchParams(globalThis.window.location.search).getAll("arg");return this.withApplicationArguments(...e)}catch(e){throw Xe(1,e),e}}withApplicationEnvironment(e){try{return ve(ze,{applicationEnvironment:e}),this}catch(e){throw Xe(1,e),e}}withApplicationCulture(e){try{return ve(ze,{applicationCulture:e}),this}catch(e){throw Xe(1,e),e}}withResourceLoader(e){try{return Pe.loadBootResource=e,this}catch(e){throw Xe(1,e),e}}async download(){try{await async function(){lt(We),await Re(We),re(),D(),oe(),await Pe.allDownloadsFinished.promise}()}catch(e){throw Xe(1,e),e}}async create(){try{return this.instance||(this.instance=await async function(){return await ct(We),Fe.api}()),this.instance}catch(e){throw Xe(1,e),e}}async run(){try{return We.config||Be(!1,"Null moduleConfig.config"),this.instance||await this.create(),this.instance.runMainAndExit()}catch(e){throw Xe(1,e),e}}},mt=Xe,gt=ct;Ie||"function"==typeof globalThis.URL||Be(!1,"This browser/engine doesn't support URL API. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"),"function"!=typeof globalThis.BigInt64Array&&Be(!1,"This browser/engine doesn't support BigInt64Array API. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"),ft.withConfig(/*json-start*/{
+const e=()=>(async()=>{try{return new WebAssembly.Module(Uint8Array.from(atob("AGFzbQEAAAABBAFgAAADAgEAChABDgACaR9AAQMAAAsACxoL"),e=>e.codePointAt(0))),!0}catch(e){return!1}})(),o=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,15,1,13,0,65,1,253,15,65,2,253,15,253,128,2,11])),t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,0,0,1,5,1,96,0,1,123,3,2,1,0,10,10,1,8,0,65,0,253,15,253,98,11])),n=Symbol.for("wasm promise_control");function r(e,o){let t=null;const r=new Promise(function(n,r){t={isDone:!1,promise:null,resolve:o=>{t.isDone||(t.isDone=!0,n(o),e&&e())},reject:e=>{t.isDone||(t.isDone=!0,r(e),o&&o())}}});t.promise=r;const s=r;return s[n]=t,{promise:s,promise_control:t}}function s(e){return e[n]}function i(e){e&&function(e){return void 0!==e[n]}(e)||We(!1,"Promise is not controllable")}const a="__mono_message__",l=["debug","log","trace","warn","info","error"],c="MONO_WASM: ";let d,u,f,m,g,p;function h(e){m=e}function b(e){if(ke.diagnosticTracing){const o="function"==typeof e?e():e;console.debug(c+o)}}function w(e,...o){console.info(c+e,...o)}function y(e,...o){console.info(e,...o)}function v(e,...o){console.warn(c+e,...o)}function _(e,...o){if(o&&o.length>0&&o[0]&&"object"==typeof o[0]){if(o[0].silent)return;if(o[0].toString)return void console.error(c+e,o[0].toString())}console.error(c+e,...o)}function A(e,o,t){return function(...n){try{let r=n[0];if(void 0===r)r="undefined";else if(null===r)r="null";else if("function"==typeof r)r=r.toString();else if("string"!=typeof r)try{r=JSON.stringify(r)}catch(e){r=r.toString()}o(t?JSON.stringify({method:e,payload:r,arguments:n.slice(1)}):[e+r,...n.slice(1)])}catch(e){f.error(`proxyConsole failed: ${e}`)}}}function x(e,o,t){u=o,m=e,f={...o};const n=`${t}/console`.replace("https://","wss://").replace("http://","ws://");d=new WebSocket(n),d.addEventListener("error",E),d.addEventListener("close",j),function(){for(const e of l)u[e]=A(`console.${e}`,R,!0)}()}function T(e){let o=30;const t=()=>{d?0==d.bufferedAmount||0==o?(e&&y(e),function(){for(const e of l)u[e]=A(`console.${e}`,f.log,!1)}(),d.removeEventListener("error",E),d.removeEventListener("close",j),d.close(1e3,e),d=void 0):(o--,globalThis.setTimeout(t,100)):e&&f&&f.log(e)};t()}function R(e){d&&d.readyState===WebSocket.OPEN?d.send(e):f.log(e)}function E(e){f.error(`[${m}] proxy console websocket error: ${e}`,e)}function j(e){f.debug(`[${m}] proxy console websocket closed: ${e}`,e)}function D(){ke.preferredIcuAsset=C(ke.config);let e="invariant"==ke.config.globalizationMode;if(!e)if(ke.preferredIcuAsset)ke.diagnosticTracing&&b("ICU data archive(s) available, disabling invariant mode");else{if("custom"===ke.config.globalizationMode||"all"===ke.config.globalizationMode||"sharded"===ke.config.globalizationMode){const e="invariant globalization mode is inactive and no ICU data archives are available";throw _(`ERROR: ${e}`),new Error(e)}ke.diagnosticTracing&&b("ICU data archive(s) not available, using invariant globalization mode"),e=!0,ke.preferredIcuAsset=null}const o="DOTNET_SYSTEM_GLOBALIZATION_INVARIANT",t=ke.config.environmentVariables;if(void 0===t[o]&&e&&(t[o]="1"),void 0===t.TZ)try{const e=Intl.DateTimeFormat().resolvedOptions().timeZone||null;e&&(t.TZ=e)}catch(e){w("failed to detect timezone, will fallback to UTC")}}function C(e){var o;if((null===(o=e.resources)||void 0===o?void 0:o.icu)&&"invariant"!=e.globalizationMode){const o=e.applicationCulture||(Me?globalThis.navigator&&globalThis.navigator.languages&&globalThis.navigator.languages[0]:Intl.DateTimeFormat().resolvedOptions().locale);e.applicationCulture||(e.applicationCulture=o);const t=e.resources.icu;let n=null;if("custom"===e.globalizationMode){if(t.length>=1)return t[0].name}else o&&"all"!==e.globalizationMode?"sharded"===e.globalizationMode&&(n=function(e){const o=e.split("-")[0];return"en"===o||["fr","fr-FR","it","it-IT","de","de-DE","es","es-ES"].includes(e)?"icudt_EFIGS.dat":["zh","ko","ja"].includes(o)?"icudt_CJK.dat":"icudt_no_CJK.dat"}(o)):n="icudt.dat";if(n)for(let e=0;e<t.length;e++){const o=t[e];if(o.virtualPath===n)return o.name}}return e.globalizationMode="invariant",null}(new Date).valueOf();const M=class{constructor(e){this.url=e}toString(){return this.url}};async function S(e){if(Se&&"function"!=typeof globalThis.atob){const e="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";globalThis.atob=o=>{const t=String(o).replace(/=+$/,"");let n="";for(let o=0,r=0,s=0;s<t.length;s++){const i=e.indexOf(t.charAt(s));-1!==i&&(r=o%4?64*r+i:i,o++%4&&(n+=String.fromCharCode(255&r>>(-2*o&6))))}return n}}if(Ee){const e=await import(/*! webpackIgnore: true */"process"),o=14;if(e.versions.node.split(".")[0]<o)throw new Error(`NodeJS at '${e.execPath}' has too low version '${e.versions.node}', please use at least ${o}.`)}const o=/*! webpackIgnore: true */import.meta.url,t=o.indexOf("?");var n;if(t>0&&(ke.modulesUniqueQuery=o.substring(t)),ke.scriptUrl=o.replace(/\\/g,"/").replace(/[?#].*/,""),ke.scriptDirectory=(n=ke.scriptUrl).slice(0,n.lastIndexOf("/"))+"/",ke.locateFile=e=>"URL"in globalThis&&globalThis.URL!==M?new URL(e,ke.scriptDirectory).toString():I(e)?e:ke.scriptDirectory+e,ke.fetch_like=U,ke.out=console.log,ke.err=console.error,ke.onDownloadResourceProgress=e.onDownloadResourceProgress,Me&&globalThis.navigator){const e=globalThis.navigator,o=e.userAgentData&&e.userAgentData.brands;o&&o.length>0?ke.isChromium=o.some(e=>"Google Chrome"===e.brand||"Microsoft Edge"===e.brand||"Chromium"===e.brand):e.userAgent&&(ke.isChromium=e.userAgent.includes("Chrome"),ke.isFirefox=e.userAgent.includes("Firefox"))}void 0===globalThis.URL&&(globalThis.URL=M)}async function U(e,o){try{const t="function"==typeof globalThis.fetch;if(Ee){const n=e.startsWith("file://");if(!n&&t)return globalThis.fetch(e,o||{credentials:"same-origin"});g||(p=await import(/*! webpackIgnore: true */"url"),g=await import(/*! webpackIgnore: true */"fs")),n&&(e=p.fileURLToPath(e));const r=await g.promises.readFile(e);return{ok:!0,headers:{length:0,get:()=>null},url:e,arrayBuffer:()=>r,json:()=>JSON.parse(r),text:()=>{throw new Error("NotImplementedException")}}}if(t)return globalThis.fetch(e,o||{credentials:"same-origin"});if("function"==typeof read)return{ok:!0,url:e,headers:{length:0,get:()=>null},arrayBuffer:()=>new Uint8Array(read(e,"binary")),json:()=>JSON.parse(read(e,"utf8")),text:()=>read(e,"utf8")}}catch(o){return{ok:!1,url:e,status:500,headers:{length:0,get:()=>null},statusText:"ERR28: "+o,arrayBuffer:()=>{throw o},json:()=>{throw o},text:()=>{throw o}}}throw new Error("No fetch implementation available")}const P=/^[a-zA-Z][a-zA-Z\d+\-.]*?:\/\//,k=/[a-zA-Z]:[\\/]/;function I(e){return Ee||Se?e.startsWith("/")||e.startsWith("\\")||-1!==e.indexOf("///")||k.test(e):P.test(e)}let O,$=0;const L=[],N=[],z=new Map,F={"js-module-runtime":!0,"js-module-dotnet":!0,"js-module-native":!0,"js-module-diagnostics":!0},W={...F,"js-module-library-initializer":!0},V={...F,dotnetwasm:!0,heap:!0,manifest:!0},B={...W,manifest:!0},J={...W,dotnetwasm:!0},H={dotnetwasm:!0,symbols:!0},Q={...W,dotnetwasm:!0,symbols:!0},q={symbols:!0};function G(e){return!("icu"==e.behavior&&e.name!=ke.preferredIcuAsset)}function Z(e,o,t){null!=o||(o=[]),We(1==o.length,`Expect to have one ${t} asset in resources`);const n=o[0];return n.behavior=t,K(n),e.push(n),n}function K(e){V[e.behavior]&&z.set(e.behavior,e)}function X(e){We(V[e],`Unknown single asset behavior ${e}`);const o=z.get(e);if(o&&!o.resolvedUrl)if(o.resolvedUrl=ke.locateFile(o.name),F[o.behavior]){const e=me(o);e?("string"!=typeof e&&We(!1,"loadBootResource response for 'dotnetjs' type should be a URL string"),o.resolvedUrl=e):o.resolvedUrl=le(o.resolvedUrl,o.behavior)}else if("dotnetwasm"!==o.behavior)throw new Error(`Unknown single asset behavior ${e}`);return o}function Y(e){const o=X(e);return We(o,`Single asset for ${e} not found`),o}let ee=!1;async function oe(){if(!ee){ee=!0,ke.diagnosticTracing&&b("mono_download_assets");try{const e=[],o=[],t=(e,o)=>{!Q[e.behavior]&&G(e)&&ke.expected_instantiated_assets_count++,!J[e.behavior]&&G(e)&&(ke.expected_downloaded_assets_count++,o.push(se(e)))};for(const o of L)t(o,e);for(const e of N)t(e,o);ke.allDownloadsQueued.promise_control.resolve(),Promise.all([...e,...o]).then(()=>{ke.allDownloadsFinished.promise_control.resolve()}).catch(e=>{throw ke.err("Error in mono_download_assets: "+e),Xe(1,e),e}),await ke.runtimeModuleLoaded.promise;const n=async e=>{const o=await e;if(H[o.behavior])return"symbols"===o.behavior&&(await Pe.instantiate_symbols_asset(o),ge(o)),void++ke.actual_downloaded_assets_count;if(o.buffer){if(!Q[o.behavior]){o.buffer&&"object"==typeof o.buffer||We(!1,"asset buffer must be array-like or buffer-like or promise of these"),"string"!=typeof o.resolvedUrl&&We(!1,"resolvedUrl must be string");const e=o.resolvedUrl,t=await o.buffer,n=new Uint8Array(t);ge(o),await Pe.beforeOnRuntimeInitialized.promise,await Pe.afterInstantiateWasm.promise,Pe.instantiate_asset(o,e,n)}}else o.isOptional||We(!1,"Expected asset to have the downloaded buffer"),!J[o.behavior]&&G(o)&&ke.expected_downloaded_assets_count--,!Q[o.behavior]&&G(o)&&ke.expected_instantiated_assets_count--},r=[],s=[];for(const o of e)r.push(n(o));for(const e of o)s.push(n(e));Promise.all(r).then(()=>{Ce||Pe.coreAssetsInMemory.promise_control.resolve()}).catch(e=>{throw ke.err("Error in mono_download_assets: "+e),Xe(1,e),e}),Promise.all(s).then(async()=>{Ce||(await Pe.coreAssetsInMemory.promise,Pe.allAssetsInMemory.promise_control.resolve())}).catch(e=>{throw ke.err("Error in mono_download_assets: "+e),Xe(1,e),e})}catch(e){throw ke.err("Error in mono_download_assets: "+e),e}}}let te=!1;function ne(){if(te)return;te=!0;const e=ke.config,o=[];if(e.assets)for(const o of e.assets)"object"!=typeof o&&We(!1,`asset must be object, it was ${typeof o} : ${o}`),"string"!=typeof o.behavior&&We(!1,"asset behavior must be known string"),"string"!=typeof o.name&&We(!1,"asset name must be string"),o.resolvedUrl&&"string"!=typeof o.resolvedUrl&&We(!1,"asset resolvedUrl could be string"),o.hash&&"string"!=typeof o.hash&&We(!1,"asset resolvedUrl could be string"),o.pendingDownload&&"object"!=typeof o.pendingDownload&&We(!1,"asset pendingDownload could be object"),o.isCore?L.push(o):N.push(o),K(o);else if(e.resources){const t=e.resources;t.wasmNative||We(!1,"resources.wasmNative must be defined"),t.jsModuleNative||We(!1,"resources.jsModuleNative must be defined"),t.jsModuleRuntime||We(!1,"resources.jsModuleRuntime must be defined"),Z(N,t.wasmNative,"dotnetwasm"),Z(o,t.jsModuleNative,"js-module-native"),Z(o,t.jsModuleRuntime,"js-module-runtime"),t.jsModuleDiagnostics&&Z(o,t.jsModuleDiagnostics,"js-module-diagnostics");const n=(e,o,t)=>{const n=e;n.behavior=o,t?(n.isCore=!0,L.push(n)):N.push(n)};if(t.coreAssembly)for(let e=0;e<t.coreAssembly.length;e++)n(t.coreAssembly[e],"assembly",!0);if(t.assembly)for(let e=0;e<t.assembly.length;e++)n(t.assembly[e],"assembly",!t.coreAssembly);if(0!=e.debugLevel&&ke.isDebuggingSupported()){if(t.corePdb)for(let e=0;e<t.corePdb.length;e++)n(t.corePdb[e],"pdb",!0);if(t.pdb)for(let e=0;e<t.pdb.length;e++)n(t.pdb[e],"pdb",!t.corePdb)}if(e.loadAllSatelliteResources&&t.satelliteResources)for(const e in t.satelliteResources)for(let o=0;o<t.satelliteResources[e].length;o++){const r=t.satelliteResources[e][o];r.culture=e,n(r,"resource",!t.coreAssembly)}if(t.coreVfs)for(let e=0;e<t.coreVfs.length;e++)n(t.coreVfs[e],"vfs",!0);if(t.vfs)for(let e=0;e<t.vfs.length;e++)n(t.vfs[e],"vfs",!t.coreVfs);const r=C(e);if(r&&t.icu)for(let e=0;e<t.icu.length;e++){const o=t.icu[e];o.name===r&&n(o,"icu",!1)}if(t.wasmSymbols)for(let e=0;e<t.wasmSymbols.length;e++)n(t.wasmSymbols[e],"symbols",!1)}if(e.appsettings)for(let o=0;o<e.appsettings.length;o++){const t=e.appsettings[o],n=pe(t);"appsettings.json"!==n&&n!==`appsettings.${e.applicationEnvironment}.json`||N.push({name:t,behavior:"vfs",cache:"no-cache",useCredentials:!0})}e.assets=[...L,...N,...o]}async function re(e){const o=await se(e);return await o.pendingDownloadInternal.response,o.buffer}async function se(e){try{return await ie(e)}catch(o){if(!ke.enableDownloadRetry)throw o;if(Se||Ee)throw o;if(e.pendingDownload&&e.pendingDownloadInternal==e.pendingDownload)throw o;if(e.resolvedUrl&&-1!=e.resolvedUrl.indexOf("file://"))throw o;if(o&&404==o.status)throw o;e.pendingDownloadInternal=void 0,await ke.allDownloadsQueued.promise;try{return ke.diagnosticTracing&&b(`Retrying download '${e.name}'`),await ie(e)}catch(o){return e.pendingDownloadInternal=void 0,await new Promise(e=>globalThis.setTimeout(e,100)),ke.diagnosticTracing&&b(`Retrying download (2) '${e.name}' after delay`),await ie(e)}}}async function ie(e){for(;O;)await O.promise;try{++$,$==ke.maxParallelDownloads&&(ke.diagnosticTracing&&b("Throttling further parallel downloads"),O=r());const o=await async function(e){if(e.pendingDownload&&(e.pendingDownloadInternal=e.pendingDownload),e.pendingDownloadInternal&&e.pendingDownloadInternal.response)return e.pendingDownloadInternal.response;if(e.buffer){const o=await e.buffer;return e.resolvedUrl||(e.resolvedUrl="undefined://"+e.name),e.pendingDownloadInternal={url:e.resolvedUrl,name:e.name,response:Promise.resolve({ok:!0,arrayBuffer:()=>o,json:()=>JSON.parse(new TextDecoder("utf-8").decode(o)),text:()=>new TextDecoder("utf-8").decode(o),headers:{get:()=>{}}})},e.pendingDownloadInternal.response}const o=e.loadRemote&&ke.config.remoteSources?ke.config.remoteSources:[""];let t;for(let n of o){n=n.trim(),"./"===n&&(n="");const o=ae(e,n);e.name===o?ke.diagnosticTracing&&b(`Attempting to download '${o}'`):ke.diagnosticTracing&&b(`Attempting to download '${o}' for ${e.name}`);try{e.resolvedUrl=o;const n=ue(e);if(e.pendingDownloadInternal=n,t=await n.response,!t||!t.ok)continue;return t}catch(e){t||(t={ok:!1,url:o,status:0,statusText:""+e});continue}}const n=e.isOptional||e.name.match(/\.pdb$/)&&ke.config.ignorePdbLoadErrors;if(t||We(!1,`Response undefined ${e.name}`),!n){const o=new Error(`download '${t.url}' for ${e.name} failed ${t.status} ${t.statusText}`);throw o.status=t.status,o}w(`optional download '${t.url}' for ${e.name} failed ${t.status} ${t.statusText}`)}(e);return o?(H[e.behavior]||(e.buffer=await o.arrayBuffer(),++ke.actual_downloaded_assets_count),e):e}finally{if(--$,O&&$==ke.maxParallelDownloads-1){ke.diagnosticTracing&&b("Resuming more parallel downloads");const e=O;O=void 0,e.promise_control.resolve()}}}function ae(e,o){let t;return null==o&&We(!1,`sourcePrefix must be provided for ${e.name}`),e.resolvedUrl?t=e.resolvedUrl:(t=""===o?"assembly"===e.behavior||"pdb"===e.behavior?e.name:"resource"===e.behavior&&e.culture&&""!==e.culture?`${e.culture}/${e.name}`:e.name:o+e.name,t=le(ke.locateFile(t),e.behavior)),t&&"string"==typeof t||We(!1,"attemptUrl need to be path or url string"),t}function le(e,o){return ke.modulesUniqueQuery&&B[o]&&(e+=ke.modulesUniqueQuery),e}let ce=0;const de=new Set;function ue(e){try{e.resolvedUrl||We(!1,"Request's resolvedUrl must be set");const o=function(e){let o=e.resolvedUrl;if(ke.loadBootResource){const t=me(e);if(t instanceof Promise)return t;"string"==typeof t&&(o=t)}const t={};return e.cache?t.cache=e.cache:ke.config.disableNoCacheFetch||(t.cache="no-cache"),e.useCredentials?t.credentials="include":!ke.config.disableIntegrityCheck&&e.hash&&(t.integrity=e.hash),ke.fetch_like(o,t)}(e),t={name:e.name,url:e.resolvedUrl,response:o};return de.add(e.name),t.response.then(()=>{"assembly"==e.behavior&&ke.loadedAssemblies.push(e.name),ce++,ke.onDownloadResourceProgress&&ke.onDownloadResourceProgress(ce,de.size)}),t}catch(o){const t={ok:!1,url:e.resolvedUrl,status:500,statusText:"ERR29: "+o,arrayBuffer:()=>{throw o},json:()=>{throw o}};return{name:e.name,url:e.resolvedUrl,response:Promise.resolve(t)}}}const fe={resource:"assembly",assembly:"assembly",pdb:"pdb",icu:"globalization",vfs:"configuration",manifest:"manifest",dotnetwasm:"dotnetwasm","js-module-dotnet":"dotnetjs","js-module-native":"dotnetjs","js-module-runtime":"dotnetjs"};function me(e){var o;if(ke.loadBootResource){const t=null!==(o=e.hash)&&void 0!==o?o:"",n=e.resolvedUrl,r=fe[e.behavior];if(r){const o=ke.loadBootResource(r,e.name,n,t,e.behavior);return"string"==typeof o?function(e){return"string"!=typeof e&&We(!1,"url must be a string"),!I(e)&&0!==e.indexOf("./")&&0!==e.indexOf("../")&&globalThis.URL&&globalThis.document&&globalThis.document.baseURI&&(e=new URL(e,globalThis.document.baseURI).toString()),e}(o):o}}}function ge(e){e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null}function pe(e){let o=e.lastIndexOf("/");return o>=0&&o++,e.substring(o)}async function he(e){e&&await Promise.all((null!=e?e:[]).map(e=>async function(e){try{const o=e.name;if(!e.moduleExports){const t=le(ke.locateFile(o),"js-module-library-initializer");ke.diagnosticTracing&&b(`Attempting to import '${t}' for ${e}`),e.moduleExports=await import(/*! webpackIgnore: true */t)}ke.libraryInitializers.push({scriptName:o,exports:e.moduleExports})}catch(o){v(`Failed to import library initializer '${e}': ${o}`)}}(e)))}async function be(e,o){if(!ke.libraryInitializers)return;const t=[];for(let n=0;n<ke.libraryInitializers.length;n++){const r=ke.libraryInitializers[n];r.exports[e]&&t.push(we(r.scriptName,e,()=>r.exports[e](...o)))}await Promise.all(t)}async function we(e,o,t){try{await t()}catch(t){throw v(`Failed to invoke '${o}' on library initializer '${e}': ${t}`),Xe(1,t),t}}function ye(e,o){if(e===o)return e;const t={...o};return void 0!==t.assets&&t.assets!==e.assets&&(t.assets=[...e.assets||[],...t.assets||[]]),void 0!==t.resources&&(t.resources=_e(e.resources||{assembly:[],jsModuleNative:[],jsModuleRuntime:[],wasmNative:[]},t.resources)),void 0!==t.environmentVariables&&(t.environmentVariables={...e.environmentVariables||{},...t.environmentVariables||{}}),void 0!==t.runtimeOptions&&t.runtimeOptions!==e.runtimeOptions&&(t.runtimeOptions=[...e.runtimeOptions||[],...t.runtimeOptions||[]]),Object.assign(e,t)}function ve(e,o){if(e===o)return e;const t={...o};return t.config&&(e.config||(e.config={}),t.config=ye(e.config,t.config)),Object.assign(e,t)}function _e(e,o){if(e===o)return e;const t={...o};return void 0!==t.coreAssembly&&(t.coreAssembly=[...e.coreAssembly||[],...t.coreAssembly||[]]),void 0!==t.assembly&&(t.assembly=[...e.assembly||[],...t.assembly||[]]),void 0!==t.lazyAssembly&&(t.lazyAssembly=[...e.lazyAssembly||[],...t.lazyAssembly||[]]),void 0!==t.corePdb&&(t.corePdb=[...e.corePdb||[],...t.corePdb||[]]),void 0!==t.pdb&&(t.pdb=[...e.pdb||[],...t.pdb||[]]),void 0!==t.jsModuleNative&&(t.jsModuleNative=[...e.jsModuleNative||[],...t.jsModuleNative||[]]),void 0!==t.jsModuleDiagnostics&&(t.jsModuleDiagnostics=[...e.jsModuleDiagnostics||[],...t.jsModuleDiagnostics||[]]),void 0!==t.jsModuleRuntime&&(t.jsModuleRuntime=[...e.jsModuleRuntime||[],...t.jsModuleRuntime||[]]),void 0!==t.wasmSymbols&&(t.wasmSymbols=[...e.wasmSymbols||[],...t.wasmSymbols||[]]),void 0!==t.wasmNative&&(t.wasmNative=[...e.wasmNative||[],...t.wasmNative||[]]),void 0!==t.icu&&(t.icu=[...e.icu||[],...t.icu||[]]),void 0!==t.satelliteResources&&(t.satelliteResources=function(e,o){if(e===o)return e;for(const t in o)e[t]=[...e[t]||[],...o[t]||[]];return e}(e.satelliteResources||{},t.satelliteResources||{})),void 0!==t.modulesAfterConfigLoaded&&(t.modulesAfterConfigLoaded=[...e.modulesAfterConfigLoaded||[],...t.modulesAfterConfigLoaded||[]]),void 0!==t.modulesAfterRuntimeReady&&(t.modulesAfterRuntimeReady=[...e.modulesAfterRuntimeReady||[],...t.modulesAfterRuntimeReady||[]]),void 0!==t.extensions&&(t.extensions={...e.extensions||{},...t.extensions||{}}),void 0!==t.vfs&&(t.vfs=[...e.vfs||[],...t.vfs||[]]),Object.assign(e,t)}function Ae(){const e=ke.config;if(e.environmentVariables=e.environmentVariables||{},e.runtimeOptions=e.runtimeOptions||[],e.resources=e.resources||{assembly:[],jsModuleNative:[],jsModuleRuntime:[],wasmNative:[],vfs:[],satelliteResources:{}},e.assets){ke.diagnosticTracing&&b("config.assets is deprecated, use config.resources instead");for(const o of e.assets){const t={};switch(o.behavior){case"assembly":t.assembly=[o];break;case"pdb":t.pdb=[o];break;case"resource":t.satelliteResources={},t.satelliteResources[o.culture]=[o];break;case"icu":t.icu=[o];break;case"symbols":t.wasmSymbols=[o];break;case"vfs":t.vfs=[o];break;case"dotnetwasm":t.wasmNative=[o];break;case"js-module-runtime":t.jsModuleRuntime=[o];break;case"js-module-native":t.jsModuleNative=[o];break;case"js-module-diagnostics":t.jsModuleDiagnostics=[o];break;case"js-module-dotnet":break;default:throw new Error(`Unexpected behavior ${o.behavior} of asset ${o.name}`)}_e(e.resources,t)}}e.debugLevel,void 0===e.virtualWorkingDirectory&&(e.virtualWorkingDirectory=Ue),e.applicationEnvironment||(e.applicationEnvironment="Production"),e.applicationCulture&&(e.environmentVariables.LANG=`${e.applicationCulture}.UTF-8`),Pe.diagnosticTracing=ke.diagnosticTracing=!!e.diagnosticTracing,Pe.waitForDebugger=e.waitForDebugger,ke.maxParallelDownloads=e.maxParallelDownloads||ke.maxParallelDownloads,ke.enableDownloadRetry=void 0!==e.enableDownloadRetry?e.enableDownloadRetry:ke.enableDownloadRetry}let xe=!1;async function Te(e){var o;if(xe)await ke.afterConfigLoaded.promise;else try{if(xe=!0,Ae(),await he(null===(o=ke.config.resources)||void 0===o?void 0:o.modulesAfterConfigLoaded),await be("onRuntimeConfigLoaded",[ke.config]),e.onConfigLoaded)try{await e.onConfigLoaded(ke.config,Oe),Ae()}catch(e){throw _("onConfigLoaded() failed",e),e}Ae(),ke.afterConfigLoaded.promise_control.resolve(ke.config)}catch(o){const t=`Failed to initialize config ${o} ${null==o?void 0:o.stack}`;throw ke.config=e.config=Object.assign(ke.config,{message:t,error:o,isError:!0}),Xe(1,new Error(t)),o}}function Re(){return!!globalThis.navigator&&(ke.isChromium||ke.isFirefox)}"function"==typeof importScripts&&(globalThis.dotnetSidecar=!0);const Ee="object"==typeof process&&"object"==typeof process.versions&&"string"==typeof process.versions.node,je="function"==typeof importScripts,De=je&&"undefined"!=typeof dotnetSidecar,Ce=je&&!De,Me="object"==typeof window||je&&!Ee,Se=!Me&&!Ee,Ue="/";let Pe={},ke={},Ie={},Oe={},$e={},Le=!1;const Ne={},ze={config:Ne},Fe={mono:{},binding:{},internal:$e,module:ze,loaderHelpers:ke,runtimeHelpers:Pe,diagnosticHelpers:Ie,api:Oe};function We(e,o){if(e)return;const t="Assert failed: "+("function"==typeof o?o():o),n=new Error(t);_(t,n),Pe.nativeAbort(n)}function Ve(){return void 0!==ke.exitCode}function Be(){return Pe.runtimeReady&&!Ve()}function Je(){Ve()&&We(!1,`.NET runtime already exited with ${ke.exitCode} ${ke.exitReason}. You can use dotnet.runMain() which doesn't exit the runtime.`),Pe.runtimeReady||We(!1,".NET runtime didn't start yet. Please call dotnet.create() first.")}function He(){Me&&(globalThis.addEventListener("unhandledrejection",eo),globalThis.addEventListener("error",oo))}let Qe,qe;function Ge(){Qe=ze.onAbort,qe=ze.onExit,ze.onAbort=Ke,ze.onExit=Ze}function Ze(e){qe&&qe(e),Xe(e,ke.exitReason)}function Ke(e){Qe&&Qe(e||ke.exitReason),Xe(1,e||ke.exitReason)}function Xe(e,o){var t;const n=o&&"object"==typeof o;e=n&&"number"==typeof o.status?o.status:void 0===e?-1:e;const r=n&&"string"==typeof o.message?o.message:""+o;(o=n?o:Pe.ExitStatus?function(e,o){const t=new Pe.ExitStatus(e);return t.message=o,t.toString=()=>o,t}(e,r):new Error("Exit with code "+e+" "+r)).status=e,o.message||(o.message=r);const s=""+(o.stack||(new Error).stack);try{Object.defineProperty(o,"stack",{get:()=>s})}catch(e){}const i=!!o.silent;if(o.silent=!0,Ve())ke.diagnosticTracing&&b("mono_exit called after exit");else{try{ze.onAbort==Ke&&(ze.onAbort=Qe),ze.onExit==Ze&&(ze.onExit=qe),Me&&(globalThis.removeEventListener("unhandledrejection",eo),globalThis.removeEventListener("error",oo)),Pe.runtimeReady?(Pe.jiterpreter_dump_stats&&Pe.jiterpreter_dump_stats(!1),0===e&&(null===(t=ke.config)||void 0===t?void 0:t.interopCleanupOnExit)&&Pe.forceDisposeProxies(!0,!0)):(ke.diagnosticTracing&&b(`abort_startup, reason: ${o}`),function(e){ke.allDownloadsQueued.promise_control.reject(e),ke.allDownloadsFinished.promise_control.reject(e),ke.afterConfigLoaded.promise_control.reject(e),ke.wasmCompilePromise.promise_control.reject(e),ke.runtimeModuleLoaded.promise_control.reject(e),Pe.dotnetReady&&(Pe.dotnetReady.promise_control.reject(e),Pe.afterInstantiateWasm.promise_control.reject(e),Pe.afterPreRun.promise_control.reject(e),Pe.beforeOnRuntimeInitialized.promise_control.reject(e),Pe.afterOnRuntimeInitialized.promise_control.reject(e),Pe.afterPostRun.promise_control.reject(e))}(o))}catch(e){v("mono_exit A failed",e)}try{i||(function(e,o){if(0!==e&&o){const e=Pe.ExitStatus&&o instanceof Pe.ExitStatus?b:_;"string"==typeof o?e(o):(void 0===o.stack&&(o.stack=(new Error).stack+""),o.message?e(Pe.stringify_as_error_with_stack?Pe.stringify_as_error_with_stack(o.message+"\n"+o.stack):o.message+"\n"+o.stack):e(JSON.stringify(o)))}!Ce&&ke.config&&(ke.config.logExitCode?ke.config.forwardConsole?T("WASM EXIT "+e):y("WASM EXIT "+e):ke.config.forwardConsole&&T())}(e,o),function(e){if(Me&&!Ce&&ke.config&&ke.config.appendElementOnExit&&document){const o=document.createElement("label");o.id="tests_done",0!==e&&(o.style.background="red"),o.innerHTML=""+e,document.body.appendChild(o)}}(e))}catch(e){v("mono_exit B failed",e)}ke.exitCode=e,ke.exitReason||(ke.exitReason=o),!Ce&&Pe.runtimeReady&&ze.runtimeKeepalivePop()}if(ke.config&&ke.config.asyncFlushOnExit&&0===e)throw(async()=>{try{await async function(){if(Ee)try{const e=await import(/*! webpackIgnore: true */"process"),o=e=>new Promise((o,t)=>{e.on("error",t),e.end("","utf8",o)}),t=o(e.stderr),n=o(e.stdout);let r;const s=new Promise(e=>{r=setTimeout(()=>e("timeout"),1e3)});await Promise.race([Promise.all([n,t]),s]),clearTimeout(r)}catch(e){_(`flushing std* streams failed: ${e}`)}}()}finally{Ye(e,o)}})(),o;Ye(e,o)}function Ye(e,o){if(Pe.runtimeReady&&Pe.nativeExit)try{Pe.nativeExit(e)}catch(e){!Pe.ExitStatus||e instanceof Pe.ExitStatus||v("set_exit_code_and_quit_now failed: "+e.toString())}if(0!==e||!Me)throw Ee?process.exit(e):Pe.quit&&Pe.quit(e,o),o}function eo(e){to(e,e.reason,"rejection")}function oo(e){to(e,e.error,"error")}function to(e,o,t){e.preventDefault();try{o||(o=new Error("Unhandled "+t)),void 0===o.stack&&(o.stack=(new Error).stack),o.stack=o.stack+"",o.silent||(_("Unhandled error:",o),Xe(1,o))}catch(e){}}!function(n){if(Le)throw new Error("Loader module already loaded");Le=!0,Pe=n.runtimeHelpers,ke=n.loaderHelpers,Ie=n.diagnosticHelpers,Oe=n.api,$e=n.internal,Object.assign(Oe,{INTERNAL:$e,invokeLibraryInitializers:be}),Object.assign(n.module,{config:ye(Ne,{environmentVariables:{}})});const a={mono_wasm_bindings_is_ready:!1,config:n.module.config,diagnosticTracing:!1,nativeAbort:e=>{throw e||new Error("abort")},nativeExit:e=>{throw new Error("exit:"+e)}},l={gitHash:"5254d8bcf59917edc1e1abc33bdf2442b77b1c70",config:n.module.config,diagnosticTracing:!1,maxParallelDownloads:16,enableDownloadRetry:!0,_loaded_files:[],loadedFiles:[],loadedAssemblies:[],libraryInitializers:[],workerNextNumber:1,actual_downloaded_assets_count:0,actual_instantiated_assets_count:0,expected_downloaded_assets_count:0,expected_instantiated_assets_count:0,afterConfigLoaded:r(),allDownloadsQueued:r(),allDownloadsFinished:r(),wasmCompilePromise:r(),runtimeModuleLoaded:r(),loadingWorkers:r(),is_exited:Ve,is_runtime_running:Be,assert_runtime_running:Je,mono_exit:Xe,createPromiseController:r,getPromiseController:s,assertIsControllablePromise:i,mono_download_assets:oe,resolve_single_asset_path:Y,setup_proxy_console:x,set_thread_prefix:h,installUnhandledErrorHandler:He,retrieve_asset_download:re,invokeLibraryInitializers:be,isDebuggingSupported:Re,exceptionsFinal:e,simd:t,relaxedSimd:o};Object.assign(Pe,a),Object.assign(ke,l)}(Fe);let no,ro,so,io=!1,ao=!1;async function lo(e){if(!ao){if(ao=!0,Me&&ke.config.forwardConsole&&void 0!==globalThis.WebSocket&&x("main",globalThis.console,globalThis.location.origin),ze||We(!1,"Null moduleConfig"),ke.config||We(!1,"Null moduleConfig.config"),"function"==typeof e){const o=e(Fe.api);if(o.ready)throw new Error("Module.ready couldn't be redefined.");Object.assign(ze,o),ve(ze,o)}else{if("object"!=typeof e)throw new Error("Can't use moduleFactory callback of createDotnetRuntime function.");ve(ze,e)}await S(ze)}}async function co(e){return await lo(e),ke.config.exitOnUnhandledError&&He(),Ge(),async function(){var e;await Te(ze),ne();const o=uo();(async function(){try{const e=Y("dotnetwasm");await se(e),e&&e.pendingDownloadInternal&&e.pendingDownloadInternal.response||We(!1,"Can't load dotnet.native.wasm");const o=await e.pendingDownloadInternal.response,t=o.headers&&o.headers.get?o.headers.get("Content-Type"):void 0;let n;if("function"==typeof WebAssembly.compileStreaming&&"application/wasm"===t)n=await WebAssembly.compileStreaming(o);else{Me&&"application/wasm"!==t&&v('WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.');const e=await o.arrayBuffer();ke.diagnosticTracing&&b("instantiate_wasm_module buffered"),n=Se?await Promise.resolve(new WebAssembly.Module(e)):await WebAssembly.compile(e)}e.pendingDownloadInternal=null,e.pendingDownload=null,e.buffer=null,e.moduleExports=null,ke.wasmCompilePromise.promise_control.resolve(n)}catch(e){ke.wasmCompilePromise.promise_control.reject(e)}})(),setTimeout(async()=>{try{D(),await oe()}catch(e){Xe(1,e)}},0);const t=await Promise.all(o);return await fo(t),await Pe.dotnetReady.promise,await he(null===(e=ke.config.resources)||void 0===e?void 0:e.modulesAfterRuntimeReady),await be("onRuntimeReady",[Fe.api]),Oe}()}function uo(){const e=Y("js-module-runtime"),o=Y("js-module-native");if(no&&ro)return[no,ro,so];"object"==typeof e.moduleExports?no=e.moduleExports:(ke.diagnosticTracing&&b(`Attempting to import '${e.resolvedUrl}' for ${e.name}`),no=import(/*! webpackIgnore: true */e.resolvedUrl)),"object"==typeof o.moduleExports?ro=o.moduleExports:(ke.diagnosticTracing&&b(`Attempting to import '${o.resolvedUrl}' for ${o.name}`),ro=import(/*! webpackIgnore: true */o.resolvedUrl));const t=X("js-module-diagnostics");return t&&("object"==typeof t.moduleExports?so=t.moduleExports:(ke.diagnosticTracing&&b(`Attempting to import '${t.resolvedUrl}' for ${t.name}`),so=import(/*! webpackIgnore: true */t.resolvedUrl))),[no,ro,so]}async function fo(e){const{initializeExports:o,initializeReplacements:t,configureRuntimeStartup:n,configureEmscriptenStartup:r,configureWorkerStartup:s,setRuntimeGlobals:i,passEmscriptenInternals:a}=e[0],{default:l}=e[1],c=e[2];i(Fe),o(Fe),c&&c.setRuntimeGlobals(Fe),await n(ze),ke.runtimeModuleLoaded.promise_control.resolve(),l(()=>(Object.assign(ze,{__dotnet_runtime:{initializeReplacements:t,configureEmscriptenStartup:r,configureWorkerStartup:s,passEmscriptenInternals:a}}),ze)).catch(e=>{if(e.message&&e.message.toLowerCase().includes("out of memory"))throw new Error(".NET runtime has failed to start, because too much memory was requested. Please decrease the memory by adjusting EmccMaximumHeapSize.");throw e})}Ce&&async function(){(function(){const e=new MessageChannel,o=e.port1,t=e.port2;o.addEventListener("message",e=>{!function(e){const o=JSON.parse(e.config),t=JSON.parse(e.monoThreadInfo);ze.config=o,ze.wasmModule=e.wasmModule,ze.wasmMemory=e.wasmMemory,ze.handlers=e.handlers,io?ke.diagnosticTracing&&b("mono config already received"):(ye(ke.config,o),Pe.monoThreadInfo=t,Ae(),ke.diagnosticTracing&&b("mono config received"),io=!0,ke.afterConfigLoaded.promise_control.resolve(ke.config),Me&&o.forwardConsole&&void 0!==globalThis.WebSocket&&ke.setup_proxy_console("worker-idle",console,globalThis.location.origin))}(e.data),o.close(),t.close()},{once:!0}),o.start(),self.postMessage({[a]:{monoCmd:"preload",port:t}},[t])})(),await ke.afterConfigLoaded.promise,function(){const e=ke.config;e.assets||We(!1,"config.assets must be defined");for(const o of e.assets)K(o),q[o.behavior]&&N.push(o)}();const e=uo(),o=await Promise.all(e);return globalThis.name="em-pthread",await fo(o),ke.config.exitOnUnhandledError&&He(),Ge(),Me&&ke.config.forwardConsole&&void 0!==globalThis.WebSocket&&x("main",globalThis.console,globalThis.location.origin),await S(ze),await oe(),self.dispatchEvent(new MessageEvent("message",{data:{cmd:1,handlers:ze.handlers,wasmMemory:ze.wasmMemory,wasmModule:ze.wasmModule}})),ze}().catch(e=>Xe(1,e));const mo=new class{withModuleConfig(e){try{return ve(ze,e),this}catch(e){throw Xe(1,e),e}}withInterpreterPgo(e,o){try{return ye(Ne,{interpreterPgo:e,interpreterPgoSaveDelay:o}),Ne.runtimeOptions?Ne.runtimeOptions.push("--interp-pgo-recording"):Ne.runtimeOptions=["--interp-pgo-recording"],this}catch(e){throw Xe(1,e),e}}withConfig(e){try{return ye(Ne,e),this}catch(e){throw Xe(1,e),e}}withConfigSrc(e){return this}withVirtualWorkingDirectory(e){try{return e&&"string"==typeof e||We(!1,"must be directory path"),ye(Ne,{virtualWorkingDirectory:e}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariable(e,o){try{const t={};return t[e]=o,ye(Ne,{environmentVariables:t}),this}catch(e){throw Xe(1,e),e}}withEnvironmentVariables(e){try{return e&&"object"==typeof e||We(!1,"must be dictionary object"),ye(Ne,{environmentVariables:e}),this}catch(e){throw Xe(1,e),e}}withDiagnosticTracing(e){try{return"boolean"!=typeof e&&We(!1,"must be boolean"),ye(Ne,{diagnosticTracing:e}),this}catch(e){throw Xe(1,e),e}}withDebugging(e){try{return null!=e&&"number"==typeof e||We(!1,"must be number"),ye(Ne,{debugLevel:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArguments(...e){try{return e&&Array.isArray(e)||We(!1,"must be array of strings"),ye(Ne,{applicationArguments:e}),this}catch(e){throw Xe(1,e),e}}withRuntimeOptions(e){try{return e&&Array.isArray(e)||We(!1,"must be array of strings"),Ne.runtimeOptions?Ne.runtimeOptions.push(...e):Ne.runtimeOptions=e,this}catch(e){throw Xe(1,e),e}}withMainAssembly(e){try{return ye(Ne,{mainAssemblyName:e}),this}catch(e){throw Xe(1,e),e}}withApplicationArgumentsFromQuery(){try{if(!globalThis.window)throw new Error("Missing window to the query parameters from");if(void 0===globalThis.URLSearchParams)throw new Error("URLSearchParams is supported");const e=new URLSearchParams(globalThis.window.location.search).getAll("arg");return this.withApplicationArguments(...e)}catch(e){throw Xe(1,e),e}}withApplicationEnvironment(e){try{return ye(Ne,{applicationEnvironment:e}),this}catch(e){throw Xe(1,e),e}}withApplicationCulture(e){try{return ye(Ne,{applicationCulture:e}),this}catch(e){throw Xe(1,e),e}}withResourceLoader(e){try{return ke.loadBootResource=e,this}catch(e){throw Xe(1,e),e}}async download(){try{await async function(){lo(ze),await Te(ze),ne(),D(),oe(),await ke.allDownloadsFinished.promise}()}catch(e){throw Xe(1,e),e}}async create(){try{return this.instance||(this.instance=await async function(){return await co(ze),Fe.api}()),this.instance}catch(e){throw Xe(1,e),e}}run(){return this.runMainAndExit()}async runMainAndExit(){try{return ze.config||We(!1,"Null moduleConfig.config"),this.instance||await this.create(),this.instance.runMainAndExit()}catch(e){throw Xe(1,e),e}}async runMain(){try{return ze.config||We(!1,"Null moduleConfig.config"),this.instance||await this.create(),this.instance.runMain()}catch(e){throw Xe(1,e),e}}},go=Xe,po=co;Se||"function"==typeof globalThis.URL||We(!1,"This browser/engine doesn't support URL API. Please use a modern version."),"function"!=typeof globalThis.BigInt64Array&&We(!1,"This browser/engine doesn't support BigInt64Array API. Please use a modern version. See also https://learn.microsoft.com/aspnet/core/blazor/supported-platforms"),globalThis.performance&&"function"==typeof globalThis.performance.now||We(!1,"This browser/engine doesn't support performance.now. Please use a modern version."),Se||globalThis.crypto&&"object"==typeof globalThis.crypto.subtle||We(!1,"This engine doesn't support crypto.subtle. Please use a modern version."),Se||globalThis.crypto&&"function"==typeof globalThis.crypto.getRandomValues||We(!1,"This engine doesn't support crypto.getRandomValues. Please use a modern version."),Ee&&"function"!=typeof process.exit&&We(!1,"This engine doesn't support process.exit. Please use a modern version."),mo.withConfig(/*json-start*/{
   "mainAssemblyName": "Soenneker.Quark.Suite.Demo",
   "resources": {
-    "hash": "sha256-Qi3wjSfuta5ICBs2Z/jKW+xcOidbQ6Z1W9V7+h93ruw=",
+    "hash": "sha256-bbKh9COWBQpDwiuaty6G9IwrNdvWrsQxNmMFAl9hU/w=",
     "jsModuleNative": [
       {
-        "name": "dotnet.native.6hxud45j4c.js"
+        "name": "dotnet.native.k851xj4z1b.js"
       }
     ],
     "jsModuleRuntime": [
       {
-        "name": "dotnet.runtime.azrfhwb804.js"
+        "name": "dotnet.runtime.tzjft7ib9j.js"
       }
     ],
     "wasmNative": [
       {
-        "name": "dotnet.native.z4k6nhnm75.wasm",
-        "hash": "sha256-c/YFUsb5WEZrilpRdbIrN+mTa1pxya+54i7ruW1nSrE=",
+        "name": "dotnet.native.qqas4hprap.wasm",
+        "hash": "sha256-Yt0W04rN2xcyIo7WzYvcY9YCjb1KUsIuXPUMmrsLQXE=",
         "cache": "force-cache"
       }
     ],
     "icu": [
       {
         "virtualPath": "icudt_CJK.dat",
-        "name": "icudt_CJK.tjcz0u77k5.dat",
-        "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
+        "name": "icudt_CJK.5lgyv9xn0b.dat",
+        "hash": "sha256-eZuX0pntrUwNrAmFCMwpxJjFA3/Myi/rW2x9mEZ+Mbg=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "icudt_EFIGS.dat",
-        "name": "icudt_EFIGS.tptq2av103.dat",
-        "hash": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
+        "name": "icudt_EFIGS.xyuimhy3ww.dat",
+        "hash": "sha256-SQcxb+bdx2UXUCU9tFdOWCr4Ctk64xghCnr0JGLWWKQ=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "icudt_no_CJK.dat",
-        "name": "icudt_no_CJK.lfu7j35m59.dat",
-        "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs=",
+        "name": "icudt_no_CJK.h0en30vv0c.dat",
+        "hash": "sha256-T8YllylpxyWp9Aq4AiF+BMAxKXqYyzWB9RA5RqY19vs=",
         "cache": "force-cache"
       }
     ],
     "coreAssembly": [
       {
+        "payloadSize": 44112,
         "virtualPath": "System.Runtime.InteropServices.JavaScript.wasm",
-        "name": "System.Runtime.InteropServices.JavaScript.2h81ftq2dy.wasm",
-        "hash": "sha256-2vsAdKWBErzY6EocA7xnEf5lq1vRQia9Z5hsfP5pw84=",
+        "name": "System.Runtime.InteropServices.JavaScript.czzvbunlz4.wasm",
+        "hash": "sha256-GGUn/3Rj5rje8ITwLkCrQjdNgP77K8YS/nqZSnKCyMo=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 2590288,
         "virtualPath": "System.Private.CoreLib.wasm",
-        "name": "System.Private.CoreLib.pe4440wk47.wasm",
-        "hash": "sha256-UXNIpDnEPikvAXuu276oMBQmIP6SBiuZeRUXoRu/96A=",
+        "name": "System.Private.CoreLib.utr53iwdge.wasm",
+        "hash": "sha256-3jgMlhfoykryX7Hpmd3UfM6ZXuEJpVwGCOpalVp+xAY=",
         "cache": "force-cache"
       }
     ],
     "assembly": [
       {
+        "payloadSize": 2433104,
         "virtualPath": "Bogus.wasm",
-        "name": "Bogus.yn7e1oy79k.wasm",
-        "hash": "sha256-sgBQWvDAeMztRt/Zz3kbIhHu0/sWUoKHV/CddXYETlY=",
+        "name": "Bogus.1xv4rmdijs.wasm",
+        "hash": "sha256-ld0Iz99gTi0z8IrJQFtnCJXSg8m61uz9E6QIOQcaxwo=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 298576,
         "virtualPath": "Microsoft.AspNetCore.Components.wasm",
-        "name": "Microsoft.AspNetCore.Components.swa6819ea7.wasm",
-        "hash": "sha256-RMc+udjSWt2xbSYa5742X6rHshrvynEoco3mRaCFGCo=",
+        "name": "Microsoft.AspNetCore.Components.onncyo9ynh.wasm",
+        "hash": "sha256-xNSWPKOUtR5vfjqKmHlYm3U7ywD+9+wKWZYLp41lTk4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 42064,
         "virtualPath": "Microsoft.AspNetCore.Components.Forms.wasm",
-        "name": "Microsoft.AspNetCore.Components.Forms.0utp1rd4sw.wasm",
-        "hash": "sha256-SCDUvgaVZpJRxdvtF+N8Hcep4ujGIhBLGEK5oZOt/7E=",
+        "name": "Microsoft.AspNetCore.Components.Forms.nfiaj57c0j.wasm",
+        "hash": "sha256-Le2rLP/TT1CbO39GKRAxYVwLzRRrMc9htXzORpp3ODE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 101456,
         "virtualPath": "Microsoft.AspNetCore.Components.Web.wasm",
-        "name": "Microsoft.AspNetCore.Components.Web.77cpz0nhn2.wasm",
-        "hash": "sha256-/UJxpYWZj/n8vN0M3PoElrrFAS/j3cZiccsgqzwI13s=",
+        "name": "Microsoft.AspNetCore.Components.Web.6vsyu7vaj7.wasm",
+        "hash": "sha256-Xm97XrvIP0OLx/6agPI9E2gDFBpElvVEBClcroq7PU8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 145488,
         "virtualPath": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
-        "name": "Microsoft.AspNetCore.Components.WebAssembly.a58tnk8uhp.wasm",
-        "hash": "sha256-fhWw68Crm7VtLeJKBWVWbaq+Z7BfVa4lSuRYBJeqlBo=",
+        "name": "Microsoft.AspNetCore.Components.WebAssembly.7ogpqbln45.wasm",
+        "hash": "sha256-WWmCGszPA3qAQKDRznwKCVzoT8X9SfhuUS1vhEKqTzk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 12880,
         "virtualPath": "Microsoft.Extensions.Configuration.wasm",
-        "name": "Microsoft.Extensions.Configuration.9q0jp76nnp.wasm",
-        "hash": "sha256-jyB6Ohndx3+UzniXuNKXiUmZyJPVObtu8CGksOyKvGk=",
+        "name": "Microsoft.Extensions.Configuration.w1ybcka95t.wasm",
+        "hash": "sha256-JL1A0AX5XjQ1NhrOrFUWQZQPmeOZge/ysaW1ZtQdXTU=",
         "cache": "force-cache"
       },
       {
-        "virtualPath": "Microsoft.Extensions.Configuration.Abstractions.wasm",
-        "name": "Microsoft.Extensions.Configuration.Abstractions.ilvvifrsuk.wasm",
-        "hash": "sha256-tk833d+XfJljytZVRfi+SBFa1REgiO7cPyNmj25suCc=",
+        "payloadSize": 12880,
+        "virtualPath": "Microsoft.Extensions.Configuration.EnvironmentVariables.wasm",
+        "name": "Microsoft.Extensions.Configuration.EnvironmentVariables.ee954lo6yv.wasm",
+        "hash": "sha256-Kkm5yhLHpE3mKuh44I2Uq71Z8qkIs8IRv39xy5XkKZM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9808,
         "virtualPath": "Microsoft.Extensions.Configuration.Json.wasm",
-        "name": "Microsoft.Extensions.Configuration.Json.frazqtnewj.wasm",
-        "hash": "sha256-O//lmM7iBWUtBjH2FJ3NMhOI8xRMCAko/BmV8+lm5Do=",
+        "name": "Microsoft.Extensions.Configuration.Json.k8hsp9pmvn.wasm",
+        "hash": "sha256-RNNBNKN4z1gGVzl17/iiC+TBkMdOPuLXMq+mIIsDDps=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 54864,
         "virtualPath": "Microsoft.Extensions.DependencyInjection.wasm",
-        "name": "Microsoft.Extensions.DependencyInjection.mt5uv2cyps.wasm",
-        "hash": "sha256-BoC4IaIn4gTK5fp6lkWpNObM7wNMfTYpbARl7nl0wyY=",
+        "name": "Microsoft.Extensions.DependencyInjection.xsuqkn3vjc.wasm",
+        "hash": "sha256-j6E9SjkxqkH3zlmHTUL/FMwpeB8exrUKKmP5LSGQaOE=",
         "cache": "force-cache"
       },
       {
-        "virtualPath": "Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
-        "name": "Microsoft.Extensions.DependencyInjection.Abstractions.eny5zom2il.wasm",
-        "hash": "sha256-qoHSfzgwOXBKsqPFIhiPjM8TvMPdYzNEjzBHzfL+Mys=",
+        "payloadSize": 15440,
+        "virtualPath": "Microsoft.Extensions.Diagnostics.wasm",
+        "name": "Microsoft.Extensions.Diagnostics.3cidgatzd9.wasm",
+        "hash": "sha256-7VkZi+zUmN+PIaU6mfpdG8roHT1w43L/4DCDkmEkTwg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5712,
+        "virtualPath": "Microsoft.Extensions.Localization.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Localization.Abstractions.tuyo6cdh0a.wasm",
+        "hash": "sha256-i7OmzsFpUzCDvxFLUCYpNa3jqpr6qhzVL0D7QbOBHWY=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 25168,
         "virtualPath": "Microsoft.Extensions.Logging.wasm",
-        "name": "Microsoft.Extensions.Logging.hpp2g9vmos.wasm",
-        "hash": "sha256-pTKQzfARG50gdDsekcLpOR8CeX2yus+kHOJmo0y3cDg=",
+        "name": "Microsoft.Extensions.Logging.vhgepbn3zq.wasm",
+        "hash": "sha256-/b+/IvxWAfeSR3/8Le1alVGNnqJnqREq8gFr3+KLyOM=",
         "cache": "force-cache"
       },
       {
-        "virtualPath": "Microsoft.Extensions.Logging.Abstractions.wasm",
-        "name": "Microsoft.Extensions.Logging.Abstractions.kfmg8r9svh.wasm",
-        "hash": "sha256-kLnhX0DSZnpnoGG85kAHmLE4cIHYUu0ZICkeE+rCkBM=",
-        "cache": "force-cache"
-      },
-      {
-        "virtualPath": "Microsoft.Extensions.Options.wasm",
-        "name": "Microsoft.Extensions.Options.8cgbhdxqce.wasm",
-        "hash": "sha256-eLydBWiljAhXfow851jt2lgxdLxnRn2IyrblR799WqU=",
-        "cache": "force-cache"
-      },
-      {
-        "virtualPath": "Microsoft.Extensions.Primitives.wasm",
-        "name": "Microsoft.Extensions.Primitives.1w0lc1mcj1.wasm",
-        "hash": "sha256-wYd6P1RQVdx1wLGbVUXdca6pRBBwPJthqnLyxO6UMf0=",
-        "cache": "force-cache"
-      },
-      {
+        "payloadSize": 9296,
         "virtualPath": "Microsoft.Extensions.Validation.wasm",
-        "name": "Microsoft.Extensions.Validation.lspj8863f6.wasm",
-        "hash": "sha256-q66DgMDVe0j5t5W6CBWuOybJfxVf1p7oarfQQ5bXyH0=",
+        "name": "Microsoft.Extensions.Validation.zyvxpia86b.wasm",
+        "hash": "sha256-5f78vBX4FXWpo+kaK32fze2SOHl2pglCL98k9kBCRqw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 55376,
         "virtualPath": "Microsoft.IO.RecyclableMemoryStream.wasm",
-        "name": "Microsoft.IO.RecyclableMemoryStream.k69j9tcsp2.wasm",
-        "hash": "sha256-PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU=",
+        "name": "Microsoft.IO.RecyclableMemoryStream.ya9l8mji6k.wasm",
+        "hash": "sha256-WvKaYgMgfKcMDQbf6Tz4ZxxSOwwmJp3QzfKE5PEdk/k=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 50256,
         "virtualPath": "Microsoft.JSInterop.wasm",
-        "name": "Microsoft.JSInterop.u0aw55mwsr.wasm",
-        "hash": "sha256-Qkx4L/1MuyPFRtDS3LGOdyenkxsg8VAihJ60onnljAY=",
+        "name": "Microsoft.JSInterop.96lcz5hdcm.wasm",
+        "hash": "sha256-z4Kz+UC9zrWx9vcJSAvt7mSe4kQDjQvp2wzO9VJwh2o=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 11856,
         "virtualPath": "Microsoft.JSInterop.WebAssembly.wasm",
-        "name": "Microsoft.JSInterop.WebAssembly.gfego8d62w.wasm",
-        "hash": "sha256-9MrMSaF3Ux7qJdu19tfa59lYtIOsndS8NEbyw4VNnOA=",
+        "name": "Microsoft.JSInterop.WebAssembly.d71n9hnpwh.wasm",
+        "hash": "sha256-J12xQgmtWHPa58h5FrF/SHRXyb21e9S57typRJhsf34=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 63056,
         "virtualPath": "Serilog.wasm",
-        "name": "Serilog.4sydjdc6tj.wasm",
-        "hash": "sha256-rIdh1TYLe3DEG/icXVN+5cylv4kldq7CKch1278HqvU=",
+        "name": "Serilog.493qoseb5n.wasm",
+        "hash": "sha256-CMWLHiMfg2SLJvtD4XKV22LNVwec15JGLMeDvpVHtfA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 28240,
         "virtualPath": "Serilog.Extensions.Logging.wasm",
-        "name": "Serilog.Extensions.Logging.4aarm1ia2h.wasm",
-        "hash": "sha256-NHk6xRS3dIv7nLWuBUZvce3EXz7kvxiBsrjE7KvSMcI=",
+        "name": "Serilog.Extensions.Logging.szx2utty1s.wasm",
+        "hash": "sha256-mNpR27PltK5RcIdzWH+061ACgosjl4/rw2B/ue7+CPk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 11344,
         "virtualPath": "Soenneker.Asyncs.Initializers.wasm",
-        "name": "Soenneker.Asyncs.Initializers.6rhq2td1xj.wasm",
-        "hash": "sha256-nj0mJ+NLgLmqA7rbtmq2NM2fJVqbq297uHkHAXasOcc=",
+        "name": "Soenneker.Asyncs.Initializers.2q4xjnp5uo.wasm",
+        "hash": "sha256-1ure49y9xHTcQNU05jbz+WpA1zZtcb0moya20jJrwH4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 11856,
         "virtualPath": "Soenneker.Asyncs.Locks.wasm",
-        "name": "Soenneker.Asyncs.Locks.38uz8l6y59.wasm",
-        "hash": "sha256-w98tyPSMW4IxsAZGIs/dYgCYcWvpyFjWPGOZNU1rIyk=",
+        "name": "Soenneker.Asyncs.Locks.1bj450qk2v.wasm",
+        "hash": "sha256-QwBKDqTWNZTNpEJX8okMVSnwm9ZQqN27PZ8kTQQiGb4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Atomics.Longs.wasm",
-        "name": "Soenneker.Atomics.Longs.fydcyw6xkx.wasm",
-        "hash": "sha256-p1PNa8KQCzQnzVNMHEVa6HC0bWlLkXOqJBDw/iyMhqU=",
+        "name": "Soenneker.Atomics.Longs.qpjvwhoh7z.wasm",
+        "hash": "sha256-csbBmJcm9+j/rvVhUT12mZdd6KJ3Ko4joyMi1TeVk1g=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Atomics.ValueBools.wasm",
-        "name": "Soenneker.Atomics.ValueBools.vhkvciwntv.wasm",
-        "hash": "sha256-fbLzwh/xwv/quBqYbVPgQ5mGqNvh712Q+lnYC4UH3Ng=",
+        "name": "Soenneker.Atomics.ValueBools.rr9enyhdaw.wasm",
+        "hash": "sha256-97eEHKZVyDY5aJzpyOonh9OfDRNB/BEbGMNOOQJ688M=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Atomics.ValueInts.wasm",
-        "name": "Soenneker.Atomics.ValueInts.bt5oszh05m.wasm",
-        "hash": "sha256-kbSflgR8QNylARZjEwQOzenC3BdeAGFkmGlQQE8RpB8=",
+        "name": "Soenneker.Atomics.ValueInts.m90kqk00jh.wasm",
+        "hash": "sha256-Wmi0eijKM+IqzyOjCPXSVlfxemR88t7LlECJHlrPcl4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5712,
         "virtualPath": "Soenneker.Atomics.ValueLazys.wasm",
-        "name": "Soenneker.Atomics.ValueLazys.1ow9wlrdxf.wasm",
-        "hash": "sha256-X26Isv5SjeLy+Z+cBkCRngI6GHjKdESCsmfsVyPK0Os=",
+        "name": "Soenneker.Atomics.ValueLazys.vz5d5f3ety.wasm",
+        "hash": "sha256-m9ASPwoWjls/93fYvkGt8iU7KU0vFjfcZtHQWH8pZ9M=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Atomics.ValueLocks.wasm",
-        "name": "Soenneker.Atomics.ValueLocks.bpde5skt5t.wasm",
-        "hash": "sha256-39EXJThwb7V2Fl5IVEhp3pPvaH6vaAUfLKHE522qTIY=",
+        "name": "Soenneker.Atomics.ValueLocks.auunkid3n8.wasm",
+        "hash": "sha256-4qf2WkSws69g/PL1zA9ptzl45YTXIznCLE2hBGsF7HQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5712,
         "virtualPath": "Soenneker.Atomics.ValueNullableLazys.wasm",
-        "name": "Soenneker.Atomics.ValueNullableLazys.lkbeh2mvuk.wasm",
-        "hash": "sha256-FUu2vFYGouAB1JG+9JPM6lBTj++Mgo7lJzeeR8lbIMg=",
+        "name": "Soenneker.Atomics.ValueNullableLazys.gomidfohp7.wasm",
+        "hash": "sha256-UMxK63ukb0Msua2xo0jWZkwaBqCc7xPn+VjR4nqBlCI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 8272,
         "virtualPath": "Soenneker.Atomics.ValueResources.wasm",
-        "name": "Soenneker.Atomics.ValueResources.67i3amer07.wasm",
-        "hash": "sha256-4oD8c3mZXGYUUDAuzIwx4KD7GgoHvRcl8Ft823R32Vc=",
+        "name": "Soenneker.Atomics.ValueResources.7kvra6ew35.wasm",
+        "hash": "sha256-eSXqQ3aA4/zHYk5hG0i/2HTWDNWIjEDvo+eML/Au7TI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Attributes.MapTo.wasm",
-        "name": "Soenneker.Attributes.MapTo.pyxp88tca8.wasm",
-        "hash": "sha256-z4+xW0rvxiWIyabFaRZY1yMpK/q5ak4k7OXWQOMT8dM=",
+        "name": "Soenneker.Attributes.MapTo.yyxmjktm7b.wasm",
+        "hash": "sha256-hpeSCowLHRGLP1qUrJIhiHrxkgQeucOL5kNWRkaKCjU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.Attributes.PublicOpenApiObject.wasm",
-        "name": "Soenneker.Attributes.PublicOpenApiObject.xgiq353o9e.wasm",
-        "hash": "sha256-ASf5G/i9xVJa4yEkmSE6RlnS+g3IRdP5KoL0IB8M+fs=",
+        "name": "Soenneker.Attributes.PublicOpenApiObject.p5axezbm9r.wasm",
+        "hash": "sha256-rRsHerPWnpIfkIsuK/5AHq6Y1jNWuZpGAfUzHP6xprc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 45648,
         "virtualPath": "Soenneker.Blazor.C15t.wasm",
-        "name": "Soenneker.Blazor.C15t.bqbbw96us9.wasm",
-        "hash": "sha256-I9SRGfPit3xvu2gXmdnRro35C4XxRTHHsI/ljcXCJ9s=",
+        "name": "Soenneker.Blazor.C15t.jra64tb522.wasm",
+        "hash": "sha256-/4OGcAob+XAbK5pTIK/AgjBX5Kc+oTZxdCN/8AzSIfA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 30288,
         "virtualPath": "Soenneker.Blazor.Cloudflare.AiSearch.wasm",
-        "name": "Soenneker.Blazor.Cloudflare.AiSearch.9zi1fej394.wasm",
-        "hash": "sha256-q5JHBfmb5U/Du+Q4wNk+Cp0gmNggftOnC2lYS9MHN8w=",
+        "name": "Soenneker.Blazor.Cloudflare.AiSearch.zmcrj7h1ja.wasm",
+        "hash": "sha256-uzdOjlxHxwpuxTLXrniuPxay5MRhrnAZzm7GNnPHqqg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 55888,
         "virtualPath": "Soenneker.Blazor.CreditCards.wasm",
-        "name": "Soenneker.Blazor.CreditCards.57c4a59glp.wasm",
-        "hash": "sha256-P9tSV0Df3Ye36yijyKax2v/ra2U7+5I2lwXDgAXV5T8=",
+        "name": "Soenneker.Blazor.CreditCards.ip18q2a5yz.wasm",
+        "hash": "sha256-pjxxN3Apnb127/StnN8w3djF8uDSvuNte6Yu+dJQNlo=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Blazor.Extensions.EventCallback.wasm",
-        "name": "Soenneker.Blazor.Extensions.EventCallback.cohjdrfoe6.wasm",
-        "hash": "sha256-xLZHk5Q34Yuz9MZfCKHgPdCnlqPiCfU0eSPhgN3GmTs=",
+        "name": "Soenneker.Blazor.Extensions.EventCallback.hk7ezwf03n.wasm",
+        "hash": "sha256-L29/vXhIfJPWCbXs18mu2VKSeg9I0JoCj+GrFeyuE00=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 11344,
         "virtualPath": "Soenneker.Blazor.Interops.Floating.wasm",
-        "name": "Soenneker.Blazor.Interops.Floating.64l1cqfaug.wasm",
-        "hash": "sha256-2jpIxFAo5YTd5RL+cI92V5Emaoryhr6So1FPkrJDoA8=",
+        "name": "Soenneker.Blazor.Interops.Floating.idy35t2p66.wasm",
+        "hash": "sha256-xum3NLG+r3t/RoQB3OLQQrbQ0fiLMcLFi5gkMg9t2lM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 40016,
         "virtualPath": "Soenneker.Blazor.Rrweb.Replay.wasm",
-        "name": "Soenneker.Blazor.Rrweb.Replay.lfsekp3mwg.wasm",
-        "hash": "sha256-jzCUbWut+quFF/vXWpqjbGhv/Xct9dupyA7MAu9nMlI=",
+        "name": "Soenneker.Blazor.Rrweb.Replay.7b5smowyt9.wasm",
+        "hash": "sha256-47+O0gG0Sr4KCyWwtRHHQSvmM3ZnuAKGFGQj0IcadN8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 83024,
         "virtualPath": "Soenneker.Blazor.SignaturePads.wasm",
-        "name": "Soenneker.Blazor.SignaturePads.lonyhjkr7m.wasm",
-        "hash": "sha256-m3acuXUnVF3FGP9lwno6tds3xnTohenZEaELi2YaQS4=",
+        "name": "Soenneker.Blazor.SignaturePads.y1jfkaj96r.wasm",
+        "hash": "sha256-NnoWyZnC1k5SjBYwwySHCEvlE+pqNtHCYQm2zlPyUBg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9808,
         "virtualPath": "Soenneker.Blazor.Utils.Clipboard.wasm",
-        "name": "Soenneker.Blazor.Utils.Clipboard.tyw7le8el8.wasm",
-        "hash": "sha256-WzAmPutBMcW0tF/R2VY35EVcX7ScdzuJYlEtxtrlODQ=",
+        "name": "Soenneker.Blazor.Utils.Clipboard.81g0tev8x5.wasm",
+        "hash": "sha256-LHZmpnzD/Bk7chRJoivBkHmroNqkFT5fQHOIqim0Xfg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6224,
         "virtualPath": "Soenneker.Blazor.Utils.Ids.wasm",
-        "name": "Soenneker.Blazor.Utils.Ids.ui5acm3r2p.wasm",
-        "hash": "sha256-ds5oyT/QRoA/vjmuUzg0TdssyTQA+cGzzCyn34uilwo=",
+        "name": "Soenneker.Blazor.Utils.Ids.6qsgh6mpzi.wasm",
+        "hash": "sha256-kuGVbYYE80TbocL+/F3xhFfmCQxBnl+mUhuZ29tGt3k=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 14928,
         "virtualPath": "Soenneker.Blazor.Utils.JsVariable.wasm",
-        "name": "Soenneker.Blazor.Utils.JsVariable.ozgd2ckucp.wasm",
-        "hash": "sha256-vLaKg5g9j5WWLVU0/nUqN7UF/N72cOLtyjlKhyHXQQk=",
+        "name": "Soenneker.Blazor.Utils.JsVariable.1t4bip59hm.wasm",
+        "hash": "sha256-FdNjIx48THYs57s4liuf3GSO6GNtmMjQi9yilWTJHaw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 20048,
         "virtualPath": "Soenneker.Blazor.Utils.ModuleImport.wasm",
-        "name": "Soenneker.Blazor.Utils.ModuleImport.fgpx4kus5d.wasm",
-        "hash": "sha256-HzMPtzhGF/NOKeTGJEasW4w/aAw3qr42zFpUZ1L5vP0=",
+        "name": "Soenneker.Blazor.Utils.ModuleImport.2uc3cpu14l.wasm",
+        "hash": "sha256-uhOajskX68VX8bgw/ZOugFLD2xdzxqq587uPan8e1Ao=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 29264,
         "virtualPath": "Soenneker.Blazor.Utils.ResourceLoader.wasm",
-        "name": "Soenneker.Blazor.Utils.ResourceLoader.0tt52zsku2.wasm",
-        "hash": "sha256-JJRk8o3qbFwJ6+B7ZXAUeaJC9zbK0gFbKuzUj0/KJnU=",
+        "name": "Soenneker.Blazor.Utils.ResourceLoader.8c01w8ek8i.wasm",
+        "hash": "sha256-CCjWIHtLwmXcMmQEW95F8weMRSLDV0ce0rvCkMqvpV8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 1504336,
         "virtualPath": "Soenneker.Bradix.Suite.wasm",
-        "name": "Soenneker.Bradix.Suite.xmp1obor0m.wasm",
-        "hash": "sha256-92OgaUM5KjiGPaNEVxC+CRY+PKbfqRvAdyqjApniK+g=",
+        "name": "Soenneker.Bradix.Suite.50257m04vk.wasm",
+        "hash": "sha256-ZRipxubcXEdV7cqf5oqAP3Tivoz7RICp72GnO4X7ApA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.DataTables.Attributes.Orderable.wasm",
-        "name": "Soenneker.DataTables.Attributes.Orderable.6w63ap70yg.wasm",
-        "hash": "sha256-pgPoxsa37mBaajgfZVln5zZVaG3wXJzRK0kMbpT8ArQ=",
+        "name": "Soenneker.DataTables.Attributes.Orderable.79l4n3akgw.wasm",
+        "hash": "sha256-Zbg7vRZfTNDC0SiekLXCDSSnA9sge+xl91XtKUC7I/s=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.DataTables.Attributes.Searchable.wasm",
-        "name": "Soenneker.DataTables.Attributes.Searchable.scpgfrtogp.wasm",
-        "hash": "sha256-XG9aTACktG4hFS0Bj5hfOzgwaZcsMGBiXd1w83OTAz8=",
+        "name": "Soenneker.DataTables.Attributes.Searchable.7307i99v37.wasm",
+        "hash": "sha256-zZ2do4eMClr+o88fokmm0fKcG0wvmV4qYK/q8daGdXQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.DataTables.Dtos.ServerResponse.wasm",
-        "name": "Soenneker.DataTables.Dtos.ServerResponse.bhzik1u2e3.wasm",
-        "hash": "sha256-HxxzoZW/SlYTHmO6GUmFg4IiO8ctOdupA8FEjL1my9U=",
+        "name": "Soenneker.DataTables.Dtos.ServerResponse.72374h0b61.wasm",
+        "hash": "sha256-PzMXEGTtmDNVhAJt+r7WwoZDirvIo5QG9PhOGTc/wSw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 7248,
         "virtualPath": "Soenneker.DataTables.Dtos.ServerSideRequest.wasm",
-        "name": "Soenneker.DataTables.Dtos.ServerSideRequest.d96jb7xmcu.wasm",
-        "hash": "sha256-cZ0A4j2qZBArDRDPnXGikogA75VWplG16zUgWxT/QnM=",
+        "name": "Soenneker.DataTables.Dtos.ServerSideRequest.zoaxxibx1s.wasm",
+        "hash": "sha256-nRJe6LZotS2iqqczceG1L30l/vKossnSEnGkx7m3oKY=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 8784,
         "virtualPath": "Soenneker.DataTables.Extensions.ServerSideRequest.wasm",
-        "name": "Soenneker.DataTables.Extensions.ServerSideRequest.johgz6hm1k.wasm",
-        "hash": "sha256-fdeo+hen2VOrRuo9t0wSMeO8LQWtSM+pW9hyP8QRHkA=",
+        "name": "Soenneker.DataTables.Extensions.ServerSideRequest.7rslm295v7.wasm",
+        "hash": "sha256-03Iii7LDeyp7+AUgRQ/i4cF+DnOeTkfwSN28CjeJG/k=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Dtos.Filters.Base.wasm",
-        "name": "Soenneker.Dtos.Filters.Base.zy6nm7a745.wasm",
-        "hash": "sha256-9cq+0CIzU1Tz9K6+Ota7Qo5RJEK4jt/lJwf8sN7w/G8=",
+        "name": "Soenneker.Dtos.Filters.Base.urn0bmonc8.wasm",
+        "hash": "sha256-WrtxP5MWqrNqMvqR+2xyHvNokLlOlGZPOIF6esx/60A=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Dtos.Filters.ExactMatch.wasm",
-        "name": "Soenneker.Dtos.Filters.ExactMatch.ws9pda0g3p.wasm",
-        "hash": "sha256-4JJ0N4WyazBO8mLINQmRU2XlhWsj86J2SJ9kitbmmj0=",
+        "name": "Soenneker.Dtos.Filters.ExactMatch.3im51jnk3d.wasm",
+        "hash": "sha256-1cFpDjnPOvy3qXKSIiTeKkqPPRJBe+04VOoiC9AG1ow=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6736,
         "virtualPath": "Soenneker.Dtos.IdValuePair.wasm",
-        "name": "Soenneker.Dtos.IdValuePair.lsajlwt8t3.wasm",
-        "hash": "sha256-ZUJcpe2GZM9rkNgTZNsApAkmhHmbeHXJLTTqJusujB0=",
+        "name": "Soenneker.Dtos.IdValuePair.d52kha3bkm.wasm",
+        "hash": "sha256-H6+NM/1cb23JnBbgv6Cn01Uy35hauol+T2KMOHWOops=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Dtos.Options.OrderBy.wasm",
-        "name": "Soenneker.Dtos.Options.OrderBy.7fmofxpksw.wasm",
-        "hash": "sha256-g6pi6k67mzAc8MybyycK/QOPekf73l4Uzlk0We9028M=",
+        "name": "Soenneker.Dtos.Options.OrderBy.w1m2lpoy82.wasm",
+        "hash": "sha256-JBU04IAc9oYDrxOO2DwgiCTFi+skurLoiggpxci9LoE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6224,
         "virtualPath": "Soenneker.Dtos.RequestDataOptions.wasm",
-        "name": "Soenneker.Dtos.RequestDataOptions.s9ge40jbzp.wasm",
-        "hash": "sha256-4L2yreMS8WE3xHBiFdu3pbSCQWpxejBil3eFdCW0Zq0=",
+        "name": "Soenneker.Dtos.RequestDataOptions.2vofc5b6qd.wasm",
+        "hash": "sha256-nhv9oP7kc3g3epOKvytmr8Mgvm1N7zoqTh5ju3Jf+bY=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Dtos.Results.Paged.wasm",
-        "name": "Soenneker.Dtos.Results.Paged.6xbrst9sjd.wasm",
-        "hash": "sha256-GjUzzTo4GUl9Z5wAsFQc43pdoT7WM6M3UHK6kzpP8Ik=",
+        "name": "Soenneker.Dtos.Results.Paged.j7uey01rfe.wasm",
+        "hash": "sha256-b8LYp4b1hblNEWnmWzzmk/cguUW1skcOAF8v0swpz6E=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9296,
         "virtualPath": "Soenneker.Enums.SortDirections.wasm",
-        "name": "Soenneker.Enums.SortDirections.zqbz20f62i.wasm",
-        "hash": "sha256-O9i94CJZzLUb6TlFroQg8kgDIkTwstUDU8ixhbkzQPM=",
+        "name": "Soenneker.Enums.SortDirections.rso29ltuth.wasm",
+        "hash": "sha256-C1e5MSFxBDpI9EiIBmbg3sAokyywAayneum7trkhPfc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.CancellationTokens.wasm",
-        "name": "Soenneker.Extensions.CancellationTokens.f6akubmn3d.wasm",
-        "hash": "sha256-eYVRV/3vXzmZO3gYnHABZjYpXNXESWa1B/fBPNGPwPA=",
+        "name": "Soenneker.Extensions.CancellationTokens.34xbdzpii2.wasm",
+        "hash": "sha256-YyVtILwk6ktXgejQbSipN2vWu5uGYs189bdS/cmogHk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Char.wasm",
-        "name": "Soenneker.Extensions.Char.rhkjvdxcjx.wasm",
-        "hash": "sha256-f9HlqD7ZrM9Sa3muwCPy8ZH/ycHYfK4DvCmQB6Lnc6E=",
+        "name": "Soenneker.Extensions.Char.w961on8mnh.wasm",
+        "hash": "sha256-/FUmu0hw0AXhIFoIfDz6evB3UiJFhZsYsO0dqUBmVUw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 16464,
         "virtualPath": "Soenneker.Extensions.Configuration.wasm",
-        "name": "Soenneker.Extensions.Configuration.6c47letec4.wasm",
-        "hash": "sha256-to5cHH3CN/JlUgu6197jINB6r4pLm7EvAJlo/FEjPVE=",
+        "name": "Soenneker.Extensions.Configuration.iih0x6qhw2.wasm",
+        "hash": "sha256-qtHvqA4p0XwIwJBAXoyO5anlSUaszYsKNomddJnv+PI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Extensions.Configuration.Logging.wasm",
-        "name": "Soenneker.Extensions.Configuration.Logging.zjshhu9aud.wasm",
-        "hash": "sha256-MVyYYrPIXVSrFxwNSF7jvydpcx/NlSAz1n8E+VT51+A=",
+        "name": "Soenneker.Extensions.Configuration.Logging.2qp3d9s84y.wasm",
+        "hash": "sha256-+lXDh1OLmLBEGeML5qDyH/aoaUOFO7duFY6WQkjb5Xc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.Extensions.FieldInfo.wasm",
-        "name": "Soenneker.Extensions.FieldInfo.2hl2b3f8ga.wasm",
-        "hash": "sha256-NqBXccD5jhhGCctWd4EUFBkTiJNoQwTsMLejmvrNwjY=",
+        "name": "Soenneker.Extensions.FieldInfo.x47n4z8lmq.wasm",
+        "hash": "sha256-4TPdqdpmlCYBvVzwExrlCxg+inFZrlL7TyHPnwtgaGE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Long.wasm",
-        "name": "Soenneker.Extensions.Long.vlhs597ti6.wasm",
-        "hash": "sha256-I+EU1eDBnJxjPv18ef9IhUlXoyfbshYms0YTgNHQpP8=",
+        "name": "Soenneker.Extensions.Long.epf7sdhygc.wasm",
+        "hash": "sha256-vjSuLzxa5cezMhYV2ccjoMGC9rQ50B3Al7ib+JTJsik=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.MemberInfo.wasm",
-        "name": "Soenneker.Extensions.MemberInfo.lxhu3ny9uw.wasm",
-        "hash": "sha256-SbUF7JBm0vMt3cy5sY9nozmEATjnnFWEHoCdgk3TgkE=",
+        "name": "Soenneker.Extensions.MemberInfo.vx35dmp75s.wasm",
+        "hash": "sha256-zcdzscYjinmH7ZF5zM0Vx/8B9z7PXbmLC7YFlNNNRG8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
         "virtualPath": "Soenneker.Extensions.MethodInfo.wasm",
-        "name": "Soenneker.Extensions.MethodInfo.ndxfencp4z.wasm",
-        "hash": "sha256-RR/gZ4lT6/vAfmEc0sFlc556y2I9j3W5kBmnISWeM6A=",
+        "name": "Soenneker.Extensions.MethodInfo.sftykya9oc.wasm",
+        "hash": "sha256-ePpNCLmWtE2NHnbu1YeMip2ntgSamdzTyCXMBDXMPDU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Serilog.LogEventLevels.wasm",
-        "name": "Soenneker.Extensions.Serilog.LogEventLevels.5c76io8zn9.wasm",
-        "hash": "sha256-W6N4UzIKFRz5udIadw5Z91CcYkfUQnSROTvOASKV/LQ=",
+        "name": "Soenneker.Extensions.Serilog.LogEventLevels.5znpz3yh5z.wasm",
+        "hash": "sha256-X2v5vbp00heTMQHScXokds2aZlH7JmEJsEsOOE8ICcQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.Extensions.Spans.Chars.wasm",
-        "name": "Soenneker.Extensions.Spans.Chars.1yigfhwmpi.wasm",
-        "hash": "sha256-6ZZdcYliaFBhwD8jiS1G8V5R6V9F4/c2skUj4Sd4lSI=",
+        "name": "Soenneker.Extensions.Spans.Chars.p0a38md6ca.wasm",
+        "hash": "sha256-ecUWVjdcWvBG+Qc9cWGJSbcSrKMRjRMs1Foc1HRTgNM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Spans.Readonly.ParameterInfos.wasm",
-        "name": "Soenneker.Extensions.Spans.Readonly.ParameterInfos.a3undb0qvb.wasm",
-        "hash": "sha256-6k4fnxbLkvjoQ3Yt4F8MzKxk3pqK4Z07L8clIrLIqYo=",
+        "name": "Soenneker.Extensions.Spans.Readonly.ParameterInfos.l7fp3lm6zj.wasm",
+        "hash": "sha256-v6/R9JbkkzfkCIJ6XY7f1eJ8Sg7GCerJlzUCuIWhpWE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Spans.Readonly.Types.wasm",
-        "name": "Soenneker.Extensions.Spans.Readonly.Types.8mjnnu3bsj.wasm",
-        "hash": "sha256-EGJ/GVEmSRMONFoVrh3Z63cSM4WCx3G14O6vVVEcEgE=",
+        "name": "Soenneker.Extensions.Spans.Readonly.Types.g1jojiecsg.wasm",
+        "hash": "sha256-ZNGRzwGOlq4oAos34K9DsT92eMz+8LM2216HigcowmA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 7760,
         "virtualPath": "Soenneker.Extensions.String.wasm",
-        "name": "Soenneker.Extensions.String.qmxpppjvx7.wasm",
-        "hash": "sha256-ftytWsnXSB/s971etoaS2UKDH3MymxHAwEHPASWw7d4=",
+        "name": "Soenneker.Extensions.String.ann61kfp8q.wasm",
+        "hash": "sha256-Nl4508i5qIlH1TkYB/JzGtqnlwNsalrJrtRB+fL8RgQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.Task.wasm",
-        "name": "Soenneker.Extensions.Task.z7h7u7cdav.wasm",
-        "hash": "sha256-EVM7UYXT/IvIgchmXjau203ESOzYmcsoYTQoJ/ow+b0=",
+        "name": "Soenneker.Extensions.Task.gy0om060d4.wasm",
+        "hash": "sha256-KK/To1CfyhC4clrG3lnijboTyziegqEiZdyyt6WzKII=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Extensions.ValueTask.wasm",
-        "name": "Soenneker.Extensions.ValueTask.t0dchg5c2r.wasm",
-        "hash": "sha256-7Q170nrPfCNTjRQnGfpwxZCCSkutR7lh0mrTGN14UE4=",
+        "name": "Soenneker.Extensions.ValueTask.4vxbf0rx8p.wasm",
+        "hash": "sha256-0CDeDVQAtv3X1ueO9u4qMLNViTGY40PPSKWrc2P6B1M=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 25168,
         "virtualPath": "Soenneker.Lepton.Suite.wasm",
-        "name": "Soenneker.Lepton.Suite.mccu9hmf68.wasm",
-        "hash": "sha256-+riHqiBPVhTKW9jsGxWmHPgxGy4Sw0hCHNs8+pV7ahw=",
+        "name": "Soenneker.Lepton.Suite.xhwxehjx1u.wasm",
+        "hash": "sha256-O7sONbWEdlzU2FKP9+sExa97geeeWeIJiqpCbASKLEo=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 10320,
         "virtualPath": "Soenneker.Librarian.Abstractions.wasm",
-        "name": "Soenneker.Librarian.Abstractions.kc11hcv5uw.wasm",
-        "hash": "sha256-7LHD32YL5SWIIQLpbygXLVtsAL/F8bOG5hmWongXxic=",
+        "name": "Soenneker.Librarian.Abstractions.m4jo70vyu1.wasm",
+        "hash": "sha256-KrJxfguvEISSDrxL7m6r67iFG1SDBGnqV4jFtFNVZvc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9296,
         "virtualPath": "Soenneker.Librarian.Browser.wasm",
-        "name": "Soenneker.Librarian.Browser.dejm9fhhcc.wasm",
-        "hash": "sha256-S1/7Z51w/ra7EswXcmVZEEPtbCx+YYdnZOuPhnYg5Zc=",
+        "name": "Soenneker.Librarian.Browser.9y9v7thof6.wasm",
+        "hash": "sha256-IU+LZ5DxTFhXmnQXXdX0TXIGMF7wgABRVhI8gKNDcJw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 36944,
         "virtualPath": "Soenneker.Librarian.Core.wasm",
-        "name": "Soenneker.Librarian.Core.mmpmak51jh.wasm",
-        "hash": "sha256-PtUleANnM9JUGjlvQicda16QQyz87lo0mduu7f3O4eA=",
+        "name": "Soenneker.Librarian.Core.wx3py0342x.wasm",
+        "hash": "sha256-NHLFb2brKDxvBou4izQU19u60AaTeJohDCiy2HzP4zw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Librarian.LocalStorage.wasm",
-        "name": "Soenneker.Librarian.LocalStorage.x0i496iz41.wasm",
-        "hash": "sha256-v2p8BGshLo7ZQHqXivRHpk8G/ELHhgKDcbyuGMbT0Bw=",
+        "name": "Soenneker.Librarian.LocalStorage.k74llfxvbj.wasm",
+        "hash": "sha256-cFb1/J4/LzX54li9fWXzgb71QgFe+GCC+hYzunClT9Y=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 56912,
         "virtualPath": "Soenneker.Lucide.Enums.Icons.wasm",
-        "name": "Soenneker.Lucide.Enums.Icons.j69uvczkpb.wasm",
-        "hash": "sha256-BRcfd+gfJT/IabBTOcsDjFyjIjGwcJbxojXt/Y6jXmg=",
+        "name": "Soenneker.Lucide.Enums.Icons.0wo4oo77ij.wasm",
+        "hash": "sha256-AAEbQgfDOZPU+xmgwKY7a2463fdfmbNW/0SF4aZNz3I=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.Lucide.Icons.wasm",
-        "name": "Soenneker.Lucide.Icons.sfjfcgunl6.wasm",
-        "hash": "sha256-KHwhRgDmFCVl8zcdqrBOnC8Jho+OJSdU08N5tmVUk8U=",
+        "name": "Soenneker.Lucide.Icons.nmrzh7knxy.wasm",
+        "hash": "sha256-YVwKUrfNlKLHQo4/pFnhl5v+PCHAJG/u9jFAG94kNpI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 499280,
         "virtualPath": "Soenneker.Quark.Builders.wasm",
-        "name": "Soenneker.Quark.Builders.ikoavllnii.wasm",
-        "hash": "sha256-4p2PWTJn1bIX4pAEwVXr9C+tZX5giWPKfs8kHkA1h70=",
+        "name": "Soenneker.Quark.Builders.8cez3oan8s.wasm",
+        "hash": "sha256-WNZL2Gl1nAcCRvkjDzVvflzaeNPwJxwA8qCtLc0SH94=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 10320,
         "virtualPath": "Soenneker.Quark.Enums.Breakpoints.wasm",
-        "name": "Soenneker.Quark.Enums.Breakpoints.ff8hnc761s.wasm",
-        "hash": "sha256-61vJWIIuJ2Z/i25t9UjLgdNca8Z2dkVrLNnDN3d9CMk=",
+        "name": "Soenneker.Quark.Enums.Breakpoints.os7jk731n7.wasm",
+        "hash": "sha256-yNG4feYt95LiUcL0DjHkDqftlLKTjpCqyIBm5dCo5Kw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 20560,
         "virtualPath": "Soenneker.Quark.Enums.DisplayTypes.wasm",
-        "name": "Soenneker.Quark.Enums.DisplayTypes.ojlhashdvl.wasm",
-        "hash": "sha256-rO58sUtaroOk0PZMhz0lpm4r7oa9XVjqhgdE3b7+NJs=",
+        "name": "Soenneker.Quark.Enums.DisplayTypes.s91ugfdh7x.wasm",
+        "hash": "sha256-EOIPsH1lk+qm1QJn5dyfVmE703zb6H5uJcHAjSXDhWs=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 10832,
         "virtualPath": "Soenneker.Quark.Enums.TextAlignments.wasm",
-        "name": "Soenneker.Quark.Enums.TextAlignments.ha50hmaocn.wasm",
-        "hash": "sha256-yYNisR33f0d/Y8v7cV0BzxeD6mw9eFp0P+3kiav66C8=",
+        "name": "Soenneker.Quark.Enums.TextAlignments.skxsokl87y.wasm",
+        "hash": "sha256-/NANu8mJW0ogVOb3bTuzRICU18qT0N2do3x7Qm9g2dA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9808,
         "virtualPath": "Soenneker.Quark.Enums.TextTransforms.wasm",
-        "name": "Soenneker.Quark.Enums.TextTransforms.bsyexyv93s.wasm",
-        "hash": "sha256-ZZ83DFNOM0OMuTzrtb3MXKJtnT8WiNim6CPB7qCFpqg=",
+        "name": "Soenneker.Quark.Enums.TextTransforms.z00fxswda7.wasm",
+        "hash": "sha256-455zDUTWUioNgvmXRsU2olnrXH51MbjtRFbGS4+l6jU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Quark.Gen.Lucide.Abstractions.wasm",
-        "name": "Soenneker.Quark.Gen.Lucide.Abstractions.v3p369k3z8.wasm",
-        "hash": "sha256-JdS4GMUaIaOoaZNvU5PrhHk1wAc++Jl1KVQ7Z1R3ESo=",
+        "name": "Soenneker.Quark.Gen.Lucide.Abstractions.e2jgn2oc10.wasm",
+        "hash": "sha256-hgOEulijZTofZcilJ3VYGF+30UYne6Ku6VjnSmJ4aKQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5712,
         "virtualPath": "Soenneker.Quark.Gen.SimpleIcons.Abstractions.wasm",
-        "name": "Soenneker.Quark.Gen.SimpleIcons.Abstractions.wy18v2fiwm.wasm",
-        "hash": "sha256-CA1Qx7iLlsHXQYAto8O9aIl37YrnBz3j6fkCtJVIdZw=",
+        "name": "Soenneker.Quark.Gen.SimpleIcons.Abstractions.rbwakxvpyo.wasm",
+        "hash": "sha256-2VVvmztsM9fFOmBNeN5AdkugUmDtWPZTm8oc7mPqwXA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "Soenneker.Queues.Intrusive.Abstractions.wasm",
-        "name": "Soenneker.Queues.Intrusive.Abstractions.qlhb4i6x4l.wasm",
-        "hash": "sha256-IiYJ8G9Keb7B84ATjZVJN1hpZfKrwALuqa4XaqbexJ8=",
+        "name": "Soenneker.Queues.Intrusive.Abstractions.ze7zxiiqds.wasm",
+        "hash": "sha256-S/nEY01XbURiBX++3HV9kligPi1kr8UdXoVntH/HnzU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6224,
         "virtualPath": "Soenneker.Queues.Intrusive.ValueMpsc.wasm",
-        "name": "Soenneker.Queues.Intrusive.ValueMpsc.g9u5la7ph6.wasm",
-        "hash": "sha256-dHXPKz6m4dpTgQFcAmDa3gvl+peFRFsK6q/+lnJTn/k=",
+        "name": "Soenneker.Queues.Intrusive.ValueMpsc.eaqcjtgxce.wasm",
+        "hash": "sha256-6igA/QdF97q1ASjB8q7Ol00Urug2Fbg6fWwl6mn+Hys=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 95824,
         "virtualPath": "Soenneker.Reflection.Cache.wasm",
-        "name": "Soenneker.Reflection.Cache.4qdb2d8wiz.wasm",
-        "hash": "sha256-xM9btTNpB9TDjYmAO7uKSGt0qXTtnxlflweAoX7fvZw=",
+        "name": "Soenneker.Reflection.Cache.ng0agqpj21.wasm",
+        "hash": "sha256-KddMrU9oeOLJBCaALXw4zn7DMaP8zFac9hDZfDou2RU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 15440,
         "virtualPath": "Soenneker.Serilog.Sinks.Browser.Blazor.wasm",
-        "name": "Soenneker.Serilog.Sinks.Browser.Blazor.m7htq1hyzm.wasm",
-        "hash": "sha256-nnUWkxSR/Sfsb/Xid3MeMvlvIFy9ESNLedkM1u1haMY=",
+        "name": "Soenneker.Serilog.Sinks.Browser.Blazor.3lzw8zspzc.wasm",
+        "hash": "sha256-J/Blo3L3b1N7D5KY1Ba0XESbiby12MdXg0agNcOW2Sk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 94800,
         "virtualPath": "Soenneker.SimpleIcons.Enums.Icons.wasm",
-        "name": "Soenneker.SimpleIcons.Enums.Icons.nzy6i5swz4.wasm",
-        "hash": "sha256-ozyI2/Er5x0UT93J1PC166tvb6eO+DursBOs+5il1Zc=",
+        "name": "Soenneker.SimpleIcons.Enums.Icons.rq9vjgb9d2.wasm",
+        "hash": "sha256-7Zmd0zSi3YKj8xJObNV8K0Tu4LvUIE18o09PRmEmPz8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 72784,
         "virtualPath": "Soenneker.Utils.AutoBogus.wasm",
-        "name": "Soenneker.Utils.AutoBogus.8wlino20ao.wasm",
-        "hash": "sha256-qMktzjtHL5juDOZ4zQLB2buF9xAtUfnJJMmazk/4m6A=",
+        "name": "Soenneker.Utils.AutoBogus.bhz552hu6b.wasm",
+        "hash": "sha256-3z8nWEEIRtJVdzP4qhQ1MNdrprVPcLetLkLOesRKj9U=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 7248,
         "virtualPath": "Soenneker.Utils.CancellationScopes.wasm",
-        "name": "Soenneker.Utils.CancellationScopes.pokdld3yxa.wasm",
-        "hash": "sha256-+eK4r4m0o4s5qAEUb6/DHsYnFDTs+efxfkQwKjBFoyo=",
+        "name": "Soenneker.Utils.CancellationScopes.kf72q0ta8h.wasm",
+        "hash": "sha256-IDyr3rrfQMFUDRHJEuOGdCgSyRDKNigaoT5kAY4ePlE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9296,
         "virtualPath": "Soenneker.Utils.Debounce.wasm",
-        "name": "Soenneker.Utils.Debounce.ou3ep5or4a.wasm",
-        "hash": "sha256-ADiGIO1l0qkG/7RuyndyjP3OwikcNc7yy+4jR5krBUs=",
+        "name": "Soenneker.Utils.Debounce.kb82e0md5v.wasm",
+        "hash": "sha256-oASuMTqFLCZWxoAEpw14B0DJ4RyKYVS8g2P9Pvsn7IM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 7248,
         "virtualPath": "Soenneker.Utils.Delay.wasm",
-        "name": "Soenneker.Utils.Delay.d7woq0fxfk.wasm",
-        "hash": "sha256-CUPza3vGO9NbKIFAfcHWuDFykMVa/rNH8xrfgtTowNA=",
+        "name": "Soenneker.Utils.Delay.ty3r2ploqz.wasm",
+        "hash": "sha256-1eJYry8S8Yo1FuJJkYVeDQz5iVc3T1djcTNj3xOrBzU=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Utils.Json.wasm",
-        "name": "Soenneker.Utils.Json.u0tlw75exe.wasm",
-        "hash": "sha256-LvJ5i006xjcVRbHhbLpeGoer61Wl9U0hWtZYFxUmy5g=",
+        "name": "Soenneker.Utils.Json.qosk7vq2i7.wasm",
+        "hash": "sha256-OjHuFYsLiKNdxEc93v0fK7fDayG35Fe2U740lEXLZXo=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Utils.LazyBools.wasm",
-        "name": "Soenneker.Utils.LazyBools.64q02mu813.wasm",
-        "hash": "sha256-ykG/ijXrtT6hRohIHvQGXpAaPjMuLGWJg2YtzfZmJwg=",
+        "name": "Soenneker.Utils.LazyBools.lz0ysffogc.wasm",
+        "hash": "sha256-gWHt6f42fDYbSEp8NDwlvOkQIVzgnc5L4XVZvCqGSdk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 7760,
         "virtualPath": "Soenneker.Utils.PooledStringBuilders.wasm",
-        "name": "Soenneker.Utils.PooledStringBuilders.mhqrnn6ww8.wasm",
-        "hash": "sha256-2lEoIpq3kxdjRDALpMyFyQV9smJXGDqPFLIdDBanYnk=",
+        "name": "Soenneker.Utils.PooledStringBuilders.5ye6fkg8oc.wasm",
+        "hash": "sha256-LdCkxJk+m/EjfD7ROl3aWLwObLeXsPZGWyTTl6ncZiQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "Soenneker.Utils.ReusableStringWriter.wasm",
-        "name": "Soenneker.Utils.ReusableStringWriter.v0lzb7uo0t.wasm",
-        "hash": "sha256-0WNkrF0LSuGFnwF7m3aPnED9iNbbuem9B8FDJCqAqec=",
+        "name": "Soenneker.Utils.ReusableStringWriter.8aankmyto1.wasm",
+        "hash": "sha256-MGBrsMeGYm7qidWtThRE+ZibssjVmyYiilU9m1KGEUg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9296,
+        "virtualPath": "Microsoft.Extensions.Configuration.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Configuration.Abstractions.epw3ato3iz.wasm",
+        "hash": "sha256-rhnm3AlCKkvEnces8YRqNOz1ArsEYr78dAivNTsaZEg=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 27728,
+        "virtualPath": "Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
+        "name": "Microsoft.Extensions.DependencyInjection.Abstractions.tb2vrw6nc0.wasm",
+        "hash": "sha256-ibicG3QN+QN9Si0aCvoJowJsz1FmT/iIqA3KNj+/D5s=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 8272,
+        "virtualPath": "Microsoft.Extensions.Diagnostics.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Diagnostics.Abstractions.c7pw3k7gpl.wasm",
+        "hash": "sha256-mGoTbWiv99FJoeOKGurDmGoopfy52pklSKJIvrC6CnI=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 5200,
+        "virtualPath": "Microsoft.Extensions.Hosting.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Hosting.Abstractions.bfjwrpc7xz.wasm",
+        "hash": "sha256-V6naAUM8v18XnXNqgObSTSTM6WznHbemhjnMlVhfpGM=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 31824,
+        "virtualPath": "Microsoft.Extensions.Logging.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Logging.Abstractions.05hlmqldlz.wasm",
+        "hash": "sha256-/KdRHKB8ljODC4kPZEGcrBXFb0SnUv79z7AYl8e9buA=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 27216,
+        "virtualPath": "Microsoft.Extensions.Options.wasm",
+        "name": "Microsoft.Extensions.Options.pz5lk3qpfj.wasm",
+        "hash": "sha256-a45pOSauz2utHFwSYs2QQ1xiqFvcod+oXEGTrquF4WI=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 11344,
+        "virtualPath": "Microsoft.Extensions.Primitives.wasm",
+        "name": "Microsoft.Extensions.Primitives.ee9arlg4sw.wasm",
+        "hash": "sha256-6kL/AYAU+mLGlRYyBzhido7jr60LA//68qv4u39vm6c=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 10320,
         "virtualPath": "System.Collections.Concurrent.wasm",
-        "name": "System.Collections.Concurrent.jjqoass7gw.wasm",
-        "hash": "sha256-oan6Kg+P8SfmGl9nff2F84IDRIbo9YeZhcg0ZrqXKXU=",
+        "name": "System.Collections.Concurrent.qr9z69jp36.wasm",
+        "hash": "sha256-NhbwzaaVbjgpS7+OgLRZoo3sFY3iakVaP3Y3tchyTIg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 89680,
         "virtualPath": "System.Collections.Immutable.wasm",
-        "name": "System.Collections.Immutable.hwggm2b55f.wasm",
-        "hash": "sha256-bzgtRNVtiz/sNrazoMnlrVKurX+2XzrmXHhHX5wiuZQ=",
+        "name": "System.Collections.Immutable.xs5nvte1vj.wasm",
+        "hash": "sha256-30+kXmrurdO3FOmIXM39Lo/04wM/MdggkznZMcg8HxM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 14928,
         "virtualPath": "System.Collections.NonGeneric.wasm",
-        "name": "System.Collections.NonGeneric.1h20913tms.wasm",
-        "hash": "sha256-hcnhdmqfKvBbLYprtH5BkvygJ20UYK1I9wAtTvRLUuk=",
+        "name": "System.Collections.NonGeneric.2kr5s0gvx3.wasm",
+        "hash": "sha256-wnZZvJLoyMVIZ+p+Yw+gEVyqHDo12Jwoq3ZqtjtQU0c=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 10832,
         "virtualPath": "System.Collections.Specialized.wasm",
-        "name": "System.Collections.Specialized.5h10vyahon.wasm",
-        "hash": "sha256-h9FuHwAIpdDniA92BkZSrhJpEGYwDqTV+3MoK8AhGWE=",
+        "name": "System.Collections.Specialized.m5eih2se7v.wasm",
+        "hash": "sha256-KlFGCa3+SOwkFILw5XK9meLYzQdxlfKcDL/aNAwgAO0=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 40016,
         "virtualPath": "System.Collections.wasm",
-        "name": "System.Collections.98noxuny18.wasm",
-        "hash": "sha256-mXT+VWZnmAg4kzBfjLTtsZvE07PTDscoAx8rFXwRUmY=",
+        "name": "System.Collections.ldnvny0fm4.wasm",
+        "hash": "sha256-53gG2onYdCmwdaqjluM3Zdc+dpRU4DOtbjRwBS1jRV0=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 36432,
         "virtualPath": "System.ComponentModel.Annotations.wasm",
-        "name": "System.ComponentModel.Annotations.9gd6hhmtq6.wasm",
-        "hash": "sha256-mb7HRLmqKMAS4gZuPTZ1KdCzCD/z9n/AZADIXtRaofs=",
+        "name": "System.ComponentModel.Annotations.vzrh5mmc0b.wasm",
+        "hash": "sha256-+0TpgKn/a/IbPe2KDK29aXtbY+2yy87hkhfByHrJgME=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 12368,
         "virtualPath": "System.ComponentModel.Primitives.wasm",
-        "name": "System.ComponentModel.Primitives.p1wwl9k45f.wasm",
-        "hash": "sha256-PaOocBx6IrEY5tUEUZy6zIJ5j0TXlnx5ChvWPLb+jCs=",
+        "name": "System.ComponentModel.Primitives.6zzanj6har.wasm",
+        "hash": "sha256-XugNE9uHdPfnDDjUOAvhRkD/xSv1dbSi0tdXUj5GjPw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 127568,
         "virtualPath": "System.ComponentModel.TypeConverter.wasm",
-        "name": "System.ComponentModel.TypeConverter.ugyt9wfunl.wasm",
-        "hash": "sha256-vuxozN9VfWtnaMZmzNfFypGt2sz7mjFiof9ptzvMl8k=",
+        "name": "System.ComponentModel.TypeConverter.5vai9ugg3y.wasm",
+        "hash": "sha256-fxfNnu8QzbWKFcNDMDZfnukgMHqqSDvtlrwk+iqXxis=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.ComponentModel.wasm",
-        "name": "System.ComponentModel.2lpuvkg07t.wasm",
-        "hash": "sha256-+tNuyDZwqiy9xZyweHauypGvvavFKtWz/nCwkmVlu8M=",
+        "name": "System.ComponentModel.jsworeszzk.wasm",
+        "hash": "sha256-/dAJev/bBjzvF5m5HAX+Xk7mEjPu9bGAAPKeagaWlxA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 14416,
         "virtualPath": "System.Console.wasm",
-        "name": "System.Console.krf3zhjd3u.wasm",
-        "hash": "sha256-cDYF5ukc0Lzz62KGQvr9CdtNhKIS5Qne3ibEQJkDsMY=",
+        "name": "System.Console.kfedcre5so.wasm",
+        "hash": "sha256-UIJi09jkeKUgKuU2+4SRhMFU94E3CjZvSLwQtUsQr+M=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 451152,
         "virtualPath": "System.Data.Common.wasm",
-        "name": "System.Data.Common.mphxtpmm0d.wasm",
-        "hash": "sha256-6vhx9U6Ce7k9zPc9TiXH3CY6Cf3CvrGhRTPfDVVoOSs=",
+        "name": "System.Data.Common.9fjhfjnelp.wasm",
+        "hash": "sha256-a/jtHjqNrmLYfrzWcwcagyRR7nakBWifA5ViZTFO1l8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 155216,
         "virtualPath": "System.Diagnostics.DiagnosticSource.wasm",
-        "name": "System.Diagnostics.DiagnosticSource.girgwm1dep.wasm",
-        "hash": "sha256-uIhLj2qYYXmuwleAE/RCnLFECx9iVoybyov8TibMQAo=",
+        "name": "System.Diagnostics.DiagnosticSource.m2uxnikk4d.wasm",
+        "hash": "sha256-flWHdVS9CgYL9vmAfLkbAYSK8zUEgl3+ea52zc4yPE8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 9808,
         "virtualPath": "System.Diagnostics.TraceSource.wasm",
-        "name": "System.Diagnostics.TraceSource.cdn8djalmo.wasm",
-        "hash": "sha256-UGHlqG1ELEQxufBP7onaOe/HiaL+Ioss5EHM57kgM3w=",
+        "name": "System.Diagnostics.TraceSource.ttocprhmsk.wasm",
+        "hash": "sha256-sZ3OLj2mwe0Z85mxCwNZ1NgepxTQ/bcm2qF7I5dE6ms=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Diagnostics.Tracing.wasm",
-        "name": "System.Diagnostics.Tracing.b5vrkplsa9.wasm",
-        "hash": "sha256-b76XW9164nRecneiD32r7Ex4kY/OBVmlmIDlW+q5ew0=",
+        "name": "System.Diagnostics.Tracing.8r38wmhqsf.wasm",
+        "hash": "sha256-/HIRjWCHgaD+e1nFkFJs2oANdHj/pqufnfZf1pMETMw=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 36944,
         "virtualPath": "System.Drawing.Primitives.wasm",
-        "name": "System.Drawing.Primitives.piut1umxuo.wasm",
-        "hash": "sha256-P0fSw+mjuBWxolK0um8OgOhVI0VaDwqVWBA1ZbN/gDU=",
+        "name": "System.Drawing.Primitives.0q0zt2il18.wasm",
+        "hash": "sha256-mCz/wr8scfaj5+0jr55L+wp2URnr2V6JHtqYRuRdIp4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Drawing.wasm",
-        "name": "System.Drawing.bquzof8wit.wasm",
-        "hash": "sha256-U7pGfxw5D048q3pJfUynlq/AnwY9KVVAT8R8bFRgLpY=",
+        "name": "System.Drawing.1jil32f1t3.wasm",
+        "hash": "sha256-81OVLSRFq9eiO0fU+BALyjHay9PAgNH5LGYQBdsAlrM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5712,
         "virtualPath": "System.IO.Pipelines.wasm",
-        "name": "System.IO.Pipelines.zw1ambfxtz.wasm",
-        "hash": "sha256-MzohL7WKh4tauIlSf3u4m7en9EKnFfRP91+1XgsxecA=",
+        "name": "System.IO.Pipelines.poe6z4m2xv.wasm",
+        "hash": "sha256-J/1aPN+FxxTbtAxMIN3gJeVId686kFSMZKU1Z/KTL1M=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 360528,
         "virtualPath": "System.Linq.Expressions.wasm",
-        "name": "System.Linq.Expressions.qlya9i5xsw.wasm",
-        "hash": "sha256-ro4r/6yBoE9j9DWmbo1WyAAnLaHswcfGphu3hCoZm8U=",
+        "name": "System.Linq.Expressions.yhew3m9eo4.wasm",
+        "hash": "sha256-muNK9UYJtZzGO3pax7VLgv5vXPTnEFMNXUrM+uHByME=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 86608,
         "virtualPath": "System.Linq.wasm",
-        "name": "System.Linq.khwqjc1onj.wasm",
-        "hash": "sha256-+NkhHG9QzbBxeiiJB/oq2IDXK9/f6DE/Y1G/rMcZceg=",
+        "name": "System.Linq.5hupwfszem.wasm",
+        "hash": "sha256-d10b8XjhgjzH8kcEvGD/yW+VHse2HUoBIgqdHi+JfMk=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 16976,
         "virtualPath": "System.Memory.wasm",
-        "name": "System.Memory.jc3dudjcn8.wasm",
-        "hash": "sha256-M7TUGhrabnJ7ccalSntUq0KG/bv5EfqlJuNJKGmgODU=",
+        "name": "System.Memory.nzpzsmir6z.wasm",
+        "hash": "sha256-rf3MsSrUK2O8Ip+ZrwCmn1aVSqznKV8wJn4qa2kdJs8=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 173136,
         "virtualPath": "System.Net.Http.wasm",
-        "name": "System.Net.Http.tnk39yewxq.wasm",
-        "hash": "sha256-pyPpYKhWqm3PXoYu0OwASul3oELGBOB1iId0/Td92hc=",
+        "name": "System.Net.Http.4ee8lxcbxx.wasm",
+        "hash": "sha256-JCwKZHoqV2bSzrSLwrhd3nhNM5W+yb1gusNCm2Z727I=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 31312,
         "virtualPath": "System.Net.Primitives.wasm",
-        "name": "System.Net.Primitives.h3n7dr5c3k.wasm",
-        "hash": "sha256-U8ZUhbVsdsnP+96Yd8xUo0JEgBPHShMiX//M0ohuwhQ=",
+        "name": "System.Net.Primitives.9phy7rz4dz.wasm",
+        "hash": "sha256-447zTIX4He7Sr7S11LM3H4MxLMMwadT0eQeXBGCiH98=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6224,
         "virtualPath": "System.ObjectModel.wasm",
-        "name": "System.ObjectModel.lp4fsy8ota.wasm",
-        "hash": "sha256-mamFuob07mFQyCUwc+xePVOzqgpoP4VEax7jjl/a230=",
+        "name": "System.ObjectModel.2vyoss71e7.wasm",
+        "hash": "sha256-gv0UttvU1YL+TtfqRBBkTgHgGZ6iP8vlUy0Hvw7nMVI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 69200,
         "virtualPath": "System.Private.Uri.wasm",
-        "name": "System.Private.Uri.y7lm80385i.wasm",
-        "hash": "sha256-ErNmk908lezHIQYY58l7NmEpGHDm/g8TllZua/6b60Y=",
+        "name": "System.Private.Uri.pa9aaj98s0.wasm",
+        "hash": "sha256-kVOXNcnRt/FDGXsyaOTr0TPJjIZBzPirYn3/GpYoSzs=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 40528,
         "virtualPath": "System.Private.Xml.Linq.wasm",
-        "name": "System.Private.Xml.Linq.324h710p8x.wasm",
-        "hash": "sha256-y3l6v06YQSYFc3zVlbkbTHZCge+D8xcyxyCe2mFiqus=",
+        "name": "System.Private.Xml.Linq.fzxiq7r6g2.wasm",
+        "hash": "sha256-i4KmptO8Bbwl1vMeOUVw2X5lAIm6IE2UwYa1Up5Im7E=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 1321040,
         "virtualPath": "System.Private.Xml.wasm",
-        "name": "System.Private.Xml.hz1idoqnqo.wasm",
-        "hash": "sha256-cziNiDVmNHiam08A2H6GXuOYxtOz1DOTEw/8wZACRNg=",
+        "name": "System.Private.Xml.7snpmtm8cq.wasm",
+        "hash": "sha256-WfHzgZbFbnXClZLQaivYAQ3HOlX8DoUgUVpWEvSaj4w=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Runtime.InteropServices.wasm",
-        "name": "System.Runtime.InteropServices.1uqe4ybfnl.wasm",
-        "hash": "sha256-p8QOYm6k0bujXBwHmGKmXjTTSm+vOH12tnIAwxFnCo0=",
+        "name": "System.Runtime.InteropServices.o5iswu9qar.wasm",
+        "hash": "sha256-FE1YDBO65ljNeHFd7aBdApaFzz8FKIRrzRQ4Wpz0CxQ=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 128080,
         "virtualPath": "System.Runtime.Numerics.wasm",
-        "name": "System.Runtime.Numerics.r0smcjcs25.wasm",
-        "hash": "sha256-W6/XQK4g925QRP9GT5yQJRdHlwoN5f54ISRGeuffvmg=",
+        "name": "System.Runtime.Numerics.dls53vu1vh.wasm",
+        "hash": "sha256-/wCQI7qP8NCyaA2WR9hihnQEH03sX8B8QbmKEu+T7co=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 6736,
         "virtualPath": "System.Runtime.Serialization.Formatters.wasm",
-        "name": "System.Runtime.Serialization.Formatters.1el1a2iqki.wasm",
-        "hash": "sha256-d6sbINVEOf2ew8qhuruTD0bBxJv4zDCcyhIOcKgP8e0=",
+        "name": "System.Runtime.Serialization.Formatters.x6rhzecb90.wasm",
+        "hash": "sha256-F+HCZi4f7W6M+ALFPn0PjvrKRK12bTfTIZw7M4egz8g=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5200,
+        "virtualPath": "System.Runtime.Serialization.Primitives.wasm",
+        "name": "System.Runtime.Serialization.Primitives.nz9salteiq.wasm",
+        "hash": "sha256-bdC1PpJmxf3ZyJvOb+Wneui/29HhIL+ioV0AhV8nmgk=",
+        "cache": "force-cache"
+      },
+      {
+        "payloadSize": 11856,
         "virtualPath": "System.Runtime.wasm",
-        "name": "System.Runtime.cch9wr8cqe.wasm",
-        "hash": "sha256-9FMgg9tfc0DdFFTL80xDX6u8MxzBMq9A3v6CN3t0MV0=",
+        "name": "System.Runtime.t0olvr8z32.wasm",
+        "hash": "sha256-3XevLw1IhekweHeoIi0HbPCE3Xa0iFu/cKhwdhgOmuI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Security.Cryptography.Algorithms.wasm",
-        "name": "System.Security.Cryptography.Algorithms.axm4yfbbsd.wasm",
-        "hash": "sha256-8kQjTAKKYhuCUwyJGcOcaUvjUWkGRVYhEt93YmvGXLk=",
+        "name": "System.Security.Cryptography.Algorithms.d7d857flfa.wasm",
+        "hash": "sha256-JzpbCN9ljBeyBlv7uo43wYPQv8ebSIXbZUD7fFZxujY=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Security.Cryptography.Csp.wasm",
-        "name": "System.Security.Cryptography.Csp.vsov7u42ja.wasm",
-        "hash": "sha256-T+7cWHM7Ac9otyMUNeOWz8ZfrrtOKYWOxpMarVdyTwQ=",
+        "name": "System.Security.Cryptography.Csp.bd7xui4686.wasm",
+        "hash": "sha256-j8k577/5zp9jO65jer9afZsNSCJnm5yD9Hkd4dU15po=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 22096,
         "virtualPath": "System.Security.Cryptography.wasm",
-        "name": "System.Security.Cryptography.7q01occcoy.wasm",
-        "hash": "sha256-70E3MVG9LC4uwtP5SKBbiBm9Rov9yYU7CJNIB8iOZqo=",
+        "name": "System.Security.Cryptography.yw8cutlp4o.wasm",
+        "hash": "sha256-3kVd8Xw7lOzjteMviO9Mqzwxdz2EaVciRcldKGudYj4=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Text.Encoding.Extensions.wasm",
-        "name": "System.Text.Encoding.Extensions.qizm3e8m2k.wasm",
-        "hash": "sha256-Ujg2Kd4u+soD5hEId0WRpdVA7qPZRCJ41Y/DF/79CxY=",
+        "name": "System.Text.Encoding.Extensions.0pk8gtc6hb.wasm",
+        "hash": "sha256-xP4rX5pk1asH9qiGUu/GvnmiXhVXvXdIO27+7DYaqcM=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 30800,
         "virtualPath": "System.Text.Encodings.Web.wasm",
-        "name": "System.Text.Encodings.Web.j95f39uoi8.wasm",
-        "hash": "sha256-mbBcpfSrflT332c8zepVkKJc5qc//zVK5BHxU/OFPHY=",
+        "name": "System.Text.Encodings.Web.mf7iq1u5g0.wasm",
+        "hash": "sha256-IhS9xDcDiHAVkxzePW5gfqVWEisk2gd2Sq6Lls6qVcI=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 460880,
         "virtualPath": "System.Text.Json.wasm",
-        "name": "System.Text.Json.vrl291lgdo.wasm",
-        "hash": "sha256-u3fARaiEN4QzJluwLD45wy+qnnHDcBLu7sXpZf8xLAc=",
+        "name": "System.Text.Json.cmh1shqnhy.wasm",
+        "hash": "sha256-dO+rvQzS8S5m5NDotnXzHhjSjt7Ikf70NYeZL5V87Eg=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 264784,
         "virtualPath": "System.Text.RegularExpressions.wasm",
-        "name": "System.Text.RegularExpressions.axpooz46t8.wasm",
-        "hash": "sha256-Pt2b7SH4VtxHlVof29yHLQHdZyZUkWs/jhM5I4qkh3w=",
+        "name": "System.Text.RegularExpressions.59iuovesf0.wasm",
+        "hash": "sha256-F3QYupID7kW1QRKaiyuRV6Uhf6uDRGyCk2HwzGRPQdA=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.Threading.wasm",
-        "name": "System.Threading.t6510gvok2.wasm",
-        "hash": "sha256-hQAwgk8oOwJ+OiAA54yfv7kKKBy8izZ4wyTpZmh2RIk=",
+        "name": "System.Threading.xiax8m3res.wasm",
+        "hash": "sha256-icMKJ108hEh11RnsAuM5S1k5WQFH+d12Vmp22l/qp2I=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4176,
         "virtualPath": "System.Xml.Linq.wasm",
-        "name": "System.Xml.Linq.mf2xcoy9rz.wasm",
-        "hash": "sha256-binOW1w231SV4HaSWhW/NpNt2hcVaRpvXDk5F1if90k=",
+        "name": "System.Xml.Linq.cdvmp88v6w.wasm",
+        "hash": "sha256-sJ7x9qNQI6zO1y1cKMOtbGwvY+U/CSx0IjywIjGyNuE=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "System.wasm",
-        "name": "System.qf9o9thhcz.wasm",
-        "hash": "sha256-Oi2ZVXkw2JmP+MBLYf56Z9QoZPjrC9vYuyU2cUrA7EM=",
+        "name": "System.vasn2s1gvu.wasm",
+        "hash": "sha256-BzFYPuXGBhZmBht9/mjpa/UBgs6V7beqeNmnMqh4j6U=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4688,
         "virtualPath": "netstandard.wasm",
-        "name": "netstandard.x4q0tpphoq.wasm",
-        "hash": "sha256-UZXMwjpUNiphx0TljfJp/mktvGG16XoDcGYQvaqlzHU=",
+        "name": "netstandard.azekhbou71.wasm",
+        "hash": "sha256-Krpo5AF5p7jj2m9SZlt6fWuWxyLzGoQv0FVqB9SEXyc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 4122192,
         "virtualPath": "Soenneker.Quark.Suite.wasm",
-        "name": "Soenneker.Quark.Suite.al83opc856.wasm",
-        "hash": "sha256-Pione8U0XqNy7Fhi0LTdzyqtT6GEHjLqYn5+dnqlq+8=",
+        "name": "Soenneker.Quark.Suite.kuhfoouz3i.wasm",
+        "hash": "sha256-5N/cR/bPVc6mx0O6ZShivXhgWRjStN3jCl9PThP2hAc=",
         "cache": "force-cache"
       },
       {
+        "payloadSize": 5909584,
         "virtualPath": "Soenneker.Quark.Suite.Demo.wasm",
-        "name": "Soenneker.Quark.Suite.Demo.up9ail6vdx.wasm",
-        "hash": "sha256-Tsq2pTf/cS+zyHsvQumTpovJjh1Ju6C7elI+JPregOw=",
+        "name": "Soenneker.Quark.Suite.Demo.idds9qe59a.wasm",
+        "hash": "sha256-SlylGshNpTWvQOMcAV7bd/yjOy/ISbaq0TH5fYmpxYA=",
         "cache": "force-cache"
       }
     ]
   },
   "debugLevel": 0,
-  "linkerEnabled": true,
   "appsettings": [
     "../appsettings.json"
   ],
@@ -926,13 +1110,13 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "System.ComponentModel.TypeDescriptor.IsComObjectDescriptorSupported": false,
         "System.Data.DataSet.XmlSerializationIsSupported": false,
         "System.Diagnostics.Debugger.IsSupported": false,
-        "System.Diagnostics.Metrics.Meter.IsSupported": false,
-        "System.Diagnostics.Tracing.EventSource.IsSupported": false,
+        "System.Diagnostics.Metrics.Meter.IsSupported": true,
+        "System.Diagnostics.Tracing.EventSource.IsSupported": true,
         "System.GC.Server": true,
         "System.Globalization.Invariant": false,
         "System.TimeZoneInfo.Invariant": false,
         "System.Linq.Enumerable.IsSizeOptimized": true,
-        "System.Net.Http.EnableActivityPropagation": false,
+        "System.Net.Http.EnableActivityPropagation": true,
         "System.Net.Http.WasmEnableStreamingResponse": true,
         "System.Net.SocketsHttpHandler.Http3Support": false,
         "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
@@ -948,8 +1132,10 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "System.Text.Encoding.EnableUnsafeUTF7Encoding": false,
         "System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault": true,
         "System.Threading.Thread.EnableAutoreleasePool": false,
-        "Microsoft.AspNetCore.Components.Endpoints.NavigationManager.DisableThrowNavigationException": false
+        "Microsoft.AspNetCore.Components.Endpoints.NavigationManager.DisableThrowNavigationException": false,
+        "System.Diagnostics.StackTrace.IsLineNumberSupported": false,
+        "System.Runtime.CompilerServices.RuntimeFeature.IsMultithreadingSupported": false
       }
     }
   }
-}/*json-end*/);export{gt as default,ft as dotnet,mt as exit};
+}/*json-end*/);export{po as default,mo as dotnet,go as exit};
