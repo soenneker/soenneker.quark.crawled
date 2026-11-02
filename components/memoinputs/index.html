@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+<html lang="en" class="dark" style="color-scheme: dark; --blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
 	<head>
 		<meta charset="utf-8">
 		<script>
@@ -2354,7 +2354,7 @@
 														<h2 id="size-variations" class="scroll-m-20 border-b pb-2 transition-colors first:mt-0 text-xl font-semibold tracking-tight m-0" data-slot="h2">Size Variations</h2>
 														<!--!-->
 														<span class="block text-muted-foreground text-sm" data-slot="span" _bl_268="">
-															<!--!-->InputSizes.Sm and InputSizes.Lg.</span>
+															<!--!-->Custom height and text size utilities.</span>
 													</div>
 													<!--!-->      
 													<!--!-->
@@ -2369,13 +2369,13 @@
 																	<p class="[&amp;:not(:first-child)]:mt-6 font-semibold leading-7" data-slot="paragraph">Small Size</p>
 																	<!--!-->             
 																	<!--!-->
-																	<textarea placeholder="Small memo edit..." class="field-sizing-content placeholder:text-muted-foreground aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 dark:bg-input/30 focus-visible:ring-[3px] h-9 text-xs flex text-base md:text-sm px-2.5 py-2 w-full min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="3" data-slot="textarea" _bl_359=""></textarea>
+																	<textarea placeholder="Small memo edit..." class="field-sizing-content placeholder:text-muted-foreground aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 dark:bg-input/30 focus-visible:ring-[3px] flex text-xs px-2.5 py-2 w-full h-9 min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="3" data-slot="textarea" _bl_359=""></textarea>
 																	<!--!-->             
 																	<!--!-->
 																	<p class="[&amp;:not(:first-child)]:mt-6 font-semibold leading-7 mt-4" data-slot="paragraph">Large Size</p>
 																	<!--!-->             
 																	<!--!-->
-																	<textarea placeholder="Large memo edit..." class="field-sizing-content placeholder:text-muted-foreground aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 dark:bg-input/30 focus-visible:ring-[3px] h-11 text-base flex text-base md:text-sm px-2.5 py-2 w-full min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="3" data-slot="textarea" _bl_360=""></textarea>
+																	<textarea placeholder="Large memo edit..." class="field-sizing-content placeholder:text-muted-foreground aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 dark:bg-input/30 focus-visible:ring-[3px] flex text-base px-2.5 py-2 w-full h-11 min-h-16 disabled:opacity-50 disabled:cursor-not-allowed border border-input focus-visible:border-ring bg-transparent rounded-lg focus-visible:ring-ring/50 outline-none transition-colors" rows="3" data-slot="textarea" _bl_360=""></textarea>
 																</div>
 															</div>
 														</div>
@@ -2386,7 +2386,7 @@
 																<!--!-->
 																<div class="bg-muted/25" data-slot="div" _bl_327="">
 																	<pre aria-hidden="true" class="m-0 h-[104px] overflow-hidden px-4 py-3 font-mono text-sm leading-6">
-																		<code>&lt;Paragraph FontWeight="FontWeight.Semibold"&gt;Small Size&lt;/Paragraph&gt; &lt;MemoInput @bind-Value="_smallValue" InputSize="InputSizes.Sm" Placeholder="Small memo edit..."/&gt; &lt;Paragraph FontWeight="FontWeight.Semibold" Margin="Margin.FromTop.Is4"&gt;Large Size&lt;/Paragraph&gt; &lt;MemoInput @bind-Value="_largeValue" InputSize="InputSizes.Lg" Placeholder="Large memo edit..."/&gt;</code>
+																		<code>&lt;Paragraph FontWeight="FontWeight.Semibold"&gt;Small Size&lt;/Paragraph&gt; &lt;MemoInput @bind-Value="_smallValue" Height="Height.Is9" TextSize="TextSize.Xs" Placeholder="Small memo edit..."/&gt; &lt;Paragraph FontWeight="FontWeight.Semibold" Margin="Margin.FromTop.Is4"&gt;Large Size&lt;/Paragraph&gt; &lt;MemoInput @bind-Value="_largeValue" Height="Height.Is11" TextSize="TextSize.Base" Placeholder="Large memo edit..."/&gt;</code>
 																	</pre>
 																</div>
 																<!--!-->
@@ -3019,7 +3019,7 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="basic-usage" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#basic-usage" data-slot="anchor" data-active="true" aria-current="location">Basic Usage</a>
+													<a data-scrollspy-anchor="basic-usage" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#basic-usage" data-slot="anchor">Basic Usage</a>
 													<!--!-->
 													<a data-scrollspy-anchor="size-variations" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#size-variations" data-slot="anchor">Size Variations</a>
 													<!--!-->
@@ -3039,7 +3039,7 @@
 													<!--!-->
 													<a data-scrollspy-anchor="character-counter" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#character-counter" data-slot="anchor">Character Counter</a>
 													<!--!-->
-													<a data-scrollspy-anchor="pre-filled-content" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#pre-filled-content" data-slot="anchor">Pre-filled Content</a>
+													<a data-scrollspy-anchor="pre-filled-content" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/memoinputs#pre-filled-content" data-slot="anchor" data-active="true" aria-current="location">Pre-filled Content</a>
 												</nav>
 											</div>
 										</div>
