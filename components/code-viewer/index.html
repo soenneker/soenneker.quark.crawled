@@ -3521,7 +3521,7 @@
 																			<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" xmlns="http://www.w3.org/2000/svg"></path>
 																		</svg>
 																	</button>
-																	<div aria-label="Project JSON" readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 100px; height: 96px;" _bl_261="" data-keybinding-context="1" data-mode-id="json">
+																	<div aria-label="Project JSON" readonly="" class="w-full" data-slot="code-editor" style="position: relative; width: 100%; min-width: 0px; min-height: 100px; height: 96px; --vscode-editorCodeLens-lineHeight: 16px; --vscode-editorCodeLens-fontSize: 12px; --vscode-editorCodeLens-fontFeatureSettings: &quot;liga&quot; off, &quot;calt&quot; off;" _bl_261="" data-keybinding-context="1" data-mode-id="json">
 																		<div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/1" style="width: 622px; height: 100px;">
 																			<div data-mprt="3" class="overflow-guard" style="width: 622px; height: 100px;">
 																				<div class="native-edit-context" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" tabindex="0" role="textbox" aria-required="false" aria-multiline="true" aria-autocomplete="none" aria-roledescription="editor" aria-label="Project JSON" style="tab-size: 16.8047px; text-wrap: wrap; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; font-variation-settings: normal; line-height: 19px; letter-spacing: 0px; top: 0px; left: 68px; width: 538px; height: 19px;"></div>
@@ -3598,7 +3598,14 @@
 																					</div>
 																				</div>
 																				<div role="presentation" aria-hidden="true" style="width: 622px;"></div>
-																				<div data-mprt="4" class="overlayWidgets" style="width: 622px;"></div>
+																				<div data-mprt="4" class="overlayWidgets" style="width: 622px;">
+																					<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 608px; position: absolute; right: 50%; top: 0px;">
+																						<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
+																						<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 540px;">
+																							<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
+																						</div>
+																					</div>
+																				</div>
 																				<div data-mprt="9" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 100px;">
 																					<div class="minimap-shadow-hidden" style="height: 100px;"></div>
 																					<canvas width="0" height="100" style="position: absolute; left: 0px; width: 0px; height: 100px;"></canvas>
@@ -3612,6 +3619,7 @@
 																			<div data-mprt="2" class="overflowingContentWidgets"></div>
 																			<div data-mprt="5" class="overflowingOverlayWidgets"></div>
 																		</div>
+																		<div class="context-view" aria-hidden="true" style="display: none;"></div>
 																	</div>
 																</div>
 															</div>
@@ -3786,9 +3794,9 @@
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
-													<a data-scrollspy-anchor="formatted-json" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/code-viewer#formatted-json" data-slot="anchor">Formatted JSON</a>
+													<a data-scrollspy-anchor="formatted-json" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/code-viewer#formatted-json" data-slot="anchor" data-active="true" aria-current="location">Formatted JSON</a>
 													<!--!-->
-													<a data-scrollspy-anchor="original-formatting" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/code-viewer#original-formatting" data-slot="anchor" data-active="true" aria-current="location">Original formatting</a>
+													<a data-scrollspy-anchor="original-formatting" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/code-viewer#original-formatting" data-slot="anchor">Original formatting</a>
 												</nav>
 											</div>
 										</div>
