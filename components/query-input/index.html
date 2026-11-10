@@ -2317,7 +2317,7 @@
 													<h2 id="query-building" class="scroll-m-20 border-b pb-2 transition-colors first:mt-0 text-xl font-semibold tracking-tight m-0" data-slot="h2">Query building</h2>
 													<!--!-->
 													<span class="block text-muted-foreground text-sm" data-slot="span" _bl_236="">
-														<!--!-->Mix search text with filters. Use arrow keys and Enter to select suggestions, and Escape to dismiss them. Quoted values and exclusions are supported.</span>
+														<!--!-->Mix search text with filters. Use arrow keys and Enter to select suggestions, and Escape to dismiss them. Use AND/OR to combine operands (AND takes precedence). Adjacent operands use AND. Quoted values and exclusions are supported.</span>
 												</div>
 												<!--!-->      
 												<!--!-->
@@ -2332,7 +2332,7 @@
 																<div class="grid-cols-1 grid w-full gap-3" data-slot="grid">
 																	<!--!-->
 																	<div data-slot="query-input" class="relative w-full">
-																		<input class="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50" placeholder="Search or add a filter..." aria-label="Search query" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="query-options-f3b3011c4a5c4ae1ad51e482dd87f192" autocomplete="off" _bl_249="">
+																		<input class="h-10 w-full rounded-md border border-input bg-background px-3 pr-10 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50" placeholder="Search or add a filter..." aria-label="Search query" aria-busy="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="query-options-6516e4cc156b4260b508cc03ee8dc1da" autocomplete="off" _bl_249="">
 																	</div>
 																	<!--!-->             
 																	<!--!-->
@@ -2341,8 +2341,15 @@
 																	<!--!-->
 																	<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Text:
 																	</p>
+																	<!--!-->             
+																	<!--!-->
+																	<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Expression: QueryInputBinaryExpression { Left = QueryInputFilterExpression { Filter = QueryInputFilter { Field = state, Value = open, Excluded = False } }, Operator = Or, Right = QueryInputBinaryExpression { Left = QueryInputFilterExpression { Filter = QueryInputFilter { Field = state, Value = closed, Excluded = False } }, Operator = And, Right = QueryInputFilterExpression { Filter = QueryInputFilter { Field = assignee, Value = me, Excluded = True } } } }</p>
 																	<!--!-->
 																	<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Include state: open</p>
+																	<!--!-->
+																	<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Include state: closed</p>
+																	<!--!-->
+																	<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">Exclude assignee: me</p>
 																</div>
 															</div>
 														</div>
@@ -2373,6 +2380,9 @@
 												</div>
 											</div>
 										</div>
+										<!--!--> 
+										<!--!-->
+										<p class="[&amp;:not(:first-child)]:mt-6 leading-7" data-slot="paragraph">For server-backed suggestions, assign SuggestValues on QueryInput or an individual QueryInputField. The async callback receives Field, Search, Query, Parsed, MaxSuggestions, and a cancellation token. Return SelectOption values from your API or database lookup. Translate Parsed.Expression to preserve AND/OR when executing searches, and check Errors before execution.</p>
 									</article>
 									<!--!-->                                     
 									<!--!-->
@@ -2409,12 +2419,12 @@
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
 		<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;b7bb3279d7e34115b0079ebd3001b2f1&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
-		<script src="https://quark.soenneker.com/_content/Soenneker.Blazor.Cloudflare.AiSearch/js/aisearchinterop.min.js" crossorigin="anonymous" type="module" data-soenneker-loaded="true"></script>
 		<div style="display:contents;" _bl_242="">
 			<!--!-->
 			<div data-bradix-dismissable-layer-branch="" style="display:contents;" _bl_246="">
 				<!--!-->
 			</div>
 		</div>
+		<script src="https://quark.soenneker.com/_content/Soenneker.Blazor.Cloudflare.AiSearch/js/aisearchinterop.min.js" crossorigin="anonymous" type="module" data-soenneker-loaded="true"></script>
 	</body>
 </html>
