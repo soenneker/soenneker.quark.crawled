@@ -1286,6 +1286,12 @@
 .mtks { text-decoration: line-through; }
 .mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }
 .monaco-editor, .monaco-diff-editor, .monaco-component { forced-color-adjust: none; }</style>
+		<style type="text/css" media="screen">
+.monaco-editor .ghost-text-decoration,
+.monaco-editor .ghost-text-decoration-preview,
+.monaco-editor .ghost-text {
+	font-family: default;
+}</style>
 	</head>
 	<body class="monaco-enable-motion underline-links">
 		<div id="app">
@@ -3560,7 +3566,42 @@
 														<!--!-->
 														<div id="quark-datatable-4" class="relative w-full min-w-0" data-slot="div" _bl_247="">
 															<!--!-->
-															<div class="relative w-full min-w-0 overflow-x-auto" data-slot="div" _bl_250="">
+															<div class="relative w-full min-w-0 overflow-x-auto" style="min-height: 8rem;" data-slot="div" _bl_250="">
+																<!--!-->
+																<div data-slot="datatable-loading" class="flex inset-0 absolute items-center justify-center z-10" style="background: transparent;" _bl_251="">
+																	<!--!-->
+																	<span aria-label="Loading data" class="quark-spinner inline-block align-middle leading-0 relative size-6 overflow-hidden shrink-0 pointer-events-none" dir="ltr" data-reverse="false" data-decorative="false" style="contain:strict; --spinner-foreground:currentColor; --spinner-track-color:currentColor; --spinner-track-opacity:0.15; --spinner-stroke-width:8; --spinner-track-stroke-width:8; --spinner-radius:46; --spinner-track-radius:46; --spinner-minimum-arc:25; --spinner-maximum-arc:77.778; --spinner-left-start:225deg; --spinner-left-middle:130deg; --spinner-right-start:-225deg; --spinner-right-middle:-130deg; --spinner-layer-1:135deg; --spinner-layer-2:270deg; --spinner-layer-3:405deg; --spinner-layer-4:540deg; --spinner-layer-5:675deg; --spinner-layer-6:810deg; --spinner-layer-7:945deg; --spinner-layer-8:1080deg; --spinner-rotation-duration:1.568s; --spinner-arc-duration:1.333s; --spinner-cycle-duration:5.332s; --spinner-color-duration:5.332s; --spinner-easing:cubic-bezier(0.4, 0, 0.2, 1); --spinner-arc-travel:100; --spinner-color-1:currentColor; --spinner-color-2:currentColor; --spinner-color-3:currentColor; --spinner-color-4:currentColor" role="status" data-slot="spinner">
+																		<!--!-->
+																		<svg class="quark-spinner-track-graphic" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+																			<circle data-slot="spinner-track" class="quark-spinner-track" cx="50" cy="50"></circle>
+																		</svg>
+																		<!--!-->
+																		<span data-slot="spinner-motion" class="quark-spinner-indeterminate" aria-hidden="true">
+																			<span class="quark-spinner-layer">
+																				<span class="quark-spinner-clipper quark-spinner-left">
+																					<span class="quark-spinner-circle-rotator">
+																						<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																							<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																						</svg>
+																					</span>
+																				</span>
+																				<span class="quark-spinner-gap-patch">
+																					<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																						<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																					</svg>
+																				</span>
+																				<span class="quark-spinner-clipper quark-spinner-right">
+																					<span class="quark-spinner-circle-rotator">
+																						<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																							<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																						</svg>
+																					</span>
+																				</span>
+																			</span>
+																		</span>
+																		<span class="sr-only">Loading data</span>
+																	</span>
+																</div>
 																<!--!-->
 																<div class="w-full" data-slot="div" _bl_252="">
 																	<!--!-->
@@ -3570,6 +3611,46 @@
 																	</div>
 																	<!--!-->                  
 																	<!--!-->
+																	<div class="inset-0 absolute z-10" data-slot="datatable-loader">
+																		<!--!-->
+																		<div class="flex inset-0 absolute items-center justify-center" style="background: transparent;" data-slot="datatable-loader-overlay" _bl_257="">
+																			<!--!-->
+																			<div role="status" aria-live="polite" aria-label="Loading data" class="flex items-center justify-center" data-slot="datatable-loader-content" _bl_261="">
+																				<!--!-->
+																				<span class="quark-spinner inline-block align-middle text-primary leading-0 relative size-8 overflow-hidden shrink-0 pointer-events-none" dir="ltr" data-reverse="false" data-decorative="true" style="contain:strict; --spinner-foreground:currentColor; --spinner-track-color:currentColor; --spinner-track-opacity:0.15; --spinner-stroke-width:8; --spinner-track-stroke-width:8; --spinner-radius:46; --spinner-track-radius:46; --spinner-minimum-arc:25; --spinner-maximum-arc:77.778; --spinner-left-start:225deg; --spinner-left-middle:130deg; --spinner-right-start:-225deg; --spinner-right-middle:-130deg; --spinner-layer-1:135deg; --spinner-layer-2:270deg; --spinner-layer-3:405deg; --spinner-layer-4:540deg; --spinner-layer-5:675deg; --spinner-layer-6:810deg; --spinner-layer-7:945deg; --spinner-layer-8:1080deg; --spinner-rotation-duration:1.568s; --spinner-arc-duration:1.333s; --spinner-cycle-duration:5.332s; --spinner-color-duration:5.332s; --spinner-easing:cubic-bezier(0.4, 0, 0.2, 1); --spinner-arc-travel:100; --spinner-color-1:currentColor; --spinner-color-2:currentColor; --spinner-color-3:currentColor; --spinner-color-4:currentColor" aria-hidden="true" data-slot="datatable-spinner">
+																					<!--!-->
+																					<svg class="quark-spinner-track-graphic" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+																						<circle data-slot="spinner-track" class="quark-spinner-track" cx="50" cy="50"></circle>
+																					</svg>
+																					<!--!-->
+																					<span data-slot="spinner-motion" class="quark-spinner-indeterminate" aria-hidden="true">
+																						<span class="quark-spinner-layer">
+																							<span class="quark-spinner-clipper quark-spinner-left">
+																								<span class="quark-spinner-circle-rotator">
+																									<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																										<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																									</svg>
+																								</span>
+																							</span>
+																							<span class="quark-spinner-gap-patch">
+																								<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																									<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																								</svg>
+																							</span>
+																							<span class="quark-spinner-clipper quark-spinner-right">
+																								<span class="quark-spinner-circle-rotator">
+																									<svg class="quark-spinner-circle-graphic" viewBox="0 0 100 100" focusable="false">
+																										<circle class="quark-spinner-circle" cx="50" cy="50" pathLength="100" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+																									</svg>
+																								</span>
+																							</span>
+																						</span>
+																					</span>
+																				</span>
+																				<!--!-->
+																			</div>
+																		</div>
+																	</div>
 																	<!--!-->                  
 																	<!--!-->
 																	<!--!-->
@@ -3630,208 +3711,7 @@
 																			</thead>
 																			<!--!-->                      
 																			<!--!-->
-																			<tbody class="[&amp;_tr:last-child]:border-0" data-slot="table-body">
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Phil Blick</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Finance</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">PhilBlick.Kshlerin28@yahoo.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$109,824.37</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Sep 27, 2023</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">On Leave</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Richard Schoen</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Engineering</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">RichardSchoen.OKeefe@hotmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$95,420.57</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Sep 21, 2023</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Active</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Jane Reichert</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">HR</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">JaneReichert_Rice@hotmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$49,488.86</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">May 24, 2024</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Active</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Mercedes Russel</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Engineering</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">MercedesRussel.Olson@yahoo.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$98,537.25</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Apr 05, 2024</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Active</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Jeff Renner</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Finance</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">JeffRenner72@yahoo.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$50,122.56</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">May 21, 2022</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Active</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Leo Daugherty</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Operations</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">LeoDaugherty.Batz@gmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$62,423.24</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Dec 31, 2022</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">On Leave</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Joanne Cruickshank</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Marketing</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">JoanneCruickshank.Deckow84@yahoo.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$98,113.12</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Aug 30, 2024</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">On Leave</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Ira Jerde</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Marketing</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">IraJerde_Fritsch@gmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$73,414.58</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Jun 08, 2026</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Inactive</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Alejandro Rogahn</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">HR</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">AlejandroRogahn.Volkman@hotmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$31,856.01</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Dec 28, 2024</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">On Leave</td>
-																				</tr>
-																				<!--!-->
-																				<tr class="hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors" data-slot="table-row">
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Dean Hintz</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Operations</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">DeanHintz.Batz@gmail.com</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">$77,110.00</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Dec 22, 2022</td>
-																					<!--!-->                                     
-																					<!--!-->
-																					<td class="[&amp;:has([role=checkbox])]:pe-0 align-middle whitespace-nowrap p-2" data-slot="table-cell">Active</td>
-																				</tr>
-																			</tbody>
+																			<tbody class="[&amp;_tr:last-child]:border-0" data-slot="table-body"></tbody>
 																		</table>
 																	</div>
 																	<!--!-->                  
@@ -4380,7 +4260,7 @@
 																		</div>
 																		<div role="presentation" aria-hidden="true" style="width: 594px;"></div>
 																		<div data-mprt="4" class="overlayWidgets" style="width: 608px;">
-																			<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 594px; position: absolute; right: 50%; top: 0px;">
+																			<div class="sticky-widget" widgetid="editor.contrib.stickyScrollWidget" style="display: none; width: 594px; position: absolute;">
 																				<div class="sticky-widget-line-numbers" role="none" style="width: 68px;"></div>
 																				<div class="sticky-widget-lines-scrollable" style="--vscode-editorStickyScroll-scrollableWidth: 579px;">
 																					<div class="sticky-widget-lines" role="list" style="left: 0px;"></div>
