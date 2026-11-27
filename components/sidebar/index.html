@@ -93,6 +93,7 @@
 		<script type="application/ld+json"><!--!-->{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quark.soenneker.com/#website","name":"Quark Suite","url":"https://quark.soenneker.com/","inLanguage":"en"},{"@type":"WebPage","@id":"https://quark.soenneker.com/components/sidebar#webpage","url":"https://quark.soenneker.com/components/sidebar","name":"Blazor Sidebar: Navigation \u0026 Resizing | Quark Suite","description":"Build Blazor sidebar navigation with Quark. Explore menu groups, submenus, mobile layouts, controlled collapse, loading skeletons, resizing, and width persistence.","inLanguage":"en","isPartOf":{"@id":"https://quark.soenneker.com/#website"},"about":{"@type":"SoftwareSourceCode","name":"Soenneker.Quark.Suite","programmingLanguage":"C#","codeRepository":"https://github.com/soenneker/soenneker.quark.suite"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quark Suite","item":"https://quark.soenneker.com/"},{"@type":"ListItem","position":2,"name":"Blazor Sidebar: Navigation \u0026 Resizing","item":"https://quark.soenneker.com/components/sidebar"}]}}]}</script>
 		<link rel="stylesheet" href="https://quark.soenneker.com/css/headersearch.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/css/sonner.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
+		<link rel="stylesheet" href="https://quark.soenneker.com/_content/Soenneker.Quark.Suite/js/monaco-editor/monaco.editor.main.esm.css" crossorigin="anonymous" media="all" type="text/css" data-soenneker-loaded="true">
 	</head>
 	<body>
 		<div id="app">
@@ -3061,7 +3062,7 @@
 																										<!--!-->
 																										<div data-sidebar="menu-skeleton-icon" class="size-4 bg-muted rounded-md animate-pulse" data-slot="skeleton"></div>
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 84%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 86%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																								<!--!-->                                         
@@ -3072,7 +3073,7 @@
 																										<!--!-->
 																										<div data-sidebar="menu-skeleton-icon" class="size-4 bg-muted rounded-md animate-pulse" data-slot="skeleton"></div>
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 75%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 82%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																								<!--!-->                                         
@@ -3081,7 +3082,7 @@
 																									<!--!-->
 																									<div class="flex px-2 h-8 gap-2 items-center rounded-md" data-sidebar="menu-skeleton" data-slot="sidebar-menu-skeleton">
 																										<!--!-->
-																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 55%" data-slot="skeleton"></div>
+																										<div data-sidebar="menu-skeleton-text" class="bg-muted rounded-md animate-pulse h-4 max-w-(--skeleton-width) flex-1" style="--skeleton-width: 56%" data-slot="skeleton"></div>
 																									</div>
 																								</li>
 																							</ul>
@@ -3384,13 +3385,13 @@
 														<div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full h-full" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem; --sidebar-width-mobile: 18rem" data-slot="sidebar-wrapper">
 															<!--!-->
 															<!--!-->
-															<div data-sidebar-resize-root="" data-side="left" data-variant="sidebar" data-shell="default" data-state="expanded" data-collapsible="" data-slot="sidebar" class="group peer hidden text-sidebar-foreground md:block relative" _bl_379="">
+															<div data-sidebar-resize-root="" data-side="left" data-variant="sidebar" data-shell="default" data-state="expanded" data-collapsible="" data-slot="sidebar" class="group peer hidden text-sidebar-foreground md:block relative" _bl_381="">
 																<!--!-->
-																<div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)" _bl_380=""></div>
+																<div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)" _bl_382=""></div>
 																<!--!-->
 																<aside data-slot="sidebar-container" data-side="left" class="absolute inset-y-0 z-10 hidden h-full w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear data-[side=left]:left-0 data-[side=left]:group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] data-[side=right]:right-0 data-[side=right]:group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)] md:flex group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l md:pr-1">
 																	<!--!-->
-																	<div data-slot="sidebar-inner" data-sidebar="sidebar" class="flex size-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm group-data-[variant=floating]:ring-1 group-data-[variant=floating]:ring-sidebar-border" _bl_381="">
+																	<div data-slot="sidebar-inner" data-sidebar="sidebar" class="flex size-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm group-data-[variant=floating]:ring-1 group-data-[variant=floating]:ring-sidebar-border" _bl_383="">
 																		<!--!-->
 																		<div class="flex p-2 flex-col gap-2" data-sidebar="header" data-slot="sidebar-header">
 																			<!--!-->
@@ -3398,9 +3399,9 @@
 																				<!--!-->
 																				<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																					<!--!-->
-																					<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-0! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))] flex text-left text-sm p-2 w-full h-12 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-background rounded-md ring-sidebar-ring outline-hidden shadow-[0_0_0_1px_hsl(var(--sidebar-border))] transition-[width,height,padding]" data-sidebar="menu-button" data-size="lg" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_383="">
+																					<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-0! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))] flex text-left text-sm p-2 w-full h-12 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-background rounded-md ring-sidebar-ring outline-hidden shadow-[0_0_0_1px_hsl(var(--sidebar-border))] transition-[width,height,padding]" data-sidebar="menu-button" data-size="lg" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_385="">
 																						<!--!-->
-																						<span class="flex text-white size-8 items-center justify-center bg-blue-600 rounded-lg transition-opacity aspect-square group-data-[collapsible=icon]:size-4 group-data-[collapsible=icon]:group-hover:opacity-0" data-slot="span" _bl_385="">
+																						<span class="flex text-white size-8 items-center justify-center bg-blue-600 rounded-lg transition-opacity aspect-square group-data-[collapsible=icon]:size-4 group-data-[collapsible=icon]:group-hover:opacity-0" data-slot="span" _bl_387="">
 																							<!--!-->
 																							<!--!-->
 																							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
@@ -3413,13 +3414,13 @@
 																						</span>
 																						<!--!-->                                         
 																						<!--!-->
-																						<div class="grid text-left text-sm leading-tight flex-1 group-data-[collapsible=icon]:hidden" data-slot="div" _bl_386="">
+																						<div class="grid text-left text-sm leading-tight flex-1 group-data-[collapsible=icon]:hidden" data-slot="div" _bl_388="">
 																							<!--!-->
-																							<span class="font-semibold truncate" data-slot="span" _bl_389="">
+																							<span class="font-semibold truncate" data-slot="span" _bl_391="">
 																								<!--!-->Acme Inc</span>
 																							<!--!-->                                             
 																							<!--!-->
-																							<span class="text-xs truncate" data-slot="span" _bl_390="">
+																							<span class="text-xs truncate" data-slot="span" _bl_392="">
 																								<!--!-->Enterprise</span>
 																						</div>
 																					</button>
@@ -3441,7 +3442,7 @@
 																						<!--!-->
 																						<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																							<!--!-->
-																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="open" data-active="false" aria-expanded="true" type="button" data-slot="sidebar-menu-button" _bl_391="">
+																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="open" data-active="false" aria-expanded="true" type="button" data-slot="sidebar-menu-button" _bl_393="">
 																								<!--!-->
 																								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																									<!--!-->
@@ -3451,7 +3452,7 @@
 																								</svg>
 																								<!--!-->                                                 
 																								<!--!-->
-																								<span data-slot="span" _bl_397="">
+																								<span data-slot="span" _bl_399="">
 																									<!--!-->Playground</span>
 																								<!--!-->                                                 
 																								<!--!-->
@@ -3489,7 +3490,7 @@
 																						<!--!-->
 																						<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																							<!--!-->
-																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_392="">
+																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_394="">
 																								<!--!-->
 																								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																									<!--!-->
@@ -3502,7 +3503,7 @@
 																								</svg>
 																								<!--!-->                                                 
 																								<!--!-->
-																								<span data-slot="span" _bl_398="">
+																								<span data-slot="span" _bl_400="">
 																									<!--!-->Models</span>
 																								<!--!-->                                                 
 																								<!--!-->
@@ -3516,7 +3517,7 @@
 																						<!--!-->
 																						<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																							<!--!-->
-																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_393="">
+																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_395="">
 																								<!--!-->
 																								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																									<!--!-->
@@ -3525,7 +3526,7 @@
 																								</svg>
 																								<!--!-->                                                 
 																								<!--!-->
-																								<span data-slot="span" _bl_399="">
+																								<span data-slot="span" _bl_401="">
 																									<!--!-->Documentation</span>
 																								<!--!-->                                                 
 																								<!--!-->
@@ -3539,7 +3540,7 @@
 																						<!--!-->
 																						<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																							<!--!-->
-																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_394="">
+																							<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-2! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-8 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="default" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_396="">
 																								<!--!-->
 																								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-middle size-4 shrink-0" focusable="false" aria-hidden="true" data-slot="icon">
 																									<!--!-->
@@ -3550,7 +3551,7 @@
 																								</svg>
 																								<!--!-->                                                 
 																								<!--!-->
-																								<span data-slot="span" _bl_400="">
+																								<span data-slot="span" _bl_402="">
 																									<!--!-->Settings</span>
 																								<!--!-->                                                 
 																								<!--!-->
@@ -3572,19 +3573,19 @@
 																				<!--!-->
 																				<li class="group/menu-item relative" data-sidebar="menu-item" data-slot="sidebar-menu-item">
 																					<!--!-->
-																					<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-0! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-12 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="lg" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_384="">
+																					<button class="peer/menu-button group/menu-button group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate group-data-[collapsible=icon]:p-0! hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex text-left text-sm p-2 w-full h-12 overflow-hidden gap-2 items-center disabled:opacity-50 disabled:pointer-events-none cursor-pointer disabled:cursor-not-allowed bg-transparent rounded-md ring-sidebar-ring outline-hidden transition-[width,height,padding]" data-sidebar="menu-button" data-size="lg" data-state="closed" data-active="false" type="button" data-slot="sidebar-menu-button" _bl_386="">
 																						<!--!-->
-																						<span class="flex text-xs font-semibold size-8 items-center justify-center rounded-full aspect-square bg-sidebar-accent" data-slot="span" _bl_387="">
+																						<span class="flex text-xs font-semibold size-8 items-center justify-center rounded-full aspect-square bg-sidebar-accent" data-slot="span" _bl_389="">
 																							<!--!-->sh</span>
 																						<!--!-->                                         
 																						<!--!-->
-																						<div class="grid text-left text-sm leading-tight flex-1" data-slot="div" _bl_388="">
+																						<div class="grid text-left text-sm leading-tight flex-1" data-slot="div" _bl_390="">
 																							<!--!-->
-																							<span class="font-semibold truncate" data-slot="span" _bl_395="">
+																							<span class="font-semibold truncate" data-slot="span" _bl_397="">
 																								<!--!-->shadcn</span>
 																							<!--!-->                                             
 																							<!--!-->
-																							<span class="text-xs truncate" data-slot="span" _bl_396="">
+																							<span class="text-xs truncate" data-slot="span" _bl_398="">
 																								<!--!-->m@example.com</span>
 																						</div>
 																						<!--!-->                                         
@@ -3613,7 +3614,7 @@
 																	</div>
 																	<!--!-->             
 																	<!--!-->
-																	<div data-sidebar="resize-handle" role="separator" tabindex="0" aria-label="Resize sidebar" aria-orientation="vertical" aria-valuemin="192" aria-valuemax="400" class="hidden md:block absolute inset-y-0 z-30 w-1 cursor-col-resize touch-none select-none hover:bg-sidebar-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sidebar-ring" style="right: 0;" _bl_382="" aria-valuenow="256" aria-valuetext="256 pixels"></div>
+																	<div data-sidebar="resize-handle" role="separator" tabindex="0" aria-label="Resize sidebar" aria-orientation="vertical" aria-valuemin="192" aria-valuemax="400" class="hidden md:block absolute inset-y-0 z-30 w-1 cursor-col-resize touch-none select-none hover:bg-sidebar-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sidebar-ring" style="right: 0;" _bl_384="" aria-valuenow="256" aria-valuetext="256 pixels"></div>
 																</aside>
 															</div>
 															<!--!-->                      
@@ -3669,12 +3670,12 @@
 									<!--!-->
 									<aside data-slot="docs-on-this-page" class="hidden xl:block sticky self-start top-[calc(var(--header-height)+1rem)]">
 										<!--!-->
-										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_401="">
+										<div class="px-1 max-h-[calc(100vh-var(--header-height)-2rem)] overflow-auto" data-slot="div" _bl_379="">
 											<!--!-->
 											<p class="[&amp;:not(:first-child)]:mt-6 text-muted-foreground text-[0.8rem] font-medium leading-7 mb-4" data-slot="paragraph">On This Page</p>
 											<!--!-->             
 											<!--!-->
-											<div class="contents" data-slot="scrollspy" _bl_402="" data-scrollspy-initialized="true">
+											<div class="contents" data-slot="scrollspy" _bl_380="" data-scrollspy-initialized="true">
 												<!--!-->
 												<nav aria-label="On This Page" class="flex text-[0.8rem] flex-col gap-2" data-slot="nav">
 													<!--!-->
@@ -3682,11 +3683,11 @@
 													<!--!-->
 													<a data-scrollspy-anchor="collapsible-group-label" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#collapsible-group-label" data-slot="anchor">Collapsible Group Label</a>
 													<!--!-->
-													<a data-scrollspy-anchor="skeleton" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#skeleton" data-slot="anchor" data-active="true" aria-current="location">Skeleton</a>
+													<a data-scrollspy-anchor="skeleton" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#skeleton" data-slot="anchor">Skeleton</a>
 													<!--!-->
 													<a data-scrollspy-anchor="mobile" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#mobile" data-slot="anchor">Mobile</a>
 													<!--!-->
-													<a data-scrollspy-anchor="controlled-sidebar" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#controlled-sidebar" data-slot="anchor">Controlled Sidebar</a>
+													<a data-scrollspy-anchor="controlled-sidebar" data-scrollspy-offset="96" class="block text-muted-foreground leading-6 transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:!text-foreground" href="components/sidebar#controlled-sidebar" data-slot="anchor" data-active="true" aria-current="location">Controlled Sidebar</a>
 												</nav>
 											</div>
 										</div>
@@ -3707,7 +3708,6 @@
 		</div>
 		<script src="_framework/blazor.webassembly.js"></script>
 		<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;b7bb3279d7e34115b0079ebd3001b2f1&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
-		<script src="https://quark.soenneker.com/_content/Soenneker.Blazor.Cloudflare.AiSearch/js/aisearchinterop.min.js" crossorigin="anonymous" type="module" data-soenneker-loaded="true"></script>
 		<div style="display:contents;" _bl_365="">
 			<!--!-->
 			<!--!-->
@@ -3718,5 +3718,6 @@
 				<!--!-->
 			</div>
 		</div>
+		<script src="https://quark.soenneker.com/_content/Soenneker.Blazor.Cloudflare.AiSearch/js/aisearchinterop.min.js" crossorigin="anonymous" type="module" data-soenneker-loaded="true"></script>
 	</body>
 </html>
